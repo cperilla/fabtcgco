@@ -1,118 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos de Flesh and Blood Colombia :  The Hunted</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://dhhim4ltzu1pj.cloudfront.net/media/images/art_hnt_keyart.original.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: #ffffff;
-        }
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-image: url('art_hnt_keyart.original.jpg');
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+          color: #ffffff;
+          width:100%;
+      }
 
-        header {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: rgba(18, 8, 35, 0.8);
-        }
-        header img {
-            height: 80px;
-            margin-right: 20px;
-        }
+      header.top{
+          display: flex;
+          padding: 10px 5px;
+          width:100%;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(18, 8, 35);
+      }
+      header.top img {
+          height: 80px;
+          margin-right: 20px;
+      }
 
-        header h1 {
-            font-size: 24px;
-            margin: 0;
-        }
+      header.top h1 {
+          font-size: 24px;
+          margin: 10px;
+      }
 
-        main {
+      main {
 
-            margin-left:auto;
-            margin-right:auto;
-            margin-top:10px;
-            margin-bottom:10px;
-            max-width: 800px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
+          width: 80%;
+          min-width: 600px;
+          max-width: 800px;
+          margin-left:auto;
+          margin-right:auto;
+          margin-top:10px;
+          margin-bottom:10px;
+          padding: 5px;
+          background-color: rgba(0, 0, 0, 0.7);
+          border-radius: 10px;
+      }
 
-        .calendar {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 5px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .calendar .month .title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .calendar .month .grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .calendar div {
-            padding: 10px;
-            background-color: rgba(68, 68, 68, 0.6);
-            border: 1px solid #333;
-        }
+      .calendar {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 5px;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .calendar .month .title {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .calendar .month .grid {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 5px;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .calendar div {
+          padding: 5px;
+          background-color: rgba(68, 68, 68, 0.6);
+          border: 1px solid #333;
+      }
 
-        .calendar .header {
-            background-color: rgba(51, 51, 51, 0.6);
-            font-weight: bold;
-        }
+      .calendar .header {
+          background-color: rgba(51, 51, 51, 0.6);
+          font-weight: bold;
+      }
 
-        .calendar .event {
-            background-color: rgba(158, 148, 175, 0.6);
-        }
+      .calendar .event {
+          background-color: rgba(158, 148, 175, 0.6);
+      }
+      .calendar .today {
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+          border-color: rgba(108, 248, 75, 0.3);
+          border-width: 2px;
+      }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+      .calendar .current {
+          background-color: rgba(108, 248, 75, 0.3);
+      }
 
-        th {
-            background-color: rgba(51, 51, 51, 0.6);
-        }
+      .calendar .done {
+          background-color: rgba(58, 48, 75, 0.6);
+      }
 
-        td {
-            background-color: rgba(85, 85, 85, 0.6);
-        }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
 
-        tr:nth-child(even) td {
-            background-color: rgba(68, 68, 68, 0.6);
-        }
+      th, td {
+          padding: 10px;
+          text-align: left;
+      }
+
+      th {
+          background-color: rgba(51, 51, 51, 0.6);
+      }
+
+      td {
+          background-color: rgba(85, 85, 85, 0.6);
+      }
+
+      tr:nth-child(even) td {
+          background-color: rgba(68, 68, 68, 0.6);
+      }
+      tr.today td {
+          background-color: rgba(108, 248, 75, 0.3);
+      }
+      tr.next td {
+          background-color: rgba(208, 48, 75, 0.3);
+
+      }
+
+
+      .links-header {
+          background-color:rgb(18, 8, 35);
+          padding: 5px;
+          border-bottom: 1px solid #ddd;
+          border-top: 1px solid #ddd;
+          align-items: center;
+          
+      }
+
+      .links {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+      }
+
+      .links ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 1.5rem;
+      }
+
+      .links li {
+          margin: 0;
+      }
+
+      .links a {
+          text-decoration: none;
+          color: #FFD700;
+          font-weight: bold;
+          transition: color 0.3s ease;
+      }
+
+      .links a:hover {
+          color:#FF4500;
+      }
+
     </style>
     <script src="calendar.js" defer></script>
-</head>
-<body>
-    <header>
-      <img src="FABLogo.jpg" alt="FABCO Logo">
-      <img src="https://dhhim4ltzu1pj.cloudfront.net/media/images/the_hunted_logo.original.png" alt="The Hunted Logo">
-        <h1>Flesh and Blood Colombia</h1>
-        
+  </head>
+  <body>
+    <header class="top">
+      <img src="FABLogo.jpg" alt="FABCO Logo"><h1>Flesh and Blood Colombia</h1>
+      <img src="the_hunted_logo.original.png" alt="The Hunted Logo">
+      
     </header>
+    <header class='links-header'>
+      <nav class="links">
+        <ul>
+          <li><a href="https://challonge.com/communities/fabco">Challonge</a></li>
+          <li><a href="https://challonge.com/communities/fabco/rankings">Rankings</a></li>
+          <li><a href="https://www.facebook.com/groups/23891653443812984">Facebook</a></li>
+          <li><a href="https://www.instagram.com/flesh_and_blood_colombia/">Instagram</a></li>
+          <li><a href="https://chat.whatsapp.com/Ga3W3eRQvWrDrblaV9W6Re">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
-        <h2>Calendario de Eventos: Version 20250102 </h2>
-        <div class="calendar">
-            <!-- Calendar will be populated dynamically -->
-        </div>
+      <p>📅 <span id="currentDate" ></span></p>
+      <h2>Proximo evento:</h2>
+      <div class="nextEvent">
+        <table id='nextEvent'>
+          <tr>
+            <th>Fecha</th>
+            <th>Día</th>
+            <th>Evento</th>
+            <th>Hora</th>
+            <th>Ubicación</th>
+            <th>Reminder</th>
+          </tr>
+        </table>
+      </div>
+      <h2>Calendario de Eventos</h2>
+      <div class="calendar">
+        <!-- Calendar will be populated dynamically -->
+      </div>
     </main>
-</body>
+  </body>
 </html>
