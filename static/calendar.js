@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const todayStr = today.toISOString().split('T')[0];
   document.getElementById("currentDate").textContent = todayStr;
   const nextEventTable = document.getElementById("nextEvent");
-  fetch('Eventos_de_la_Comunidad_Flesh_and_Blood_Q1_2025__D_as_en_Espa_ol_.csv')
+  fetch('csv/Eventos_de_la_Comunidad_Flesh_and_Blood_Q1_2025__D_as_en_Espa_ol_.csv')
     .then(response => response.text())
     .then(data => {
       const rows = data.split('\n').slice(1); // Skip header row
