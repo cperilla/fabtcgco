@@ -50,7 +50,7 @@ function createMonth(calendar, currentDate) {
                         <th>Evento</th>
                         <th>Hora</th>
                         <th>Ubicación</th>
-                        <th>Reminder</th>
+                        <th>Icono</th>
                     </tr>
                  `;
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
               td.textContent = col;
               tr.appendChild(td);
             });
-            if(today < eventDate && !next){
+            if(today <= eventDate && !next){
               next = true;
               const cloned = tr.cloneNode(true)
               nextEventTable.appendChild(cloned);
