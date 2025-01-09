@@ -1,8 +1,8 @@
 const daysOfWeek = [ 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 
-const parseUTCDate = (dateString) => {
+const parseDate = (dateString) => {
   const [year, month, day] = dateString.split('-').map(Number);
-  return new Date(Date.UTC(year, month - 1, day)); // Month is zero-indexed
+  return new Date(year, month - 1, day); // Month is zero-indexed
 };
 
 const fetchData = async(url) => {
@@ -14,7 +14,7 @@ function createMonth(calendar, currentDate) {
   const month = document.createElement('div');
   month.classList.add('month');
   const label =  document.createElement('div');
-  label.textContent = new Intl.DateTimeFormat('es-ES', { month: 'long', timeZone : 'UTC' }).format(currentDate);
+  label.textContent = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(currentDate);
   month.appendChild(label);
   label.classList.add('label');
   const grid =  document.createElement('div');
@@ -29,7 +29,7 @@ function createMonth(calendar, currentDate) {
   });
   calendar.appendChild(month);
 
-  let dayOfWeek = currentDate.getUTCDay() - 1;
+  let dayOfWeek = currentDate.getDay() - 1;
   if( dayOfWeek < 0 ){
     dayOfWeek = 7
   }
@@ -76,17 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const tableBody = document.querySelector('tbody');
       const events = {};
       const eventsByMonth = {};
-      let next = false;
+      let nextSet = false;
       rows.map(row => row.split(','))
           .filter(columns => columns.length === 6).sort((a, b) => {
-            const dateA = parseUTCDate(a[0]);
-            const dateB = parseUTCDate(b[0]);
+            const dateA = parseDate(a[0]);
+            const dateB = parseDate(b[0]);
             return dateA - dateB;
           }).forEach(columns => {
             events[columns[0]] = columns[5]; // Push date and emoji
-            const eventDate  = parseUTCDate(columns[0]);
+            const eventDate  = parseDate(columns[0]);
             const dateStr = eventDate.toISOString().split('T')[0];
-            const eventMonth = new Intl.DateTimeFormat('es-ES', { month: 'long', timeZone : 'UTC' }).format(eventDate);
+            const eventMonth = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(eventDate);
             const tr = document.createElement('tr');
             if(dateStr == todayStr) {
               tr.classList.add('today')
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
               td.textContent = col;
               tr.appendChild(td);
             });
-            if(today <= normalizeDate(eventDate) && !next){
-              next = true;
+            if(today <= normalizeDate(eventDate) && !nextSet){
+              nextSet = true;
               const cloned = tr.cloneNode(true)
               nextEventTable.appendChild(cloned);
               tr.classList.add('next');
@@ -112,33 +112,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Generate calendar
       const calendar = document.querySelector('.calendar');
-      const firstDay = new Date(Date.UTC(2025,0,01));
-      const lastDay = new Date(Date.UTC(2025,2,31));
+      const firstDay = new Date(2025,0,01);
+      const lastDay = new Date(2025,2,31);
       
       
       // Fill calendar
       let currentDate = firstDay;
       let month = createMonth(calendar, currentDate);
 
-      let lastMonth = new Intl.DateTimeFormat('es-ES', { month: 'long', timeZone : 'UTC' }).format(currentDate);
+      let lastMonth = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(currentDate);
       eventsByMonth[lastMonth].forEach(tr => month.table.appendChild(tr));
       while (currentDate <= lastDay) {
         const div = document.createElement('div');
         const dateStr = currentDate.toISOString().split('T')[0];
-        const curMonth = new Intl.DateTimeFormat('es-ES', { month: 'long', timeZone : 'UTC' }).format(currentDate);
+        const curMonth = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(currentDate);
         if (curMonth !== lastMonth){
           month = createMonth(calendar, currentDate);
           lastMonth = curMonth
           eventsByMonth[lastMonth].forEach(tr => month.table.appendChild(tr));
         }
-        div.textContent = currentDate.getUTCDate();
+        div.textContent = currentDate.getDate();
         
         if(dateStr == todayStr) {
            div.classList.add('today');
         } 
         
         if (events[dateStr]) {
-          if (currentDate < today.getUTCDate()) {
+          if (currentDate < today.getDate()) {
             div.classList.add('done')
           } else
           if (dateStr == todayStr) {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         month.grid.appendChild(div);
-        currentDate.setUTCDate(currentDate.getUTCDate() + 1);
+        currentDate.setDate(currentDate.getDate() + 1);
       }
     })
     .catch(error => console.error('Error loading CSV:', error));
