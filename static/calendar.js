@@ -10,7 +10,7 @@ const fetchData = async(url) => {
   return response.text();
 };
 
-function createMonth(calendar, currentDate) {
+function createMonth(calendar, currentDate){
   const month = document.createElement('div');
   month.classList.add('month');
   const label =  document.createElement('div');
@@ -50,6 +50,7 @@ function createMonth(calendar, currentDate) {
                         <th>Evento</th>
                         <th>Hora</th>
                         <th>Ubicación</th>
+                        <th>Ciudad</th>
                         <th>Icono</th>
                     </tr>
                  `;
@@ -78,12 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const eventsByMonth = {};
       let nextSet = false;
       rows.map(row => row.split(','))
-          .filter(columns => columns.length === 6).sort((a, b) => {
+          .filter(columns => columns.length === 7).sort((a, b) => {
             const dateA = parseDate(a[0]);
             const dateB = parseDate(b[0]);
             return dateA - dateB;
           }).forEach(columns => {
-            events[columns[0]] = columns[5]; // Push date and emoji
+            events[columns[0]] = columns[6]; // Push date and emoji
             const eventDate  = parseDate(columns[0]);
             const dateStr = eventDate.toISOString().split('T')[0];
             const eventMonth = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(eventDate);
