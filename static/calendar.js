@@ -60,10 +60,12 @@ function createMonth(calendar, currentDate) {
   month.appendChild(table)
   return { 'grid': grid, 'table' : table };
 }
-
+function normalizeDate(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  const today = new Date();
+  const today = normalizeDate(new Date());
   const todayStr = today.toISOString().split('T')[0];
   document.getElementById("currentDate").textContent = todayStr;
   const nextEventTable = document.getElementById("nextEvent");
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
               td.textContent = col;
               tr.appendChild(td);
             });
-            if(today <= eventDate && !next){
+            if(today <= normalizeDate(eventDate) && !next){
               next = true;
               const cloned = tr.cloneNode(true)
               nextEventTable.appendChild(cloned);
