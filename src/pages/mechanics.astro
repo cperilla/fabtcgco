@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../css/cards.css';
+---
+<Layout>
+    <h1>Mecanicas de Juego</h1>
+    <div class='cards'>
+      <div class="card green">
+        <h2>Dominante</h2>
+        <p>El Héroe defensor no puede defender este ataque con más de 1 carta de su mano (incluidas cartas de Reacción Defensa).</p>
+      </div>
+      <div class="card green">
+        <h2>Go Again</h2>
+        <p>Go again permite que podamos realizar diversas acciones en un turno. Una carta con go again le da al jugador que la utiliza un punto de acción adicional.</p>
+      </div>
+      <div class="card green">
+        <h2>Opt X</h2>
+        <p>Observe X cartas del tope de su baraja. Puede colocarlas ya sea en el tope o en el fondo de la baraja en cualquier orden.</p>
+      </div>
+      <div class="card green">
+        <h2>Overpower</h2>
+        <p>El Héroe defensor no puede defender con más de una carta de acción.</p>
+      </div>
+      <div class="card yellow">
+        <h2>Ward X</h2>
+        <p>Si el Héroe fuera a recibir daño, previene X de ese daño y se destruye esta carta.</p>
+      </div>
+      <div class="card yellow">
+        <h2>Blood Debt</h2>
+        <p>Al inicio de su fase final, si esta carta se encuentra en su zona de removidos o desterrados, el Héroe decide si pagar 3 recursos o de lo contrario pierde 2 puntos de vida.</p>
+      </div>
+      <div class="card yellow">     
+        <h2>Boost</h2>
+        <p>Como costo adicional para jugar esta carta, puedes remover o desterrar la carta del tope de tu baraja. Si esa carta es de mecha Esta carta obtiene go again.</p>
+      </div>
+      <div class="card yellow">
+        <h2>Clash</h2>
+        <p>Los Héroes enfrentados revelan la carta del tope de sus respectivas barajas. Si se revela la carta con el mayor valor, gana el enfrentamiento. No hay efecto si no hay un ganador. Si la carta no tiene valor de ataque se considera 0</p>
+      </div>
+      <div class="card yellow">
+        <h2>Combo</h2>
+        <p>Una mecánica Ninjas que obtiene su poder en la secuenciación de distintos ataques.</p>
+      </div>
+      <div class="card green">
+        <h2>Contract</h2>
+        <p>Contract le da una serie de instrucciones al jugador para que las complete y cumpla con el Contract. Pueden ser completados cualquier número de veces mientras estén activos en la cadena de combate.</p>
+      </div>
+      <div class="card green">
+        <h2>Crush</h2>
+        <p>Una mecánica de Guardians enfocada en aprovechar el valor de sus ataques. Cuando un ataque con Crush causa 4 o más de daño al Héroe enemigo, el efecto de Crush se activa.</p>
+      </div>
+      <div class="card green">
+        <h2>Intimidate</h2>
+        <p>El Héroe objetivo remueve o destierra de su mano una carta al azar. Se destierra boca abajo, solo su dueño puede verla</p>
+      </div>
+      <div class="card green">
+        <h2>Phantasm</h2>
+        <p>Si esta carta es defendida por una carta, que no sea de Ilusionista, con poder de ataque 6 o más, destruye esta carta. El ataque no se resuelve.</p>
+      </div>
+      <div class="card green">
+        <h2>Reload</h2>
+        <p>Si no tienes cartas en tu arsenal, puedes colocar una carta boca abajo de tu mano en el arsenal.</p>
+      </div>
+      <div class="card yellow">
+        <h2>Reprise</h2>
+        <p>Se activa reprise cuando el héroe defensor ha defendido con una carta desde su mano</p>
+      </div>
+      <div class="card yellow">
+        <h2>Spectra</h2>
+        <p>Esta carta puede ser atacada. Cuando esta carta se convierte en el objetivo de un ataque, se destrye. El ataque no se resuelve.</p>
+      </div>
+      <div class="card yellow">
+        <h2>Stealth</h2>
+        <p>Stealth es una habilidad sin reglas que funciona específica para esta clase como una habilidad "vacía".</p>
+      </div>
+      <div class="card yellow">
+        <h2>Transcend</h2>
+        <p>Pon esta carta en la mano de su dueño volteada.</p>
+      </div>
+
+
+    <div class="card green">
+        <h2>Wager</h2>
+        <p>Cuando la cadena de este ataque se resuelve, si el ataque golpea, creas un [token], de lo contrario el Héroe objetivo crea un [token].</p>
+    </div>
+    <div class="card yellow">
+        <h2>~X Element~ Fusion</h2>
+        <p>Como un costo adicional para jugar esta carta, puedes revelar una carta de ~X Element~ desde tu mano.</p>
+    </div>
+    <div class="card orange">
+        <h2>Charge</h2>
+        <p>Como un costo adicional para jugar esta carta, puedes cargar el Alma de tu Héroe. Coloque una carta de tu mano boca arriba bajo su carta de Héroe.</p>
+    </div>
+    <div class="card orange">
+        <h2>Crank</h2>
+        <p>Cuando esta carta entra en la arena, puedes remover uno de sus "Steam Counter". Si lo haces, ganas 1 punto de Acción.</p>
+    </div>
+    <div class="card orange">
+        <h2>Galvanize</h2>
+        <p>Galvanize - cuando esta carta defiende, puedes destruir un Item bajo tu control. Si lo haces, [...]</p>
+    </div>
+    <div class="card orange">
+        <h2>Piercing X</h2>
+        <p>Si esta carta es defendida por un equipo, gana +X de poder.</p>
+    </div>
+    <div class="card orange">
+        <h2>Scrap</h2>
+        <p>Como un costo adicional para jugar esta carta, puedes remover un Item o Equipo de tu cementerio.</p>
+    </div>
+    <div class="card orange">
+        <h2>Amp</h2>
+        <p>La próxima vez que vayas a infligir Daño Arcano este turno, en su lugar infliges esa cifra mas X.</p>
+    </div>
+    <div class="card orange">
+        <h2>Beat Chest</h2>
+        <p>Como un costo adicional para jugar esta carta, puedes descartar una carta con 6 o mas de poder.</p>
+    </div>
+    <div class="card orange">
+        <h2>Channel</h2>
+        <p>Channel es una mecánica que usa cartas de Element para cumplir ciertas condiciones para mantener ciertas auras elementales poderosas en la arena.</p>
+    </div>
+    <div class="card orange">
+        <h2>Ephemeral</h2>
+        <p>Si esta carta fuera a ser colocada en el cementerio desde cualquier lugar, en lugar de eso cesa de existir.</p>
+    </div>
+    <div class="card orange">
+        <h2>Essence of ~X Element(s)~</h2>
+        <p>Puedes tener cartas de ~X Element(s)~ en tu baraja.</p>
+    </div>
+    <div class="card orange">
+        <h2>Evo Upgrade</h2>
+        <p>Evo Upgrade - [...] por cada Evo que tengas equipada. Evo Upgrade - Donde X es el numero de Evos que tienes equipado.</p>
+    </div>
+    <div class="card orange">
+        <h2>Heave X</h2>
+        <p>Al inicio de su fase final, si esta carta esta en su mano y tienes una espacio en el arsenal, puedes pagar X y poner esta carta boca arriba en la zona de arsenal. Si lo haces, crea X Seismic Surge tokens.</p>
+    </div>
+    <div class="card orange">
+        <h2>Tower</h2>
+        <p>Tower - Si esta carta tiene 13 o mas poder, [...].</p>
+    </div>
+    <div class="card red">
+        <h2>Ambush</h2>
+        <p>Mientras esta carta este en tu Arsenal, puedes defender con ella.</p>
+    </div>
+    <div class="card red">
+        <h2>Protect</h2>
+        <p>Puedes defender cualquier Héroe que sea atacado por un oponente con esta carta.</p>
+    </div>
+    <div class="card red">
+        <h2>Universal</h2>
+        <p>Cuando esta carta se encuentra en cualquier zona, es de la misma clase que tu Héroe.</p>
+    </div>
+      
+
+
+</Layout>
+
