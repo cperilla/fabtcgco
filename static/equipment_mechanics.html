@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flesh and Blood Mechanics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 40px);
+            background-color: #fff;
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card p {
+            margin: 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .green {
+            background-color: #d4edda;
+        }
+        .yellow {
+            background-color: #fff3cd;
+        }
+        .orange {
+            background-color: #ffe5b4;
+        }
+        .red {
+            background-color: #f8d7da;
+        }
+    </style>
+</head>
+<body>
+  <h1>Mecanicas de los equipos</h1>
+    <div class="card green">
+        <h2>Arcane Barrier X</h2>
+        <p>Si su Héroe fuera a recibir daño arcano, puedes pagar X en su lugar. Si lo haces, previene X daño arcano que la fuente del daño fuera a provocar.</p>
+    </div>
+    <div class="card green">
+        <h2>Battleworn</h2>
+        <p>Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate.</p>
+    </div>
+    <div class="card green">
+        <h2>Bladebreak</h2>
+        <p>Si defiendes con esta carta, destrúyela cuando se cierre la cadena de combate.</p>
+    </div>
+    <div class="card green">
+        <h2>Temper</h2>
+        <p>Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate, destrúyela si su  valor defensa es 0.</p>
+    </div>
+    <div class="card yellow">
+        <h2>Cloaked</h2>
+        <p>Equipa esta carta boca abajo.</p>
+    </div>
+    <div class="card yellow">
+        <h2>Spellvoid X</h2>
+        <p>Si su Héroe fuera a recibir daño arcano, en su lugar puedes destruir esta carta. Si lo haces, previene X daño arcano.</p>
+    </div>
+    <div class="card orange">
+        <h2>Quell X</h2>
+        <p>Si tu Héroe fuera a recibir daño, puedes pagar X para prevenir X de ese daño. Si se utiliza se destruye al inicio de la fase final. Se puede usar multiples veces.</p>
+    </div>
+    <div class="card red">
+        <h2>Guardwell</h2>
+        <p>Cuando se cierre la cadena de combate, si esta carta defendió, ponle contadores de -1 de Defensa igual a su valor.</p>
+    </div>
+    <div class="card red">
+        <h2>Modular</h2>
+        <p>Esta carta puede ser equipada en cualquier zona de Equipo.</p>
+    </div>
+</body>
+</html>
