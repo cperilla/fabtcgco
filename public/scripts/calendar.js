@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Generate calendar
       const calendar = document.querySelector('.calendar');
-      const firstDay = new Date(2025,0,01);
+      const firstDay = new Date(2025,0,1);
       const lastDay = new Date(2025,2,31);
       
       

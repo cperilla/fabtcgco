@@ -1,22 +1,39 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../css/base.css';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+import { Image } from 'astro:assets';
+import  fabLogo from '../images/FABLogo.jpg';
+import huntedLogo from '../images/the_hunted_logo.original.png';
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Flesh and Blood Colombia :  The Hunted</title>
+  </head>
+  <body>
+    <header class="top">
+      <Image src={fabLogo} alt="FABCO Logo" height='90' />
+      <h1>Flesh and Blood Colombia</h1>
+      <Image src={huntedLogo} alt="The Hunted Logo" height='80' />
+
+    </header>
+    <header class='links-header'>
+      <nav class="links">
+        <ul>
+          <li><a href="https://challonge.com/communities/fabco">Challonge</a></li>
+          <li><a href="https://challonge.com/communities/fabco/rankings">Rankings</a></li>
+          <li><a href="https://www.facebook.com/groups/23891653443812984">Facebook</a></li>
+          <li><a href="https://www.instagram.com/flesh_and_blood_colombia/">Instagram</a></li>
+          <li><a href="https://chat.whatsapp.com/Ga3W3eRQvWrDrblaV9W6Re">WhatsApp</a></li>
+          <li><a href="https://discord.gg/u783DZ9kGE">Discord</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
