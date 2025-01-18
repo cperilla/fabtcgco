@@ -1,0 +1,30 @@
+---
+import EventCard from '../components/EventCard.astro';
+import Calendar from '../components/Calendar.astro';
+
+const { month, year, eventsData } = Astro.props;
+import { getEventsOfMonth, getCalendarDays, formatMonthName } from '../utils/calendarUtils';
+
+const eventsOfMonth = getEventsOfMonth(eventsData, month);
+const calendarDays = getCalendarDays(year, month, eventsOfMonth);
+const monthName = formatMonthName(month, year);
+---
+
+<section class="relative">
+  <div class="w-full py-5 relative z-10 backdrop-blur-3xl">
+    <div class="w-full max-w-7xl mx-auto px-2 lg:px-8">
+      <div class="grid grid-cols-12 gap-8 max-w-4xl mx-auto xl:max-w-full">
+        <div class="col-span-12 xl:col-span-6">
+          <h2 class="font-manrope text-3xl leading-tight text-white-900 mb-1.5">Eventos de {monthName}</h2>
+          <p class="text-lg font-normal text-white-600 mb-8">No te los pierdas</p>
+          <div class="flex gap-5 flex-col md:max-h-96 md:overflow-y-auto">
+            {Object.values(eventsOfMonth).flat().map((event) => (
+              <EventCard event={event} />
+            ))}
+          </div>
+        </div>
+        <Calendar month={monthName} year={year} days={calendarDays} />
+      </div>
+    </div>
+  </div>
+</section>

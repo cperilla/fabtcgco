@@ -1,0 +1,28 @@
+---
+interface Location {
+  spot: string;
+  city: string;
+}
+
+interface Event {
+  icon: string;
+  type: string;
+  title: string;
+  time: string;
+  location: Location;
+  date: string;
+}
+
+const {event} : {event: Event} = Astro.props;
+---
+
+<div class="p-6 rounded-xl bg-white">
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+        <p class="text-base font-medium text-gray-900">{event.date} a las {event.time}</p>
+      </div>
+    </div>
+    <h6 class="text-xl leading-8 font-semibold text-black mb-1">{event.icon}{event.title}</h6>
+    <p class="text-base font-normal text-gray-600">{event.location.spot} | {event.location.city}</p>
+  </div>
