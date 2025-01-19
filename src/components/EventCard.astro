@@ -1,17 +1,5 @@
 ---
-interface Location {
-  spot: string;
-  city: string;
-}
-
-interface Event {
-  icon: string;
-  type: string;
-  title: string;
-  time: string;
-  location: Location;
-  date: string;
-}
+import { Event } from './interfaces.ts';
 
 const {event} : {event: Event} = Astro.props;
 ---

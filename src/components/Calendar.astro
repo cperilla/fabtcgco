@@ -1,22 +1,6 @@
 ---
 import CalendarDay from './CalendarDay.astro';
-
-interface Location {
-  spot: string;
-  city: string;
-}
-
-interface Event {
-  title: string;
-  time: string;
-  color: string;
-}
-
-interface Day {
-  dayNumber: string;
-  today?: boolean;
-  events: Event[];
-}
+import { Day } from './interfaces.ts';
 
 interface Props {
   month: string;

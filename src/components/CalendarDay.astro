@@ -1,18 +1,6 @@
 ---
 import CalendarEvent from './CalendarEvent.astro';
-
-interface Event {
-    icon: string;
-    type: string;
-    title: string;
-    time: string;
-}
-
-interface Day {
-    dayNumber?: string;
-    today?: boolean;
-    events?: Event[];
-}
+import { Day } from './interfaces.ts';
 
 const { day }: { day: Day } = Astro.props;
 ---

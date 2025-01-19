@@ -1,10 +1,5 @@
 ---
-interface Event {
-    icon: string;
-    type: string;
-    title: string;
-    time: string;
-}
+import { Event } from './interfaces.ts';
 
 const {event} : {event?: Event} = Astro.props;
 ---
