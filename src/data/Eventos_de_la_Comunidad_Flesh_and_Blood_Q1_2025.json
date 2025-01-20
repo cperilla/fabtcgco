@@ -1,0 +1,313 @@
+[
+    {
+      "Date": "2025-01-02",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🐝 Mead Garden",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-01-09",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-01-16",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-01-23",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-01-30",
+      "Day": "Jueves",
+      "Event": "Play Testing",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🧪",
+      "EventType": "PlayTesting"
+    },
+    {
+      "Date": "2025-01-31",
+      "Day": "Viernes",
+      "Event": "Learn to Play",
+      "Time": "5PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-02-14",
+      "Day": "Viernes",
+      "Event": "Learn to Play",
+      "Time": "5PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-02-28",
+      "Day": "Viernes",
+      "Event": "Learn to Play",
+      "Time": "5PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-03-14",
+      "Day": "Viernes",
+      "Event": "Learn to Play",
+      "Time": "5PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-03-28",
+      "Day": "Viernes",
+      "Event": "Learn to Play",
+      "Time": "5PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-01-18",
+      "Day": "Sábado",
+      "Event": "Learn To Play",
+      "Time": "3 PM",
+      "Location": "⚔️ Armeria Rohan",
+      "Ciudad": "Bogotá",
+      "Emoji": "🎓",
+      "EventType": "HowToPlay"
+    },
+    {
+      "Date": "2025-02-06",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-02-13",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-02-20",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-02-27",
+      "Day": "Jueves",
+      "Event": "Play Testing",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🧪",
+      "EventType": "PlayTesting"
+    },
+    {
+      "Date": "2025-03-06",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-03-13",
+      "Day": "Jueves",
+      "Event": "Armory / Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡🛡️",
+      "EventType": "ArmoryBlitz"
+    },
+    {
+      "Date": "2025-03-20",
+      "Day": "Jueves",
+      "Event": "Blitz",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "⚡",
+      "EventType": "Blitz"
+    },
+    {
+      "Date": "2025-03-27",
+      "Day": "Jueves",
+      "Event": "Play Testing",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🧪",
+      "EventType": "PlayTesting"
+    },
+    {
+      "Date": "2025-01-04",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🐝 Mead Garden",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-01-11",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-01-18",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-01-25",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-02-08",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-02-22",
+      "Day": "Sábado",
+      "Event": "Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️",
+      "EventType": "CC"
+    },
+    {
+      "Date": "2025-03-08",
+      "Day": "Sábado",
+      "Event": "Armory / Classic Constructed",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️🛡️",
+      "EventType": "ArmoryCC"
+    },
+    {
+      "Date": "2025-03-22",
+      "Day": "Sábado",
+      "Event": "Armory / Classic Constructed - Cierre de Temporada",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "🏗️🛡️🏆",
+      "EventType": "ArmoryCC"
+    },
+    {
+      "Date": "2025-02-02",
+      "Day": "Domingo",
+      "Event": "The Hunted ❌ Launch Event - Sealed Draft",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "✍️",
+      "EventType": "Sealed"
+    },
+    {
+      "Date": "2025-02-15",
+      "Day": "Sábado",
+      "Event": "The Hunted ❌ Precons Tournament",
+      "Time": "3 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "📦",
+      "EventType": "Precon"
+    },
+    {
+      "Date": "2025-03-01",
+      "Day": "Sábado",
+      "Event": "Armory / The Hunted ❌ Sealed Draft",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "✍️🛡️",
+      "EventType": "ArmorySealed"
+    },
+    {
+      "Date": "2025-03-15",
+      "Day": "Sábado",
+      "Event": "The Hunted  ❌ Blitz Precons Event",
+      "Time": "5 PM",
+      "Location": "🌪️ Chaos Store",
+      "Ciudad": "Cali",
+      "Emoji": "📦",
+      "EventType": "Precon"
+    }
+  ]
+  

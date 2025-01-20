@@ -1,23 +1,38 @@
 ---
+import CalendarDay from './CalendarDay.astro';
+import { Day } from './interfaces.ts';
+
+interface Props {
+  month: string;
+  year: string;
+  days: Day[];
+}
+
+const {month, year, days} = Astro.props;
 ---
 
-<p>📅 <span id="currentDate" ></span></p>
-<h2>Proximo evento:</h2>
-<div class="nextEvent">
-  <table id='nextEvent'>
-    <tr>
-      <th>Fecha</th>
-      <th>Día</th>
-      <th>Evento</th>
-      <th>Hora</th>
-      <th>Ubicación</th>
-      <th>Ciudad</th>
-      <th>Reminder</th>
-    </tr>
-  </table>
+<div class="flex flex-col h-full col-span-12 xl:col-span-6 px-2.5 py-5 sm:p-8 bg-gradient-to-b from-white/25 to-white xl:bg-white rounded-2xl max-xl:row-start-1">
+  <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-5">
+    <div class="flex items-center gap-4">
+      <h5 class="text-xl leading-8 font-semibold text-gray-900">{month} {year}</h5>
+    </div>
+  </div>
+  <div class="border border-indigo-200 rounded-xl">
+    <div class="grid grid-cols-7 rounded-t-3xl border-b border-indigo-200">
+      <div class="py-3.5 border-r rounded-tl-xl border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Dom</div>
+      <div class="py-3.5 border-r border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Lus</div>
+      <div class="py-3.5 border-r border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Mar</div>
+      <div class="py-3.5 border-r border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Mie</div>
+      <div class="py-3.5 border-r border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Jue</div>
+      <div class="py-3.5 border-r border-indigo-200 bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Vie</div>
+      <div class="py-3.5 rounded-tr-xl bg-indigo-50 flex items-center justify-center text-sm font-medium text-indigo-600">Sab</div>
+    </div>
+    <div class="grid grid-cols-7 rounded-b-xl">
+      {days.length > 0 ? (
+        days.map((day) => (
+          <CalendarDay day={day} />
+        ))
+      ) : ''}
+    </div>
+  </div>
 </div>
-<h2>Calendario de Eventos</h2>
-<div class="calendar">
-  <!-- Calendar will be populated dynamically -->
-</div>
-<script src="/scripts/calendar.js" defer></script>
