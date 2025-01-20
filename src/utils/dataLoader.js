@@ -1,6 +1,5 @@
-import fs from 'fs/promises';
+import eventsData from '../data/Eventos_de_la_Comunidad_Flesh_and_Blood_Q1_2025.json';
 
-export const loadEventsData = async (jsonPath) => {
-  const jsonContent = await fs.readFile(jsonPath, 'utf-8');
-  return JSON.parse(jsonContent);
+export const loadEventsData = () => {
+  return eventsData;
 };
