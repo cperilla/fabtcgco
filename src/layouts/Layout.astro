@@ -1,9 +1,6 @@
 ---
 import '../css/base.css';
-
-import { Image } from 'astro:assets';
-import  fabLogo from '../images/FABLogo.jpg';
-import huntedLogo from '../images/the_hunted_logo.original.png';
+import Header from '../components/Header.astro';
 ---
 
 <!DOCTYPE html>
@@ -12,37 +9,11 @@ import huntedLogo from '../images/the_hunted_logo.original.png';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos de Flesh and Blood Colombia :  The Hunted</title>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   </head>
   <body>
-    <header class="top">
-      <Image src={fabLogo} alt="FABCO Logo" height='90' />
-      <h1>Flesh and Blood Colombia</h1>
-      <Image src={huntedLogo} alt="The Hunted Logo" height='80' />
-
-    </header>
-    <header class='links-header'>
-      <nav class="links">
-        <ul>
-          <li><a href="https://challonge.com/communities/fabco">Challonge</a></li>
-          <li><a href="https://challonge.com/communities/fabco/rankings">Rankings</a></li>
-          <li><a href="https://www.facebook.com/groups/23891653443812984">Facebook</a></li>
-          <li><a href="https://www.instagram.com/flesh_and_blood_colombia/">Instagram</a></li>
-          <li><a href="https://chat.whatsapp.com/Ga3W3eRQvWrDrblaV9W6Re">WhatsApp</a></li>
-          <li><a href="https://discord.gg/u783DZ9kGE">Discord</a></li>
-        </ul>
-      </nav>
-    </header>
-    <header class='links-header'>
-     <nav class="links">
-        <ul
-          <li>Ayudas: </li>
-          <li><a href="/mechanics">Mecanicas</a></li>
-          <li><a href="/equipment_mechanics">Mecanicas de equipos</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
+    <Header/>
+    <main class="container mx-auto px-4 mt-4 py-4 rounded-lg">
       <slot />
     </main>
   </body>

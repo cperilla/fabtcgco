@@ -1,0 +1,65 @@
+---
+const { fabLogo = "images/FABLogo.png" } = Astro.props;
+---
+
+<header class="header">
+    <nav class="nav">
+        <div class="mx-auto max-w-12xl px-2 sm:px-2 lg:px-8">
+            <div class="relative flex items-center justify-between nav-items-container">
+                <div class="absolute inset-y-0 left-4 flex items-center md:hidden">
+                    <button id="menu-toggle" class="text-white md:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex shrink-0 items-center lg:pl-20">
+                        <div class="logo">
+                            <a href="/">
+                                <img class="h-20 w-auto" src={fabLogo} alt="Logo Flesh and Blood" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        <a href="https://challonge.com/communities/fabco" target="_blank" rel="noopener noreferrer">Challonge</a>
+                        <a href="https://challonge.com/communities/fabco/rankings" target="_blank" rel="noopener noreferrer">Rankings</a>
+                        <a href="/mechanics">Mecanicas</a>
+                        <a href="/equipment_mechanics">Mecanicas de equipos</a>
+                        <a href="https://www.facebook.com/groups/23891653443812984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/flesh_and_blood_colombia/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/Ga3W3eRQvWrDrblaV9W6Re" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://discord.gg/u783DZ9kGE" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="https://challonge.com/communities/fabco" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Challonge</a>
+            <a href="https://challonge.com/communities/fabco/rankings" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Rankings</a>
+            <a href="/mechanics" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mecanicas</a>
+            <a href="/equipment_mechanics" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mecanicas de equipos</a>
+            <a href="https://www.facebook.com/groups/23891653443812984" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/flesh_and_blood_colombia/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.gg/u783DZ9kGE" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>    
+
