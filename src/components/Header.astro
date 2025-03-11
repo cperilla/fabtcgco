@@ -1,5 +1,16 @@
 ---
 const { fabLogo = "images/FABLogo.png" } = Astro.props;
+
+const links = [
+    { href: "https://challonge.com/communities/fabco", icon: "", text: "Challonge" },
+    { href: "https://challonge.com/communities/fabco/rankings", icon: "", text: "Rankings" },
+    { href: "/mechanics", icon: "", text: "Mecanicas" },
+    { href: "/equipment_mechanics", icon: "", text: "Mecanicas de equipos" },
+    { href: "https://www.facebook.com/groups/23891653443812984", icon: "fa-brands fa-facebook-f", text: "" },
+    { href: "https://www.instagram.com/flesh_and_blood_colombia/", icon: "fa-brands fa-instagram", text: "" },
+    { href: "https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE", icon: "fa-brands fa-whatsapp", text: "" },
+    { href: "https://discord.gg/u783DZ9kGE", icon: "fa-brands fa-discord", text: "" }
+];
 ---
 
 <header class="header">
@@ -22,37 +33,30 @@ const { fabLogo = "images/FABLogo.png" } = Astro.props;
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                        <a href="https://challonge.com/communities/fabco" target="_blank" rel="noopener noreferrer">Challonge</a>
-                        <a href="https://challonge.com/communities/fabco/rankings" target="_blank" rel="noopener noreferrer">Rankings</a>
-                        <a href="/mechanics">Mecanicas</a>
-                        <a href="/equipment_mechanics">Mecanicas de equipos</a>
-                        <a href="https://www.facebook.com/groups/23891653443812984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/flesh_and_blood_colombia/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://discord.gg/u783DZ9kGE" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
-                    </div>
+                        <div class="flex space-x-4">
+                            {links.map(link => (
+                                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                                    {link.icon ? <i class={link.icon}></i> : link.text}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="https://challonge.com/communities/fabco" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Challonge</a>
-            <a href="https://challonge.com/communities/fabco/rankings" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Rankings</a>
-            <a href="/mechanics" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mecanicas</a>
-            <a href="/equipment_mechanics" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mecanicas de equipos</a>
-            <a href="https://www.facebook.com/groups/23891653443812984" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/flesh_and_blood_colombia/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://discord.gg/u783DZ9kGE" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><i class="fa-brands fa-discord"></i></a>
+                {links.map(link => (
+                    <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" target="_blank" rel="noopener noreferrer">
+                        {link.icon ? <i class={link.icon}></i> : link.text}
+                    </a>
+                ))}
             </div>
         </div>
     </nav>
 </header>
-
 
 <script>
     const menuToggle = document.getElementById('menu-toggle');
@@ -61,5 +65,4 @@ const { fabLogo = "images/FABLogo.png" } = Astro.props;
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
-</script>    
-
+</script>
