@@ -14,6 +14,6 @@ export interface Event {
 
 export interface Day {
     dayNumber: string;
-    today?: boolean;
+    dateString: string;
     events: Event[];
 }

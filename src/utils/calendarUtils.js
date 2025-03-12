@@ -56,7 +56,7 @@ export const getCalendarDays = (year, month, eventsOfMonth) => {
 
     calendarDays.push({
       dayNumber: format(currentDay, 'd'),
-      today: isToday(currentDay),
+      dateString: formattedDate,
       events: eventsOfMonth[formattedDate] || [],
     });
 
