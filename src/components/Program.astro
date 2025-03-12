@@ -31,7 +31,9 @@ const monthName = formatMonthName(month, year);
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA", {
+        timeZone: "America/Bogota"
+    }).replace(/\//g, "-");
     const todayElements = document.querySelectorAll(`[data-date="${today}"] > span`);
     todayElements.forEach((el) => {
       el.classList.remove("text-gray-400");
