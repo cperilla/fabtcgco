@@ -31,7 +31,12 @@ const monthName = formatMonthName(month, year);
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const today = new Date().toISOString().split("T")[0];
+    function getFormattedDate(dateIn) {
+        return dateIn.getFullYear() + '-' +
+                String(dateIn.getMonth() + 1).padStart(2, '0') + '-' + 
+                String(dateIn.getDate()).padStart(2, '0');
+    }
+    const today = getFormattedDate(new Date());
     const todayElements = document.querySelectorAll(`[data-date="${today}"] > span`);
     todayElements.forEach((el) => {
       el.classList.remove("text-gray-400");
