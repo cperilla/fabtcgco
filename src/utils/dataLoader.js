@@ -1,4 +1,4 @@
-import eventsData from '../data/Eventos_de_la_Comunidad_Flesh_and_Blood_Q1_2025.json';
+import eventsData from '../data/Eventos_Comunidad_Q2_2025_final.json';
 
 export const loadEventsData = () => {
   return eventsData;
