@@ -11,11 +11,12 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.2.0",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/cloudflare": "^12.4.1",
+    "@astrojs/tailwind": "^6.0.2",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "astro": "^5.1.7",
     "date-fns": "^4.1.0",
+    "tailwind-variants": "^1.0.0",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
