@@ -4,8 +4,8 @@ import { Event } from './interfaces.ts';
 const {event} : {event?: Event} = Astro.props;
 ---
 {event ? (
-    <div class="absolute top-7 xl:top-7 bottom-1 left-3.5 p-1.5 xl:px-2.5 h-max rounded bg-purple-50 ">
+<div class="absolute top-7 xl:top-7 bottom-1 left-3.5 p-1.5 xl:px-2.5 h-max rounded event">
         <p class="xl:block text-xs font-medium text-purple-600 mb-px">{event.icon}</p>
-        <span class="hidden xl:block text-xs font-normal text-purple-600 whitespace-nowrap">{event.time}</span>
+        <span class="hidden xl:block text-xs font-normal time whitespace-nowrap">{event.time}</span>
     </div>
 ) : ''}
