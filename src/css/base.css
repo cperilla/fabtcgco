@@ -136,6 +136,7 @@ main {
 .nav ul li a:hover {
     color: var(--accent-color);
 }
+
 .calendar {
     color:var(--secondary-color);
 }

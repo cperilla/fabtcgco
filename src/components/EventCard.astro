@@ -1,15 +1,22 @@
 ---
-import { Event } from './interfaces.ts';
 
+import { Event, generateICS, getGoogleCalendarLink } from './interfaces.ts';
 const {event} : {event: Event} = Astro.props;
 ---
 
 <div class="flex items-center justify-between">
   <div class="flex items-center gap-3.5">
     <span class="m-2.5 w-2.5 h-2.5 rounded-full bullet"></span>
-    <p class="text-base font-medium"> <span class="eventTime">{event.date} a las {event.time}</span>
-        <span class="text-l leading-8 font-semibold text-black eventTitle">{event.icon}{event.title}</span>
-        <span class="text-b font-normal eventLocation">{event.location.spot} | {event.location.city}</span>
+    <p class="text-base font-medium">
+       <a class="no-underline text-xs" href={`data:text/calendar;charset=utf-8,${encodeURIComponent(generateICS(event))}`}
+          download={`${event.title}-${event.date}.ics`}>📥</a>
+          
+       <a class="no-underline text-xs" href={getGoogleCalendarLink(event)} target="_blank">
+         📅 
+       </a>
+       <span class="eventTime text-sm">{event.date} - {event.time} - </span>
+        <span class="text-xl leading-8 font-semibold text-black eventTitle">{event.icon} {event.title}</span>
+        <span class="text-sm font-normal eventLocation">{event.location.spot} | {event.location.city}</span>
     </p>
   </div>
 </div>
