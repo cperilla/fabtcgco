@@ -1,118 +1,170 @@
+
 :root {
-    --gray-color: #2d2b2b;
-    --red-color: #c34242;
-    --cream-color: #e1d6c6;
-    --white-color: #ffffff;
-    --brigth-transparent: rgba(255, 255, 255, 0.1);
+  --primary-color:        #170f06;
+  --primary-light:        #3a261a;
+  --primary-dark:         #0d0602;
+
+  --secondary-color:      #fa6113;
+  --secondary-light:      #ff8a3e;
+  --secondary-dark:       #c64400;
+
+  --accent-color:         #a62d07;
+  --accent-light:         #cc3b12;
+  --accent-dark:          #731f04;
+
+  --neutral-color:        #fff0b6;
+  --neutral-variant:      #fce69c;
+  --neutral-bg:           #f7f2d4;
+
+  --base-color:           #641c07;
+  --base-variant:         #7e2409;
+  --base-bg:              #3b0f03;
+
+  --text-color:           #fffefb;
+  --muted-color:          #cbbca3;
+  --border-color:         #402010;
+  --transparent-veil:     rgba(255, 240, 182, 0.1);
+
+  /* Light backgrounds */
+  --bg-light-1: #fff8e5;
+  --bg-light-2: #fdf0c8;
+  --bg-light-3: #fae7aa;
+  --bg-light-4: #f6da91;
+
+  /* Dark backgrounds */
+  --bg-dark-1: #4d1a0b;
+  --bg-dark-1-tr: rgba(77,26,15,0.3);
+  --bg-dark-2: #3d1407;
+  --bg-dark-3: #2d0f05;
+  --bg-dark-4: #1f0a03;
+  --bg-dark-4-tr: rgba(35,10,03,0.8);
 }
 
-main {
-    background-color: var(--gray-color);
+
+
+html[data-theme='highseas'] {
+  --primary-color:        #103f43;
+  --primary-light:        #31686c;
+  --primary-dark:         #0a2b2e;
+
+  --secondary-color:      #18676e;
+  --secondary-light:      #3c9096;
+  --secondary-dark:       #104a50;
+
+  --accent-color:         #2ca4a8;
+  --accent-light:         #4dc1c4;
+  --accent-dark:          #1f7e81;
+
+  --neutral-color:        #06282e;
+  --neutral-variant:      #123d44;
+  --neutral-bg:           #0f343a;
+
+  --base-color:           #1b373c;
+  --base-variant:         #30545a;
+  --base-bg:              #0e2024;
+
+  --text-color:           #ebf9fa;
+  --muted-color:          #a1c5c7;
+  --border-color:         #28484c;
+  --transparent-veil:     rgba(28, 55, 60, 0.1);
+
+  /* Light backgrounds */
+  --bg-light-1: #e3f6f7;
+  --bg-light-2: #c9e6e7;
+  --bg-light-3: #afd6d7;
+  --bg-light-4: #95c6c7;
+
+  /* Dark backgrounds */
+  --bg-dark-1: #133337;
+  --bg-dark-2: #0f2a2e;
+  --bg-dark-3: #0b2125;
+  --bg-dark-4: #06181c;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--cream-color);
-    color: var(--white-color);
+    font-family: Roboto, Arial, sans-serif;
+    background-color: var(--bg-dark-1);
+    
+    color:var(--secondary-color);
+    background-image:url('/images/hnt-bg.png');
     width: 100%;
 }
 
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 5px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.calendar .month .title, 
-.calendar .month .grid {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.calendar .month .grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-.calendar div {
-    padding: 5px;
-    background-color: rgba(68, 68, 68, 0.6);
-    border: 1px solid #333;
-}
-
-.calendar .header {
-    background-color: rgba(51, 51, 51, 0.6);
-    font-weight: bold;
-}
-
-.calendar .event {
-    background-color: rgba(158, 148, 175, 0.6);
-}
-
-.calendar .today {
-    border-color: rgba(108, 248, 75, 0.3);
-    border-width: 2px;
-}
-
-.calendar .current {
-    background-color: rgba(108, 248, 75, 0.3);
-}
-
-.calendar .done {
-    background-color: rgba(58, 48, 75, 0.6);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: rgba(51, 51, 51, 0.6);
-}
-
-td {
-    background-color: rgba(85, 85, 85, 0.6);
-}
-
-tr:nth-child(even) td {
-    background-color: rgba(68, 68, 68, 0.6);
-}
-
-tr.today td {
-    background-color: rgba(108, 248, 75, 0.3);
-}
-
-tr.next td {
-    background-color: rgba(208, 48, 75, 0.3);
+.welcome {
+   background-color: var(--bg-dark-4-tr);
 }
 
 .nav {
-    background-color: var(--gray-color);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    background-color: var(--brigth-transparent);
+    background-color: var(--transparent-veil);
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
 }
 
-.nav ul li a:hover {
-    color: var(--red-color);
+main {
+}
+.eventCard {
+
+   background-color: var(--transparent-veil);
+}
+.eventCard .bullet {
+    background-color: var(--secondary-light)
+}
+.eventCard .eventTime{
+    color: var(--secondary-color);
+   
+}
+.eventCard .eventTitle{
+    color: var(--accent-color);
+   
 }
 
+.eventCard .eventTitle{
+    color: var(--accent-color);
+   
+}
+.eventCard .eventLocation{
+    color: var(--secondary-dark);
+   
+}
+.nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.calendar {
+    color:var(--secondary-color);
+}
+.calendar .calendarHead{
+    background-color: var(--base-bg);
+    color: var(--secondary-light);
+}
+.calendar .calendarDay{
+    background-color: var(--neutral-bg);
+    color: var(--primary-color);
+}
+.calendar .bullet {
+    background-color: var(--accent-light);
+}
+.calendar .event {
+    background-color: var(--bg-dark-1);
+}
+.calendar .event .time {
+    color: var(--accent-light);
+}
+.logoText {
+    color: var(--secondary-light);
+    font-family: 'Winky Rough', sans-serif;
+    font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Winky Rough', Roboto, sans-serif;
+}
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

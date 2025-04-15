@@ -11,17 +11,18 @@ const monthName = formatMonthName(month, year);
 ---
 
 <section class="relative">
-  <div class="w-full py-5 relative z-10 backdrop-blur-3xl">
+  <div class="w-full py-5 relative z-10 backdrop-blur-2xl">
     <div class="w-full max-w-7xl mx-auto px-2 lg:px-8">
       <div class="grid grid-cols-12 gap-8 max-w-4xl mx-auto xl:max-w-full">
         <div class="col-span-12 xl:col-span-6">
-          <h2 class="font-manrope text-3xl leading-tight text-white-900 mb-1.5">Eventos de {monthName}</h2>
-          <p class="text-lg font-normal text-white-600 mb-8">No te los pierdas</p>
-          <div class="flex gap-5 flex-col md:max-h-96 md:overflow-y-auto">
+          <h2 class="font-manrope text-2xl leading-tight text-white-900 mb-1.5">Eventos de {monthName} <span class="text-sm text-rightfont-normal text-white-600 mb-8">No te los pierdas!</span>
+</h2>
+          <div class="flex gap-1 p-5 flex-col md:max-h-128 md:overflow-y-auto eventCard">
             {Object.values(eventsOfMonth).flat().map((event) => (
-              <EventCard event={event} />
+            <EventCard event={event} />
             ))}
           </div>
+          <div class="text-xs  text-right">📥 ical download, 📅 google calendar link</div>
         </div>
         <Calendar month={monthName} year={year} days={calendarDays} />
       </div>
@@ -31,16 +32,16 @@ const monthName = formatMonthName(month, year);
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    function getFormattedDate(dateIn) {
-        return dateIn.getFullYear() + '-' +
-                String(dateIn.getMonth() + 1).padStart(2, '0') + '-' + 
-                String(dateIn.getDate()).padStart(2, '0');
-    }
-    const today = getFormattedDate(new Date());
-    const todayElements = document.querySelectorAll(`[data-date="${today}"] > span`);
-    todayElements.forEach((el) => {
-      el.classList.remove("text-gray-400");
-      el.classList.add("text-xs", "font-semibold", "text-indigo-600", "sm:text-white", "sm:w-6", "sm:h-6", "rounded-full", "sm:flex", "items-center", "justify-center", "sm:bg-indigo-600");
-    });
+  function getFormattedDate(dateIn) {
+  return dateIn.getFullYear() + '-' +
+  String(dateIn.getMonth() + 1).padStart(2, '0') + '-' +
+  String(dateIn.getDate()).padStart(2, '0');
+  }
+  const today = getFormattedDate(new Date());
+  const todayElements = document.querySelectorAll(`[data-date="${today}"] > span`);
+  todayElements.forEach((el) => {
+  el.classList.remove("text-gray-400");
+  el.classList.add("text-xs", "font-semibold", "bullet", "sm:text-white", "sm:w-6", "sm:h-6", "rounded-full", "sm:flex", "items-center", "justify-center", "sm:bg-indigo-600");
+  });
   });
 </script>
