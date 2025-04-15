@@ -33,9 +33,11 @@
 
   /* Dark backgrounds */
   --bg-dark-1: #4d1a0b;
+  --bg-dark-1-tr: rgba(77,26,15,0.3);
   --bg-dark-2: #3d1407;
   --bg-dark-3: #2d0f05;
   --bg-dark-4: #1f0a03;
+  --bg-dark-4-tr: rgba(35,10,03,0.8);
 }
 
 
@@ -79,18 +81,19 @@ html[data-theme='highseas'] {
   --bg-dark-4: #06181c;
 }
 
-main {
-    background-color: var(--bg-light-1);
-}
-
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Roboto, Arial, sans-serif;
     background-color: var(--bg-dark-1);
-    color: var(--base-color);
+    
+    color:var(--secondary-color);
+    background-image:url('/images/hnt-bg.png');
     width: 100%;
 }
 
+.welcome {
+   background-color: var(--bg-dark-4-tr);
+}
 
 .nav {
     background-color: var(--primary-color);
@@ -103,7 +106,11 @@ body {
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
 }
+
+main {
+}
 .eventCard {
+
    background-color: var(--transparent-veil);
 }
 .eventCard .bullet {
@@ -123,14 +130,14 @@ body {
    
 }
 .eventCard .eventLocation{
-    color: var(--base-color);
+    color: var(--secondary-dark);
    
 }
 .nav ul li a:hover {
     color: var(--accent-color);
 }
 .calendar {
-    color:(--primary-light);
+    color:var(--secondary-color);
 }
 .calendar .calendarHead{
     background-color: var(--base-bg);
@@ -149,7 +156,14 @@ body {
 .calendar .event .time {
     color: var(--accent-light);
 }
-
+.logoText {
+    color: var(--secondary-light);
+    font-family: 'Winky Rough', sans-serif;
+    font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Winky Rough', Roboto, sans-serif;
+}
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

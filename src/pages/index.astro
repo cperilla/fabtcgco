@@ -1,5 +1,6 @@
 ---
 import Program from '../components/Program.astro';
+import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 import { loadEventsData } from '../utils/dataLoader';
@@ -12,6 +13,7 @@ const months = getMonths(eventsData);
 ---
 
 <Layout>
+    <Welcome />
     {months.map((month) => (
         <Program month={month} year={year} eventsData={eventsData} />
     ))}
