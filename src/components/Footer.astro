@@ -1,0 +1,23 @@
+<select id="themeSwitcher" class="text-sm">
+  <option value=":root">Default</option>
+  <option value="highseas">High Seas</option>
+  <option value="highseas-light">High Seas Light</option>
+  <option value="wtr">Welcome to Rathe</option>
+  <option value="hunted">Hunted</option>
+</select>
+
+<script>
+  const themeSwitcher = document.getElementById('themeSwitcher');
+
+  themeSwitcher.addEventListener('change', () => {
+  document.documentElement.setAttribute('data-theme', themeSwitcher.value);
+  localStorage.setItem('theme', themeSwitcher.value);
+  });
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeSwitcher.value = savedTheme;
+  }
+</script>

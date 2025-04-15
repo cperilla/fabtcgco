@@ -1,3 +1,53 @@
+html[data-theme='wtr'] {
+  --primary-color:        #611a05;  /* Warrior red / burning embers */
+  --primary-light:        #9b3211;
+  --primary-dark:         #410f02;
+
+  --secondary-color:      #3e3a39;  /* Steel and iron of armor */
+  --secondary-light:      #706a67;
+  --secondary-dark:       #2a2624;
+
+  --accent-color:         #ddad2e;  /* Heroic light and runes */
+  --accent-light:         #f6ce59;
+  --accent-dark:          #b98c13;
+
+  --neutral-color:        #f5e5d2;  /* Skin tones and light glows */
+  --neutral-variant:      #d4b89e;
+  --neutral-bg:           #f8f0e5;
+
+  --base-color:           #31160c;  /* Background shadows and leather */
+  --base-variant:         #4b2615;
+  --base-bg:              #1b0b05;
+
+  --text-color:           #f4f2f0;
+  --muted-color:          #a4968d;
+  --border-color:         #704e3b;
+  --transparent-veil:     rgba(101, 63, 41, 0.1);
+
+  /* Light backgrounds */
+  --bg-light-1: #f8f1e9;
+  --bg-light-2: #f2dfc9;
+  --bg-light-3: #e8c7a7;
+  --bg-light-4: #dfb083;
+
+  --bg-light-1-tr: rgba(248, 241, 233, 0.8);
+  --bg-light-2-tr: rgba(242, 223, 201, 0.8);
+  --bg-light-3-tr: rgba(232, 199, 167, 0.8);
+  --bg-light-4-tr: rgba(223, 176, 131, 0.8);
+
+  /* Dark backgrounds */
+  --bg-dark-1: #381f14;
+  --bg-dark-2: #2c170e;
+  --bg-dark-3: #211009;
+  --bg-dark-4: #170a05;
+
+  --bg-dark-1-tr: rgba(56, 31, 20, 0.8);
+  --bg-dark-2-tr: rgba(44, 23, 14, 0.8);
+  --bg-dark-3-tr: rgba(33, 16, 9, 0.8);
+  --bg-dark-4-tr: rgba(23, 10, 5, 0.8);
+
+  --bg-image: url('/images/wtr-bg.png');
+}    
 
 :root {
   --primary-color:        #170f06;
@@ -25,38 +75,45 @@
   --border-color:         #402010;
   --transparent-veil:     rgba(255, 240, 182, 0.1);
 
-  /* Light backgrounds */
   --bg-light-1: #fff8e5;
   --bg-light-2: #fdf0c8;
   --bg-light-3: #fae7aa;
   --bg-light-4: #f6da91;
 
-  /* Dark backgrounds */
+  --bg-light-1-tr: rgba(255, 248, 229, 0.8);
+  --bg-light-2-tr: rgba(253, 240, 200, 0.8);
+  --bg-light-3-tr: rgba(250, 231, 170, 0.8);
+  --bg-light-4-tr: rgba(246, 218, 145, 0.8);
+
   --bg-dark-1: #4d1a0b;
-  --bg-dark-1-tr: rgba(77,26,15,0.3);
   --bg-dark-2: #3d1407;
   --bg-dark-3: #2d0f05;
   --bg-dark-4: #1f0a03;
-  --bg-dark-4-tr: rgba(35,10,03,0.8);
-}
 
+  --bg-dark-1-tr: rgba(77, 26, 11, 0.8);
+  --bg-dark-2-tr: rgba(61, 20, 7, 0.8);
+  --bg-dark-3-tr: rgba(45, 15, 5, 0.8);
+  --bg-dark-4-tr: rgba(31, 10, 3, 0.8);
+
+  --bg-image: url('/images/hntd-bg.png');
+}
 
 
 html[data-theme='highseas'] {
   --primary-color:        #103f43;
-  --primary-light:        #31686c;
+  --primary-light:        #3c6c71;
   --primary-dark:         #0a2b2e;
 
-  --secondary-color:      #18676e;
-  --secondary-light:      #3c9096;
+  --secondary-color:      #1b6269;
+  --secondary-light:      #48a3aa;
   --secondary-dark:       #104a50;
 
   --accent-color:         #2ca4a8;
   --accent-light:         #4dc1c4;
   --accent-dark:          #1f7e81;
 
-  --neutral-color:        #06282e;
-  --neutral-variant:      #123d44;
+  --neutral-color:        #d1eef0;
+  --neutral-variant:      #9dd3d5;
   --neutral-bg:           #0f343a;
 
   --base-color:           #1b373c;
@@ -68,31 +125,92 @@ html[data-theme='highseas'] {
   --border-color:         #28484c;
   --transparent-veil:     rgba(28, 55, 60, 0.1);
 
-  /* Light backgrounds */
   --bg-light-1: #e3f6f7;
   --bg-light-2: #c9e6e7;
   --bg-light-3: #afd6d7;
   --bg-light-4: #95c6c7;
 
-  /* Dark backgrounds */
+  --bg-light-1-tr: rgba(227, 246, 247, 0.8);
+  --bg-light-2-tr: rgba(201, 230, 231, 0.8);
+  --bg-light-3-tr: rgba(175, 214, 215, 0.8);
+  --bg-light-4-tr: rgba(149, 198, 199, 0.8);
+
   --bg-dark-1: #133337;
   --bg-dark-2: #0f2a2e;
   --bg-dark-3: #0b2125;
   --bg-dark-4: #06181c;
+
+  --bg-dark-1-tr: rgba(19, 51, 55, 0.8);
+  --bg-dark-2-tr: rgba(15, 42, 46, 0.8);
+  --bg-dark-3-tr: rgba(11, 33, 37, 0.8);
+  --bg-dark-4-tr: rgba(6, 24, 28, 0.8);
+
+  --bg-image: url('/images/sead-bg.png');
 }
+
+
+html[data-theme='highseas-light'] {
+  --primary-color:        #d0a85f;
+  --primary-light:        #e2c88a;
+  --primary-dark:         #a07744;
+
+  --secondary-color:      #58a3a8;
+  --secondary-light:      #7dc7cb;
+  --secondary-dark:       #417f83;
+
+  --accent-color:         #d78b3b;
+  --accent-light:         #f6b86e;
+  --accent-dark:          #a86623;
+
+  --neutral-color:        #fcf3df;
+  --neutral-variant:      #f7e2b3;
+  --neutral-bg:           #fdf7ec;
+
+  --base-color:           #b47c4d;
+  --base-variant:         #d8a36f;
+  --base-bg:              #f4d7b6;
+
+  --text-color:           #2e2e2e;
+  --muted-color:          #846b55;
+  --border-color:         #c9a474;
+  --transparent-veil:     rgba(255, 243, 223, 0.1);
+
+  --bg-light-1: #fff8e8;
+  --bg-light-2: #fef1d5;
+  --bg-light-3: #f9e5b8;
+  --bg-light-4: #f1d495;
+
+  --bg-light-1-tr: rgba(255, 248, 232, 0.8);
+  --bg-light-2-tr: rgba(254, 241, 213, 0.8);
+  --bg-light-3-tr: rgba(249, 229, 184, 0.8);
+  --bg-light-4-tr: rgba(241, 212, 149, 0.8);
+
+  --bg-dark-1: #b0733d;
+  --bg-dark-2: #8a5a30;
+  --bg-dark-3: #644123;
+  --bg-dark-4: #422b17;
+
+  --bg-dark-1-tr: rgba(176, 115, 61, 0.8);
+  --bg-dark-2-tr: rgba(138, 90, 48, 0.8);
+  --bg-dark-3-tr: rgba(100, 65, 35, 0.8);
+  --bg-dark-4-tr: rgba(66, 43, 23, 0.8);
+
+  --bg-image: url('/images/seal-bg.png');
+}
+
 
 body {
     margin: 0;
     font-family: Roboto, Arial, sans-serif;
     background-color: var(--bg-dark-1);
     
-    color:var(--secondary-color);
-    background-image:url('/images/hnt-bg.png');
+    color:var(--text-color);
+    background-image: var(--bg-image);
     width: 100%;
 }
 
 .welcome {
-   background-color: var(--bg-dark-4-tr);
+    color:var(--text-color);
 }
 
 .nav {
@@ -110,21 +228,15 @@ body {
 main {
 }
 .eventCard {
-
-   background-color: var(--transparent-veil);
+   background-color: var(--bg-light-2-tr);
 }
 .eventCard .bullet {
     background-color: var(--secondary-light)
 }
 .eventCard .eventTime{
-    color: var(--secondary-color);
+    color: var(--base-color);
    
 }
-.eventCard .eventTitle{
-    color: var(--accent-color);
-   
-}
-
 .eventCard .eventTitle{
     color: var(--accent-color);
    
@@ -141,29 +253,46 @@ main {
     color:var(--secondary-color);
 }
 .calendar .calendarHead{
-    background-color: var(--base-bg);
+    background-color: var(--bg-dark-4-tr);
     color: var(--secondary-light);
 }
 .calendar .calendarDay{
-    background-color: var(--neutral-bg);
-    color: var(--primary-color);
+    background-color: var(--bg-light-4-tr);
+    color: var(--text-color);
 }
 .calendar .bullet {
     background-color: var(--accent-light);
 }
 .calendar .event {
-    background-color: var(--bg-dark-1);
+    background-color: var(--bg-dark-1-tr);
 }
 .calendar .event .time {
-    color: var(--accent-light);
+    color: var(--base-variant);
 }
 .logoText {
     color: var(--secondary-light);
     font-family: 'Winky Rough', sans-serif;
     font-weight: 600;
 }
+
+#themeSwitcher {
+  background-color: var(--bg-dark-2);
+  color: var(--text-color);
+  border: px solid var(--border-color);
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  float:right;
+  appearance: none;
+}
+
+#themeSwitcher:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Winky Rough', Roboto, sans-serif;
+    color: var(--text-color);
 }
 @media (max-width: 768px) {
     .header {
