@@ -1,27 +1,42 @@
 ---
 const title = "Más que un juego, una comunidad...";
 import banner from '../images/banner.jpeg';
-import { Image } from 'astro:assets'
+description: "Nuestra identidad, propósito y espíritu en Flesh and Blood Colombia"
 ---
 
+<section class="text-center py-16 px-4 max-w-4xl mx-auto backdrop-blur-md">
+  
+  <h4>Bienvenido a la comunidad de</h4>
+  <h1 class="text-4xl font-bold mb-6"> Flesh and Blood Colombia</h1>
+  <p class="text-lg mb-10 text-muted-foreground">
+    Esta comunidad no nació para ser cómoda. Nació para forjar guerreros. Aquí no valoramos lo fácil, valoramos el camino difícil: el que deja cicatrices, pero también enseñanzas. Jugamos para mejorar. Jugamos para crecer. Jugamos con sangre, sudor y honor.
+  </p>
 
-<section class="px-6 py-12 bg-base text-neutral flex">
-<div class="welcomeImg">
-<Image src={banner} alt="player banner"  class="w-full flex h-auto max-w-md max-h-md" />
-</div>
-  <div class="max-w-3xl mx-auto text-sm welcome backdrop-blur-xl p-5">
-    <h1 class="text-xl font-bold text-accent mb-6">{title}</h1>
+  <div class="space-y-12">
+    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_02.png" alt="Guerrero en Catedral Gótica" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
+      <p class="text-2xl italic text-muted-foreground">
+        Aunque esté solo. Aunque esté herido. Aunque nadie lo vea, el guerrero se levanta una vez más.
+      </p>
+    </div>
 
-    <p class="leading-relaxed">
-      <strong>Flesh and Blood Colombia</strong> es una comunidad construida en torno al juego cara a cara, con una identidad organizada, entusiasta y profundamente acogedora. Nos reunimos semanalmente para disfrutar de partidas en formatos Blitz y Classic Constructed, celebrar lanzamientos con eventos sellados y drafts, y compartir el juego más allá de la mesa. Aquí, cada jugador encuentra su espacio, desde quienes apenas están aprendiendo hasta quienes quieren competir a nivel profesional. Nuestros encuentros no solo se centran en competir, sino en fortalecer vínculos, crecer estratégicamente y disfrutar cada turno.
-    </p>
+    <div class="flex flex-col md:flex-row-reverse items-center gap-6 text-left">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_04.png" alt="Guerrero en batalla naval" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
+      <p class="text-2xl italic text-muted-foreground">
+        No importa que el barco se hunda. No importa que llueva fuego. Mientras respire, no he perdido.
+      </p>
+    </div>
 
-    <p class="mt-6">
-      A lo largo del tiempo, hemos consolidado un sistema estructurado que incluye torneos mensuales, temporadas con seguimiento de rendimiento, rankings, espacios de aprendizaje como <em>Learn to Play</em>, y un entorno que prioriza el respeto y la colaboración. Utilizamos herramientas como chats comunitarios, recursos compartidos y espacios físicos como tiendas locales para impulsar una experiencia integral. El ambiente es técnico y competitivo, pero también profundamente humano, donde el humor, la camaradería y la pasión por el juego están siempre presentes.
-    </p>
-
-    <p class="mt-6 italic text-muted-color">
-      Aunque la mayoría de nuestra comunidad se encuentra en <strong>Cali, Colombia</strong>, invitamos a todos los jugadores —nuevos o veteranos— que estén considerando unirse al mundo de <em>Flesh and Blood</em> a formar parte de este espacio. Te damos la bienvenida a la mesa: aquí cada carta cuenta una historia, y la tuya está por comenzar.
-    </p>
+    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_06.png" alt="Hechicero con símbolo en fuego" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
+      <p class="text-2xl italic text-muted-foreground">
+        Algunos forjan con acero. Otros con fuego. Nosotros con convicción.
+      </p>
+    </div>
   </div>
+
+  <p class="mt-16 text-lg text-muted-foreground">
+    Este es el estándar. Este es el espíritu. Y si estás aquí, es porque estás listo para escribir tu historia con nosotros. Con sangre. Con orgullo. Con comunidad.
+  </p>
 </section>
+

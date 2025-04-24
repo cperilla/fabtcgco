@@ -13,5 +13,8 @@ const months = getMonths(eventsData);
 ---
 
 <Layout>
-    <Welcome />
+<h1> Calendario de eventos</h1>
+    {months.map((month) => (
+        <Program month={month} year={year} eventsData={eventsData} />
+    ))}
 </Layout>
