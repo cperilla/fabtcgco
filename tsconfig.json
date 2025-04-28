@@ -5,6 +5,8 @@
     "dist"
 ],
 "compilerOptions": {
+    "strictNullChecks" : true,
+    "allowJs" : true,
     "types": [
         "@cloudflare/workers-types/2023-07-01"
     ]
