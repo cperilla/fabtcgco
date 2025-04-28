@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntryBySlug } from 'astro:content';
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug('posts', slug);
+if (!post) throw new Error(`Post not found: ${slug}`);
+const { Content } = await post.render();
+---
+
+<Layout>
+  <div class="backdrop-blur-md bg-black/40 p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
+    <article class="prose prose-invert">
+      <h1>{post.data.title}</h1>
+      <div class="flex justify-between text-gray-400 mb-4">
+        <p>{new Date(post.data.publishDate).toLocaleDateString()}</p>
+        {post.data.author && <p>by {post.data.author}</p>}
+      </div>
+      <Content /> <!-- Correct way to render the post -->
+    </article>
+  </div>
+</Layout>
