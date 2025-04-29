@@ -2,69 +2,75 @@
 const { fabLogo = "/images/FABLogo.png" } = Astro.props;
 
 const links = [
-    { href: "/calendar", icon: "", text: "Calendario" },
-    { href: "https://challonge.com/communities/fabco", icon: "", text: "Challonge" },
-    { href: "https://challonge.com/communities/fabco/rankings", icon: "", text: "Rankings" },
-    { href: "/blog", icon: "", text: "Blog" },
-    { href: "/mechanics", icon: "", text: "Mecanicas" },
-    { href: "/equipment_mechanics", icon: "", text: "Mecanicas de equipos" },
-    { href: "https://www.facebook.com/groups/23891653443812984", icon: "fa-brands fa-facebook-f", text: "" },
-    { href: "https://www.instagram.com/flesh_and_blood_colombia/", icon: "fa-brands fa-instagram", text: "" },
-    { href: "https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE", icon: "fa-brands fa-whatsapp", text: "" },
-    { href: "https://discord.gg/u783DZ9kGE", icon: "fa-brands fa-discord", text: "" }
+{ href: "/calendar", icon: "", text: "Calendario" },
+{ href: "https://challonge.com/communities/fabco", icon: "", text: "Challonge" },
+{ href: "https://challonge.com/communities/fabco/rankings", icon: "", text: "Rankings" },
+{ href: "/blog", icon: "", text: "Blog" },
+{ href: "/mechanics", icon: "", text: "Mecanicas" },
+{ href: "/equipment_mechanics", icon: "", text: "Mecanicas de equipos" },
+{ href: "https://www.facebook.com/groups/23891653443812984", icon: "fa-brands fa-facebook-f", text: "" },
+{ href: "https://www.instagram.com/flesh_and_blood_colombia/", icon: "fa-brands fa-instagram", text: "" },
+{ href: "https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE", icon: "fa-brands fa-whatsapp", text: "" },
+{ href: "https://discord.gg/u783DZ9kGE", icon: "fa-brands fa-discord", text: "" }
 ];
 ---
 
 <header class="header">
-    <nav class="nav">
-        <div class="mx-auto max-w-12xl px-2 sm:px-2 lg:px-8">
-            <div class="relative flex items-center justify-between nav-items-container">
-                <div class="absolute inset-y-0 left-4 flex items-center md:hidden">
-                    <button id="menu-toggle" class="text-white md:hidden">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex shrink-0 items-center lg:pl-20">
-                        <div class="logo">
-                            <a href="/">
-                                <img class="h-20 w-auto" src={fabLogo} alt="Logo Flesh and Blood" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            {links.map(link => (
-                                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                                    {link.icon ? <i class={link.icon}></i> : link.text}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <nav class="nav">
+    <div class="mx-auto max-w-12xl px-2 sm:px-2 lg:px-8">
+      <div class="relative flex items-center justify-between nav-items-container">
+        <div class="absolute inset-y-0 left-4 flex items-center md:hidden">
+          <button id="menu-toggle" class="text-white md:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <!-- Mobile menu -->
-        <div class="sm:hidden hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pb-3 pt-2">
-                {links.map(link => (
-                    <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" target="_blank" rel="noopener noreferrer">
-                        {link.icon ? <i class={link.icon}></i> : link.text}
-                    </a>
-                ))}
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center lg:pl-20">
+            <div class="logo">
+              <a href="/">
+                <img class="h-20 w-auto" src={fabLogo} alt="Logo Flesh and Blood" />
+              </a>
             </div>
+          </div>
         </div>
-    </nav>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              {links.map(link => {
+              const isExternal = /^https?:\/\//.test(link.href);
+              return (
+              <a
+                href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                >
+                {link.icon ? <i class={link.icon}></i> : link.text}
+              </a>
+              );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        {links.map(link => (
+        <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" target="_blank" rel="noopener noreferrer">
+          {link.icon ? <i class={link.icon}></i> : link.text}
+        </a>
+        ))}
+      </div>
+    </div>
+  </nav>
 </header>
 
 <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+  menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  });
 </script>
-

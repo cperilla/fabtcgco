@@ -1,12 +1,12 @@
 ---
 title: "Reflexión sobre Project Blue"
-date: 2025-04-29
+publishDate: 2025-04-29
 description: "Una conversación abierta en la comunidad sobre el formato Project Blue de LSS, la experiencia de juego en Blitz y el compromiso por construir espacios más justos y completos."
 author: "Aldturi with the help of lots of IA"
 tags: [flesh-and-blood, comunidad, project-blue, formatos, diseño]
 ---
 
-Hoy la comunidad tuvo una discusión sobre el Project Blue, un nuevo experimento de formato que está explorando LSS. Para quienes no lo conocen, Project Blue propone un entorno construido desde cero para héroes jóvenes. Se juega con 55 cartas en el inventario total, 20 vidas, y un mazo de 40 cartas donde se permite un máximo de dos copias por carta única. Además, hay una lista de cartas prohibidas y restringidas disponible en este enlace: https://fabrary.net/decks/01JSQXSCR1N3QQ9T4VCG1H8393. Este formato se lanzará con un evento inaugural especial que contará con premiaciones atractivas: una carta Gold Foil de alta demanda en el mercado secundario, versiones promocionales exclusivas de Sink Below con nuevo arte, tapetes temáticos y cajas de sobres de la próxima expansión High Seas.
+Hoy la comunidad tuvo una discusión sobre el Project Blue, un nuevo experimento de formato que está explorando LSS. Para quienes no lo conocen, Project Blue propone un entorno construido desde cero para héroes jóvenes. Se juega con 55 cartas en el inventario total, 20 vidas, y un mazo de 40 cartas donde se permite un máximo de dos copias por carta única. Además, [hay una lista de cartas prohibidas y restringidas ya disponible](https://fabrary.net/decks/01JSQXSCR1N3QQ9T4VCG1H8393). Este formato se lanzará con un evento inaugural especial que contará con premiaciones atractivas: una carta Gold Foil de alta demanda en el mercado secundario, versiones promocionales exclusivas de Sink Below con nuevo arte, tapetes temáticos y cajas de sobres de la próxima expansión High Seas.
 
 La conversación de hoy no fue superficial ni pasajera. Volvimos a tener una de esas discusiones que valen la pena conservar, de las que no se agotan en un par de mensajes. Un tema complejo, pero necesario: ¿qué está pasando realmente con Blitz y qué lugar puede tener Project Blue en nuestra comunidad?
 
