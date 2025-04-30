@@ -1,0 +1,25 @@
+---
+title: "Reflexión sobre Project Blue"
+publishDate: 2025-04-29
+description: "Una conversación abierta en la comunidad sobre el formato Project Blue de LSS, la experiencia de juego en Blitz y el compromiso por construir espacios más justos y completos."
+author: "Aldturi with the help of lots of IA"
+tags: [flesh-and-blood, comunidad, project-blue, formatos, diseño]
+---
+
+Hoy la comunidad tuvo una discusión sobre el Project Blue, un nuevo experimento de formato que está explorando LSS. Para quienes no lo conocen, Project Blue propone un entorno construido desde cero para héroes jóvenes. Se juega con 55 cartas en el inventario total, 20 vidas, y un mazo de 40 cartas donde se permite un máximo de dos copias por carta única. Además, [hay una lista de cartas prohibidas y restringidas ya disponible](https://fabrary.net/decks/01JSQXSCR1N3QQ9T4VCG1H8393). Este formato se lanzará con un evento inaugural especial que contará con premiaciones atractivas: una carta Gold Foil de alta demanda en el mercado secundario, versiones promocionales exclusivas de Sink Below con nuevo arte, tapetes temáticos y cajas de sobres de la próxima expansión High Seas.
+
+La conversación de hoy no fue superficial ni pasajera. Volvimos a tener una de esas discusiones que valen la pena conservar, de las que no se agotan en un par de mensajes. Un tema complejo, pero necesario: ¿qué está pasando realmente con Blitz y qué lugar puede tener Project Blue en nuestra comunidad?
+
+La discusión empezó, como muchas veces, desde una incomodidad. No fue una queja ruidosa, sino más bien una de esas observaciones que incomodan precisamente porque son ciertas. Blitz, aunque pensado como formato introductorio, no logra ofrecer una experiencia que se sienta completa. El castigo por errores es inmediato, las partidas son fugaces, y la sensación que queda para muchos es que uno juega más contra el reloj que contra el oponente.
+
+Pero lo valioso no estuvo solo en la crítica, sino en cómo surgieron las ideas. Hubo quienes defendieron el rol de Blitz como un primer paso pedagógico. No se trata, decían, de que represente la experiencia completa de Flesh and Blood, sino de que enseñe lo esencial: cómo se juegan las cartas, cómo se manejan las fases, cómo se entiende la base del sistema. Y eso, para muchos jugadores nuevos, es suficiente para un primer contacto. El problema aparece cuando esa experiencia inicial no conecta con un deseo de continuar. Cuando Blitz se siente como un "demo" que cuesta lo mismo que el juego completo, es lógico que el jugador nuevo se salte esa etapa o la juegue una vez y nunca más.
+
+De ahí nace el interés por Project Blue. No como una solución final, sino como un experimento interesante: ¿qué pasaría si diseñamos un formato desde cero para que funcione con 20 vidas? No reduciendo el juego completo, sino construyendo una experiencia distinta con intención propia. A muchos nos pareció valioso que LSS, por fin, esté escuchando eso. No es solo el tema del precio, aunque inevitablemente se cuela en la conversación. Es que por primera vez se plantea que quizás el problema de Blitz no está en la comunidad, sino en su diseño.
+
+Lo más bonito de la conversación fue la disposición al matiz. Nadie defendía una postura a capa y espada. Más bien, se construía sobre lo que el otro decía. Hubo quien reconoció que aunque le gusta Blitz, no puede negar que está mal balanceado. Otro compartió que con su equipo caro de Runeblade pudo armar un deck top meta de Blitz por solo nueve dólares, pero incluso eso no fue un argumento definitivo. Se trataba más de entender qué tipo de experiencia quiere la comunidad, y si existe un formato que pueda realmente capturar lo que hace único a Flesh and Blood sin exigir una inversión prohibitiva o una curva de entrada abrupta.
+
+No es la primera vez que tenemos este tipo de conversación en la comunidad, y eso dice mucho. Hay un compromiso genuino por pensar el juego, por cuidar la experiencia de quienes se acercan por primera vez y de quienes ya llevan un buen tiempo dentro. No estamos aquí solo para jugar torneos. Estamos para entender por qué jugamos, cómo queremos jugar, y qué espacios tenemos que construir para que valga la pena quedarse.
+
+Project Blue tal vez no sea la respuesta definitiva, pero nos permitió abrir preguntas necesarias. Y eso, en una comunidad como la nuestra, ya es una victoria.
+
+Quiero agradecer a todos los que participaron en esta conversación. Cada contribución, desde quienes analizaron la experiencia de juego con detalle, pasando por quienes defendieron el valor pedagógico de Blitz, hasta quienes compartieron sus reflexiones desde la experiencia práctica, sumó riqueza al intercambio. Hay quienes buscan entender a fondo antes de opinar, quienes prueban en carne propia antes de juzgar, y quienes empujan la conversación con preguntas incómodas pero necesarias. Tener este equilibrio de perspectivas es lo que le da vida a nuestra comunidad, y es una de las razones por las que vale la pena seguir construyéndola juntos.

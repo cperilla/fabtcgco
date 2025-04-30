@@ -9,8 +9,10 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <div class="backdrop-blur-md bg-black/40 p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
-    <article class="prose prose-invert">
+        
+    <article class="prose prose-invert text-xl p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
+
+    <a href="/blog/">Regresar a los articulos</a>
       <h1>{post.data.title}</h1>
       <div class="flex justify-between text-gray-400 mb-4">
         <p>{new Date(post.data.publishDate).toLocaleDateString()}</p>
@@ -18,5 +20,5 @@ const { Content } = await post.render();
       </div>
       <Content /> <!-- Correct way to render the post -->
     </article>
-  </div>
+
 </Layout>
