@@ -312,11 +312,10 @@ article img {
 }
 
 article img:hover {
-    
     transform: scale(1.8);
 }
 article p {
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 1rem;
     line-height: 1.6;
 }
@@ -325,11 +324,16 @@ article p a {
     text-decoration: underline;
 }
 article table {
+    margin-left: auto;
+    margin-right:auto;
     background-color: var(--bg-dark-4-tr);
     color: var(--text-color);
 }
 article th {
     background-color: var(--bg-dark-3);
+    padding:2px;
+    padding-left:5px;
+    padding-right:10px;                 
 }
 article td {
     text-align: right;
@@ -344,6 +348,22 @@ article td {
   float:right;
   appearance: none;
 }
+article li {
+    list-style-type: circle;
+    padding:0.5em;
+    margin-left:2em;
+    
+}
+blockquote {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 2rem 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent-dark);
+  line-height: 1.6;
+}
+
 
 #themeSwitcher:focus {
   outline: none;
