@@ -10,8 +10,6 @@ pages_build_output_dir = "./dist"
 # Docs: https://developers.cloudflare.com/pages/functions/smart-placement/#smart-placement
 # [placement]
 # mode = "smart"
-[build]
-command = "yarn install && yarn build"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Docs:
