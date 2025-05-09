@@ -297,17 +297,17 @@ article h2,
 article h3,
 article h4 {
     color: var(--accent-color);
-    margin-top:100px;
-    margin-bottom:20px;
-    font-size:180%;
+    margin-top:1lh;
+    margin-bottom:1lh;
+    font-size:120%;
 }
 article img {
     max-width:50%;
     text-align:center;
     margin-left:auto;
     margin-right:auto;
-    margin-top:20px;
-    margin-bottom:50px;
+    margin-top:1lh;
+    margin-bottom:3lh;
     transition: transform 0.2s ease;
 }
 
@@ -315,8 +315,7 @@ article img:hover {
     transform: scale(1.8);
 }
 article p {
-    margin-top: 20px;
-    padding: 1rem;
+    padding: 1lh;
     line-height: 1.6;
 }
 article p a {
@@ -343,7 +342,7 @@ article td {
   background-color: var(--bg-dark-2);
   color: var(--text-color);
   border: px solid var(--border-color);
-  padding: 0.2rem 0.5rem;
+  padding: 1lh;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   float:right;
   appearance: none;
@@ -355,11 +354,10 @@ article li {
     
 }
 blockquote {
-  font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
-  margin: 2rem 1rem;
-  padding-left: 1rem;
+  margin: 1lh;
+  padding-left: 1lh;
   border-left: 4px solid var(--accent-dark);
   line-height: 1.6;
 }

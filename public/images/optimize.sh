@@ -2,7 +2,7 @@
 
 mkdir -p optimized
 
-for file in *.png; do
+for file in "$@"; do
   magick "$file" \
     -resize '300x300>' \
     -strip \
