@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 import { loadEventsData } from '../utils/dataLoader';
 import { getMonths } from '../utils/calendarUtils';
 
-const jsonPath = './src/data/Eventos_Comunidad_Q2_2025_final.json';
+const jsonPath = './src/data/Eventos_Comunidad_Q3_2025.json';
 const eventsData = await loadEventsData(jsonPath);
 const year = "2025";
 const months = getMonths(eventsData);
