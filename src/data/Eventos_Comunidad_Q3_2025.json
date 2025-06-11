@@ -2,12 +2,12 @@
   {
     "Date": "2025-06-12",
     "Day": "Jueves",
-    "Event": "Classic Constructed",
-    "Time": "5 PM",
+    "Event": "Living Legend",
+    "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-06-14",
@@ -21,7 +21,7 @@
   },
   {
     "Date": "2025-06-19",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -32,16 +32,16 @@
   {
     "Date": "2025-06-21",
     "Day": "Sábado",
-    "Event": "Living Legend",
-    "Time": "3 PM",
+    "Event": "Classic Constructed",
+    "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-06-26",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -52,16 +52,16 @@
   {
     "Date": "2025-06-28",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-07-03",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -72,16 +72,16 @@
   {
     "Date": "2025-07-05",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-07-10",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -92,16 +92,16 @@
   {
     "Date": "2025-07-12",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-07-17",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -112,16 +112,16 @@
   {
     "Date": "2025-07-19",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-07-24",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -132,16 +132,16 @@
   {
     "Date": "2025-07-26",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-07-31",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -152,16 +152,16 @@
   {
     "Date": "2025-08-02",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-08-07",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -172,16 +172,16 @@
   {
     "Date": "2025-08-09",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-08-14",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -192,16 +192,16 @@
   {
     "Date": "2025-08-16",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-08-21",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -212,16 +212,16 @@
   {
     "Date": "2025-08-23",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-08-28",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -232,16 +232,16 @@
   {
     "Date": "2025-08-30",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-09-04",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -252,16 +252,16 @@
   {
     "Date": "2025-09-06",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
+    "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
+    "Emoji": "🏆",
+    "EventType": "LivingLegend"
   },
   {
     "Date": "2025-09-11",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Blitz",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -272,16 +272,16 @@
   {
     "Date": "2025-09-13",
     "Day": "Sábado",
-    "Event": "Living Legend",
+    "Event": "Classic Constructed",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🏆",
-    "EventType": "LivingLegend"
+    "Emoji": "🏗️",
+    "EventType": "CC"
   },
   {
     "Date": "2025-09-18",
-    "Day": "Thursday",
+    "Day": "Jueves",
     "Event": "Project Blue",
     "Time": "5 PM",
     "Location": "🌪️ Chaos Store",
@@ -292,21 +292,31 @@
   {
     "Date": "2025-09-20",
     "Day": "Sábado",
-    "Event": "Classic Constructed",
-    "Time": "3 PM",
-    "Location": "🌪️ Chaos Store",
-    "Ciudad": "Cali",
-    "Emoji": "🏗️",
-    "EventType": "CC"
-  },
-  {
-    "Date": "2025-09-27",
-    "Day": "Sábado",
     "Event": "Living Legend",
     "Time": "3 PM",
     "Location": "🌪️ Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏆",
     "EventType": "LivingLegend"
+  },
+  {
+    "Date": "2025-09-25",
+    "Day": "Jueves",
+    "Event": "Project Blue",
+    "Time": "5 PM",
+    "Location": "🌪️ Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "ProjectBlue"
+  },
+  {
+    "Date": "2025-09-27",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "🌪️ Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
   }
 ]
