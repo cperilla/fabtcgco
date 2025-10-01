@@ -1,4 +1,4 @@
-<select id="themeSwitcher" class="text-sm">
+<select id="themeSwitcher" class="text-sm invisible">
   <option value=":root">Default</option>
   <option value="highseas">High Seas</option>
   <option value="highseas-light">High Seas Light</option>
@@ -15,7 +15,7 @@
   });
 
   // Load saved theme
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = false;// localStorage.getItem('theme');
   if (savedTheme) {
   document.documentElement.setAttribute('data-theme', savedTheme);
   themeSwitcher.value = savedTheme;

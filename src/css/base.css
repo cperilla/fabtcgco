@@ -1,6 +1,6 @@
 html[data-theme='wtr'] {
   --primary-color:        #611a05;  /* Warrior red / burning embers */
-  --primary-light:        #9b3211;
+  --primary-light:        #Ab4221;
   --primary-dark:         #410f02;
 
   --secondary-color:      #3e3a39;  /* Steel and iron of armor */
@@ -67,7 +67,7 @@ html[data-theme='wtr'] {
   --neutral-bg:           #f7f2d4;
 
   --base-color:           #641c07;
-  --base-variant:         #7e2409;
+  --base-variant:         #9e4429;
   --base-bg:              #3b0f03;
 
   --text-color:           #fffefb;
@@ -81,16 +81,16 @@ html[data-theme='wtr'] {
   --bg-light-4: #f6da91;
 
   --bg-light-1-tr: rgba(255, 248, 229, 0.8);
-  --bg-light-2-tr: rgba(253, 240, 200, 0.8);
+  --bg-light-2-tr: rgba(253, 250, 240, 0.9);
   --bg-light-3-tr: rgba(250, 231, 170, 0.8);
-  --bg-light-4-tr: rgba(246, 218, 145, 0.8);
+  --bg-light-4-tr: rgba(0, 0, 0, 0.1);
 
   --bg-dark-1: #4d1a0b;
   --bg-dark-2: #3d1407;
   --bg-dark-3: #2d0f05;
   --bg-dark-4: #1f0a03;
 
-  --bg-dark-1-tr: rgba(77, 26, 11, 0.8);
+  --bg-dark-1-tr: rgba(57, 06, 01, 0.8);
   --bg-dark-2-tr: rgba(61, 20, 7, 0.8);
   --bg-dark-3-tr: rgba(45, 15, 5, 0.8);
   --bg-dark-4-tr: rgba(31, 10, 3, 0.8);
