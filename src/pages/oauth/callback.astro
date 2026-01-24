@@ -1,0 +1,120 @@
+---
+// OAuth callback page - displays authorization code for manual copy
+// This page receives the ?code= parameter from Challonge OAuth
+---
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth Callback - FABCO</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: #16213e;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      color: #e94560;
+      margin-bottom: 1rem;
+    }
+    .code-box {
+      background: #0f0f23;
+      border: 2px solid #e94560;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      word-break: break-all;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    .success { color: #4ade80; }
+    .error { color: #f87171; }
+    .instructions {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    button {
+      background: #e94560;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #d63850;
+    }
+    .copied {
+      background: #4ade80 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>FABCO - Challonge OAuth</h1>
+    <div id="content">
+      <p>Procesando...</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const error = params.get('error');
+    const errorDesc = params.get('error_description');
+    const content = document.getElementById('content');
+
+    if (code) {
+      content.innerHTML = `
+        <p class="success">Autorizacion exitosa!</p>
+        <p>Copia este codigo y pegalo en la terminal:</p>
+        <div class="code-box" id="codeBox">${code}</div>
+        <button id="copyBtn" onclick="copyCode()">Copiar codigo</button>
+        <p class="instructions">Puedes cerrar esta ventana despues de copiar el codigo.</p>
+      `;
+    } else if (error) {
+      content.innerHTML = `
+        <p class="error">Error de autorizacion</p>
+        <p>Error: ${error}</p>
+        ${errorDesc ? `<p>${errorDesc}</p>` : ''}
+        <p class="instructions">Intenta de nuevo o verifica la configuracion OAuth.</p>
+      `;
+    } else {
+      content.innerHTML = `
+        <p class="error">No se recibio codigo de autorizacion</p>
+        <p class="instructions">Esta pagina debe ser accedida desde el flujo OAuth de Challonge.</p>
+      `;
+    }
+
+    function copyCode() {
+      const code = document.getElementById('codeBox').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = 'Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copiar codigo';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
