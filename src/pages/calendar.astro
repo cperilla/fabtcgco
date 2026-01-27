@@ -8,10 +8,7 @@ import { formatMonthName } from '../utils/calendarUtils';
 const eventsData = loadEventsData();
 const year = new Date(eventsData[0].Date).getFullYear().toString();
 
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-
-// Transform and sort all events
+// Transform and sort all events (no date filtering - done client-side)
 const allEvents = eventsData
     .map(e => ({
         icon: e.Emoji,
@@ -25,27 +22,13 @@ const allEvents = eventsData
     }))
     .sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
 
-// Split into past and future events
-const pastEvents = allEvents.filter(e => e.dateObj < today);
-const futureEvents = allEvents.filter(e => e.dateObj >= today);
-
-// Only keep last 3 past events
-const recentPastEvents = pastEvents.slice(-3);
-
-// Combine: last 3 past + all future
-const displayEvents = [...recentPastEvents, ...futureEvents];
-
-// Find the next event (first future event)
-const nextEvent = futureEvents[0];
-const nextEventKey = nextEvent ? nextEvent.key : null;
-
 // Group events by month for display
-const eventsByMonth = displayEvents.reduce((acc, event) => {
+const eventsByMonth = allEvents.reduce((acc, event) => {
     const month = event.dateObj.getMonth() + 1;
     if (!acc[month]) acc[month] = [];
     acc[month].push(event);
     return acc;
-}, {} as Record<number, typeof displayEvents>);
+}, {} as Record<number, typeof allEvents>);
 
 const months = Object.keys(eventsByMonth).map(Number).sort((a, b) => a - b);
 
@@ -65,18 +48,16 @@ let globalIndex = 0;
         </div>
         <p class="subtitle">Próximos eventos de la comunidad</p>
     </div>
-    <div class="events-container">
+    <div class="events-container" id="events-container">
         {months.map((month) => {
             const events = eventsByMonth[month];
             const monthName = formatMonthName(month, year);
             return (
-                <section>
+                <section data-month={month}>
                     <h2 class="calendar-month-header">{monthName} {year}</h2>
                     {events.map((event) => {
                         const idx = globalIndex++;
-                        const isPast = event.dateObj < today;
-                        const isNext = event.key === nextEventKey;
-                        return <EventTicket event={event} index={idx} isPast={isPast} isNext={isNext} />;
+                        return <EventTicket event={event} index={idx} />;
                     })}
                 </section>
             );
@@ -84,3 +65,84 @@ let globalIndex = 0;
     </div>
 </div>
 </Layout>
+
+<script>
+  function updateCalendarStates() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const tickets = document.querySelectorAll('.event-ticket');
+    const ticketData: { element: HTMLElement; date: Date; key: string }[] = [];
+
+    // Collect all ticket data
+    tickets.forEach(ticket => {
+      const dateStr = ticket.getAttribute('data-event-date');
+      const key = ticket.getAttribute('data-event-key');
+      if (dateStr && key) {
+        ticketData.push({
+          element: ticket as HTMLElement,
+          date: new Date(dateStr + 'T00:00:00'),
+          key
+        });
+      }
+    });
+
+    // Sort by date
+    ticketData.sort((a, b) => a.date.getTime() - b.date.getTime());
+
+    // Split into past and future
+    const pastTickets = ticketData.filter(t => t.date < today);
+    const futureTickets = ticketData.filter(t => t.date >= today);
+
+    // Find the next event (first future event)
+    const nextEventKey = futureTickets.length > 0 ? futureTickets[0].key : null;
+
+    // Get the last 3 past events to show
+    const recentPastKeys = new Set(pastTickets.slice(-3).map(t => t.key));
+
+    // Apply classes and visibility
+    ticketData.forEach(t => {
+      const isPast = t.date < today;
+      const isNext = t.key === nextEventKey;
+
+      // Remove any existing state classes
+      t.element.classList.remove('event-ticket--past', 'event-ticket--next', 'event-ticket--hidden');
+
+      // Remove existing next-badge if any
+      const existingBadge = t.element.querySelector('.next-badge');
+      if (existingBadge) existingBadge.remove();
+
+      if (isPast) {
+        if (recentPastKeys.has(t.key)) {
+          t.element.classList.add('event-ticket--past');
+        } else {
+          t.element.classList.add('event-ticket--hidden');
+        }
+      } else if (isNext) {
+        t.element.classList.add('event-ticket--next');
+        // Add next badge
+        const badge = document.createElement('span');
+        badge.className = 'next-badge';
+        badge.textContent = 'Próximo';
+        t.element.insertBefore(badge, t.element.firstChild);
+      }
+    });
+
+    // Hide empty month sections
+    document.querySelectorAll('[data-month]').forEach(section => {
+      const visibleTickets = section.querySelectorAll('.event-ticket:not(.event-ticket--hidden)');
+      if (visibleTickets.length === 0) {
+        (section as HTMLElement).style.display = 'none';
+      } else {
+        (section as HTMLElement).style.display = '';
+      }
+    });
+  }
+
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', updateCalendarStates);
+  // Also run immediately in case DOMContentLoaded already fired
+  if (document.readyState !== 'loading') {
+    updateCalendarStates();
+  }
+</script>

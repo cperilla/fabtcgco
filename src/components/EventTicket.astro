@@ -7,11 +7,9 @@ import { generateICS, getGoogleCalendarLink } from './interfaces';
 interface Props {
   event: Event;
   index: number;
-  isPast?: boolean;
-  isNext?: boolean;
 }
 
-const { event, index, isPast = false, isNext = false } = Astro.props;
+const { event, index } = Astro.props;
 
 const eventDate = new Date(event.date);
 const dayNumber = format(eventDate, 'd');
@@ -24,11 +22,14 @@ const googleCalUrl = getGoogleCalendarLink(event);
 const isEven = index % 2 === 0;
 const layoutClass = isEven ? 'event-ticket--left' : 'event-ticket--right';
 const typeClass = `event-type-${(event.type || 'default').toLowerCase()}`;
-const stateClass = isNext ? 'event-ticket--next' : isPast ? 'event-ticket--past' : '';
+const eventKey = `${event.date}-${event.title}-${event.time}`;
 ---
 
-<article class={`event-ticket ${layoutClass} ${typeClass} ${stateClass}`}>
-  {isNext && <span class="next-badge">Próximo</span>}
+<article
+  class={`event-ticket ${layoutClass} ${typeClass}`}
+  data-event-date={event.date}
+  data-event-key={eventKey}
+>
   <div class="event-ticket-date">
     <span class="day">{dayNumber}</span>
     <span class="month">{monthAbbr}</span>
