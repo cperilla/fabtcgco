@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const secciones = [
+  {
+    titulo: "1. Respeto y trato entre jugadores",
+    contenido: `Se espera que todos los jugadores mantengan un trato respetuoso, directo y sin hostilidad.
+No se permiten agresiones verbales, burlas reiteradas ni provocaciones personales.
+El lenguaje puede ser expresivo, pero nunca debe degradar ni excluir a otros jugadores.`
+  },
+  {
+    titulo: "2. Juego competitivo y limpio",
+    contenido: `Jugar fuerte está bien. Hacer trampa, no.
+Todos los jugadores deben conocer y seguir las reglas oficiales del juego y del torneo.
+No se toleran trampas, acuerdos ilegales, colusión ni manipulación de resultados.`
+  },
+  {
+    titulo: "3. Comportamiento durante la partida",
+    contenido: `Queremos jugadores intensos, no destructivos.
+Está prohibido romper cartas, lanzar objetos, golpear mobiliario o generar ambientes agresivos, incluso si la frustración va dirigida a uno mismo.
+Actitudes de este tipo pueden llevar a intervención inmediata.`
+  },
+  {
+    titulo: "4. Participación en comunidad",
+    contenido: `Ser parte de FAB Colombia implica construir, no dividir.
+La crítica es bienvenida, el desprecio o el sabotaje no.
+Quien insista en dañar la comunidad o crear conflicto sistemático perderá el derecho a participar en espacios organizados.`
+  },
+  {
+    titulo: "5. Autoridad del evento",
+    contenido: `Durante cualquier torneo o evento organizado, las decisiones del organizador y de los jueces se respetan.
+El desacuerdo no justifica la desobediencia.
+Si hay espacio para apelar una decisión, se hace por los canales que existen, sin escalar el conflicto.`
+  }
+];
+
+const referencias = [
+  { nombre: "Tournament Rules and Policy", url: "https://fabtcg.com/resources/tournament-rules-and-policy/" },
+  { nombre: "Penalty Guidelines", url: "https://fabtcg.com/resources/penalty-guidelines/" },
+  { nombre: "Comprehensive Rules", url: "https://fabtcg.com/resources/rules/" }
+];
+---
+
+<Layout>
+<div class="mechanics-page">
+    <div class="mechanics-header">
+        <h1>Código de Conducta</h1>
+        <div class="stars">
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+        </div>
+        <p class="subtitle">FAB Colombia</p>
+    </div>
+
+    <div class="mechanics-container">
+        <div class="conduct-intro">
+            <p>FAB Colombia existe para fomentar el juego organizado de Flesh and Blood en el país, elevar el nivel competitivo y construir una comunidad respetuosa, sólida y duradera. En nuestros espacios de juego esperamos competencia fuerte, trato claro y cero tolerancia a actitudes que dañen el ambiente colectivo.</p>
+        </div>
+
+        {secciones.map((seccion) => (
+            <article class="mechanic-ticket mechanic-green">
+                <div class="mechanic-ticket-name">
+                    <span class="name">{seccion.titulo}</span>
+                </div>
+                <div class="mechanic-ticket-content">
+                    <p class="description" set:html={seccion.contenido.replace(/\n/g, '<br>')} />
+                </div>
+            </article>
+        ))}
+
+        <div class="conduct-footer">
+            <p>Este código aplica en todos los espacios presenciales y virtuales organizados bajo el nombre de FAB Colombia. No buscamos corregir personas, sino proteger la posibilidad de jugar más, jugar mejor y hacerlo juntos.</p>
+        </div>
+
+        <div class="conduct-references">
+            <h3>Referencias oficiales Flesh and Blood</h3>
+            <p>Este código complementa y respeta los lineamientos globales de Flesh and Blood. Aplican en todos los eventos de FAB Colombia:</p>
+            <ul>
+                {referencias.map((ref) => (
+                    <li><a href={ref.url} target="_blank" rel="noopener noreferrer">{ref.nombre}</a></li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .conduct-intro {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .conduct-intro p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    .conduct-footer {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        border-left: 4px solid var(--secondary-color);
+    }
+
+    .conduct-footer p {
+        margin: 0;
+        color: var(--muted-color);
+        line-height: 1.6;
+        font-style: italic;
+    }
+
+    .conduct-references {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .conduct-references h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .conduct-references p {
+        color: var(--muted-color);
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .conduct-references ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .conduct-references li {
+        margin-bottom: 0.5rem;
+    }
+
+    .conduct-references a {
+        color: var(--accent-light);
+        text-decoration: none;
+    }
+
+    .conduct-references a:hover {
+        text-decoration: underline;
+    }
+</style>
