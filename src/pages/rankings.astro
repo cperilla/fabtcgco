@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import rankingsData from '../data/rankings.json';
+---
+
+<Layout>
+  <div class="rankings-page">
+    <div class="rankings-header">
+      <h1>Rankings</h1>
+      <div class="stars">
+        <span style="color: #91160d;">★</span>
+        <span style="color: #765d2f;">★</span>
+        <span style="color: #91160d;">★</span>
+        <span style="color: #765d2f;">★</span>
+        <span style="color: #91160d;">★</span>
+      </div>
+      <p class="subtitle">Rankings activos de la comunidad</p>
+    </div>
+
+    <div class="rankings-container">
+      <section class="rankings-section rankings-active">
+        <h2 class="rankings-section-header">Rankings Activos</h2>
+        <div class="rankings-grid" id="active-rankings">
+          <!-- Populated by JavaScript -->
+        </div>
+        <p class="no-rankings hidden" id="no-active">No hay rankings activos en este momento</p>
+      </section>
+
+      <section class="rankings-section rankings-past">
+        <h2 class="rankings-section-header">Rankings Anteriores</h2>
+        <div class="rankings-grid" id="past-rankings">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script define:vars={{ rankingsData }}>
+  function formatDate(dateStr) {
+    const date = new Date(dateStr + 'T00:00:00');
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    return date.toLocaleDateString('es-ES', options);
+  }
+
+  function isActive(ranking) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const start = new Date(ranking.dateStart + 'T00:00:00');
+    const end = new Date(ranking.dateEnd + 'T00:00:00');
+
+    return today >= start && today <= end;
+  }
+
+  function createRankingCard(ranking, isActiveRanking) {
+    const card = document.createElement('a');
+    card.className = `ranking-card ${isActiveRanking ? 'ranking-card--active' : 'ranking-card--past'}`;
+
+    if (ranking.link) {
+      card.href = ranking.link;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+    } else {
+      card.className += ' ranking-card--no-link';
+    }
+
+    const startDate = formatDate(ranking.dateStart);
+    const endDate = formatDate(ranking.dateEnd);
+
+    card.innerHTML = `
+      <div class="ranking-card-icon">
+        <span>🏆</span>
+      </div>
+      <div class="ranking-card-content">
+        <h3 class="ranking-name">${ranking.name}</h3>
+        <p class="ranking-dates">${startDate} - ${endDate}</p>
+        ${ranking.link ? '<span class="ranking-link-indicator">Ver ranking →</span>' : '<span class="ranking-no-link">Sin enlace disponible</span>'}
+      </div>
+      ${isActiveRanking ? '<span class="active-badge">Activo</span>' : ''}
+    `;
+
+    return card;
+  }
+
+  function renderRankings() {
+    const activeContainer = document.getElementById('active-rankings');
+    const pastContainer = document.getElementById('past-rankings');
+    const noActiveMsg = document.getElementById('no-active');
+
+    const activeRankings = [];
+    const pastRankings = [];
+
+    // Sort rankings by end date (most recent first for past, latest ending for active)
+    const sortedRankings = [...rankingsData].sort((a, b) =>
+      new Date(b.dateEnd) - new Date(a.dateEnd)
+    );
+
+    sortedRankings.forEach(ranking => {
+      if (isActive(ranking)) {
+        activeRankings.push(ranking);
+      } else {
+        pastRankings.push(ranking);
+      }
+    });
+
+    // Render active rankings
+    if (activeRankings.length === 0) {
+      noActiveMsg.classList.remove('hidden');
+    } else {
+      activeRankings.forEach(ranking => {
+        activeContainer.appendChild(createRankingCard(ranking, true));
+      });
+    }
+
+    // Render past rankings
+    pastRankings.forEach(ranking => {
+      pastContainer.appendChild(createRankingCard(ranking, false));
+    });
+  }
+
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', renderRankings);
+  // Also run immediately in case DOMContentLoaded already fired
+  if (document.readyState !== 'loading') {
+    renderRankings();
+  }
+</script>
