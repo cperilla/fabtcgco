@@ -1,0 +1,50 @@
+---
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
+import type { Event } from './interfaces';
+import { generateICS, getGoogleCalendarLink } from './interfaces';
+
+interface Props {
+  event: Event;
+  index: number;
+}
+
+const { event, index } = Astro.props;
+
+const eventDate = new Date(event.date);
+const dayNumber = format(eventDate, 'd');
+const monthAbbr = format(eventDate, 'MMM', { locale: es }).toUpperCase();
+
+const icsContent = generateICS(event);
+const icsDataUrl = `data:text/calendar;charset=utf-8,${encodeURIComponent(icsContent)}`;
+const googleCalUrl = getGoogleCalendarLink(event);
+
+const isEven = index % 2 === 0;
+const layoutClass = isEven ? 'event-ticket--left' : 'event-ticket--right';
+const typeClass = `event-type-${(event.type || 'default').toLowerCase()}`;
+const eventKey = `${event.date}-${event.title}-${event.time}`;
+---
+
+<article
+  class={`event-ticket ${layoutClass} ${typeClass}`}
+  data-event-date={event.date}
+  data-event-key={eventKey}
+>
+  <div class="event-ticket-date">
+    <span class="day">{dayNumber}</span>
+    <span class="month">{monthAbbr}</span>
+  </div>
+  <div class="event-ticket-content">
+    <h3 class="title">{event.icon} {event.title}</h3>
+    <p class="time">{event.time}</p>
+    <p class="location">{event.location.spot} | {event.location.city}</p>
+    <div class="actions">
+      <a href={icsDataUrl} download={`${event.title.replace(/\s/g, '_')}.ics`} class="action-link">
+        📥 iCal
+      </a>
+      <a href={googleCalUrl} target="_blank" rel="noopener noreferrer" class="action-link">
+        📅 Google
+      </a>
+    </div>
+  </div>
+</article>

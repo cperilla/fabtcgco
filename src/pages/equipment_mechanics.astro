@@ -1,46 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../css/cards.css';
----
-<Layout>
-<h1>Mecanicas de los equipos</h1>
-<div class="cards">
 
-<div class="card green">
-  <h2>Arcane Barrier X</h2>
-  <p>Si su Héroe fuera a recibir daño arcano, puedes pagar X en su lugar. Si lo haces, previene X daño arcano que la fuente del daño fuera a provocar.</p>
-</div>
-<div class="card green">
-  <h2>Battleworn</h2>
-  <p>Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate.</p>
-</div>
-<div class="card green">
-  <h2>Bladebreak</h2>
-  <p>Si defiendes con esta carta, destrúyela cuando se cierre la cadena de combate.</p>
-</div>
-<div class="card green">
-  <h2>Temper</h2>
-  <p>Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate, destrúyela si su  valor defensa es 0.</p>
-</div>
-<div class="card yellow">
-  <h2>Cloaked</h2>
-  <p>Equipa esta carta boca abajo.</p>
-</div>
-<div class="card yellow">
-  <h2>Spellvoid X</h2>
-  <p>Si su Héroe fuera a recibir daño arcano, en su lugar puedes destruir esta carta. Si lo haces, previene X daño arcano.</p>
-</div>
-<div class="card orange">
-  <h2>Quell X</h2>
-  <p>Si tu Héroe fuera a recibir daño, puedes pagar X para prevenir X de ese daño. Si se utiliza se destruye al inicio de la fase final. Se puede usar multiples veces.</p>
-</div>
-<div class="card red">
-  <h2>Guardwell</h2>
-  <p>Cuando se cierre la cadena de combate, si esta carta defendió, ponle contadores de -1 de Defensa igual a su valor.</p>
-</div>
-<div class="card red">
-  <h2>Modular</h2>
-  <p>Esta carta puede ser equipada en cualquier zona de Equipo.</p>
-</div>
+const mechanics = [
+  { name: "Arcane Barrier X", description: "Si su Héroe fuera a recibir daño arcano, puedes pagar X en su lugar. Si lo haces, previene X daño arcano que la fuente del daño fuera a provocar.", color: "green" },
+  { name: "Battleworn", description: "Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate.", color: "green" },
+  { name: "Bladebreak", description: "Si defiendes con esta carta, destrúyela cuando se cierre la cadena de combate.", color: "green" },
+  { name: "Temper", description: "Si defiendes con esta carta, ponle un contador de -1 de Defensa cuando se cierre la cadena de combate, destrúyela si su valor defensa es 0.", color: "green" },
+  { name: "Cloaked", description: "Equipa esta carta boca abajo.", color: "yellow" },
+  { name: "Spellvoid X", description: "Si su Héroe fuera a recibir daño arcano, en su lugar puedes destruir esta carta. Si lo haces, previene X daño arcano.", color: "yellow" },
+  { name: "Quell X", description: "Si tu Héroe fuera a recibir daño, puedes pagar X para prevenir X de ese daño. Si se utiliza se destruye al inicio de la fase final. Se puede usar multiples veces.", color: "orange" },
+  { name: "Guardwell", description: "Cuando se cierre la cadena de combate, si esta carta defendió, ponle contadores de -1 de Defensa igual a su valor.", color: "red" },
+  { name: "Modular", description: "Esta carta puede ser equipada en cualquier zona de Equipo.", color: "red" },
+];
+---
+
+<Layout>
+<div class="mechanics-page">
+    <div class="mechanics-header">
+        <h1>Mecánicas de Equipos</h1>
+        <div class="stars">
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+        </div>
+        <p class="subtitle">Referencia rápida de mecánicas de equipos</p>
+    </div>
+    <div class="mechanics-container">
+        {mechanics.map((mechanic) => (
+            <article class={`mechanic-ticket mechanic-${mechanic.color}`}>
+                <div class="mechanic-ticket-name">
+                    <span class="name">{mechanic.name}</span>
+                </div>
+                <div class="mechanic-ticket-content">
+                    <p class="description">{mechanic.description}</p>
+                </div>
+            </article>
+        ))}
+    </div>
 </div>
 </Layout>

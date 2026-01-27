@@ -66,3 +66,17 @@ export const getCalendarDays = (year, month, eventsOfMonth) => {
   return calendarDays;
 };
 
+export const getEventsAsFlatList = (eventsData, month) => {
+  return eventsData
+    .filter(event => new Date(event.Date).getMonth() + 1 === month)
+    .sort((a, b) => new Date(a.Date) - new Date(b.Date))
+    .map(event => ({
+      icon: event.Emoji,
+      type: event.EventType,
+      title: event.Event,
+      time: event.Time,
+      location: { spot: event.Location, city: event.Ciudad },
+      date: event.Date,
+    }));
+};
+

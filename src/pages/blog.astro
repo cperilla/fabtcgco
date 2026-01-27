@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
@@ -8,20 +10,38 @@ const posts = (await getCollection('posts')).sort(
 ---
 
 <Layout>
-  <div class="space-y-8 blog text-xl p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
-    {posts.map(post => (
-    <a class="p-4 postlink rounded-xl block" href={`/blog/${post.slug}/`}>
-        <h2 class="text-2xl font-bold mb-2">
-          {post.data.title}
-        </h2>
-        <p class="text-sm mb-2">
-          <span class='date'>{new Date(post.data.publishDate).toLocaleDateString()}</span>
-          <span class='author'>by {post.data.author}</span>
-        </p>
-        
-        <p>{post.data.description ?? ''}</p>
+  <div class="blog-page">
+    <div class="blog-header">
+      <h1>Blog</h1>
+      <div class="stars">
+        <span style="color: #91160d;">★</span>
+        <span style="color: #765d2f;">★</span>
+        <span style="color: #91160d;">★</span>
+        <span style="color: #765d2f;">★</span>
+        <span style="color: #91160d;">★</span>
       </div>
-      </a>
-    ))}
+      <p class="subtitle">Artículos de la comunidad</p>
+    </div>
+    <div class="blog-container">
+      {posts.map((post, index) => {
+        const postDate = new Date(post.data.publishDate);
+        const dayNumber = format(postDate, 'd');
+        const monthAbbr = format(postDate, 'MMM', { locale: es }).toUpperCase();
+        const isEven = index % 2 === 0;
+        return (
+          <a class={`blog-card ${isEven ? 'blog-card--left' : 'blog-card--right'}`} href={`/blog/${post.slug}/`}>
+            <div class="blog-card-date">
+              <span class="day">{dayNumber}</span>
+              <span class="month">{monthAbbr}</span>
+            </div>
+            <div class="blog-card-content">
+              <h2 class="title">{post.data.title}</h2>
+              <p class="author">por {post.data.author}</p>
+              <p class="description">{post.data.description ?? ''}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
   </div>
 </Layout>

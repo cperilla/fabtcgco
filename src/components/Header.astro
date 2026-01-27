@@ -3,11 +3,11 @@ const { fabLogo = "/images/FABLogo.png" } = Astro.props;
 
 const links = [
 { href: "/calendar", icon: "", text: "Calendario" },
-{ href: "https://challonge.com/communities/fabco", icon: "", text: "Challonge" },
-{ href: "https://challonge.com/communities/fabco/rankings", icon: "", text: "Rankings" },
+{ href: "/rankings", icon: "", text: "Rankings" },
 { href: "/blog", icon: "", text: "Blog" },
 { href: "/mechanics", icon: "", text: "Mecanicas" },
 { href: "/equipment_mechanics", icon: "", text: "Mecanicas de equipos" },
+{ href: "https://challonge.com/communities/fabco", icon: "challonge", text: "" },
 { href: "https://www.facebook.com/groups/23891653443812984", icon: "fa-brands fa-facebook-f", text: "" },
 { href: "https://www.instagram.com/flesh_and_blood_colombia/", icon: "fa-brands fa-instagram", text: "" },
 { href: "https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE", icon: "fa-brands fa-whatsapp", text: "" },
@@ -34,7 +34,7 @@ const links = [
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <div class="hidden sm:ml-6 sm:block">
+          <div class="sm:ml-6 nav-links">
             <div class="flex space-x-4">
               {links.map(link => {
               const isExternal = /^https?:\/\//.test(link.href);
@@ -44,7 +44,11 @@ const links = [
                 target={isExternal ? "_blank" : undefined}
                 rel={isExternal ? "noopener noreferrer" : undefined}
                 >
-                {link.icon ? <i class={link.icon}></i> : link.text}
+                {link.icon === "challonge" ? (
+                  <img src="/images/challonge-favicon.ico" alt="Challonge" class="challonge-icon" />
+                ) : link.icon ? (
+                  <i class={link.icon}></i>
+                ) : link.text}
               </a>
               );
               })}
@@ -57,8 +61,12 @@ const links = [
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2">
         {links.map(link => (
-        <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" target="_blank" rel="noopener noreferrer">
-          {link.icon ? <i class={link.icon}></i> : link.text}
+        <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium mobile-menu-link" target="_blank" rel="noopener noreferrer">
+          {link.icon === "challonge" ? (
+            <img src="/images/challonge-favicon.ico" alt="Challonge" class="challonge-icon" />
+          ) : link.icon ? (
+            <i class={link.icon}></i>
+          ) : link.text}
         </a>
         ))}
       </div>
