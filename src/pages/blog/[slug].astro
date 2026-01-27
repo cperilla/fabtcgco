@@ -1,24 +1,36 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getEntryBySlug } from 'astro:content';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug('posts', slug);
 if (!post) throw new Error(`Post not found: ${slug}`);
 const { Content } = await post.render();
+
+const postDate = new Date(post.data.publishDate);
+const formattedDate = format(postDate, "d 'de' MMMM, yyyy", { locale: es });
 ---
 
 <Layout>
-        
-    <article class="prose prose-invert text-xl p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
+  <div class="blog-page">
+    <div class="blog-post-container">
+      <a href="/blog/" class="back-link">← Regresar a los artículos</a>
 
-    <a href="/blog/">Regresar a los articulos</a>
-      <h1>{post.data.title}</h1>
-      <div class="flex justify-between text-gray-400 mb-4">
-        <p>{new Date(post.data.publishDate).toLocaleDateString()}</p>
-        {post.data.author && <p>by {post.data.author}</p>}
-      </div>
-      <Content /> <!-- Correct way to render the post -->
-    </article>
+      <article class="blog-post">
+        <header class="blog-post-header">
+          <h1>{post.data.title}</h1>
+          <div class="blog-post-meta">
+            <span class="date">{formattedDate}</span>
+            {post.data.author && <span class="author">por {post.data.author}</span>}
+          </div>
+        </header>
 
+        <div class="blog-post-content">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </div>
 </Layout>

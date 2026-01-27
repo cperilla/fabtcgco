@@ -1,19 +1,86 @@
 ---
-import Program from '../components/Program.astro';
-import Welcome from '../components/Welcome.astro';
+import EventTicket from '../components/EventTicket.astro';
 import Layout from '../layouts/Layout.astro';
 
 import { loadEventsData } from '../utils/dataLoader';
-import { getMonths } from '../utils/calendarUtils';
+import { formatMonthName } from '../utils/calendarUtils';
 
 const eventsData = loadEventsData();
 const year = new Date(eventsData[0].Date).getFullYear().toString();
-const months = getMonths(eventsData);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+// Transform and sort all events
+const allEvents = eventsData
+    .map(e => ({
+        icon: e.Emoji,
+        type: e.EventType,
+        title: e.Event,
+        time: e.Time,
+        location: { spot: e.Location, city: e.Ciudad },
+        date: e.Date,
+        dateObj: new Date(e.Date),
+        key: `${e.Date}-${e.Event}-${e.Time}`
+    }))
+    .sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
+
+// Split into past and future events
+const pastEvents = allEvents.filter(e => e.dateObj < today);
+const futureEvents = allEvents.filter(e => e.dateObj >= today);
+
+// Only keep last 3 past events
+const recentPastEvents = pastEvents.slice(-3);
+
+// Combine: last 3 past + all future
+const displayEvents = [...recentPastEvents, ...futureEvents];
+
+// Find the next event (first future event)
+const nextEvent = futureEvents[0];
+const nextEventKey = nextEvent ? nextEvent.key : null;
+
+// Group events by month for display
+const eventsByMonth = displayEvents.reduce((acc, event) => {
+    const month = event.dateObj.getMonth() + 1;
+    if (!acc[month]) acc[month] = [];
+    acc[month].push(event);
+    return acc;
+}, {} as Record<number, typeof displayEvents>);
+
+const months = Object.keys(eventsByMonth).map(Number).sort((a, b) => a - b);
+
+let globalIndex = 0;
 ---
 
 <Layout>
-<h1> Calendario de eventos</h1>
-    {months.map((month) => (
-        <Program month={month} year={year} eventsData={eventsData} />
-    ))}
+<div class="calendar-page">
+    <div class="calendar-header">
+        <h1>Calendario</h1>
+        <div class="stars">
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+        </div>
+        <p class="subtitle">Próximos eventos de la comunidad</p>
+    </div>
+    <div class="events-container">
+        {months.map((month) => {
+            const events = eventsByMonth[month];
+            const monthName = formatMonthName(month, year);
+            return (
+                <section>
+                    <h2 class="calendar-month-header">{monthName} {year}</h2>
+                    {events.map((event) => {
+                        const idx = globalIndex++;
+                        const isPast = event.dateObj < today;
+                        const isNext = event.key === nextEventKey;
+                        return <EventTicket event={event} index={idx} isPast={isPast} isNext={isNext} />;
+                    })}
+                </section>
+            );
+        })}
+    </div>
+</div>
 </Layout>

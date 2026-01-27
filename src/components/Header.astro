@@ -57,7 +57,7 @@ const links = [
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2">
         {links.map(link => (
-        <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" target="_blank" rel="noopener noreferrer">
+        <a href={link.href} class="block rounded-md px-3 py-2 text-base font-medium mobile-menu-link" target="_blank" rel="noopener noreferrer">
           {link.icon ? <i class={link.icon}></i> : link.text}
         </a>
         ))}
