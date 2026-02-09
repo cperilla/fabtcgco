@@ -10,6 +10,16 @@ Usage:
     python create_tournament.py --create <date>      # Create tournament for specific date
     python create_tournament.py --create-range <start> <end>  # Create tournaments for date range
     python create_tournament.py --dry-run <date>     # Show what would be created without creating
+    python create_tournament.py --update <url> [url...]       # Update existing tournament(s)
+    python create_tournament.py --update-dry-run <url> [url...] # Show what would be updated
+
+Options:
+    --location <loc>    Filter by location (e.g., "Palmira", "Chaos Store")
+
+Settings applied to new/updated tournaments:
+    - quick_advance: true (allows quick match advancement)
+    - open_signup: true (makes signup page publicly visible)
+    - signup_cap: 32 (maximum participants)
 """
 
 import argparse
@@ -298,15 +308,16 @@ def create_tournament_payload(event, templates, cards_data=None):
     except ValueError:
         starts_at = date.replace(hour=17, minute=0).isoformat()  # Default 5 PM
 
-    # Build description with ranking links
+    # Build description with ranking links based on location
     description = merged.get('description', '')
     rankings = templates.get('rankings', {})
-    if rankings:
+    location_rankings = location_config.get('rankings', ['season', 'year'])  # Default to Chaos Store rankings
+
+    if rankings and location_rankings:
         ranking_links = "\n\nRankings FABCO:\n"
-        if 'season' in rankings:
-            ranking_links += f"- {rankings['season']['name']}: {rankings['season']['url']}\n"
-        if 'year' in rankings:
-            ranking_links += f"- {rankings['year']['name']}: {rankings['year']['url']}\n"
+        for ranking_key in location_rankings:
+            if ranking_key in rankings:
+                ranking_links += f"- {rankings[ranking_key]['name']}: {rankings[ranking_key]['url']}\n"
         description = description + ranking_links
 
     # Build payload in JSON:API format
@@ -317,6 +328,7 @@ def create_tournament_payload(event, templates, cards_data=None):
         'game_name': merged.get('game_name', 'Flesh and Blood'),
         'description': description,
         'private': merged.get('private', False),
+        'quick_advance': merged.get('quick_advance', True),
         'starts_at': starts_at
     }
 
@@ -366,6 +378,56 @@ def create_tournament(config, access_token, payload, dry_run=False):
         print(f"URL: {url}")
         print(f"Method: POST")
         # Mask the bearer token in headers for display
+        display_headers = {k: (v[:20] + '...' if k == 'Authorization' else v) for k, v in headers.items()}
+        print(f"Headers: {display_headers}")
+        print(f"Payload: {json.dumps(payload, indent=2, ensure_ascii=False)}")
+        print(f"\n--- Response Details ---")
+        print(f"Status: {response.status_code}")
+        print(f"Headers: {dict(response.headers)}")
+        print(f"Body: {response.text[:1000] if len(response.text) > 1000 else response.text}")
+        return None
+
+
+def update_tournament(config, access_token, tournament_url, updates, dry_run=False):
+    """Update an existing tournament via API."""
+    if dry_run:
+        print(f"\n[DRY RUN] Would update tournament {tournament_url}:")
+        print(json.dumps(updates, indent=2, ensure_ascii=False))
+        return {'dry_run': True, 'updates': updates}
+
+    headers = get_api_headers(access_token)
+    community_id = config.get('community_id')
+
+    # Use resource scoping URL format for community tournaments
+    if community_id:
+        url = f"{API_BASE}/communities/{community_id}/tournaments/{tournament_url}.json"
+    else:
+        url = f"{API_BASE}/tournaments/{tournament_url}.json"
+
+    payload = {
+        'data': {
+            'type': 'Tournaments',
+            'attributes': updates
+        }
+    }
+
+    response = requests.put(url, headers=headers, json=payload)
+
+    if response.status_code == 200:
+        result = response.json()
+        print(f"Tournament updated successfully!")
+        tournament_data = result.get('data', {})
+        attrs = tournament_data.get('attributes', {})
+        print(f"  Name: {attrs.get('name')}")
+        print(f"  URL: https://challonge.com/{attrs.get('url')}")
+        print(f"  open_signup: {attrs.get('registration_options', {}).get('open_signup')}")
+        print(f"  quick_advance: {attrs.get('quick_advance')}")
+        return result
+    else:
+        print(f"Failed to update tournament: {response.status_code}")
+        print(f"\n--- Request Details ---")
+        print(f"URL: {url}")
+        print(f"Method: PUT")
         display_headers = {k: (v[:20] + '...' if k == 'Authorization' else v) for k, v in headers.items()}
         print(f"Headers: {display_headers}")
         print(f"Payload: {json.dumps(payload, indent=2, ensure_ascii=False)}")
@@ -442,6 +504,10 @@ def main():
                         help='Path to calendar JSON file')
     parser.add_argument('--location', metavar='LOC',
                         help='Filter events by location (e.g., "Palmira", "Chaos Store")')
+    parser.add_argument('--update', metavar='URL', nargs='+',
+                        help='Update existing tournament(s) by URL slug (e.g., fabco_sage_20260205)')
+    parser.add_argument('--update-dry-run', metavar='URL', nargs='+',
+                        help='Show what would be updated for tournament(s)')
 
     args = parser.parse_args()
 
@@ -542,6 +608,42 @@ def main():
                     failed += 1
 
         print(f"\nSummary: {created} created, {failed} failed")
+        return 0 if failed == 0 else 1
+
+    # Handle update commands
+    if args.update or args.update_dry_run:
+        tournament_urls = args.update or args.update_dry_run
+        is_dry_run = args.update_dry_run is not None
+
+        if not is_dry_run:
+            access_token = get_valid_token(config)
+            if not access_token:
+                return 1
+        else:
+            access_token = None
+
+        # Settings to apply to all tournaments
+        updates = {
+            'quick_advance': templates.get('default', {}).get('quick_advance', True),
+            'registration_options': templates.get('default', {}).get('registration_options', {
+                'open_signup': True,
+                'signup_cap': 32
+            })
+        }
+
+        updated = 0
+        failed = 0
+
+        for tournament_url in tournament_urls:
+            print(f"\nUpdating tournament: {tournament_url}...")
+            result = update_tournament(config, access_token, tournament_url, updates, dry_run=is_dry_run)
+
+            if result:
+                updated += 1
+            else:
+                failed += 1
+
+        print(f"\nSummary: {updated} updated, {failed} failed")
         return 0 if failed == 0 else 1
 
     # No command specified

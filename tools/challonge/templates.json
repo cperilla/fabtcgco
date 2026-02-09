@@ -9,12 +9,18 @@
       "id": 2589,
       "name": "Ranking Anual",
       "url": "https://challonge.com/communities/fabco/rankings?id=2589"
+    },
+    "palmira": {
+      "id": 2967,
+      "name": "Ranking Palmira 2026",
+      "url": "https://challonge.com/communities/fabco/rankings?id=2967"
     }
   },
   "default": {
     "tournament_type": "swiss",
     "game_name": "Flesh and Blood",
     "private": false,
+    "quick_advance": true,
     "description": "Torneo de Flesh and Blood organizado por FABCO Colombia\n\nRankings:\n- Ranking de Temporada: https://challonge.com/communities/fabco/rankings?id=2002\n- Ranking Anual: https://challonge.com/communities/fabco/rankings?id=2589\n\nPremiación: Según participantes.\nLista de baneo y legalidad: https://fabtcg.com/en/resources/rules-and-policy-center/card-legality-policy\nReglas detalladas del juego: https://fabtcg.com/en/resources/rules-and-policy-center/comprehensive-rules/\nReglas detalladas sobre el torneo: https://fabtcg.com/en/resources/rules-and-policy-center/tournament-rules-and-policy/",
     "notifications": {
       "upon_matches_open": true,
@@ -73,11 +79,13 @@
   "locations": {
     "Chaos Store": {
       "suffix": "Chaos Cali",
-      "short_name": "Chaos"
+      "short_name": "Chaos",
+      "rankings": ["season", "year"]
     },
     "Palmira": {
       "suffix": "Palmira",
-      "short_name": "Palmira"
+      "short_name": "Palmira",
+      "rankings": ["palmira"]
     }
   }
 }
