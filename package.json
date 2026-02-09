@@ -24,5 +24,8 @@
     "@cloudflare/workers-types": "^4.20250109.0",
     "wrangler": "^3.114.17"
   },
+  "resolutions": {
+    "@astrojs/cloudflare/wrangler": "4.63.0"
+  },
   "packageManager": "yarn@4.9.1"
 }
