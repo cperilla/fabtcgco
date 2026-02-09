@@ -388,26 +388,81 @@ def create_tournament(config, access_token, payload, dry_run=False):
         return None
 
 
-def update_tournament(config, access_token, tournament_url, updates, dry_run=False):
-    """Update an existing tournament via API."""
-    if dry_run:
-        print(f"\n[DRY RUN] Would update tournament {tournament_url}:")
-        print(json.dumps(updates, indent=2, ensure_ascii=False))
-        return {'dry_run': True, 'updates': updates}
-
+def get_tournament(config, access_token, tournament_url):
+    """Fetch current tournament data from API."""
     headers = get_api_headers(access_token)
     community_id = config.get('community_id')
 
-    # Use resource scoping URL format for community tournaments
     if community_id:
         url = f"{API_BASE}/communities/{community_id}/tournaments/{tournament_url}.json"
     else:
         url = f"{API_BASE}/tournaments/{tournament_url}.json"
 
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        return response.json().get('data', {}).get('attributes', {})
+    else:
+        print(f"Failed to fetch tournament: {response.status_code}")
+        return None
+
+
+def update_tournament(config, access_token, tournament_url, updates, dry_run=False):
+    """Update an existing tournament via API.
+
+    Fetches current tournament data first, merges with updates, then sends
+    the complete data to avoid resetting fields.
+    """
+    headers = get_api_headers(access_token)
+    community_id = config.get('community_id')
+
+    if community_id:
+        url = f"{API_BASE}/communities/{community_id}/tournaments/{tournament_url}.json"
+    else:
+        url = f"{API_BASE}/tournaments/{tournament_url}.json"
+
+    # First, fetch current tournament data
+    if not dry_run:
+        current = get_tournament(config, access_token, tournament_url)
+        if not current:
+            return None
+    else:
+        current = {}
+
+    # Merge updates with current data, preserving existing values
+    merged = {}
+
+    # Always preserve starts_at if it exists
+    if current.get('starts_at'):
+        merged['starts_at'] = current['starts_at']
+
+    # Merge registration_options - only include non-null values
+    current_reg = current.get('registration_options', {})
+    update_reg = updates.get('registration_options', {})
+    merged_reg = {}
+    for key, value in {**current_reg, **update_reg}.items():
+        if value is not None:
+            merged_reg[key] = value
+    if merged_reg:
+        merged['registration_options'] = merged_reg
+
+    # Add any other updates (skip None values)
+    for key, value in updates.items():
+        if key != 'registration_options' and value is not None:
+            merged[key] = value
+
+    # Always set quick_advance to true
+    merged['quick_advance'] = True
+
+    if dry_run:
+        print(f"\n[DRY RUN] Would update tournament {tournament_url}:")
+        print(json.dumps(merged, indent=2, ensure_ascii=False))
+        return {'dry_run': True, 'updates': merged}
+
     payload = {
         'data': {
             'type': 'Tournaments',
-            'attributes': updates
+            'attributes': merged
         }
     }
 
@@ -420,8 +475,8 @@ def update_tournament(config, access_token, tournament_url, updates, dry_run=Fal
         attrs = tournament_data.get('attributes', {})
         print(f"  Name: {attrs.get('name')}")
         print(f"  URL: https://challonge.com/{attrs.get('url')}")
+        print(f"  starts_at: {attrs.get('starts_at')}")
         print(f"  open_signup: {attrs.get('registration_options', {}).get('open_signup')}")
-        print(f"  quick_advance: {attrs.get('quick_advance')}")
         return result
     else:
         print(f"Failed to update tournament: {response.status_code}")
