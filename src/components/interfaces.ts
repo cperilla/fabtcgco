@@ -10,6 +10,7 @@ export interface Event {
     time: string;
     location: Location;
     date: string;
+    tournamentUrl?: string;
 }
 
 export interface Day {
