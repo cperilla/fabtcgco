@@ -1383,13 +1383,34 @@ article ul, article ol {
     letter-spacing: 0.5px;
 }
 
-/* Card name from tournament */
-.card-name {
-    font-size: 0.9rem;
-    font-style: italic;
+/* Tournament title format: LOCATION : Card Name : Format Tournament */
+.tournament-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.tournament-title .location-part {
+    text-transform: uppercase;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
-    margin: 0.25rem 0 0.5rem 0;
+}
+
+.tournament-title .separator {
+    margin: 0 0.4rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tournament-title .card-name-part {
+    font-style: italic;
+    color: rgba(255, 215, 0, 0.95);
+}
+
+.tournament-title .format-part {
     font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Event meta - time and city */

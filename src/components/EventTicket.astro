@@ -47,12 +47,19 @@ const hasTournament = !!event.tournamentUrl;
     <span class="month">{monthAbbr}</span>
   </div>
   <div class="event-ticket-content">
-    <div class="event-ticket-header">
-      <h3 class="title">{event.icon} {event.title}</h3>
-      <span class="location-badge">{event.location.spot}</span>
-    </div>
-    {cardName && (
-      <p class="card-name">"{cardName}"</p>
+    {cardName ? (
+      <h3 class="tournament-title">
+        <span class="location-part">{event.location.spot}</span>
+        <span class="separator">:</span>
+        <span class="card-name-part">{cardName}</span>
+        <span class="separator">:</span>
+        <span class="format-part">{event.title} Tournament</span>
+      </h3>
+    ) : (
+      <div class="event-ticket-header">
+        <h3 class="title">{event.icon} {event.title}</h3>
+        <span class="location-badge">{event.location.spot}</span>
+      </div>
     )}
     <div class="event-meta">
       <span class="time">{event.time}</span>
