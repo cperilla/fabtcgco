@@ -180,7 +180,8 @@
     "Ciudad": "Cali",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260212"
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260212",
+    "TournamentName": "FAB Chaos Sage Jue 12/02/26 : Brothers in Arms"
   },
   {
     "Date": "2026-02-14",
@@ -191,7 +192,8 @@
     "Ciudad": "Cali",
     "Emoji": "🏗️",
     "EventType": "CC",
-    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260214"
+    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260214",
+    "TournamentName": "FAB Chaos CC Sáb 14/02/26 : Asking for Trouble"
   },
   {
     "Date": "2026-02-14",
@@ -202,7 +204,8 @@
     "Ciudad": "Palmira",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260214"
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260214",
+    "TournamentName": "FAB Palmira Sage Sáb 14/02/26 : Arrogant Showboating"
   },
   {
     "Date": "2026-02-19",
@@ -213,7 +216,8 @@
     "Ciudad": "Cali",
     "Emoji": "🏗️",
     "EventType": "CC",
-    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260219"
+    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260219",
+    "TournamentName": "FAB Chaos CC Jue 19/02/26 : Beat of the Ironsong"
   },
   {
     "Date": "2026-02-21",
@@ -224,7 +228,8 @@
     "Ciudad": "Cali",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260221"
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260221",
+    "TournamentName": "FAB Chaos Sage Sáb 21/02/26 : Cries of Encore"
   },
   {
     "Date": "2026-02-21",
@@ -235,7 +240,8 @@
     "Ciudad": "Palmira",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260221"
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260221",
+    "TournamentName": "FAB Palmira Sage Sáb 21/02/26 : Attention Grabbers"
   },
   {
     "Date": "2026-02-26",
@@ -246,7 +252,8 @@
     "Ciudad": "Cali",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260226"
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260226",
+    "TournamentName": "FAB Chaos Sage Jue 26/02/26 : Big Bully"
   },
   {
     "Date": "2026-02-28",
@@ -257,7 +264,8 @@
     "Ciudad": "Cali",
     "Emoji": "🏆",
     "EventType": "LL",
-    "TournamentURL": "https://challonge.com/fabco_chaos_ll_20260228"
+    "TournamentURL": "https://challonge.com/fabco_chaos_ll_20260228",
+    "TournamentName": "FAB Chaos LL Sáb 28/02/26 : Bask in Your Own Greatness"
   },
   {
     "Date": "2026-02-28",
@@ -268,7 +276,8 @@
     "Ciudad": "Palmira",
     "Emoji": "🌀",
     "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260228"
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260228",
+    "TournamentName": "FAB Palmira Sage Sáb 28/02/26 : Cheers!"
   },
   {
     "Date": "2026-03-05",

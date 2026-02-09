@@ -1358,6 +1358,82 @@ article ul, article ol {
     color: #fff;
 }
 
+/* Event Ticket Header - title and location badge */
+.event-ticket-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.event-ticket-header .title {
+    margin: 0;
+}
+
+.location-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1a1410;
+    border-radius: 0.25rem;
+    letter-spacing: 0.5px;
+}
+
+/* Card name from tournament */
+.card-name {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0.25rem 0 0.5rem 0;
+    font-weight: 500;
+}
+
+/* Event meta - time and city */
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.event-meta .time {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.event-meta .city {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Primary action link - prominent tournament button */
+.action-link--primary {
+    background: rgba(255, 215, 0, 0.25) !important;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    font-weight: 600;
+}
+
+.action-link--primary:hover {
+    background: rgba(255, 215, 0, 0.4) !important;
+    border-color: rgba(255, 215, 0, 0.7);
+}
+
+/* Events with tournaments get subtle highlight */
+.event-ticket--has-tournament {
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Event Type Gradient Backgrounds - muted for dark theme */
 .event-type-cc {
     background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
