@@ -1339,8 +1339,9 @@ article ul, article ol {
 
 .event-ticket-content .actions {
     display: flex;
+    justify-content: center;
     gap: 1rem;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 .event-ticket-content .action-link {
@@ -1383,19 +1384,14 @@ article ul, article ol {
     letter-spacing: 0.5px;
 }
 
-/* Tournament title format: LOCATION : Card Name : Format Tournament */
+/* Tournament title format: Card Name : Format Tournament */
 .tournament-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
     color: #fff;
     line-height: 1.4;
-}
-
-.tournament-title .location-part {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
 }
 
 .tournament-title .separator {
@@ -1405,18 +1401,20 @@ article ul, article ol {
 
 .tournament-title .card-name-part {
     font-style: italic;
+    font-weight: 700;
     color: rgba(255, 215, 0, 0.95);
 }
 
 .tournament-title .format-part {
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Event meta - time and city */
+/* Event meta - time and location */
 .event-meta {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
     flex-wrap: wrap;
@@ -1433,9 +1431,10 @@ article ul, article ol {
     color: #fff;
 }
 
-.event-meta .city {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.7);
+.event-meta .location-full {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Primary action link - prominent tournament button */
@@ -1457,11 +1456,11 @@ article ul, article ol {
 
 /* Event Type Gradient Backgrounds - muted for dark theme */
 .event-type-cc {
-    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    background: linear-gradient(135deg, #8b3a3a 0%, #5c2626 100%);
 }
 
 .event-type-sage {
-    background: linear-gradient(135deg, #2f5d50 0%, #234840 100%);
+    background: linear-gradient(135deg, #6878a0 0%, #4a5578 100%);
 }
 
 .event-type-blitz {

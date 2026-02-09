@@ -49,11 +49,9 @@ const hasTournament = !!event.tournamentUrl;
   <div class="event-ticket-content">
     {cardName ? (
       <h3 class="tournament-title">
-        <span class="location-part">{event.location.spot}</span>
-        <span class="separator">:</span>
         <span class="card-name-part">{cardName}</span>
         <span class="separator">:</span>
-        <span class="format-part">{event.title} Tournament</span>
+        <span class="format-part">{event.icon} {event.title} Tournament</span>
       </h3>
     ) : (
       <div class="event-ticket-header">
@@ -63,7 +61,7 @@ const hasTournament = !!event.tournamentUrl;
     )}
     <div class="event-meta">
       <span class="time">{event.time}</span>
-      <span class="city">{event.location.city}</span>
+      <span class="location-full">{event.location.city}, {event.location.spot}</span>
     </div>
     <div class="actions">
       {hasTournament && (
