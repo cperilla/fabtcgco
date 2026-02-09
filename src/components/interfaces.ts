@@ -11,6 +11,7 @@ export interface Event {
     location: Location;
     date: string;
     tournamentUrl?: string;
+    tournamentName?: string;
 }
 
 export interface Day {

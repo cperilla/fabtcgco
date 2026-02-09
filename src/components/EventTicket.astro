@@ -23,10 +23,22 @@ const isEven = index % 2 === 0;
 const layoutClass = isEven ? 'event-ticket--left' : 'event-ticket--right';
 const typeClass = `event-type-${(event.type || 'default').toLowerCase()}`;
 const eventKey = `${event.date}-${event.title}-${event.time}`;
+
+// Extract card name from tournament name (strip date portion)
+// Format: "FAB Chaos Sage Jue 12/02/26 : Brothers in Arms" -> "Brothers in Arms"
+const getCardName = (tournamentName?: string) => {
+  if (!tournamentName) return null;
+  const colonIndex = tournamentName.indexOf(':');
+  if (colonIndex === -1) return null;
+  return tournamentName.slice(colonIndex + 1).trim();
+};
+
+const cardName = getCardName(event.tournamentName);
+const hasTournament = !!event.tournamentUrl;
 ---
 
 <article
-  class={`event-ticket ${layoutClass} ${typeClass}`}
+  class={`event-ticket ${layoutClass} ${typeClass} ${hasTournament ? 'event-ticket--has-tournament' : ''}`}
   data-event-date={event.date}
   data-event-key={eventKey}
 >
@@ -35,21 +47,34 @@ const eventKey = `${event.date}-${event.title}-${event.time}`;
     <span class="month">{monthAbbr}</span>
   </div>
   <div class="event-ticket-content">
-    <h3 class="title">{event.icon} {event.title}</h3>
-    <p class="time">{event.time}</p>
-    <p class="location">{event.location.spot} | {event.location.city}</p>
+    {cardName ? (
+      <h3 class="tournament-title">
+        <span class="card-name-part">{cardName}</span>
+        <span class="separator">:</span>
+        <span class="format-part">{event.icon} {event.title} Tournament</span>
+      </h3>
+    ) : (
+      <div class="event-ticket-header">
+        <h3 class="title">{event.icon} {event.title}</h3>
+        <span class="location-badge">{event.location.spot}</span>
+      </div>
+    )}
+    <div class="event-meta">
+      <span class="time">{event.time}</span>
+      <span class="location-full">{event.location.city}, {event.location.spot}</span>
+    </div>
     <div class="actions">
+      {hasTournament && (
+        <a href={event.tournamentUrl} target="_blank" rel="noopener noreferrer" class="action-link action-link--tournament action-link--primary">
+          🏆 Inscribirse
+        </a>
+      )}
       <a href={icsDataUrl} download={`${event.title.replace(/\s/g, '_')}.ics`} class="action-link">
         📥 iCal
       </a>
       <a href={googleCalUrl} target="_blank" rel="noopener noreferrer" class="action-link">
         📅 Google
       </a>
-      {event.tournamentUrl && (
-        <a href={event.tournamentUrl} target="_blank" rel="noopener noreferrer" class="action-link action-link--tournament">
-          🏆 Torneo
-        </a>
-      )}
     </div>
   </div>
 </article>

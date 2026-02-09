@@ -18,7 +18,9 @@ const allEvents = eventsData
         location: { spot: e.Location, city: e.Ciudad },
         date: e.Date,
         dateObj: new Date(e.Date),
-        key: `${e.Date}-${e.Event}-${e.Time}`
+        key: `${e.Date}-${e.Event}-${e.Time}`,
+        tournamentUrl: e.TournamentURL,
+        tournamentName: e.TournamentName,
     }))
     .sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
 
