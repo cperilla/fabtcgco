@@ -39,11 +39,11 @@
     },
     "swiss_options": {
       "rounds": 4,
-      "pts_for_match_win": 3.0,
-      "pts_for_match_tie": 1.0,
-      "pts_for_game_win": 1.0,
-      "pts_for_game_tie": 0.5,
-      "pts_for_bye": 3.0
+      "pts_for_match_win": 1.0,
+      "pts_for_match_tie": 0.0,
+      "pts_for_game_win": 0.0,
+      "pts_for_game_tie": 0.0,
+      "pts_for_bye": 1.0
     }
   },
   "event_types": {

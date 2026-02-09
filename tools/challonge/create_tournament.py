@@ -446,13 +446,21 @@ def update_tournament(config, access_token, tournament_url, updates, dry_run=Fal
     if merged_reg:
         merged['registration_options'] = merged_reg
 
-    # Add any other updates (skip None values)
-    for key, value in updates.items():
-        if key != 'registration_options' and value is not None:
-            merged[key] = value
+    # Preserve swiss_options - only include non-null/non-zero values
+    current_swiss = current.get('swiss_options', {})
+    update_swiss = updates.get('swiss_options', {})
+    merged_swiss = {}
+    for key, value in {**current_swiss, **update_swiss}.items():
+        if value is not None and value != 0 and value != 0.0:
+            merged_swiss[key] = value
+    if merged_swiss:
+        merged['swiss_options'] = merged_swiss
 
-    # Always set quick_advance to true
-    merged['quick_advance'] = True
+    # Add any other updates (skip None values and nested options already handled)
+    skip_keys = {'registration_options', 'swiss_options'}
+    for key, value in updates.items():
+        if key not in skip_keys and value is not None:
+            merged[key] = value
 
     if dry_run:
         print(f"\n[DRY RUN] Would update tournament {tournament_url}:")
