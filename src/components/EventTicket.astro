@@ -45,6 +45,11 @@ const eventKey = `${event.date}-${event.title}-${event.time}`;
       <a href={googleCalUrl} target="_blank" rel="noopener noreferrer" class="action-link">
         📅 Google
       </a>
+      {event.tournamentUrl && (
+        <a href={event.tournamentUrl} target="_blank" rel="noopener noreferrer" class="action-link action-link--tournament">
+          🏆 Torneo
+        </a>
+      )}
     </div>
   </div>
 </article>

@@ -36,6 +36,7 @@ export const getEventsOfMonth = (eventsData, month) => {
         city: event.Ciudad,
       },
       date: event.Date,
+      tournamentUrl: event.TournamentURL,
     });
     return acc;
   }, {});
@@ -77,6 +78,7 @@ export const getEventsAsFlatList = (eventsData, month) => {
       time: event.Time,
       location: { spot: event.Location, city: event.Ciudad },
       date: event.Date,
+      tournamentUrl: event.TournamentURL,
     }));
 };
 

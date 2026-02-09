@@ -1,0 +1,91 @@
+{
+  "rankings": {
+    "season": {
+      "id": 2002,
+      "name": "Ranking de Temporada",
+      "url": "https://challonge.com/communities/fabco/rankings?id=2002"
+    },
+    "year": {
+      "id": 2589,
+      "name": "Ranking Anual",
+      "url": "https://challonge.com/communities/fabco/rankings?id=2589"
+    },
+    "palmira": {
+      "id": 2967,
+      "name": "Ranking Palmira 2026",
+      "url": "https://challonge.com/communities/fabco/rankings?id=2967"
+    }
+  },
+  "default": {
+    "tournament_type": "swiss",
+    "game_name": "Flesh and Blood",
+    "private": false,
+    "quick_advance": true,
+    "description": "Torneo de Flesh and Blood organizado por FABCO Colombia\n\nRankings:\n- Ranking de Temporada: https://challonge.com/communities/fabco/rankings?id=2002\n- Ranking Anual: https://challonge.com/communities/fabco/rankings?id=2589\n\nPremiación: Según participantes.\nLista de baneo y legalidad: https://fabtcg.com/en/resources/rules-and-policy-center/card-legality-policy\nReglas detalladas del juego: https://fabtcg.com/en/resources/rules-and-policy-center/comprehensive-rules/\nReglas detalladas sobre el torneo: https://fabtcg.com/en/resources/rules-and-policy-center/tournament-rules-and-policy/",
+    "notifications": {
+      "upon_matches_open": true,
+      "upon_tournament_ends": true
+    },
+    "match_options": {
+      "accept_attachments": false
+    },
+    "registration_options": {
+      "open_signup": true,
+      "signup_cap": 32
+    },
+    "seeding_options": {
+      "hide_seeds": false,
+      "sequential_pairings": false
+    },
+    "swiss_options": {
+      "rounds": 4,
+      "pts_for_match_win": 1.0,
+      "pts_for_match_tie": 0.0,
+      "pts_for_game_win": 0.0,
+      "pts_for_game_tie": 0.0,
+      "pts_for_bye": 1.0
+    }
+  },
+  "event_types": {
+    "CC": {
+      "name_prefix": "FABCO CC",
+      "description": "Torneo Classic Constructed - Flesh and Blood\nInventario total de 80 cartas no incluido el heroe, el deck de juego debe ser de minimo 60 cartas.\n Tiempo: Cada ronda tiene un tiempo permitido de 55 minutos.",
+      "tournament_type": "swiss"
+    },
+    "Sage": {
+      "name_prefix": "FABCO Silver Age",
+      "description": "Torneo Silver Age - Flesh and Blood\nInventario total de 55 cartas no incluido el heroe, el deck de juego debe ser de 40 cartas exactas.\n Tiempo: Cada ronda tiene un tiempo permitido de 35 minutos.",
+      "tournament_type": "swiss"
+    },
+    "LL": {
+      "name_prefix": "FABCO Living Legend",
+      "description": "Torneo Living Legend - Flesh and Blood\nInventario total de 80 cartas no incluido el heroe, el deck de juego debe ser de minimo 60 cartas.\n Tiempo: Cada ronda tiene un tiempo permitido de 55 minutos.",
+      "tournament_type": "swiss"
+    },
+    "Blitz": {
+      "name_prefix": "FABCO Blitz",
+      "description": "Torneo Blitz - Flesh and Blood\nInventario total de 55 cartas no incluido el heroe, el deck de juego debe ser de 40 cartas exactas.\n Tiempo: Cada ronda tiene un tiempo permitido de 35 minutos.",
+      "tournament_type": "swiss"
+    },
+    "Draft": {
+      "name_prefix": "FABCO Sellados y Draft",
+      "description": "Torneo Sellados y Draft - Flesh and Blood\nSegún las reglas del formato",
+      "tournament_type": "swiss",
+      "registration_options": {
+        "signup_cap": 16
+      }
+    }
+  },
+  "locations": {
+    "Chaos Store": {
+      "suffix": "Chaos Cali",
+      "short_name": "Chaos",
+      "rankings": ["season", "year"]
+    },
+    "Palmira": {
+      "suffix": "Palmira",
+      "short_name": "Palmira",
+      "rankings": ["palmira"]
+    }
+  }
+}
