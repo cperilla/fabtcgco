@@ -623,12 +623,11 @@ def main():
             access_token = None
 
         # Settings to apply to all tournaments
+        # Note: Only send open_signup, not signup_cap, to avoid resetting other settings
         updates = {
-            'quick_advance': templates.get('default', {}).get('quick_advance', True),
-            'registration_options': templates.get('default', {}).get('registration_options', {
-                'open_signup': True,
-                'signup_cap': 32
-            })
+            'registration_options': {
+                'open_signup': True
+            }
         }
 
         updated = 0
