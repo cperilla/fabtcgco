@@ -622,6 +622,8 @@ def main():
         events = find_events_by_date(calendar, args.dry_run)
         if args.location:
             events = [e for e in events if e.get('Location') == args.location]
+        # Skip FreePlay events (casual sessions, no tournaments)
+        events = [e for e in events if e.get('EventType') != 'FreePlay']
         if not events:
             print(f"No event found for date: {args.dry_run}" + (f" at {args.location}" if args.location else ""))
             return 1
@@ -656,6 +658,8 @@ def main():
             events = find_events_by_date(calendar, date_str)
             if args.location:
                 events = [e for e in events if e.get('Location') == args.location]
+            # Skip FreePlay events (casual sessions, no tournaments)
+            events = [e for e in events if e.get('EventType') != 'FreePlay']
             if not events:
                 continue
 

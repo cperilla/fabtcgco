@@ -35,6 +35,14 @@ const getCardName = (tournamentName?: string) => {
 
 const cardName = getCardName(event.tournamentName);
 const hasTournament = !!event.tournamentUrl;
+
+// Map event types to format page URLs
+const formatUrls: Record<string, string> = {
+  'Sage': '/formato/sage',
+  'CC': '/formato/cc',
+  'LL': '/formato/living-legend'
+};
+const formatUrl = event.type ? formatUrls[event.type] : null;
 ---
 
 <article
@@ -51,11 +59,19 @@ const hasTournament = !!event.tournamentUrl;
       <h3 class="tournament-title">
         <span class="card-name-part">{cardName}</span>
         <span class="separator">:</span>
-        <span class="format-part">{event.icon} {event.title} Tournament</span>
+        {formatUrl ? (
+          <a href={formatUrl} class="format-part format-link">{event.icon} {event.title} Tournament</a>
+        ) : (
+          <span class="format-part">{event.icon} {event.title} Tournament</span>
+        )}
       </h3>
     ) : (
       <div class="event-ticket-header">
-        <h3 class="title">{event.icon} {event.title}</h3>
+        {formatUrl ? (
+          <h3 class="title"><a href={formatUrl} class="format-link">{event.icon} {event.title}</a></h3>
+        ) : (
+          <h3 class="title">{event.icon} {event.title}</h3>
+        )}
         <span class="location-badge">{event.location.spot}</span>
       </div>
     )}

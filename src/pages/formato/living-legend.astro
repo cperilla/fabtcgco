@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const secciones = [
+  {
+    titulo: "Resumen del formato",
+    contenido: `Living Legend es una emocionante evolucion de Classic Constructed, donde los poderosos heroes que han alcanzado el estatus de Living Legend, junto con sus iconicas armas distintivas, han sido liberados de los confines del juego convencional. Un reino donde los viejos heroes encuentran nueva gloria, y donde los jugadores pueden desatar todo el potencial de sus mazos. Ponte en los zapatos de estos campeones venerados o acepta el desafio con tu contendiente para derribar a estos titanes renombrados.`
+  },
+  {
+    titulo: "Requisitos del mazo",
+    contenido: `<strong>Heroe:</strong> 1 carta de heroe no joven (non-young hero)
+<strong>Card-pool:</strong> 80 cartas (incluye armas, equipamiento y cartas del mazo)
+<strong>Mazo:</strong> Minimo 60 cartas
+<strong>Copias:</strong> Hasta 3 copias de cada carta unica
+
+Living Legend esta basado en el formato Classic Constructed, con la diferencia de que permite heroes y cartas que tienen estatus Living Legend.`
+  },
+  {
+    titulo: "Reglas de construccion",
+    contenido: `Una carta solo puede incluirse en el card-pool si la clase/talentos de la carta son un subconjunto de la clase/talentos del heroe (ej: una carta con talento Light solo puede incluirse si el heroe tiene talento Light). Las cartas genericas pueden incluirse en cualquier card-pool.
+
+Una carta es unica si tiene un nombre Y color diferente de otra carta (ej: Sink Below rojo es unico comparado con Sink Below azul).
+
+Estas reglas estan sujetas a los efectos del heroe o cartas en el card-pool (ej: heroes con "Essence" permiten ciertas cartas con talento, cartas con "Legendary" se limitan a 1 en el card-pool).`
+  },
+  {
+    titulo: "Tiempo de ronda",
+    contenido: `<strong>Rondas:</strong> 55 minutos + 1 turno adicional
+<strong>Formato:</strong> Best of 1 (mejor de 1 partida)
+
+Si el tiempo expira y no hay ganador, el jugador en turno completa su turno y se juega 1 turno adicional. Si aun no hay ganador, la partida es empate.`
+  },
+  {
+    titulo: "Horario local",
+    contenido: `<strong>Ultimo sabado de cada mes:</strong> 3 PM en Chaos Store (Cali)
+
+Living Legend es nuestro evento mensual especial. Una oportunidad para desempolvar esos heroes legendarios y revivir las mejores eras del juego.`
+  }
+];
+
+const referencias = [
+  { nombre: "Living Legend - FAB TCG", url: "https://fabtcg.com/gameplay-formats/living-legend/" },
+  { nombre: "Card Legality Policy", url: "https://fabtcg.com/resources/rules-and-policy-center/card-legality-policy/" },
+  { nombre: "Tournament Rules and Policy", url: "https://fabtcg.com/resources/rules-and-policy-center/tournament-rules-and-policy/" }
+];
+---
+
+<Layout>
+<div class="mechanics-page">
+    <div class="mechanics-header">
+        <h1>Living Legend</h1>
+        <div class="stars">
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #c9a227;">★</span>
+            <span style="color: #765d2f;">★</span>
+        </div>
+        <p class="subtitle">Donde las leyendas nunca mueren</p>
+    </div>
+
+    <div class="mechanics-container">
+        <div class="conduct-intro">
+            <p>Living Legend es el formato para los nostalgicos y los valientes. Aqui los heroes mas dominantes de la historia de Flesh and Blood tienen su santuario, donde pueden seguir demostrando por que se ganaron su lugar en la leyenda.</p>
+        </div>
+
+        {secciones.map((seccion) => (
+            <article class="mechanic-ticket mechanic-gold">
+                <div class="mechanic-ticket-name">
+                    <span class="name">{seccion.titulo}</span>
+                </div>
+                <div class="mechanic-ticket-content">
+                    <p class="description" set:html={seccion.contenido.replace(/\n/g, '<br>')} />
+                </div>
+            </article>
+        ))}
+
+        <div class="conduct-references">
+            <h3>Referencias oficiales</h3>
+            <p>Para informacion actualizada sobre heroes Living Legend y reglas:</p>
+            <ul>
+                {referencias.map((ref) => (
+                    <li><a href={ref.url} target="_blank" rel="noopener noreferrer">{ref.nombre}</a></li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .conduct-intro {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid #c9a227;
+    }
+
+    .conduct-intro p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    .conduct-references {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .conduct-references h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .conduct-references p {
+        color: var(--muted-color);
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .conduct-references ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .conduct-references li {
+        margin-bottom: 0.5rem;
+    }
+
+    .conduct-references a {
+        color: var(--accent-light);
+        text-decoration: none;
+    }
+
+    .conduct-references a:hover {
+        text-decoration: underline;
+    }
+</style>
