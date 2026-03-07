@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const formatos = [
+  {
+    nombre: "Silver Age",
+    codigo: "SAGE",
+    descripcion: "Formato accesible con heroes jovenes, 40 cartas en mazo y solo rarezas common/rare/basic. Partidas rapidas de 35 minutos.",
+    color: "#4a7c4e",
+    href: "/formato/sage",
+    horario: "Jueves 5 PM, Sabados 3 PM"
+  },
+  {
+    nombre: "Classic Constructed",
+    codigo: "CC",
+    descripcion: "La experiencia definitiva de FAB. Heroes adultos, 80 card-pool, minimo 60 cartas en mazo. Rondas de 55 minutos.",
+    color: "#c41e3a",
+    href: "/formato/cc",
+    horario: "Jueves 5 PM, Sabados 3 PM"
+  },
+  {
+    nombre: "Living Legend",
+    codigo: "LL",
+    descripcion: "Evolucion de CC donde los heroes con estatus Living Legend pueden jugarse. Un reino donde las leyendas encuentran nueva gloria.",
+    color: "#c9a227",
+    href: "/formato/living-legend",
+    horario: "Ultimo sabado del mes, 3 PM"
+  }
+];
+---
+
+<Layout>
+<div class="mechanics-page">
+    <div class="mechanics-header">
+        <h1>Formatos de Juego</h1>
+        <div class="stars">
+            <span style="color: #4a7c4e;">★</span>
+            <span style="color: #c41e3a;">★</span>
+            <span style="color: #c9a227;">★</span>
+        </div>
+        <p class="subtitle">Conoce los formatos que jugamos en FAB Colombia</p>
+    </div>
+
+    <div class="mechanics-container">
+        <div class="formatos-intro">
+            <p>En Flesh and Blood existen varios formatos de juego, cada uno con sus propias reglas y pool de cartas legales. En FAB Colombia organizamos eventos regularmente en los tres formatos principales.</p>
+        </div>
+
+        <div class="formatos-grid">
+            {formatos.map((formato) => (
+                <a href={formato.href} class="formato-card" style={`--card-color: ${formato.color}`}>
+                    <div class="formato-header">
+                        <h2>{formato.nombre}</h2>
+                        <span class="formato-codigo">{formato.codigo}</span>
+                    </div>
+                    <p class="formato-descripcion">{formato.descripcion}</p>
+                    <div class="formato-horario">
+                        <span class="horario-label">Horario:</span>
+                        <span class="horario-value">{formato.horario}</span>
+                    </div>
+                    <span class="formato-link">Ver detalles →</span>
+                </a>
+            ))}
+        </div>
+
+        <div class="formatos-footer">
+            <h3>Otros formatos</h3>
+            <p>Flesh and Blood tambien tiene otros formatos como <strong>Blitz</strong> (partidas rapidas con heroes jovenes), <strong>Draft</strong> y <strong>Sealed</strong> (formatos limitados). Ocasionalmente organizamos eventos especiales en estos formatos.</p>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .formatos-intro {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .formatos-intro p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    .formatos-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .formatos-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .formato-card {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-top: 4px solid var(--card-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formato-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .formato-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .formato-header h2 {
+        margin: 0;
+        color: var(--card-color);
+        font-size: 1.25rem;
+    }
+
+    .formato-codigo {
+        background: var(--card-color);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    .formato-descripcion {
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0 0 1rem 0;
+        flex-grow: 1;
+    }
+
+    .formato-horario {
+        background: var(--bg-dark-1);
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .horario-label {
+        color: var(--muted-color);
+    }
+
+    .horario-value {
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+    .formato-link {
+        color: var(--card-color);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .formatos-footer {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .formatos-footer h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .formatos-footer p {
+        color: var(--muted-color);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .formatos-footer strong {
+        color: var(--text-color);
+    }
+</style>

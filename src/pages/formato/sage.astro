@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const secciones = [
+  {
+    titulo: "Resumen del formato",
+    contenido: `Silver Age (SAGE) es un formato accesible y de ritmo rapido que ofrece una experiencia de juego emocionante con menos cartas y menos vida inicial que Classic Constructed. Perfecto para jugadores que buscan partidas rapidas e intensas. Silver Age es la forma ideal de sumergirse directamente en la accion.`
+  },
+  {
+    titulo: "Requisitos del mazo",
+    contenido: `<strong>Heroe:</strong> 1 carta de heroe joven (young hero)
+<strong>Card-pool:</strong> 55 cartas (incluye armas, equipamiento y cartas del mazo)
+<strong>Mazo:</strong> Exactamente 40 cartas
+<strong>Copias:</strong> Hasta 2 copias de cada carta unica
+<strong>Rareza:</strong> Solo cartas <strong>common</strong>, <strong>rare</strong> y <strong>basic</strong> (incluyendo heroes)`
+  },
+  {
+    titulo: "Reglas de construccion",
+    contenido: `Una carta solo puede incluirse en el card-pool si la clase/talentos de la carta son un subconjunto de la clase/talentos del heroe. Las cartas genericas pueden incluirse en cualquier card-pool.
+
+Una carta es unica si tiene un nombre Y color diferente de otra carta (ej: Snatch rojo es unico comparado con Snatch azul).
+
+Una carta se considera common, rare o basic si alguna vez fue impresa con esa rareza.`
+  },
+  {
+    titulo: "Tiempo de ronda",
+    contenido: `<strong>Rondas:</strong> 35 minutos + 1 turno adicional
+<strong>Formato:</strong> Best of 1 (mejor de 1 partida)
+
+Si el tiempo expira y no hay ganador, el jugador en turno completa su turno y se juega 1 turno adicional. Si aun no hay ganador, la partida es empate.`
+  },
+  {
+    titulo: "Horario local",
+    contenido: `<strong>Jueves:</strong> 5 PM en Chaos Store (Cali)
+<strong>Sabados:</strong> 3 PM en Chaos Store (Cali) o Palmira
+
+Silver Age es nuestro formato mas frecuente. Ideal para practicar y mejorar tu juego competitivo.`
+  }
+];
+
+const referencias = [
+  { nombre: "Silver Age - FAB TCG", url: "https://fabtcg.com/gameplay-formats/silver-age/" },
+  { nombre: "Card Legality Policy", url: "https://fabtcg.com/resources/rules-and-policy-center/card-legality-policy/" },
+  { nombre: "Tournament Rules and Policy", url: "https://fabtcg.com/resources/rules-and-policy-center/tournament-rules-and-policy/" }
+];
+---
+
+<Layout>
+<div class="mechanics-page">
+    <div class="mechanics-header">
+        <h1>Silver Age</h1>
+        <div class="stars">
+            <span style="color: #4a7c4e;">★</span>
+            <span style="color: #2d5a30;">★</span>
+            <span style="color: #4a7c4e;">★</span>
+        </div>
+        <p class="subtitle">Formato accesible con heroes jovenes</p>
+    </div>
+
+    <div class="mechanics-container">
+        <div class="conduct-intro">
+            <p>Silver Age es el formato ideal para entrar al juego competitivo de Flesh and Blood. Con partidas mas rapidas y un pool de cartas mas accesible, ofrece una experiencia intensa y estrategica.</p>
+        </div>
+
+        {secciones.map((seccion) => (
+            <article class="mechanic-ticket mechanic-green">
+                <div class="mechanic-ticket-name">
+                    <span class="name">{seccion.titulo}</span>
+                </div>
+                <div class="mechanic-ticket-content">
+                    <p class="description" set:html={seccion.contenido.replace(/\n/g, '<br>')} />
+                </div>
+            </article>
+        ))}
+
+        <div class="conduct-references">
+            <h3>Referencias oficiales</h3>
+            <p>Para informacion actualizada sobre legalidad de cartas y reglas:</p>
+            <ul>
+                {referencias.map((ref) => (
+                    <li><a href={ref.url} target="_blank" rel="noopener noreferrer">{ref.nombre}</a></li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .conduct-intro {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid #4a7c4e;
+    }
+
+    .conduct-intro p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    .conduct-references {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .conduct-references h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .conduct-references p {
+        color: var(--muted-color);
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .conduct-references ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .conduct-references li {
+        margin-bottom: 0.5rem;
+    }
+
+    .conduct-references a {
+        color: var(--accent-light);
+        text-decoration: none;
+    }
+
+    .conduct-references a:hover {
+        text-decoration: underline;
+    }
+</style>

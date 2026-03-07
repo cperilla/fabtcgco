@@ -1,42 +1,232 @@
 ---
-const title = "Más que un juego, una comunidad...";
-import banner from '../images/banner.jpeg';
-description: "Nuestra identidad, propósito y espíritu en Flesh and Blood Colombia"
+const title = "Bienvenido a FAB Colombia";
 ---
 
 <section class="text-center py-16 px-4 max-w-4xl mx-auto backdrop-blur-md">
-  
-  <h4>Bienvenido a la comunidad de</h4>
-  <h1 class="text-4xl font-bold mb-6"> Flesh and Blood Colombia</h1>
-  <p class="text-lg mb-10 text-muted-foreground">
-    Esta comunidad no nació para ser cómoda. Nació para forjar guerreros. Aquí no valoramos lo fácil, valoramos el camino difícil: el que deja cicatrices, pero también enseñanzas. Jugamos para mejorar. Jugamos para crecer. Jugamos con sangre, sudor y honor.
-  </p>
 
-  <div class="space-y-12">
-    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
-      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_02.png" alt="Guerrero en Catedral Gótica" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
-      <p class="text-4xl legend italic text-muted-foreground">
-        Aunque esté solo. Aunque esté herido. Aunque nadie lo vea, el guerrero se levanta una vez más.
-      </p>
+  <h4>Comunidad de</h4>
+  <h1 class="text-4xl font-bold mb-6">Flesh and Blood Colombia</h1>
+
+  <div class="welcome-grid">
+    <!-- Site Overview -->
+    <div class="welcome-card">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_02.png" alt="FAB Colombia Community" class="welcome-image">
+      <div class="welcome-content">
+        <h2>Juego Organizado en Colombia</h2>
+        <p>
+          FAB Colombia es la comunidad de Flesh and Blood en Colombia. Organizamos torneos semanales,
+          mantenemos rankings locales, y construimos una comunidad competitiva y respetuosa.
+        </p>
+        <ul class="welcome-features">
+          <li><a href="/calendar">Calendario de eventos</a></li>
+          <li><a href="/rankings">Rankings locales</a></li>
+          <li><a href="/blog">Blog y noticias</a></li>
+          <li><a href="/mechanics">Guias de mecanicas</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="flex flex-col md:flex-row-reverse items-center gap-6 text-left">
-      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_04.png" alt="Guerrero en batalla naval" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
-      <p class="text-4xl italic legend text-muted-foreground">
-        No importa que el barco se hunda. No importa que llueva fuego. Mientras respire, no he perdido.
-      </p>
+    <!-- Weekly Schedule -->
+    <div class="welcome-card">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_04.png" alt="Weekly Events" class="welcome-image">
+      <div class="welcome-content">
+        <h2>Horario Semanal</h2>
+
+        <h3 class="location-header">Chaos Store - Cali</h3>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="schedule-day">Martes</span>
+            <span class="schedule-event">Free Play - 5 PM</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-day">Jueves</span>
+            <span class="schedule-event">Silver Age / CC - 5 PM</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-day">Sabados</span>
+            <span class="schedule-event">CC / Silver Age - 3 PM</span>
+          </div>
+          <div class="schedule-item schedule-special">
+            <span class="schedule-day">Ultimo Sabado</span>
+            <span class="schedule-event">Living Legend - 3 PM</span>
+          </div>
+        </div>
+
+        <h3 class="location-header">Palmira</h3>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="schedule-day">Sabados</span>
+            <span class="schedule-event">Silver Age - 3 PM</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
-      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_06.png" alt="Hechicero con símbolo en fuego" class="rounded-xl shadow-lg max-w-[300px] h-[250px] object-cover">
-      <p class="text-4xl italic legend text-muted-foreground">
-        Algunos forjan con acero. Otros con fuego. Nosotros con convicción.
-      </p>
+    <!-- Goldfish Tool -->
+    <div class="welcome-card welcome-card-wide">
+      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_06.png" alt="Goldfish Practice Tool" class="welcome-image">
+      <div class="welcome-content">
+        <h2>Herramienta Goldfish</h2>
+        <p>
+          <strong>Goldfish</strong> es la practica de jugar tu mazo en solitario, sin oponente.
+          Te permite aprender las secuencias de tu mazo, optimizar tus lineas de juego, y calcular
+          tu danio promedio por turno.
+        </p>
+        <p>
+          Hemos desarrollado una herramienta especial para practicar goldfish con tu mazo de FAB.
+        </p>
+        <a href="https://goldfish.fabtcgcolombia.club" target="_blank" rel="noopener noreferrer" class="goldfish-link">
+          Ir a Goldfish Tool
+        </a>
+      </div>
     </div>
   </div>
-
-  <p class="mt-16 text-lg text-muted-foreground">
-    Este es el estándar. Este es el espíritu. Y si estás aquí, es porque estás listo para escribir tu historia con nosotros. Con sangre. Con orgullo. Con comunidad.
-  </p>
 </section>
 
+<style>
+  .welcome-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    .welcome-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .welcome-card-wide {
+      grid-column: span 2;
+    }
+  }
+
+  .welcome-card {
+    background: var(--bg-dark-2, rgba(0, 0, 0, 0.3));
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-card-wide {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .welcome-card-wide {
+      grid-template-columns: 300px 1fr;
+    }
+  }
+
+  .welcome-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    .welcome-card-wide .welcome-image {
+      height: 100%;
+    }
+  }
+
+  .welcome-content {
+    padding: 1.5rem;
+  }
+
+  .welcome-content h2 {
+    color: var(--primary-color, #c41e3a);
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+  }
+
+  .welcome-content p {
+    color: var(--text-color, #e0e0e0);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+  }
+
+  .welcome-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .welcome-features li {
+    margin-bottom: 0.5rem;
+  }
+
+  .welcome-features a {
+    color: var(--accent-light, #64b5f6);
+    text-decoration: none;
+  }
+
+  .welcome-features a:hover {
+    text-decoration: underline;
+  }
+
+  .location-header {
+    color: var(--accent-light, #64b5f6);
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid var(--accent-light, #64b5f6);
+  }
+
+  .location-header:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .schedule-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .schedule-day {
+    font-weight: bold;
+    color: var(--primary-color, #c41e3a);
+  }
+
+  .schedule-event {
+    color: var(--text-color, #e0e0e0);
+  }
+
+  .schedule-special {
+    background: rgba(118, 93, 47, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+
+  .schedule-note {
+    font-size: 0.875rem;
+    color: var(--muted-color, #888);
+    font-style: italic;
+  }
+
+  .goldfish-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a7c4e 0%, #2d5a30 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .goldfish-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 124, 78, 0.4);
+  }
+</style>
