@@ -3,6 +3,8 @@ dist/
 
 # generated types
 .astro/
+.tmp/
+
 
 # dependencies
 node_modules/
@@ -26,3 +28,5 @@ pnpm-debug.log*
 # wrangler files
 .wrangler
 .dev.vars
+tools/challonge/oauth_config.json
+tools/challonge/oauth_token.json
