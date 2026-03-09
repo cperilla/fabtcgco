@@ -1,0 +1,189 @@
+{
+  "format": "BLITZ",
+  "year": 2025,
+  "tournaments": 8,
+  "total_matches": 82,
+  "total_players": 17,
+  "qualified_players": 17,
+  "min_tournaments": 1,
+  "top_elo": [
+    [
+      "Aldturi",
+      1554.0173749369003
+    ],
+    [
+      "AlvaroFDO2001",
+      1543.3551522838031
+    ],
+    [
+      "Saukonen",
+      1543.2713634210734
+    ],
+    [
+      "Robgiamt",
+      1540.3750594553512
+    ],
+    [
+      "DarkGentleman",
+      1528.2474093440385
+    ],
+    [
+      "Wolfmortem",
+      1521.912396184969
+    ],
+    [
+      "Elmacho1992",
+      1514.4293590099126
+    ],
+    [
+      "RubickQ",
+      1504.6644905373043
+    ],
+    [
+      "machetazoo",
+      1497.17328159223
+    ],
+    [
+      "Alejosky",
+      1485.842637113429
+    ]
+  ],
+  "player_stats": {
+    "Alejosky": {
+      "matches": 15,
+      "wins": 5,
+      "losses": 6,
+      "ties": 4,
+      "win_rate": 0.45454545454545453,
+      "tournaments": 5
+    },
+    "Aldturi": {
+      "matches": 18,
+      "wins": 10,
+      "losses": 7,
+      "ties": 1,
+      "win_rate": 0.5882352941176471,
+      "tournaments": 6
+    },
+    "Corlopincho": {
+      "matches": 20,
+      "wins": 4,
+      "losses": 6,
+      "ties": 10,
+      "win_rate": 0.4,
+      "tournaments": 7
+    },
+    "Saukonen": {
+      "matches": 20,
+      "wins": 11,
+      "losses": 6,
+      "ties": 3,
+      "win_rate": 0.6470588235294118,
+      "tournaments": 7
+    },
+    "Robgiamt": {
+      "matches": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.8,
+      "tournaments": 2
+    },
+    "machetazoo": {
+      "matches": 10,
+      "wins": 5,
+      "losses": 5,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 3
+    },
+    "Scarwolf7": {
+      "matches": 20,
+      "wins": 6,
+      "losses": 12,
+      "ties": 2,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 7
+    },
+    "RubickQ": {
+      "matches": 14,
+      "wins": 6,
+      "losses": 6,
+      "ties": 2,
+      "win_rate": 0.5,
+      "tournaments": 5
+    },
+    "Wolfmortem": {
+      "matches": 12,
+      "wins": 7,
+      "losses": 5,
+      "ties": 0,
+      "win_rate": 0.5833333333333334,
+      "tournaments": 4
+    },
+    "DJAMPUDIA": {
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Feanaro26": {
+      "matches": 12,
+      "wins": 5,
+      "losses": 7,
+      "ties": 0,
+      "win_rate": 0.4166666666666667,
+      "tournaments": 4
+    },
+    "Elmacho1992": {
+      "matches": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 1
+    },
+    "MetalPrime": {
+      "matches": 3,
+      "wins": 0,
+      "losses": 1,
+      "ties": 2,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "AlvaroFDO2001": {
+      "matches": 3,
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "tournaments": 1
+    },
+    "AlejoCartagena": {
+      "matches": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Omniconside": {
+      "matches": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "DarkGentleman": {
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "tournaments": 1
+    }
+  }
+}

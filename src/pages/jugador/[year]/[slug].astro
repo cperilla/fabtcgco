@@ -180,6 +180,63 @@ const yearColor = year === "2025" ? "#e94560" : "#0f3460";
                     </section>
                 )}
 
+                <!-- Format Breakdown -->
+                {playerData.format_breakdown && Object.keys(playerData.format_breakdown).length > 0 && (
+                    <section class="section format-section">
+                        <h2>Rendimiento por Formato</h2>
+                        <div class="format-grid">
+                            {Object.entries(playerData.format_breakdown)
+                                .sort((a, b) => b[1].matches - a[1].matches)
+                                .map(([format, stats]) => {
+                                    const formatNames = {
+                                        "CC": "Classic Constructed",
+                                        "SAGE": "Sage",
+                                        "LL": "Living Legend",
+                                        "BLITZ": "Blitz",
+                                        "DRAFT": "Draft",
+                                        "SEALED": "Sealed"
+                                    };
+                                    const formatColors = {
+                                        "CC": "#e94560",
+                                        "SAGE": "#10b981",
+                                        "LL": "#8b5cf6",
+                                        "BLITZ": "#f59e0b",
+                                        "DRAFT": "#3b82f6",
+                                        "SEALED": "#ec4899"
+                                    };
+                                    return (
+                                        <div class={`format-card ${!stats.is_significant ? 'low-data' : ''}`}
+                                             style={`--format-color: ${formatColors[format] || '#6b7280'}`}>
+                                            <h3 class="format-name">{formatNames[format] || format}</h3>
+                                            {!stats.is_significant && <span class="low-data-badge">*</span>}
+                                            <div class="format-stats">
+                                                <div class="format-stat">
+                                                    <span class="f-value">{stats.tournaments}</span>
+                                                    <span class="f-label">Torneos</span>
+                                                </div>
+                                                <div class="format-stat">
+                                                    <span class="f-value">{stats.matches}</span>
+                                                    <span class="f-label">Partidas</span>
+                                                </div>
+                                                <div class="format-stat">
+                                                    <span class="f-value">{Math.round(stats.win_rate * 100)}%</span>
+                                                    <span class="f-label">Win Rate</span>
+                                                </div>
+                                            </div>
+                                            <div class="format-record">{stats.wins}W - {stats.losses}L - {stats.ties}E</div>
+                                            <div class="format-bar">
+                                                <div class="format-fill" style={`width: ${stats.win_rate * 100}%`}></div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                        </div>
+                        {Object.values(playerData.format_breakdown).some(s => !s.is_significant) && (
+                            <p class="format-note">* Datos con menos de 3 torneos</p>
+                        )}
+                    </section>
+                )}
+
                 <!-- Best/Worst Matchups -->
                 <div class="matchups-container">
                     {playerData.best_matchups.length > 0 && (
@@ -698,6 +755,90 @@ const yearColor = year === "2025" ? "#e94560" : "#0f3460";
         border-radius: 2px;
     }
 
+    /* Format Breakdown */
+    .format-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+
+    .format-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        border-top: 3px solid var(--format-color);
+        text-align: center;
+        position: relative;
+    }
+
+    .format-card.low-data {
+        opacity: 0.7;
+    }
+
+    .format-name {
+        color: var(--format-color);
+        font-size: 0.9rem;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .low-data-badge {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        color: var(--muted-color);
+        font-size: 0.8rem;
+    }
+
+    .format-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0.5rem;
+    }
+
+    .format-stat {
+        text-align: center;
+    }
+
+    .f-value {
+        display: block;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    .f-label {
+        font-size: 0.6rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
+    }
+
+    .format-record {
+        color: var(--muted-color);
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .format-bar {
+        height: 4px;
+        background: var(--bg-dark-2);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .format-fill {
+        height: 100%;
+        background: var(--format-color);
+        border-radius: 2px;
+    }
+
+    .format-note {
+        color: var(--muted-color);
+        font-size: 0.75rem;
+        font-style: italic;
+        text-align: center;
+        margin: 1rem 0 0 0;
+    }
+
     .player-footer {
         text-align: center;
         margin-top: 2rem;
@@ -737,6 +878,10 @@ const yearColor = year === "2025" ? "#e94560" : "#0f3460";
 
         .matchups-container {
             grid-template-columns: 1fr;
+        }
+
+        .format-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .medals-row {

@@ -38,6 +38,11 @@ def filter_tournaments_by_year(tournaments: List[Tournament], year: int) -> List
     return [t for t in tournaments if t.date.year == year]
 
 
+def filter_tournaments_by_format(tournaments: List[Tournament], format_type: str) -> List[Tournament]:
+    """Filter tournaments by format (CC, SAGE, LL, BLITZ, etc.)."""
+    return [t for t in tournaments if t.format.upper() == format_type.upper()]
+
+
 def get_all_matches(tournaments: List[Tournament]) -> List[Match]:
     """Get all matches from tournaments."""
     matches = []
@@ -53,6 +58,144 @@ def get_player_tournament_counts(tournaments: List[Tournament]) -> dict:
         for player in t.participants:
             counts[player] = counts.get(player, 0) + 1
     return counts
+
+
+def generate_format_report(
+    tournaments: List[Tournament],
+    year: int,
+    format_type: str,
+    output_dir: Path,
+    min_participation_pct: float = 0.20
+):
+    """Generate statistics report for a specific format.
+
+    Args:
+        tournaments: List of tournaments (already filtered by format).
+        year: Year for the report.
+        format_type: Format name (CC, SAGE, LL, etc.).
+        output_dir: Output directory for this format.
+        min_participation_pct: Minimum participation percentage.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    all_matches = get_all_matches(tournaments)
+
+    if len(tournaments) < 2 or len(all_matches) < 5:
+        print(f"    Skipping {format_type}: not enough data ({len(tournaments)} tournaments, {len(all_matches)} matches)")
+        return None
+
+    print(f"\n  Generating {format_type} report...")
+    print(f"    Tournaments: {len(tournaments)}, Matches: {len(all_matches)}")
+
+    # Calculate tournament participation
+    tournament_counts = get_player_tournament_counts(tournaments)
+    min_tournaments = max(1, int(len(tournaments) * min_participation_pct))
+
+    # Calculate stats
+    elo_ratings = calculate_elo(all_matches)
+    elo_history = get_elo_history(all_matches)
+    player_stats = get_all_player_stats(all_matches)
+
+    for player in player_stats:
+        player_stats[player]["tournaments"] = tournament_counts.get(player, 0)
+
+    # Filter qualified players (lower threshold for format-specific)
+    qualified = [
+        p for p, s in player_stats.items()
+        if tournament_counts.get(p, 0) >= min_tournaments
+    ]
+    qualified_matches = [
+        m for m in all_matches
+        if m.player1 in qualified and m.player2 in qualified
+    ]
+
+    if len(qualified) < 3:
+        print(f"    Skipping {format_type}: not enough qualified players ({len(qualified)})")
+        return None
+
+    print(f"    Qualified players: {len(qualified)} (min {min_tournaments} tournaments)")
+
+    # Build matrices
+    h2h_matrix = build_h2h_matrix(qualified_matches, min_matches=1)
+    tie_matrix = build_tie_rate_matrix(qualified_matches, min_matches=1)
+
+    # Generate visualizations
+    print(f"    Generating {format_type} visualizations...")
+
+    # Win rate matrix
+    plot_winrate_matrix(h2h_matrix, output_dir / "matrix_winrate.png")
+
+    # Rivalry matrix
+    plot_rivalry_matrix(h2h_matrix, output_dir / "matriz_rivalidades.png")
+
+    # Tie rate matrix
+    plot_tierate_matrix(tie_matrix, output_dir / "matrix_tierate.png")
+
+    # ELO timeline
+    plot_elo_timeline(elo_history, output_dir / "timeline_elo.png")
+
+    # ELO ranking
+    qualified_elo = {
+        p: e for p, e in elo_ratings.items()
+        if tournament_counts.get(p, 0) >= min_tournaments
+    }
+    plot_elo_ranking(qualified_elo, output_dir / "ranking_elo.png")
+
+    # Tournament participation
+    plot_tournament_participation(tournaments, output_dir / "evolucion_torneos.png")
+
+    # Top streaks
+    top_streaks = get_top_streaks(all_matches, limit=8)
+    plot_top_streaks(top_streaks, output_dir / "top_winstreaks.png")
+
+    # Top tie rates
+    qualified_matches_for_ties = [
+        m for m in all_matches
+        if m.player1 in qualified or m.player2 in qualified
+    ]
+    top_ties = get_top_tie_rates(qualified_matches_for_ties, min_matches=2, limit=8)
+    top_ties = [(p, r, c) for p, r, c in top_ties if p in qualified][:8]
+    if top_ties:
+        plot_top_ties(top_ties, output_dir / "top_empates.png")
+
+    # Build top ELO list
+    qualified_elo_list = [
+        (p, e) for p, e in elo_ratings.items()
+        if p in qualified
+    ]
+    qualified_elo_list.sort(key=lambda x: x[1], reverse=True)
+
+    # Get total unique players
+    all_players = set()
+    for t in tournaments:
+        all_players.update(t.participants)
+
+    # Save format stats JSON
+    format_stats = {
+        "format": format_type,
+        "year": year,
+        "tournaments": len(tournaments),
+        "total_matches": len(all_matches),
+        "total_players": len(all_players),
+        "qualified_players": len(qualified),
+        "min_tournaments": min_tournaments,
+        "top_elo": qualified_elo_list[:10],
+        "player_stats": {
+            p: {
+                "matches": s["matches"],
+                "wins": s["wins"],
+                "losses": s["losses"],
+                "ties": s["ties"],
+                "win_rate": s["win_rate"],
+                "tournaments": s.get("tournaments", 0),
+            }
+            for p, s in player_stats.items() if p in qualified
+        },
+    }
+
+    with open(output_dir / "stats.json", "w") as f:
+        json.dump(format_stats, f, indent=2, ensure_ascii=False, default=str)
+
+    return format_stats
 
 
 def generate_report(tournaments: List[Tournament], year: int, min_participation_pct: float = 0.10):
@@ -207,6 +350,42 @@ def generate_report(tournaments: List[Tournament], year: int, min_participation_
     }
     with open(output_dir / "stats.json", "w") as f:
         json.dump(stats_data, f, indent=2, ensure_ascii=False, default=str)
+
+    # Generate per-format reports
+    print("\nGenerating per-format reports...")
+    formats_in_data = set(t.format.upper() for t in tournaments)
+    format_reports = {}
+
+    for fmt in sorted(formats_in_data):
+        fmt_tournaments = filter_tournaments_by_format(tournaments, fmt)
+        if len(fmt_tournaments) >= 2:
+            fmt_output_dir = output_dir / "formats" / fmt.lower()
+            fmt_stats = generate_format_report(
+                fmt_tournaments,
+                year,
+                fmt,
+                fmt_output_dir,
+                min_participation_pct=0.20  # Lower threshold for format-specific
+            )
+            if fmt_stats:
+                format_reports[fmt] = fmt_stats
+
+    # Save format summary
+    if format_reports:
+        with open(output_dir / "formats" / "index.json", "w") as f:
+            json.dump({
+                "year": year,
+                "formats": list(format_reports.keys()),
+                "format_stats": {
+                    fmt: {
+                        "tournaments": s["tournaments"],
+                        "matches": s["total_matches"],
+                        "players": s["total_players"],
+                        "qualified": s["qualified_players"],
+                    }
+                    for fmt, s in format_reports.items()
+                }
+            }, f, indent=2, ensure_ascii=False)
 
     print(f"\nOutput saved to: {output_dir}")
 

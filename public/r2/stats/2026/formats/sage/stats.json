@@ -1,0 +1,189 @@
+{
+  "format": "SAGE",
+  "year": 2026,
+  "tournaments": 5,
+  "total_matches": 69,
+  "total_players": 17,
+  "qualified_players": 17,
+  "min_tournaments": 1,
+  "top_elo": [
+    [
+      "Saukonen",
+      1582.4580762034388
+    ],
+    [
+      "Scarwolf7",
+      1577.1263084435652
+    ],
+    [
+      "Corlopincho",
+      1557.0683493395657
+    ],
+    [
+      "Yanma Gast",
+      1526.2806905783586
+    ],
+    [
+      "Omniconside",
+      1515.2298601853572
+    ],
+    [
+      "Elmacho1992",
+      1501.3686930925358
+    ],
+    [
+      "Aldturi",
+      1494.803381300959
+    ],
+    [
+      "Sebastian",
+      1490.5491191676113
+    ],
+    [
+      "juanda211",
+      1487.5566179024847
+    ],
+    [
+      "Wolfmortem",
+      1485.2662023748426
+    ]
+  ],
+  "player_stats": {
+    "Wolfmortem": {
+      "matches": 15,
+      "wins": 6,
+      "losses": 8,
+      "ties": 1,
+      "win_rate": 0.42857142857142855,
+      "tournaments": 4
+    },
+    "Saukonen": {
+      "matches": 15,
+      "wins": 11,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.7333333333333333,
+      "tournaments": 4
+    },
+    "Scarwolf7": {
+      "matches": 11,
+      "wins": 8,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.7272727272727273,
+      "tournaments": 3
+    },
+    "Aldturi": {
+      "matches": 14,
+      "wins": 7,
+      "losses": 7,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 4
+    },
+    "Corlopincho": {
+      "matches": 15,
+      "wins": 9,
+      "losses": 5,
+      "ties": 1,
+      "win_rate": 0.6428571428571429,
+      "tournaments": 4
+    },
+    "Alejosky": {
+      "matches": 11,
+      "wins": 3,
+      "losses": 8,
+      "ties": 0,
+      "win_rate": 0.2727272727272727,
+      "tournaments": 3
+    },
+    "machetazoo": {
+      "matches": 11,
+      "wins": 5,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.45454545454545453,
+      "tournaments": 3
+    },
+    "Moto2Moto": {
+      "matches": 4,
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25,
+      "tournaments": 1
+    },
+    "Yanma Gast": {
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 1
+    },
+    "AlejoCartagena": {
+      "matches": 3,
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 1
+    },
+    "Omniconside": {
+      "matches": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 1
+    },
+    "XChristianx": {
+      "matches": 7,
+      "wins": 1,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.2,
+      "tournaments": 2
+    },
+    "juanda211": {
+      "matches": 3,
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 1
+    },
+    "Feanaro26": {
+      "matches": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.42857142857142855,
+      "tournaments": 2
+    },
+    "SlowPlayer22": {
+      "matches": 4,
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25,
+      "tournaments": 1
+    },
+    "Elmacho1992": {
+      "matches": 4,
+      "wins": 2,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 1
+    },
+    "Sebastian": {
+      "matches": 7,
+      "wins": 2,
+      "losses": 3,
+      "ties": 2,
+      "win_rate": 0.4,
+      "tournaments": 2
+    }
+  }
+}

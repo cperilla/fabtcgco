@@ -40,6 +40,11 @@ def filter_tournaments_by_quarter(tournaments: List[Tournament], year: int, quar
     ]
 
 
+def filter_tournaments_by_format(tournaments: List[Tournament], format_type: str) -> List[Tournament]:
+    """Filter tournaments by format (CC, SAGE, LL, etc.)."""
+    return [t for t in tournaments if t.format.upper() == format_type.upper()]
+
+
 def get_all_matches(tournaments: List[Tournament]) -> List[Match]:
     """Get all matches from tournaments."""
     matches = []
@@ -213,6 +218,51 @@ def calculate_best_progress(quarterly_stats: Dict) -> Optional[Dict]:
             }
 
     return best_progress
+
+
+def calculate_format_breakdown(
+    player: str,
+    all_tournaments: List[Tournament],
+    year: int,
+    min_tournaments_significant: int = 3
+) -> Dict[str, Dict]:
+    """Calculate per-format statistics for a player."""
+    year_tournaments = filter_tournaments_by_year(all_tournaments, year)
+    formats_in_data = set(t.format.upper() for t in year_tournaments)
+
+    format_stats = {}
+
+    for fmt in formats_in_data:
+        fmt_tournaments = filter_tournaments_by_format(year_tournaments, fmt)
+        player_fmt_tournaments = [t for t in fmt_tournaments if player in t.participants]
+
+        if not player_fmt_tournaments:
+            continue
+
+        fmt_matches = []
+        for t in player_fmt_tournaments:
+            fmt_matches.extend(t.matches)
+
+        player_matches = get_player_matches(fmt_matches, player)
+
+        if not player_matches:
+            continue
+
+        wins = sum(1 for m in player_matches if m.winner == player)
+        losses = sum(1 for m in player_matches if m.winner and m.winner != player)
+        ties = sum(1 for m in player_matches if m.winner is None)
+
+        format_stats[fmt] = {
+            "tournaments": len(player_fmt_tournaments),
+            "matches": len(player_matches),
+            "wins": wins,
+            "losses": losses,
+            "ties": ties,
+            "win_rate": round(wins / len(player_matches), 3) if player_matches else 0,
+            "is_significant": len(player_fmt_tournaments) >= min_tournaments_significant
+        }
+
+    return format_stats
 
 
 # Medal definitions with icons (using CSS classes and Unicode symbols)
@@ -527,6 +577,7 @@ def generate_player_profile(
             "opponent_count": stats.get("opponent_count", 0),
         },
         "quarterly": quarterly_stats,
+        "format_breakdown": calculate_format_breakdown(player, all_tournaments, year),
         "quarterly_rivals": quarterly_rivals,
         "best_progress": best_progress,
         "h2h": {opp: rec for opp, rec in h2h_sorted[:15]},  # Top 15 opponents
@@ -669,12 +720,37 @@ def main():
         # Sort by ELO
         all_profiles.sort(key=lambda x: x["elo"], reverse=True)
 
+        # Calculate global format statistics
+        format_stats = {}
+        for t in year_tournaments:
+            fmt = t.format.upper()
+            if fmt not in format_stats:
+                format_stats[fmt] = {
+                    "tournaments": 0,
+                    "matches": 0,
+                    "participants": set()
+                }
+            format_stats[fmt]["tournaments"] += 1
+            format_stats[fmt]["matches"] += len(t.matches)
+            format_stats[fmt]["participants"].update(t.participants)
+
+        # Convert sets to counts for JSON serialization
+        global_formats = []
+        for fmt, stats in sorted(format_stats.items(), key=lambda x: -x[1]["tournaments"]):
+            global_formats.append({
+                "format": fmt,
+                "tournaments": stats["tournaments"],
+                "matches": stats["matches"],
+                "players": len(stats["participants"])
+            })
+
         # Save players index
         with open(output_dir / "index.json", "w") as f:
             json.dump({
                 "year": year,
                 "min_tournaments": min_tournaments,
                 "players": all_profiles,
+                "formats": global_formats,
             }, f, indent=2, ensure_ascii=False)
 
         print(f"Generated {len(qualified)} player profiles")

@@ -204,8 +204,12 @@ html[data-theme='highseas-light'] {
 }
 
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Inter', Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -222,6 +226,7 @@ body {
 
 .header {
     overflow: visible;
+    position: relative;
 }
 
 .nav {
@@ -264,6 +269,24 @@ body {
     .nav-links {
         display: none;
     }
+
+    .nav {
+        min-height: 2.5rem;
+        padding: 0.25rem 0;
+    }
+
+    .nav-items-container {
+        min-height: 2.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        position: relative;
+        top: 0;
+    }
 }
 
 .challonge-icon {
@@ -277,13 +300,23 @@ body {
     background-color: var(--primary-color);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    padding: 0.25rem 0.75rem 0.75rem;
+    padding: 0 1rem 1rem;
     line-height: 0;
     position: absolute;
     top: 0;
     left: 1.5rem;
-    z-index: 50;
+    z-index: 150;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile: logo on the right, scaled down */
+@media (max-width: 639px) {
+    .logo {
+        left: auto;
+        right: 0.5rem;
+        transform: scale(0.65);
+        transform-origin: top right;
+    }
 }
 
 @media (min-width: 1024px) {

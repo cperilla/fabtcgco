@@ -1,8 +1,30 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import playersIndex from '../../../public/r2/stats/2025/players/index.json';
 
 const year = "2025";
 const basePath = `/r2/stats/${year}`;
+
+// Format display names and colors
+const formatNames = {
+    "CC": "Classic Constructed",
+    "SAGE": "Sage",
+    "LL": "Living Legend",
+    "BLITZ": "Blitz",
+    "DRAFT": "Draft",
+    "SEALED": "Sealed"
+};
+
+const formatColors = {
+    "CC": "#e94560",
+    "SAGE": "#10b981",
+    "LL": "#8b5cf6",
+    "BLITZ": "#f59e0b",
+    "DRAFT": "#3b82f6",
+    "SEALED": "#ec4899"
+};
+
+const formats = playersIndex.formats || [];
 
 const stats = {
     torneos: 74,
@@ -62,6 +84,34 @@ const radarPages = [1, 2];
         </div>
     </div>
 
+    {/* Format Tabs */}
+    <div class="format-tabs-container">
+        <h3 class="formats-title">Estadisticas por Formato</h3>
+        <div class="format-tabs">
+            <button class="format-tab active" data-format="all" style="--format-color: #e94560">
+                Todos
+            </button>
+            {formats.filter(f => f.tournaments >= 2).map((fmt) => (
+                <button
+                    class="format-tab"
+                    data-format={fmt.format.toLowerCase()}
+                    style={`--format-color: ${formatColors[fmt.format] || '#6b7280'}`}
+                >
+                    {formatNames[fmt.format] || fmt.format}
+                    <span class="tab-count">{fmt.tournaments}</span>
+                </button>
+            ))}
+        </div>
+        <div class="format-stats-row">
+            {formats.map((fmt) => (
+                <div class="format-mini-stat" style={`--format-color: ${formatColors[fmt.format] || '#6b7280'}`}>
+                    <span class="fms-name">{fmt.format}</span>
+                    <span class="fms-value">{fmt.tournaments}T / {fmt.matches}P</span>
+                </div>
+            ))}
+        </div>
+    </div>
+
     <div class="reporte-content">
         <section class="section">
             <h2>Ranking ELO</h2>
@@ -71,7 +121,7 @@ const radarPages = [1, 2];
                 <p><strong>Mini-reto:</strong> Intenta superar tu propio ELO del mes anterior!</p>
             </div>
 
-            <div class="ranking-table">
+            <div class="ranking-table" data-format="all">
                 <table>
                     <thead>
                         <tr>
@@ -96,8 +146,20 @@ const radarPages = [1, 2];
                 </table>
             </div>
 
-            <div class="chart-container">
-                <img src={`${basePath}/ranking_elo.png`} alt="Ranking ELO" />
+            <div class="chart-container" data-format="all">
+                <img src={`${basePath}/ranking_elo.png`} alt="Ranking ELO - Todos" />
+            </div>
+            <div class="chart-container hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/ranking_elo.png`} alt="Ranking ELO - CC" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/ranking_elo.png`} alt="Ranking ELO - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/ranking_elo.png`} alt="Ranking ELO - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/ranking_elo.png`} alt="Ranking ELO - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -108,8 +170,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Las lineas muestran subidas (victorias importantes) y bajadas (derrotas inesperadas). Una linea estable indica consistencia; picos y valles indican rachas.</p>
                 <p><strong>Mini-reto:</strong> Mira tu linea personal - cual fue tu mejor momento? Puedes superarlo?</p>
             </div>
-            <div class="chart-container">
-                <img src={`${basePath}/timeline-elo.png`} alt="Timeline ELO" />
+            <div class="chart-container" data-format="all">
+                <img src={`${basePath}/timeline-elo.png`} alt="Timeline ELO - Todos" />
+            </div>
+            <div class="chart-container hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/timeline_elo.png`} alt="Timeline ELO - CC" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/timeline_elo.png`} alt="Timeline ELO - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/timeline_elo.png`} alt="Timeline ELO - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/timeline_elo.png`} alt="Timeline ELO - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -120,8 +194,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Lee de fila a columna. Verde = el jugador de la fila domina. Rojo = el jugador de la fila pierde frecuentemente. Blanco = 50/50.</p>
                 <p><strong>Mini-reto:</strong> Busca tu peor matchup - el cuadro mas rojo en tu fila. Ese es tu "jefe final" personal!</p>
             </div>
-            <div class="chart-container large">
-                <img src={`${basePath}/matrix_winrate.png`} alt="Matriz de Winrate" />
+            <div class="chart-container large" data-format="all">
+                <img src={`${basePath}/matrix_winrate.png`} alt="Matriz de Winrate - Todos" />
+            </div>
+            <div class="chart-container large hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/matrix_winrate.png`} alt="Matriz de Winrate - CC" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/matrix_winrate.png`} alt="Matriz de Winrate - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/matrix_winrate.png`} alt="Matriz de Winrate - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/matrix_winrate.png`} alt="Matriz de Winrate - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -132,8 +218,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Verde brillante = rivalidad muy equilibrada (50/50, emocionante!). Rojo = matchup muy desbalanceado.</p>
                 <p><strong>Mini-reto:</strong> Encuentra tu rival mas equilibrado - esas son las partidas mas emocionantes!</p>
             </div>
-            <div class="chart-container large">
-                <img src={`${basePath}/matriz_rivalidades.png`} alt="Matriz de Rivalidades" />
+            <div class="chart-container large" data-format="all">
+                <img src={`${basePath}/matriz_rivalidades.png`} alt="Matriz de Rivalidades - Todos" />
+            </div>
+            <div class="chart-container large hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/matriz_rivalidades.png`} alt="Matriz de Rivalidades - CC" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/matriz_rivalidades.png`} alt="Matriz de Rivalidades - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/matriz_rivalidades.png`} alt="Matriz de Rivalidades - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container large hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/matriz_rivalidades.png`} alt="Matriz de Rivalidades - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -144,8 +242,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Cada barra muestra cuantas victorias seguidas logro un jugador sin perder.</p>
                 <p><strong>Mini-reto:</strong> Cual es tu racha actual? Puedes romper tu record personal?</p>
             </div>
-            <div class="chart-container">
-                <img src={`${basePath}/top_winstreaks.png`} alt="Top Winstreaks" />
+            <div class="chart-container" data-format="all">
+                <img src={`${basePath}/top_winstreaks.png`} alt="Top Winstreaks - Todos" />
+            </div>
+            <div class="chart-container hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/top_winstreaks.png`} alt="Top Winstreaks - CC" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/top_winstreaks.png`} alt="Top Winstreaks - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/top_winstreaks.png`} alt="Top Winstreaks - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/top_winstreaks.png`} alt="Top Winstreaks - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -156,8 +266,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Un alto porcentaje puede indicar estilo defensivo, matchups muy parejos, o partidas que van hasta el limite de tiempo.</p>
                 <p><strong>Mini-reto:</strong> Si tu tasa de empates es alta, intenta un deck mas agresivo. Si es baja, prueba ser mas conservador!</p>
             </div>
-            <div class="chart-container">
-                <img src={`${basePath}/top_8_empates.png`} alt="Top Empates" />
+            <div class="chart-container" data-format="all">
+                <img src={`${basePath}/top_8_empates.png`} alt="Top Empates - Todos" />
+            </div>
+            <div class="chart-container hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/top_empates.png`} alt="Top Empates - CC" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/top_empates.png`} alt="Top Empates - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/top_empates.png`} alt="Top Empates - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/top_empates.png`} alt="Top Empates - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -168,8 +290,20 @@ const radarPages = [1, 2];
                 <p><strong>Como leerlo:</strong> Las barras muestran la actividad de la comunidad a lo largo del año.</p>
                 <p><strong>Mini-reto:</strong> Cuantos torneos has asistido? Meta para el proximo año?</p>
             </div>
-            <div class="chart-container">
-                <img src={`${basePath}/evolucion_resultado_torneos.png`} alt="Participacion por Torneo" />
+            <div class="chart-container" data-format="all">
+                <img src={`${basePath}/evolucion_resultado_torneos.png`} alt="Participacion por Torneo - Todos" />
+            </div>
+            <div class="chart-container hidden" data-format="cc">
+                <img src={`${basePath}/formats/cc/evolucion_torneos.png`} alt="Participacion por Torneo - CC" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="blitz">
+                <img src={`${basePath}/formats/blitz/evolucion_torneos.png`} alt="Participacion por Torneo - Blitz" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sage">
+                <img src={`${basePath}/formats/sage/evolucion_torneos.png`} alt="Participacion por Torneo - Sage" loading="lazy" />
+            </div>
+            <div class="chart-container hidden" data-format="sealed">
+                <img src={`${basePath}/formats/sealed/evolucion_torneos.png`} alt="Participacion por Torneo - Sealed" loading="lazy" />
             </div>
         </section>
 
@@ -185,6 +319,34 @@ const radarPages = [1, 2];
     </div>
 </div>
 </Layout>
+
+<script>
+    // Format tab switching
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.format-tab');
+        const formatElements = document.querySelectorAll('.chart-container[data-format], .ranking-table[data-format]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const selectedFormat = tab.dataset.format;
+
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Show/hide format-specific content
+                formatElements.forEach(el => {
+                    const elFormat = el.dataset.format;
+                    if (selectedFormat === 'all') {
+                        el.classList.toggle('hidden', elFormat !== 'all');
+                    } else {
+                        el.classList.toggle('hidden', elFormat !== selectedFormat);
+                    }
+                });
+            });
+        });
+    });
+</script>
 
 <style>
     .reporte-page {
@@ -298,6 +460,92 @@ const radarPages = [1, 2];
         color: var(--muted-color);
         font-size: 0.75rem;
         margin-top: 0.25rem;
+    }
+
+    /* Format Tabs */
+    .format-tabs-container {
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
+        text-align: center;
+    }
+
+    .formats-title {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .format-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+
+    .format-tab {
+        background: var(--bg-dark-2);
+        border: 2px solid transparent;
+        border-radius: 2rem;
+        padding: 0.5rem 1.25rem;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .format-tab:hover {
+        border-color: var(--format-color);
+    }
+
+    .format-tab.active {
+        background: var(--format-color);
+        color: white;
+        border-color: var(--format-color);
+    }
+
+    .tab-count {
+        background: rgba(255,255,255,0.2);
+        padding: 0.1rem 0.4rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .format-tab.active .tab-count {
+        background: rgba(255,255,255,0.3);
+    }
+
+    .format-stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .format-mini-stat {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .fms-name {
+        color: var(--format-color);
+        font-weight: 600;
+    }
+
+    .fms-value {
+        color: var(--muted-color);
+    }
+
+    .hidden {
+        display: none !important;
     }
 
     .reporte-content {

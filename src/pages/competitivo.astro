@@ -11,6 +11,28 @@ const playerProfiles = [
   { year: "2025", players: players2025.players, color: "#e94560" },
 ];
 
+// Format data for display
+const formatNames = {
+  "CC": "Classic Constructed",
+  "SAGE": "Sage",
+  "LL": "Living Legend",
+  "BLITZ": "Blitz",
+  "DRAFT": "Draft",
+  "SEALED": "Sealed"
+};
+
+const formatColors = {
+  "CC": "#e94560",
+  "SAGE": "#10b981",
+  "LL": "#8b5cf6",
+  "BLITZ": "#f59e0b",
+  "DRAFT": "#3b82f6",
+  "SEALED": "#ec4899"
+};
+
+const formats2026 = players2026.formats || [];
+const formats2025 = players2025.formats || [];
+
 const reportes = [
   {
     year: "2026",
@@ -114,6 +136,71 @@ const reportes = [
                     </a>
                 ))}
             </div>
+        </section>
+
+        <!-- Format Breakdown Section -->
+        <section class="section formatos-section">
+            <h2 class="section-header">Estadisticas por Formato</h2>
+            <p class="section-intro">Distribucion de torneos y partidas por formato de juego.</p>
+
+            {/* 2026 Formats */}
+            {formats2026.length > 0 && (
+                <div class="year-formats" style="--year-color: #0f3460">
+                    <h3 class="year-header">
+                        2026
+                        <span class="live-badge-small">EN VIVO</span>
+                    </h3>
+                    <div class="formats-grid">
+                        {formats2026.map((fmt) => (
+                            <div class="format-global-card" style={`--format-color: ${formatColors[fmt.format] || '#6b7280'}`}>
+                                <h4 class="format-title">{formatNames[fmt.format] || fmt.format}</h4>
+                                <div class="format-global-stats">
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.tournaments}</span>
+                                        <span class="fg-label">Torneos</span>
+                                    </div>
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.matches}</span>
+                                        <span class="fg-label">Partidas</span>
+                                    </div>
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.players}</span>
+                                        <span class="fg-label">Jugadores</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* 2025 Formats */}
+            {formats2025.length > 0 && (
+                <div class="year-formats" style="--year-color: #e94560">
+                    <h3 class="year-header">2025</h3>
+                    <div class="formats-grid">
+                        {formats2025.map((fmt) => (
+                            <div class="format-global-card" style={`--format-color: ${formatColors[fmt.format] || '#6b7280'}`}>
+                                <h4 class="format-title">{formatNames[fmt.format] || fmt.format}</h4>
+                                <div class="format-global-stats">
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.tournaments}</span>
+                                        <span class="fg-label">Torneos</span>
+                                    </div>
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.matches}</span>
+                                        <span class="fg-label">Partidas</span>
+                                    </div>
+                                    <div class="fg-stat">
+                                        <span class="fg-value">{fmt.players}</span>
+                                        <span class="fg-label">Jugadores</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </section>
 
         <!-- Player Profiles Section -->
@@ -576,6 +663,64 @@ const reportes = [
         font-weight: 500;
         font-size: 0.9rem;
         margin-top: auto;
+    }
+
+    /* Format Statistics Section */
+    .formatos-section {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .year-formats {
+        margin-bottom: 2rem;
+    }
+
+    .year-formats:last-child {
+        margin-bottom: 0;
+    }
+
+    .formats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .format-global-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+        border-top: 3px solid var(--format-color);
+    }
+
+    .format-title {
+        color: var(--format-color);
+        font-size: 0.9rem;
+        margin: 0 0 0.75rem 0;
+        font-weight: 600;
+    }
+
+    .format-global-stats {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .fg-stat {
+        text-align: center;
+    }
+
+    .fg-value {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    .fg-label {
+        font-size: 0.6rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
     }
 
     /* Player Profiles Section */
