@@ -1,0 +1,149 @@
+{
+  "year": 2025,
+  "min_tournaments": 22,
+  "players": [
+    {
+      "player": "Saukonen",
+      "slug": "saukonen",
+      "elo": 1748.2,
+      "matches": 191,
+      "tournaments": 61,
+      "win_rate": 0.735,
+      "medals": [
+        "Titan",
+        "Inquebrantable",
+        "Coleccionista",
+        "Ascenso Meteorico"
+      ]
+    },
+    {
+      "player": "Elmacho1992",
+      "slug": "elmacho1992",
+      "elo": 1670.8,
+      "matches": 111,
+      "tournaments": 35,
+      "win_rate": 0.583,
+      "medals": [
+        "Ascenso Meteorico"
+      ]
+    },
+    {
+      "player": "Scarwolf7",
+      "slug": "scarwolf7",
+      "elo": 1648.1,
+      "matches": 114,
+      "tournaments": 36,
+      "win_rate": 0.491,
+      "medals": [
+        "Ascenso Meteorico"
+      ]
+    },
+    {
+      "player": "machetazoo",
+      "slug": "machetazoo",
+      "elo": 1633.1,
+      "matches": 168,
+      "tournaments": 53,
+      "win_rate": 0.6,
+      "medals": [
+        "El Empatador",
+        "Ascenso Meteorico",
+        "Matador de Gigantes",
+        "El Constante",
+        "Veterano"
+      ]
+    },
+    {
+      "player": "Corlopincho",
+      "slug": "corlopincho",
+      "elo": 1583.5,
+      "matches": 158,
+      "tournaments": 51,
+      "win_rate": 0.541,
+      "medals": [
+        "El Empatador",
+        "Ascenso Meteorico",
+        "Matador de Gigantes",
+        "Veterano"
+      ]
+    },
+    {
+      "player": "Aldturi",
+      "slug": "aldturi",
+      "elo": 1563.5,
+      "matches": 191,
+      "tournaments": 62,
+      "win_rate": 0.511,
+      "medals": [
+        "Titan",
+        "Asistencia Perfecta",
+        "Coleccionista",
+        "El Empatador",
+        "Ascenso Meteorico",
+        "El Constante"
+      ]
+    },
+    {
+      "player": "RubickQ",
+      "slug": "rubickq",
+      "elo": 1559.5,
+      "matches": 93,
+      "tournaments": 31,
+      "win_rate": 0.544,
+      "medals": [
+        "El Constante"
+      ]
+    },
+    {
+      "player": "Feanaro26",
+      "slug": "feanaro26",
+      "elo": 1446.1,
+      "matches": 111,
+      "tournaments": 36,
+      "win_rate": 0.404,
+      "medals": [
+        "El Empatador",
+        "Resiliente",
+        "El Constante"
+      ]
+    },
+    {
+      "player": "SlowPlayer22",
+      "slug": "slowplayer22",
+      "elo": 1441.8,
+      "matches": 90,
+      "tournaments": 28,
+      "win_rate": 0.338,
+      "medals": [
+        "Coleccionista",
+        "El Empatador",
+        "Ascenso Meteorico"
+      ]
+    },
+    {
+      "player": "Alejosky",
+      "slug": "alejosky",
+      "elo": 1391.0,
+      "matches": 130,
+      "tournaments": 43,
+      "win_rate": 0.356,
+      "medals": [
+        "El Empatador",
+        "Ascenso Meteorico",
+        "Resiliente",
+        "El Constante"
+      ]
+    },
+    {
+      "player": "DJAMPUDIA",
+      "slug": "djampudia",
+      "elo": 1370.9,
+      "matches": 71,
+      "tournaments": 22,
+      "win_rate": 0.3,
+      "medals": [
+        "Ascenso Meteorico"
+      ]
+    }
+  ]
+}

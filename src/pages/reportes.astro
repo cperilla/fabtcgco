@@ -1,0 +1,316 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const reportes = [
+  {
+    year: "2025",
+    titulo: "Reporte de Batalla 2025",
+    descripcion: "74 torneos, 859 partidas analizadas. Descubre quien domino la escena competitiva de Cali durante todo el 2025.",
+    torneos: 74,
+    partidas: 859,
+    jugadoresCalificados: 11,
+    jugadoresTotales: 41,
+    topPlayer: "Saukonen",
+    topElo: 1748,
+    color: "#e94560",
+    href: "/reportes/2025",
+    preview: "/r2/stats/2025/ranking_elo.png"
+  },
+  {
+    year: "2026",
+    titulo: "Reporte de Batalla 2026",
+    descripcion: "La temporada en curso. 16 torneos y 179 partidas hasta ahora. Sigue la evolucion del meta en tiempo real.",
+    torneos: 16,
+    partidas: 179,
+    jugadoresCalificados: 9,
+    jugadoresTotales: 24,
+    topPlayer: "Saukonen",
+    topElo: 1649,
+    color: "#0f3460",
+    href: "/reportes/2026",
+    preview: "/r2/stats/2026/ranking_elo.png"
+  }
+];
+---
+
+<Layout>
+<div class="reportes-page">
+    <div class="reportes-header">
+        <h1>Reportes de Batalla</h1>
+        <div class="stars">
+            <span style="color: #e94560;">★</span>
+            <span style="color: #0f3460;">★</span>
+        </div>
+        <p class="subtitle">Analisis estadistico de la escena competitiva de FAB Colombia</p>
+    </div>
+
+    <div class="reportes-container">
+        <div class="reportes-intro">
+            <p>Exploramos la data de todos nuestros torneos para descubrir rivalidades, rachas de victorias, tasas de empate y la evolucion del ELO de cada jugador. Esta informacion no es una clasificacion definitiva - es una herramienta de exploracion para entender como jugamos y cuanto hemos crecido.</p>
+        </div>
+
+        <div class="reportes-grid">
+            {reportes.map((reporte) => (
+                <a href={reporte.href} class="reporte-card" style={`--card-color: ${reporte.color}`}>
+                    <div class="reporte-year-badge">{reporte.year}</div>
+                    <div class="reporte-preview">
+                        <img src={reporte.preview} alt={`Preview ${reporte.year}`} />
+                    </div>
+                    <div class="reporte-content">
+                        <h2>{reporte.titulo}</h2>
+                        <p class="reporte-descripcion">{reporte.descripcion}</p>
+
+                        <div class="reporte-stats">
+                            <div class="stat">
+                                <span class="stat-value">{reporte.torneos}</span>
+                                <span class="stat-label">Torneos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">{reporte.partidas}</span>
+                                <span class="stat-label">Partidas</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">{reporte.jugadoresCalificados}</span>
+                                <span class="stat-label">Analizados</span>
+                                <span class="stat-subtext">de {reporte.jugadoresTotales}</span>
+                            </div>
+                        </div>
+
+                        <div class="reporte-top-player">
+                            <span class="top-label">Top ELO:</span>
+                            <span class="top-name">{reporte.topPlayer}</span>
+                            <span class="top-elo">{reporte.topElo}</span>
+                        </div>
+
+                        <span class="reporte-link">Ver reporte completo →</span>
+                    </div>
+                </a>
+            ))}
+        </div>
+
+        <div class="reportes-footer">
+            <h3>Sobre el analisis</h3>
+            <p>Utilizamos el sistema <strong>ELO</strong> para calcular ratings, matrices de enfrentamiento directos para analizar rivalidades, y graficos radar para visualizar perfiles de jugadores. Los datos provienen directamente de Challonge.</p>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .reportes-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .reportes-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .reportes-header h1 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .stars {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        color: var(--muted-color);
+        font-size: 1.1rem;
+    }
+
+    .reportes-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .reportes-intro {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .reportes-intro p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    .reportes-grid {
+        display: grid;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .reportes-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .reporte-card {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-top: 4px solid var(--card-color);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .reporte-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .reporte-year-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--card-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        font-size: 1.25rem;
+        z-index: 10;
+    }
+
+    .reporte-preview {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: #1a1a2e;
+    }
+
+    .reporte-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        opacity: 0.9;
+    }
+
+    .reporte-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .reporte-content h2 {
+        margin: 0 0 0.75rem 0;
+        color: var(--card-color);
+        font-size: 1.4rem;
+    }
+
+    .reporte-descripcion {
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0 0 1rem 0;
+        font-size: 0.95rem;
+    }
+
+    .reporte-stats {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+    }
+
+    .stat {
+        flex: 1;
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--card-color);
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
+    }
+
+    .stat-subtext {
+        display: block;
+        font-size: 0.7rem;
+        color: var(--muted-color);
+        margin-top: 0.1rem;
+    }
+
+    .reporte-top-player {
+        background: var(--bg-dark-1);
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .top-label {
+        color: var(--muted-color);
+        font-size: 0.875rem;
+    }
+
+    .top-name {
+        color: var(--text-color);
+        font-weight: 600;
+        flex-grow: 1;
+    }
+
+    .top-elo {
+        background: var(--card-color);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
+
+    .reporte-link {
+        color: var(--card-color);
+        font-weight: 500;
+        font-size: 0.95rem;
+        margin-top: auto;
+    }
+
+    .reportes-footer {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .reportes-footer h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .reportes-footer p {
+        color: var(--muted-color);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .reportes-footer strong {
+        color: var(--text-color);
+    }
+</style>

@@ -1,0 +1,742 @@
+---
+import Layout from '../layouts/Layout.astro';
+import rankingsData from '../data/rankings.json';
+
+// Import player profile indexes
+import players2025 from '../../public/r2/stats/2025/players/index.json';
+import players2026 from '../../public/r2/stats/2026/players/index.json';
+
+const playerProfiles = [
+  { year: "2026", players: players2026.players, color: "#0f3460", live: true },
+  { year: "2025", players: players2025.players, color: "#e94560" },
+];
+
+const reportes = [
+  {
+    year: "2026",
+    titulo: "Reporte de Batalla 2026",
+    descripcion: "Temporada en curso. 16 torneos, 179 partidas",
+    torneos: 16,
+    partidas: 179,
+    jugadoresCalificados: 9,
+    jugadoresTotales: 24,
+    topPlayer: "Saukonen",
+    topElo: 1649,
+    color: "#0f3460",
+    href: "/reportes/2026",
+    preview: "/r2/stats/2026/ranking_elo.png",
+    live: true
+  },
+  {
+    year: "2025",
+    titulo: "Reporte de Batalla 2025",
+    descripcion: "74 torneos, 859 partidas analizadas",
+    torneos: 74,
+    partidas: 859,
+    jugadoresCalificados: 11,
+    jugadoresTotales: 41,
+    topPlayer: "Saukonen",
+    topElo: 1748,
+    color: "#e94560",
+    href: "/reportes/2025",
+    preview: "/r2/stats/2025/ranking_elo.png"
+  }
+];
+---
+
+<Layout>
+<div class="competitivo-page">
+    <div class="competitivo-header">
+        <h1>Juego Competitivo</h1>
+        <div class="stars">
+            <span style="color: #91160d;">★</span>
+            <span style="color: #765d2f;">★</span>
+            <span style="color: #91160d;">★</span>
+        </div>
+        <p class="subtitle">Rankings y estadisticas de la comunidad FAB Colombia</p>
+    </div>
+
+    <div class="competitivo-container">
+        <!-- Rankings Section -->
+        <section class="section rankings-section">
+            <h2 class="section-header">Rankings Activos</h2>
+            <div class="rankings-grid" id="active-rankings">
+            </div>
+            <p class="no-rankings hidden" id="no-active">No hay rankings activos en este momento</p>
+        </section>
+
+        <section class="section rankings-section">
+            <h2 class="section-header">Rankings Anteriores</h2>
+            <div class="rankings-grid" id="past-rankings">
+            </div>
+        </section>
+
+        <!-- Battle Reports Section -->
+        <section class="section reportes-section">
+            <h2 class="section-header">Reportes de Batalla</h2>
+            <p class="section-intro">Analisis estadistico con sistema ELO, matrices de enfrentamiento y perfiles de jugadores. Solo incluye jugadores con 30%+ participacion en torneos.</p>
+
+            <div class="reportes-grid">
+                {reportes.map((reporte) => (
+                    <a href={reporte.href} class="reporte-card" style={`--card-color: ${reporte.color}`}>
+                        <div class="reporte-year-badge">
+                            {reporte.year}
+                            {reporte.live && <span class="live-dot"></span>}
+                        </div>
+                        <div class="reporte-preview">
+                            <img src={reporte.preview} alt={`Preview ${reporte.year}`} loading="lazy" />
+                        </div>
+                        <div class="reporte-content">
+                            <h3>{reporte.titulo}</h3>
+                            <p class="reporte-descripcion">{reporte.descripcion}</p>
+                            <div class="reporte-stats">
+                                <div class="stat">
+                                    <span class="stat-value">{reporte.torneos}</span>
+                                    <span class="stat-label">Torneos</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">{reporte.partidas}</span>
+                                    <span class="stat-label">Partidas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">{reporte.jugadoresCalificados}</span>
+                                    <span class="stat-label">Analizados</span>
+                                    <span class="stat-subtext">de {reporte.jugadoresTotales}</span>
+                                </div>
+                            </div>
+                            <div class="reporte-top-player">
+                                <span class="top-label">Top ELO:</span>
+                                <span class="top-name">{reporte.topPlayer}</span>
+                                <span class="top-elo">{reporte.topElo}</span>
+                            </div>
+                            <span class="reporte-link">Ver reporte completo →</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <!-- Player Profiles Section -->
+        <section class="section perfiles-section">
+            <h2 class="section-header">Perfiles de Jugadores</h2>
+            <p class="section-intro">Estadisticas detalladas por jugador. Solo incluye jugadores con 30%+ de participacion en torneos. Cada perfil muestra historial ELO, matchups, y desempeño por trimestre.</p>
+
+            {playerProfiles.map((yearData) => (
+                <div class="year-profiles" style={`--year-color: ${yearData.color}`}>
+                    <h3 class="year-header">
+                        {yearData.year}
+                        {yearData.live && <span class="live-badge-small">EN VIVO</span>}
+                    </h3>
+                    <div class="profiles-grid">
+                        {yearData.players.map((player, index) => (
+                            <a href={`/jugador/${yearData.year}/${player.slug}`} class="player-card">
+                                <div class="player-rank">#{index + 1}</div>
+                                <div class="player-radar">
+                                    <img src={`/r2/stats/${yearData.year}/players/${player.slug}-radar.png`} alt={`Radar ${player.player}`} loading="lazy" />
+                                </div>
+                                <div class="player-info">
+                                    <h4 class="player-name">{player.player}</h4>
+                                    <div class="player-stats-mini">
+                                        <span class="elo">{Math.round(player.elo)}</span>
+                                        <span class="winrate">{Math.round(player.win_rate * 100)}%</span>
+                                    </div>
+                                    <div class="player-meta">
+                                        {player.matches} partidas · {player.tournaments} torneos
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section">
+            <h3>Sobre el Analisis</h3>
+            <p>Utilizamos el sistema <strong>ELO</strong> para calcular ratings, matrices de enfrentamiento directo para analizar rivalidades, y graficos radar para visualizar perfiles de jugadores. Los datos provienen directamente de Challonge.</p>
+        </section>
+    </div>
+</div>
+</Layout>
+
+<script define:vars={{ rankingsData }}>
+  function formatDate(dateStr) {
+    const date = new Date(dateStr + 'T00:00:00');
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    return date.toLocaleDateString('es-ES', options);
+  }
+
+  function isActive(ranking) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const start = new Date(ranking.dateStart + 'T00:00:00');
+    const end = new Date(ranking.dateEnd + 'T00:00:00');
+    return today >= start && today <= end;
+  }
+
+  function createRankingCard(ranking, isActiveRanking) {
+    const card = document.createElement('a');
+    card.className = `ranking-card ${isActiveRanking ? 'ranking-card--active' : 'ranking-card--past'}`;
+
+    if (ranking.link) {
+      card.href = ranking.link;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+    } else {
+      card.className += ' ranking-card--no-link';
+    }
+
+    const startDate = formatDate(ranking.dateStart);
+    const endDate = formatDate(ranking.dateEnd);
+
+    card.innerHTML = `
+      <div class="ranking-card-icon">
+        <span>🏆</span>
+      </div>
+      <div class="ranking-card-content">
+        <h4 class="ranking-name">${ranking.name}</h4>
+        <p class="ranking-dates">${startDate} - ${endDate}</p>
+        ${ranking.link ? '<span class="ranking-link-indicator">Ver ranking →</span>' : '<span class="ranking-no-link">Sin enlace disponible</span>'}
+      </div>
+      ${isActiveRanking ? '<span class="active-badge">Activo</span>' : ''}
+    `;
+
+    return card;
+  }
+
+  function renderRankings() {
+    const activeContainer = document.getElementById('active-rankings');
+    const pastContainer = document.getElementById('past-rankings');
+    const noActiveMsg = document.getElementById('no-active');
+
+    const activeRankings = [];
+    const pastRankings = [];
+
+    const sortedRankings = [...rankingsData].sort((a, b) =>
+      new Date(b.dateEnd) - new Date(a.dateEnd)
+    );
+
+    sortedRankings.forEach(ranking => {
+      if (isActive(ranking)) {
+        activeRankings.push(ranking);
+      } else {
+        pastRankings.push(ranking);
+      }
+    });
+
+    if (activeRankings.length === 0) {
+      noActiveMsg.classList.remove('hidden');
+    } else {
+      activeRankings.forEach(ranking => {
+        activeContainer.appendChild(createRankingCard(ranking, true));
+      });
+    }
+
+    pastRankings.forEach(ranking => {
+      pastContainer.appendChild(createRankingCard(ranking, false));
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', renderRankings);
+  if (document.readyState !== 'loading') {
+    renderRankings();
+  }
+</script>
+
+<style>
+    .competitivo-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .competitivo-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .competitivo-header h1 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .stars {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        color: var(--muted-color);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .competitivo-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-header {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0 0 1rem 0;
+        padding: 0.5rem 0;
+        color: var(--text-color);
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .section-intro {
+        color: var(--muted-color);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Rankings Grid */
+    .rankings-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .ranking-card {
+        display: flex;
+        position: relative;
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        background: var(--bg-dark-2);
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-left: 4px solid #765d2f;
+    }
+
+    .ranking-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .ranking-card--active {
+        border-left-color: var(--primary-color);
+    }
+
+    .ranking-card--past {
+        opacity: 0.7;
+    }
+
+    .ranking-card--past:hover {
+        opacity: 1;
+    }
+
+    .ranking-card--no-link {
+        cursor: default;
+    }
+
+    .ranking-card--no-link:hover {
+        transform: none;
+    }
+
+    .ranking-card-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        margin-right: 1rem;
+    }
+
+    .ranking-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ranking-name {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: var(--text-color);
+    }
+
+    .ranking-dates {
+        font-size: 0.8rem;
+        margin: 0 0 0.5rem 0;
+        color: var(--muted-color);
+    }
+
+    .ranking-link-indicator {
+        font-size: 0.75rem;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .ranking-no-link {
+        font-size: 0.75rem;
+        color: var(--muted-color);
+        font-style: italic;
+    }
+
+    .active-badge {
+        position: absolute;
+        top: -8px;
+        right: 12px;
+        background: var(--primary-color);
+        color: white;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 1rem;
+    }
+
+    .no-rankings {
+        text-align: center;
+        color: var(--muted-color);
+        font-style: italic;
+        padding: 2rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* Battle Reports Grid */
+    .reportes-grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .reportes-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .reporte-card {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-top: 4px solid var(--card-color);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .reporte-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .reporte-year-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--card-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        font-size: 1.1rem;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .live-dot {
+        width: 8px;
+        height: 8px;
+        background: #10b981;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.2); }
+    }
+
+    .reporte-preview {
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+        background: var(--bg-dark-1);
+    }
+
+    .reporte-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        opacity: 0.9;
+    }
+
+    .reporte-content {
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .reporte-content h3 {
+        margin: 0 0 0.5rem 0;
+        color: var(--card-color);
+        font-size: 1.2rem;
+    }
+
+    .reporte-descripcion {
+        color: var(--muted-color);
+        line-height: 1.5;
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .reporte-stats {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding: 0.75rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+    }
+
+    .stat {
+        flex: 1;
+        text-align: center;
+    }
+
+    .stat-value {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--card-color);
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
+    }
+
+    .stat-subtext {
+        display: block;
+        font-size: 0.65rem;
+        color: var(--muted-color);
+        margin-top: 0.1rem;
+    }
+
+    .reporte-top-player {
+        background: var(--bg-dark-1);
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .top-label {
+        color: var(--muted-color);
+    }
+
+    .top-name {
+        color: var(--text-color);
+        font-weight: 600;
+        flex-grow: 1;
+    }
+
+    .top-elo {
+        background: var(--card-color);
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.25rem;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .reporte-link {
+        color: var(--card-color);
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-top: auto;
+    }
+
+    /* Player Profiles Section */
+    .perfiles-section {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .year-profiles {
+        margin-bottom: 2rem;
+    }
+
+    .year-profiles:last-child {
+        margin-bottom: 0;
+    }
+
+    .year-header {
+        color: var(--year-color);
+        font-size: 1.25rem;
+        margin: 0 0 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .live-badge-small {
+        background: #10b981;
+        color: white;
+        padding: 0.15rem 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.65rem;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+
+    .profiles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .player-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        border-top: 3px solid var(--year-color);
+    }
+
+    .player-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .player-rank {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: var(--year-color);
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+
+    .player-radar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.75rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--bg-dark-2);
+    }
+
+    .player-radar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player-info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .player-name {
+        color: var(--text-color);
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem 0;
+        font-weight: 600;
+    }
+
+    .player-stats-mini {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .player-stats-mini .elo {
+        color: var(--year-color);
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .player-stats-mini .winrate {
+        color: var(--muted-color);
+        font-size: 0.85rem;
+    }
+
+    .player-meta {
+        color: var(--muted-color);
+        font-size: 0.75rem;
+    }
+
+    /* About Section */
+    .about-section {
+        background: var(--bg-dark-1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .about-section h3 {
+        color: var(--neutral-color);
+        margin: 0 0 0.75rem 0;
+        font-size: 1rem;
+    }
+
+    .about-section p {
+        color: var(--muted-color);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .about-section strong {
+        color: var(--text-color);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .competitivo-page {
+            padding: 1rem 0.5rem;
+        }
+
+        .competitivo-header h1 {
+            font-size: 1.75rem;
+        }
+
+        .rankings-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,732 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export const prerender = false;
+
+const { year, slug } = Astro.params;
+
+// Load player data
+let playerData = null;
+let error = null;
+
+try {
+    const filePath = path.join(process.cwd(), 'public', 'r2', 'stats', year, 'players', `${slug}.json`);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    playerData = JSON.parse(fileContent);
+} catch (e) {
+    error = "Jugador no encontrado";
+}
+
+// Color based on year
+const yearColor = year === "2025" ? "#e94560" : "#0f3460";
+---
+
+<Layout>
+<div class="player-page">
+    {error ? (
+        <div class="error-container">
+            <h1>Jugador no encontrado</h1>
+            <p>No se encontro el perfil para "{slug}" en {year}.</p>
+            <a href="/competitivo" class="back-button">← Volver a Competitivo</a>
+        </div>
+    ) : (
+        <>
+            <div class="player-header" style={`--year-color: ${yearColor}`}>
+                <a href="/competitivo" class="back-link">← Volver a Competitivo</a>
+                <div class="header-content">
+                    <div class="radar-large">
+                        <img src={`/r2/stats/${year}/players/${slug}-radar.png`} alt={`Radar ${playerData.player}`} />
+                    </div>
+                    <div class="header-info">
+                        <h1>{playerData.player}</h1>
+                        <div class="year-badge">{year}</div>
+                        <div class="summary-stats">
+                            <div class="big-stat">
+                                <span class="value">{Math.round(playerData.summary.elo)}</span>
+                                <span class="label">ELO</span>
+                            </div>
+                            <div class="big-stat">
+                                <span class="value">{Math.round(playerData.summary.win_rate * 100)}%</span>
+                                <span class="label">Win Rate</span>
+                            </div>
+                            <div class="big-stat">
+                                <span class="value">{playerData.summary.matches}</span>
+                                <span class="label">Partidas</span>
+                            </div>
+                            <div class="big-stat">
+                                <span class="value">{playerData.summary.tournaments}</span>
+                                <span class="label">Torneos</span>
+                            </div>
+                        </div>
+                        <div class="record-line">
+                            <span class="wins">{playerData.summary.wins}W</span>
+                            <span class="separator">-</span>
+                            <span class="losses">{playerData.summary.losses}L</span>
+                            <span class="separator">-</span>
+                            <span class="ties">{playerData.summary.ties}E</span>
+                        </div>
+
+                        {/* Medals */}
+                        {playerData.medals && playerData.medals.length > 0 && (
+                            <div class="medals-row">
+                                {playerData.medals.map((medal) => (
+                                    <div class="medal-badge" style={`--medal-color: ${medal.color}`} title={`${medal.name}: ${medal.description}`}>
+                                        <span class="medal-emoji">{medal.emoji}</span>
+                                        <span class="medal-name">{medal.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-content">
+                {/* Best Progress - Featured if significant */}
+                {playerData.best_progress && playerData.best_progress.improvement > 0 && (
+                    <section class="section progress-section">
+                        <h2>Mayor Progreso</h2>
+                        <div class="progress-card">
+                            <div class="progress-visual">
+                                <div class="progress-quarter from">{playerData.best_progress.from_quarter}</div>
+                                <div class="progress-arrow">
+                                    <span class="arrow">→</span>
+                                    <span class="improvement-badge">+{playerData.best_progress.improvement_pct}%</span>
+                                </div>
+                                <div class="progress-quarter to">{playerData.best_progress.to_quarter}</div>
+                            </div>
+                            <div class="progress-details">
+                                <span class="from-rate">{Math.round(playerData.best_progress.from_win_rate * 100)}% WR</span>
+                                <span class="to-rate">{Math.round(playerData.best_progress.to_win_rate * 100)}% WR</span>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                <!-- Quarterly Stats with Rivals -->
+                {Object.keys(playerData.quarterly).length > 0 && (
+                    <section class="section quarterly-section">
+                        <h2>Rendimiento por Trimestre</h2>
+                        <div class="quarterly-grid">
+                            {Object.entries(playerData.quarterly).map(([q, stats]) => {
+                                const rivals = playerData.quarterly_rivals?.[q] || [];
+                                return (
+                                    <div class="quarter-card">
+                                        <h3>{q} {year}</h3>
+                                        <div class="quarter-stats">
+                                            <div class="q-stat">
+                                                <span class="q-value">{stats.tournaments}</span>
+                                                <span class="q-label">Torneos</span>
+                                            </div>
+                                            <div class="q-stat">
+                                                <span class="q-value">{stats.matches}</span>
+                                                <span class="q-label">Partidas</span>
+                                            </div>
+                                            <div class="q-stat">
+                                                <span class="q-value">{Math.round(stats.win_rate * 100)}%</span>
+                                                <span class="q-label">Win Rate</span>
+                                            </div>
+                                        </div>
+                                        <div class="q-record">
+                                            {stats.wins}W - {stats.losses}L - {stats.ties}E
+                                        </div>
+
+                                        {/* Quarterly Rivals */}
+                                        {rivals.length > 0 && (
+                                            <div class="q-rivals">
+                                                <span class="rivals-label">Rivales a vencer:</span>
+                                                <div class="rivals-list">
+                                                    {rivals.map((rival, idx) => (
+                                                        <span class="rival-chip" title={`${rival.wins}W-${rival.losses}L-${rival.ties}E`}>
+                                                            {idx === 0 ? '🎯' : idx === 1 ? '⚔️' : '🛡️'} {rival.opponent}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </section>
+                )}
+
+                <!-- Best/Worst Matchups -->
+                <div class="matchups-container">
+                    {playerData.best_matchups.length > 0 && (
+                        <section class="section matchup-section best">
+                            <h2>Mejores Matchups</h2>
+                            <div class="matchups-list">
+                                {playerData.best_matchups.map((m) => (
+                                    <div class="matchup-item">
+                                        <span class="opponent">{m.opponent}</span>
+                                        <span class="record">{m.wins}W-{m.losses}L-{m.ties}E</span>
+                                        <span class="winrate good">{Math.round(m.win_rate * 100)}%</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {playerData.worst_matchups.length > 0 && (
+                        <section class="section matchup-section worst">
+                            <h2>Peores Matchups</h2>
+                            <div class="matchups-list">
+                                {playerData.worst_matchups.map((m) => (
+                                    <div class="matchup-item">
+                                        <span class="opponent">{m.opponent}</span>
+                                        <span class="record">{m.wins}W-{m.losses}L-{m.ties}E</span>
+                                        <span class="winrate bad">{Math.round(m.win_rate * 100)}%</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+                </div>
+
+                <!-- Head to Head -->
+                <section class="section h2h-section">
+                    <h2>Enfrentamientos Directos</h2>
+                    <div class="h2h-grid">
+                        {Object.entries(playerData.h2h).map(([opponent, record]) => {
+                            const total = record.wins + record.losses + record.ties;
+                            const winRate = total > 0 ? record.wins / total : 0;
+                            return (
+                                <div class="h2h-card">
+                                    <span class="h2h-opponent">{opponent}</span>
+                                    <div class="h2h-record">
+                                        <span class="wins">{record.wins}W</span>
+                                        <span class="losses">{record.losses}L</span>
+                                        <span class="ties">{record.ties}E</span>
+                                    </div>
+                                    <div class="h2h-bar">
+                                        <div class="h2h-fill" style={`width: ${winRate * 100}%`}></div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
+            </div>
+
+            <div class="player-footer">
+                <a href="/competitivo" class="back-button">← Volver a Competitivo</a>
+            </div>
+        </>
+    )}
+</div>
+</Layout>
+
+<style>
+    .player-page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .error-container {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .error-container h1 {
+        color: var(--text-color);
+        margin-bottom: 1rem;
+    }
+
+    .error-container p {
+        color: var(--muted-color);
+        margin-bottom: 2rem;
+    }
+
+    .back-link {
+        color: var(--muted-color);
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+
+    .back-link:hover {
+        color: var(--year-color);
+    }
+
+    .player-header {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-top: 4px solid var(--year-color);
+    }
+
+    .header-content {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .radar-large {
+        flex-shrink: 0;
+        width: 350px;
+        height: 350px;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: var(--bg-dark-1);
+    }
+
+    .radar-large img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header-info {
+        flex-grow: 1;
+    }
+
+    .header-info h1 {
+        color: var(--text-color);
+        font-size: 2rem;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .year-badge {
+        display: inline-block;
+        background: var(--year-color);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .summary-stats {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .big-stat {
+        text-align: center;
+    }
+
+    .big-stat .value {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--year-color);
+    }
+
+    .big-stat .label {
+        font-size: 0.75rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
+    }
+
+    .record-line {
+        font-size: 1.1rem;
+    }
+
+    .record-line .wins {
+        color: #10b981;
+        font-weight: bold;
+    }
+
+    .record-line .losses {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .record-line .ties {
+        color: var(--muted-color);
+        font-weight: bold;
+    }
+
+    .record-line .separator {
+        color: var(--muted-color);
+        margin: 0 0.25rem;
+    }
+
+    /* Medals */
+    .medals-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .medal-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--medal-color, #ffd700);
+        border-radius: 2rem;
+        font-size: 0.8rem;
+        cursor: help;
+    }
+
+    .medal-emoji {
+        font-size: 1rem;
+    }
+
+    .medal-name {
+        color: var(--medal-color, #ffd700);
+        font-weight: 500;
+    }
+
+    /* Progress Section */
+    .progress-section {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(16, 185, 129, 0.1));
+        border: 1px solid #8b5cf6;
+    }
+
+    .progress-card {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .progress-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .progress-quarter {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--bg-dark-1);
+    }
+
+    .progress-quarter.from {
+        color: var(--muted-color);
+    }
+
+    .progress-quarter.to {
+        color: #10b981;
+    }
+
+    .progress-arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .progress-arrow .arrow {
+        font-size: 1.5rem;
+        color: var(--muted-color);
+    }
+
+    .improvement-badge {
+        background: #10b981;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    .progress-details {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        color: var(--muted-color);
+        font-size: 0.9rem;
+    }
+
+    .progress-details .to-rate {
+        color: #10b981;
+        font-weight: 500;
+    }
+
+    .player-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .section {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .section h2 {
+        color: var(--text-color);
+        font-size: 1.25rem;
+        margin: 0 0 1rem 0;
+        border-bottom: 2px solid var(--year-color);
+        padding-bottom: 0.5rem;
+    }
+
+    /* Radar Explanation */
+    .radar-explanation {
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .dimension {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+    }
+
+    .dimension strong {
+        color: var(--year-color);
+    }
+
+    /* Quarterly Stats */
+    .quarterly-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .quarter-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .quarter-card h3 {
+        color: var(--year-color);
+        font-size: 1rem;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .quarter-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0.5rem;
+    }
+
+    .q-stat {
+        text-align: center;
+    }
+
+    .q-value {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    .q-label {
+        font-size: 0.65rem;
+        color: var(--muted-color);
+        text-transform: uppercase;
+    }
+
+    .q-record {
+        color: var(--muted-color);
+        font-size: 0.85rem;
+    }
+
+    /* Quarterly Rivals */
+    .q-rivals {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--bg-dark-2);
+    }
+
+    .rivals-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: var(--muted-color);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+    }
+
+    .rivals-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .rival-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.2rem 0.5rem;
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        color: var(--text-color);
+        cursor: help;
+    }
+
+    /* Matchups */
+    .matchups-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .matchups-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .matchup-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+    }
+
+    .matchup-item .opponent {
+        flex-grow: 1;
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+    .matchup-item .record {
+        color: var(--muted-color);
+        font-size: 0.85rem;
+    }
+
+    .matchup-item .winrate {
+        font-weight: bold;
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .matchup-item .winrate.good {
+        background: rgba(16, 185, 129, 0.2);
+        color: #10b981;
+    }
+
+    .matchup-item .winrate.bad {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+    }
+
+    /* H2H */
+    .h2h-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .h2h-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .h2h-opponent {
+        display: block;
+        color: var(--text-color);
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+
+    .h2h-record {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .h2h-record .wins {
+        color: #10b981;
+    }
+
+    .h2h-record .losses {
+        color: #ef4444;
+    }
+
+    .h2h-record .ties {
+        color: var(--muted-color);
+    }
+
+    .h2h-bar {
+        height: 4px;
+        background: var(--bg-dark-2);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .h2h-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #10b981, #3b82f6);
+        border-radius: 2px;
+    }
+
+    .player-footer {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .back-button {
+        display: inline-block;
+        background: var(--year-color);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s ease;
+    }
+
+    .back-button:hover {
+        opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .radar-large {
+            width: 280px;
+            height: 280px;
+        }
+
+        .summary-stats {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .matchups-container {
+            grid-template-columns: 1fr;
+        }
+
+        .medals-row {
+            justify-content: center;
+        }
+
+        .progress-visual {
+            gap: 0.75rem;
+        }
+
+        .progress-quarter {
+            font-size: 1.2rem;
+            padding: 0.4rem 0.75rem;
+        }
+
+        .progress-details {
+            gap: 1.5rem;
+        }
+    }
+</style>

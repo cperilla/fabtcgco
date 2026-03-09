@@ -1,0 +1,277 @@
+{
+  "player": "Wolfmortem",
+  "year": 2026,
+  "summary": {
+    "elo": 1539.0,
+    "tournaments": 7,
+    "matches": 25,
+    "wins": 12,
+    "losses": 11,
+    "ties": 2,
+    "win_rate": 0.522,
+    "tie_rate": 0.08,
+    "opponent_count": 13
+  },
+  "quarterly": {
+    "Q1": {
+      "tournaments": 7,
+      "matches": 25,
+      "wins": 12,
+      "losses": 11,
+      "ties": 2,
+      "win_rate": 0.48
+    }
+  },
+  "quarterly_rivals": {
+    "Q1": [
+      {
+        "opponent": "Corlopincho",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Feanaro26",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "Saukonen",
+        "wins": 1,
+        "losses": 4,
+        "ties": 0,
+        "win_rate": 0.2,
+        "total_matches": 5
+      }
+    ]
+  },
+  "best_progress": null,
+  "h2h": {
+    "Saukonen": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "Aldturi": {
+      "wins": 4,
+      "losses": 0,
+      "ties": 0
+    },
+    "machetazoo": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0
+    },
+    "Corlopincho": {
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    "Alejosky": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Moto2Moto": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Elmacho1992": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Sebastian": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    },
+    "DJAMPUDIA": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Robgiamt": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Elnugget05": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    }
+  },
+  "best_matchups": [
+    {
+      "opponent": "Aldturi",
+      "wins": 4,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0
+    },
+    {
+      "opponent": "SlowPlayer22",
+      "wins": 2,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0
+    }
+  ],
+  "worst_matchups": [
+    {
+      "opponent": "Corlopincho",
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "Saukonen",
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.2
+    }
+  ],
+  "elo_history": [
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1500
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1485.5
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1502.2
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1521.5
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1505.5
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1489.9
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1473.1
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1458.0
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1473.8
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1491.8
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1481.6
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1502.3
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1501.5
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1490.7
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1509.4
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1495.0
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1508.3
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1524.7
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1505.3
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1486.8
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1471.5
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1486.4
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1504.8
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1501.7
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1524.9
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1539.0
+    }
+  ],
+  "radar_values": {
+    "win_rate": 0.522,
+    "tie_rate": 0.08,
+    "opponents_normalized": 0.867,
+    "matches_normalized": 0.625,
+    "dominance": 0.043
+  },
+  "medals": [
+    {
+      "name": "El Empatador",
+      "description": "Mayor tasa de empates",
+      "icon": "handshake",
+      "emoji": "🤝",
+      "color": "#f59e0b",
+      "positive": false,
+      "stat": "8% empates"
+    }
+  ]
+}

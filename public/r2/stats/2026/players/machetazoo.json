@@ -1,0 +1,334 @@
+{
+  "player": "machetazoo",
+  "year": 2026,
+  "summary": {
+    "elo": 1511.0,
+    "tournaments": 11,
+    "matches": 35,
+    "wins": 16,
+    "losses": 18,
+    "ties": 1,
+    "win_rate": 0.471,
+    "tie_rate": 0.029,
+    "opponent_count": 15
+  },
+  "quarterly": {
+    "Q1": {
+      "tournaments": 11,
+      "matches": 35,
+      "wins": 16,
+      "losses": 18,
+      "ties": 1,
+      "win_rate": 0.457
+    }
+  },
+  "quarterly_rivals": {
+    "Q1": [
+      {
+        "opponent": "Corlopincho",
+        "wins": 0,
+        "losses": 3,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 4
+      },
+      {
+        "opponent": "Scarwolf7",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Saukonen",
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "win_rate": 0.25,
+        "total_matches": 4
+      }
+    ]
+  },
+  "best_progress": null,
+  "h2h": {
+    "Aldturi": {
+      "wins": 2,
+      "losses": 4,
+      "ties": 0
+    },
+    "Corlopincho": {
+      "wins": 0,
+      "losses": 3,
+      "ties": 1
+    },
+    "Saukonen": {
+      "wins": 1,
+      "losses": 3,
+      "ties": 0
+    },
+    "Wolfmortem": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 3,
+      "losses": 0,
+      "ties": 0
+    },
+    "Scarwolf7": {
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    },
+    "Elnugget05": {
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    "Alejosky": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "Sebastian": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Moto2Moto": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Elmacho1992": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "MetalPrime": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "DJAMPUDIA": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "RubickQ": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  "best_matchups": [
+    {
+      "opponent": "SlowPlayer22",
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0
+    }
+  ],
+  "worst_matchups": [
+    {
+      "opponent": "Corlopincho",
+      "wins": 0,
+      "losses": 3,
+      "ties": 1,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "Scarwolf7",
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "Saukonen",
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25
+    },
+    {
+      "opponent": "Aldturi",
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.333
+    }
+  ],
+  "elo_history": [
+    {
+      "date": "2026-01-29T18:30:00",
+      "elo": 1500
+    },
+    {
+      "date": "2026-01-29T18:30:00",
+      "elo": 1516.0
+    },
+    {
+      "date": "2026-01-29T18:30:00",
+      "elo": 1500.0
+    },
+    {
+      "date": "2026-01-29T18:30:00",
+      "elo": 1483.3
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1500.6
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1487.8
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1504.2
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1520.0
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1504.8
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1492.5
+    },
+    {
+      "date": "2026-02-12T17:00:00",
+      "elo": 1507.7
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1491.3
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1502.8
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1519.5
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1532.2
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1516.4
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1499.1
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1477.2
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1462.2
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1449.1
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1468.5
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1459.1
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1447.2
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1432.3
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1449.4
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1468.6
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1484.8
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1470.7
+    },
+    {
+      "date": "2026-03-08T22:52:29.322696",
+      "elo": 1462.4
+    },
+    {
+      "date": "2026-03-08T22:52:29.322696",
+      "elo": 1452.8
+    },
+    {
+      "date": "2026-03-08T22:52:29.327111",
+      "elo": 1468.3
+    },
+    {
+      "date": "2026-03-08T22:52:29.327111",
+      "elo": 1484.3
+    },
+    {
+      "date": "2026-03-08T22:52:29.327111",
+      "elo": 1502.5
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1518.4
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1521.9
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1511.0
+    }
+  ],
+  "radar_values": {
+    "win_rate": 0.471,
+    "tie_rate": 0.029,
+    "opponents_normalized": 1.0,
+    "matches_normalized": 0.875,
+    "dominance": 0.059
+  },
+  "medals": [
+    {
+      "name": "Coleccionista",
+      "description": "Mas rivales unicos enfrentados",
+      "icon": "users",
+      "emoji": "👥",
+      "color": "#3b82f6",
+      "positive": true,
+      "stat": "15 rivales"
+    }
+  ]
+}

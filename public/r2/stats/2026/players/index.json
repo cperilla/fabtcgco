@@ -1,0 +1,104 @@
+{
+  "year": 2026,
+  "min_tournaments": 4,
+  "players": [
+    {
+      "player": "Saukonen",
+      "slug": "saukonen",
+      "elo": 1649.2,
+      "matches": 36,
+      "tournaments": 11,
+      "win_rate": 0.75,
+      "medals": [
+        "Inquebrantable",
+        "Veterano"
+      ]
+    },
+    {
+      "player": "Scarwolf7",
+      "slug": "scarwolf7",
+      "elo": 1629.4,
+      "matches": 26,
+      "tournaments": 8,
+      "win_rate": 0.731,
+      "medals": []
+    },
+    {
+      "player": "Corlopincho",
+      "slug": "corlopincho",
+      "elo": 1572.0,
+      "matches": 36,
+      "tournaments": 11,
+      "win_rate": 0.606,
+      "medals": [
+        "El Empatador",
+        "Veterano"
+      ]
+    },
+    {
+      "player": "Wolfmortem",
+      "slug": "wolfmortem",
+      "elo": 1539.0,
+      "matches": 25,
+      "tournaments": 7,
+      "win_rate": 0.522,
+      "medals": [
+        "El Empatador"
+      ]
+    },
+    {
+      "player": "machetazoo",
+      "slug": "machetazoo",
+      "elo": 1511.0,
+      "matches": 35,
+      "tournaments": 11,
+      "win_rate": 0.471,
+      "medals": [
+        "Coleccionista"
+      ]
+    },
+    {
+      "player": "Feanaro26",
+      "slug": "feanaro26",
+      "elo": 1466.0,
+      "matches": 16,
+      "tournaments": 5,
+      "win_rate": 0.375,
+      "medals": []
+    },
+    {
+      "player": "Aldturi",
+      "slug": "aldturi",
+      "elo": 1457.7,
+      "matches": 40,
+      "tournaments": 13,
+      "win_rate": 0.538,
+      "medals": [
+        "Titan",
+        "Asistencia Perfecta"
+      ]
+    },
+    {
+      "player": "Alejosky",
+      "slug": "alejosky",
+      "elo": 1442.7,
+      "matches": 29,
+      "tournaments": 9,
+      "win_rate": 0.31,
+      "medals": [
+        "Resiliente"
+      ]
+    },
+    {
+      "player": "SlowPlayer22",
+      "slug": "slowplayer22",
+      "elo": 1439.5,
+      "matches": 24,
+      "tournaments": 8,
+      "win_rate": 0.333,
+      "medals": [
+        "Resiliente"
+      ]
+    }
+  ]
+}

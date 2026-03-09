@@ -1,0 +1,157 @@
+{
+  "year": 2025,
+  "tournaments": 74,
+  "total_matches": 859,
+  "total_players": 41,
+  "qualified_players": 11,
+  "min_tournaments": 22,
+  "date_range": {
+    "start": "2025-01-02T18:00:00",
+    "end": "2025-12-14T13:30:00"
+  },
+  "elo_ratings": {
+    "machetazoo": 1633.0805208206787,
+    "Alejosky": 1390.9951079445414,
+    "Saukonen": 1748.1965344939083,
+    "RubickQ": 1559.519051853218,
+    "Aldturi": 1563.4850157138096,
+    "Elmacho1992": 1670.7776585644542,
+    "Scarwolf7": 1648.121603427887,
+    "Feanaro26": 1446.1470366699102,
+    "SlowPlayer22": 1441.7830321672773,
+    "DJAMPUDIA": 1370.8790186475449,
+    "Corlopincho": 1583.497956043303
+  },
+  "top_elo": [
+    [
+      "Saukonen",
+      1748.1965344939083
+    ],
+    [
+      "Elmacho1992",
+      1670.7776585644542
+    ],
+    [
+      "Scarwolf7",
+      1648.121603427887
+    ],
+    [
+      "machetazoo",
+      1633.0805208206787
+    ],
+    [
+      "Corlopincho",
+      1583.497956043303
+    ],
+    [
+      "Aldturi",
+      1563.4850157138096
+    ],
+    [
+      "RubickQ",
+      1559.519051853218
+    ],
+    [
+      "Feanaro26",
+      1446.1470366699102
+    ],
+    [
+      "SlowPlayer22",
+      1441.7830321672773
+    ],
+    [
+      "Alejosky",
+      1390.9951079445414
+    ]
+  ],
+  "player_stats": {
+    "machetazoo": {
+      "matches": 168,
+      "wins": 93,
+      "losses": 62,
+      "ties": 13,
+      "win_rate": 0.6,
+      "tournaments": 53
+    },
+    "Alejosky": {
+      "matches": 130,
+      "wins": 42,
+      "losses": 76,
+      "ties": 12,
+      "win_rate": 0.3559322033898305,
+      "tournaments": 43
+    },
+    "Saukonen": {
+      "matches": 191,
+      "wins": 136,
+      "losses": 49,
+      "ties": 6,
+      "win_rate": 0.7351351351351352,
+      "tournaments": 61
+    },
+    "RubickQ": {
+      "matches": 93,
+      "wins": 49,
+      "losses": 41,
+      "ties": 3,
+      "win_rate": 0.5444444444444444,
+      "tournaments": 31
+    },
+    "Aldturi": {
+      "matches": 191,
+      "wins": 89,
+      "losses": 85,
+      "ties": 17,
+      "win_rate": 0.5114942528735632,
+      "tournaments": 62
+    },
+    "Elmacho1992": {
+      "matches": 111,
+      "wins": 63,
+      "losses": 45,
+      "ties": 3,
+      "win_rate": 0.5833333333333334,
+      "tournaments": 35
+    },
+    "Scarwolf7": {
+      "matches": 114,
+      "wins": 54,
+      "losses": 56,
+      "ties": 4,
+      "win_rate": 0.4909090909090909,
+      "tournaments": 36
+    },
+    "Feanaro26": {
+      "matches": 111,
+      "wins": 42,
+      "losses": 62,
+      "ties": 7,
+      "win_rate": 0.40384615384615385,
+      "tournaments": 36
+    },
+    "SlowPlayer22": {
+      "matches": 90,
+      "wins": 26,
+      "losses": 51,
+      "ties": 13,
+      "win_rate": 0.33766233766233766,
+      "tournaments": 28
+    },
+    "DJAMPUDIA": {
+      "matches": 71,
+      "wins": 21,
+      "losses": 49,
+      "ties": 1,
+      "win_rate": 0.3,
+      "tournaments": 22
+    },
+    "Corlopincho": {
+      "matches": 158,
+      "wins": 66,
+      "losses": 56,
+      "ties": 36,
+      "win_rate": 0.5409836065573771,
+      "tournaments": 51
+    }
+  }
+}

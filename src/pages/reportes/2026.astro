@@ -1,0 +1,495 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const year = "2026";
+const basePath = `/r2/stats/${year}`;
+
+const stats = {
+    torneos: 16,
+    partidas: 179,
+    jugadoresTotales: 24,
+    jugadoresCalificados: 9,
+    minTorneos: 4,
+    participacionMinima: "30%",
+    fechaInicio: "29 Enero 2026",
+    fechaFin: "8 Marzo 2026"
+};
+
+const topElo = [
+    { pos: 1, nombre: "Saukonen", elo: 1649, partidas: 36, torneos: 11 },
+    { pos: 2, nombre: "Scarwolf7", elo: 1629, partidas: 26, torneos: 8 },
+    { pos: 3, nombre: "Corlopincho", elo: 1572, partidas: 36, torneos: 11 },
+    { pos: 4, nombre: "Wolfmortem", elo: 1539, partidas: 25, torneos: 7 },
+    { pos: 5, nombre: "machetazoo", elo: 1511, partidas: 35, torneos: 11 },
+    { pos: 6, nombre: "Feanaro26", elo: 1466, partidas: 16, torneos: 5 },
+    { pos: 7, nombre: "Aldturi", elo: 1458, partidas: 40, torneos: 13 },
+    { pos: 8, nombre: "Alejosky", elo: 1443, partidas: 29, torneos: 9 },
+    { pos: 9, nombre: "SlowPlayer22", elo: 1440, partidas: 24, torneos: 8 },
+];
+
+const radarPages = [1, 2];
+---
+
+<Layout>
+<div class="reporte-page">
+    <div class="reporte-header">
+        <a href="/competitivo" class="back-link">← Volver a Juego Competitivo</a>
+        <h1>Reporte de Batalla {year}</h1>
+        <p class="subtitle">Temporada en Curso - FAB Colombia</p>
+        <div class="date-range">{stats.fechaInicio} - {stats.fechaFin}</div>
+        <div class="live-badge">EN VIVO</div>
+    </div>
+
+    <div class="disclaimer-box">
+        <h3>Sobre este reporte</h3>
+        <p>Esta data es <strong>informativa y para diversion</strong>. Usala para inventarte minijuegos, retos personales, o simplemente para curiosear. La mejora es personal y cada jugador tiene metas distintas - no hay una forma "correcta" de jugar.</p>
+        <p class="disclaimer-note">Los graficos muestran solo jugadores que participaron en {stats.participacionMinima}+ de los torneos ({stats.minTorneos}+ torneos de {stats.torneos}).</p>
+    </div>
+
+    <div class="stats-summary">
+        <div class="stat-box">
+            <span class="stat-value">{stats.torneos}</span>
+            <span class="stat-label">Torneos</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value">{stats.partidas}</span>
+            <span class="stat-label">Partidas</span>
+        </div>
+        <div class="stat-box highlight">
+            <span class="stat-value">{stats.jugadoresCalificados}</span>
+            <span class="stat-label">En Analisis</span>
+            <span class="stat-subtext">de {stats.jugadoresTotales} jugadores</span>
+        </div>
+    </div>
+
+    <div class="reporte-content">
+        <section class="section">
+            <h2>Ranking ELO</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> El sistema ELO mide la habilidad relativa basandose en resultados de partidas. Todos inician en 1500.</p>
+                <p><strong>Como leerlo:</strong> Ganar contra alguien con ELO mas alto te da mas puntos. Perder contra alguien con ELO bajo te quita mas. Un ELO alto significa que consistentemente ganas contra oponentes fuertes.</p>
+                <p><strong>Mini-reto:</strong> Intenta superar tu propio ELO del mes anterior!</p>
+            </div>
+
+            <div class="ranking-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Jugador</th>
+                            <th>ELO</th>
+                            <th>Partidas</th>
+                            <th>Torneos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {topElo.map(player => (
+                            <tr class={player.pos <= 3 ? 'top-3' : ''}>
+                                <td class="pos">{player.pos}</td>
+                                <td class="nombre">{player.nombre}</td>
+                                <td class="elo">{player.elo}</td>
+                                <td class="partidas">{player.partidas}</td>
+                                <td class="torneos">{player.torneos}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chart-container">
+                <img src={`${basePath}/ranking_elo.png`} alt="Ranking ELO" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Evolucion ELO</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> La historia de como cambio el ELO de cada jugador durante la temporada.</p>
+                <p><strong>Como leerlo:</strong> Las lineas muestran subidas (victorias importantes) y bajadas (derrotas inesperadas). Una linea estable indica consistencia; picos y valles indican rachas.</p>
+                <p><strong>Mini-reto:</strong> Mira tu linea personal - cual fue tu mejor momento? Puedes superarlo?</p>
+            </div>
+            <div class="chart-container">
+                <img src={`${basePath}/timeline-elo.png`} alt="Timeline ELO" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Matriz de Winrate</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> Quien gana mas frecuentemente contra quien, jugador por jugador.</p>
+                <p><strong>Como leerlo:</strong> Lee de fila a columna. Verde = el jugador de la fila domina. Rojo = el jugador de la fila pierde frecuentemente. Blanco = 50/50.</p>
+                <p><strong>Mini-reto:</strong> Busca tu peor matchup - el cuadro mas rojo en tu fila. Ese es tu "jefe final" personal!</p>
+            </div>
+            <div class="chart-container large">
+                <img src={`${basePath}/matrix_winrate.png`} alt="Matriz de Winrate" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Matriz de Rivalidades</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> Descubre rivalidades equilibradas vs matchups dominados.</p>
+                <p><strong>Como leerlo:</strong> Verde brillante = rivalidad muy equilibrada (50/50, emocionante!). Rojo = matchup muy desbalanceado.</p>
+                <p><strong>Mini-reto:</strong> Encuentra tu rival mas equilibrado - esas son las partidas mas emocionantes!</p>
+            </div>
+            <div class="chart-container large">
+                <img src={`${basePath}/matriz_rivalidades.png`} alt="Matriz de Rivalidades" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Top Winstreaks</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> Las rachas de victorias consecutivas mas largas de la temporada.</p>
+                <p><strong>Como leerlo:</strong> Cada barra muestra cuantas victorias seguidas logro un jugador sin perder.</p>
+                <p><strong>Mini-reto:</strong> Cual es tu racha actual? Puedes romper tu record personal?</p>
+            </div>
+            <div class="chart-container">
+                <img src={`${basePath}/top_winstreaks.png`} alt="Top Winstreaks" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Tasa de Empates</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> Quienes tienden a jugar partidas largas que terminan en empate.</p>
+                <p><strong>Como leerlo:</strong> Un alto porcentaje puede indicar estilo defensivo, matchups muy parejos, o partidas que van hasta el limite de tiempo.</p>
+                <p><strong>Mini-reto:</strong> Si tu tasa de empates es alta, intenta un deck mas agresivo. Si es baja, prueba ser mas conservador!</p>
+            </div>
+            <div class="chart-container">
+                <img src={`${basePath}/top_8_empates.png`} alt="Top Empates" />
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Participacion por Torneo</h2>
+            <div class="section-explainer">
+                <p><strong>Que es:</strong> Cuantos jugadores y partidas hubo en cada torneo.</p>
+                <p><strong>Como leerlo:</strong> Las barras muestran la actividad de la comunidad a lo largo de la temporada.</p>
+                <p><strong>Mini-reto:</strong> Cuantos torneos has asistido hasta ahora? Puedes mantener la racha?</p>
+            </div>
+            <div class="chart-container">
+                <img src={`${basePath}/evolucion_resultado_torneos.png`} alt="Participacion por Torneo" />
+            </div>
+        </section>
+
+        <section class="section profiles-link-section">
+            <h2>Perfiles de Jugadores</h2>
+            <p class="section-intro">Los perfiles individuales de jugadores ahora tienen su propia seccion con estadisticas detalladas, matchups, y rendimiento por trimestre.</p>
+            <a href="/competitivo#perfiles-section" class="profiles-link-button">Ver Perfiles de Jugadores →</a>
+        </section>
+    </div>
+
+    <div class="reporte-footer">
+        <a href="/competitivo" class="back-button">← Volver a Juego Competitivo</a>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .reporte-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .back-link {
+        color: var(--muted-color);
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .back-link:hover {
+        color: #0f3460;
+    }
+
+    .reporte-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .reporte-header h1 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        color: var(--muted-color);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .date-range {
+        color: #0f3460;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+    }
+
+    .live-badge {
+        display: inline-block;
+        background: #10b981;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 2rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+    }
+
+    .disclaimer-box {
+        background: linear-gradient(135deg, rgba(15, 52, 96, 0.15), rgba(16, 185, 129, 0.1));
+        border: 1px solid #0f3460;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .disclaimer-box h3 {
+        color: #0f3460;
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .disclaimer-box p {
+        color: var(--text-color);
+        margin: 0 0 0.75rem 0;
+        line-height: 1.6;
+    }
+
+    .disclaimer-box p:last-child {
+        margin-bottom: 0;
+    }
+
+    .disclaimer-box strong {
+        color: #0f3460;
+    }
+
+    .disclaimer-note {
+        font-size: 0.9rem;
+        color: var(--muted-color) !important;
+        font-style: italic;
+    }
+
+    .stats-summary {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-box {
+        background: var(--bg-dark-2);
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        min-width: 150px;
+    }
+
+    .stat-box.highlight {
+        border: 2px solid #0f3460;
+    }
+
+    .stat-box .stat-value {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0f3460;
+    }
+
+    .stat-box .stat-label {
+        color: var(--muted-color);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+
+    .stat-box .stat-subtext {
+        display: block;
+        color: var(--muted-color);
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
+    .reporte-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section {
+        margin-bottom: 3rem;
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .section h2 {
+        color: var(--text-color);
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        border-bottom: 2px solid #0f3460;
+        padding-bottom: 0.5rem;
+    }
+
+    .section-explainer {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        border-left: 3px solid #0f3460;
+    }
+
+    .section-explainer p {
+        color: var(--text-color);
+        margin: 0 0 0.5rem 0;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .section-explainer p:last-child {
+        margin-bottom: 0;
+    }
+
+    .section-explainer strong {
+        color: #0f3460;
+    }
+
+    .dimension-list {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .dimension-list li {
+        color: var(--text-color);
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .ranking-table {
+        margin-bottom: 1.5rem;
+        overflow-x: auto;
+    }
+
+    .ranking-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .ranking-table th,
+    .ranking-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--bg-dark-1);
+    }
+
+    .ranking-table th {
+        color: var(--muted-color);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+    }
+
+    .ranking-table td {
+        color: var(--text-color);
+    }
+
+    .ranking-table .top-3 {
+        background: rgba(15, 52, 96, 0.2);
+    }
+
+    .ranking-table .pos {
+        font-weight: bold;
+        color: #0f3460;
+    }
+
+    .ranking-table .elo {
+        font-weight: bold;
+    }
+
+    .ranking-table .partidas,
+    .ranking-table .torneos {
+        color: var(--muted-color);
+    }
+
+    .chart-container {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .chart-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    .chart-container.large img {
+        max-width: 100%;
+    }
+
+    .radar-grid {
+        display: grid;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .radar-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .reporte-footer {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .back-button {
+        display: inline-block;
+        background: #0f3460;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.2s ease;
+    }
+
+    .back-button:hover {
+        background: #1a4a7d;
+    }
+
+    .profiles-link-section {
+        text-align: center;
+    }
+
+    .section-intro {
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .profiles-link-button {
+        display: inline-block;
+        background: #0f3460;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.2s ease;
+    }
+
+    .profiles-link-button:hover {
+        background: #1a4a7d;
+    }
+</style>
