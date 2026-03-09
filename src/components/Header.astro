@@ -1,5 +1,5 @@
 ---
-const { fabLogo = "/images/FABLogo.png" } = Astro.props;
+const { fabLogo = "/images/FABLogo.png", hideLogo = false } = Astro.props;
 
 const links = [
 { href: "/", icon: "", text: "Inicio" },
@@ -19,25 +19,25 @@ const links = [
 
 <header class="header">
   <nav class="nav">
-    <div class="mx-auto max-w-12xl px-2 sm:px-2 lg:px-8">
+    <div class="mx-auto px-2 lg:px-4">
       <div class="relative flex items-center justify-between nav-items-container">
-        <div class="absolute inset-y-0 left-4 flex items-center md:hidden">
+        <div class="absolute inset-y-0 left-2 flex items-center md:hidden">
           <button id="menu-toggle" class="text-white md:hidden">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex shrink-0 items-center lg:pl-20">
-            <div class="logo">
-              <a href="/">
-                <img class="h-20 w-auto" src={fabLogo} alt="Logo Flesh and Blood" />
-              </a>
-            </div>
+        {!hideLogo && (
+          <div class="logo">
+            <a href="/">
+              <img class="h-20 w-auto" src={fabLogo} alt="Logo Flesh and Blood" />
+            </a>
           </div>
+        )}
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div class="sm:ml-6 nav-links">
-            <div class="flex space-x-4">
+            <div class="flex space-x-2">
               {links.map(link => {
               const isExternal = /^https?:\/\//.test(link.href);
               return (

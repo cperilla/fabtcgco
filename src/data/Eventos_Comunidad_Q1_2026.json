@@ -13,7 +13,7 @@
     "Date": "2026-01-03",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -43,7 +43,7 @@
     "Date": "2026-01-10",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -73,7 +73,7 @@
     "Date": "2026-01-17",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -103,7 +103,7 @@
     "Date": "2026-01-24",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -133,7 +133,7 @@
     "Date": "2026-01-31",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -165,7 +165,7 @@
     "Date": "2026-02-07",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -199,7 +199,7 @@
     "Date": "2026-02-14",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -235,7 +235,7 @@
     "Date": "2026-02-21",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
@@ -271,13 +271,25 @@
     "Date": "2026-02-28",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
     "EventType": "Sage",
     "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260228",
     "TournamentName": "FAB Palmira Sage Sáb 28/02/26 : Cheers!"
+  },
+  {
+    "Date": "2026-03-03",
+    "Day": "Martes",
+    "Event": "Freeplay",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🎮",
+    "EventType": "Freeplay",
+    "TournamentURL": "https://challonge.com/fabco_chaos_freeplay_20260303",
+    "TournamentName": "FAB Chaos Freeplay Mar 03/03/26 : Duty Bound Blitz"
   },
   {
     "Date": "2026-03-05",
@@ -287,7 +299,9 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260305",
+    "TournamentName": "FAB Chaos Sage Jue 05/03/26 : Scuttle Toes"
   },
   {
     "Date": "2026-03-07",
@@ -297,17 +311,33 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏗️",
-    "EventType": "CC"
+    "EventType": "CC",
+    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260307",
+    "TournamentName": "FAB Chaos CC Sáb 07/03/26 : Blunten"
   },
   {
     "Date": "2026-03-07",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260307",
+    "TournamentName": "FAB Palmira Sage Sáb 07/03/26 : Dyed Silk Sleeves"
+  },
+  {
+    "Date": "2026-03-10",
+    "Day": "Martes",
+    "Event": "Freeplay",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🎮",
+    "EventType": "Freeplay",
+    "TournamentURL": "https://challonge.com/fabco_chaos_freeplay_20260310",
+    "TournamentName": "FAB Chaos Freeplay Mar 10/03/26 : Voltic Veil"
   },
   {
     "Date": "2026-03-10",
@@ -327,7 +357,9 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260312",
+    "TournamentName": "FAB Chaos Sage Jue 12/03/26 : Rainbow Goo Trap"
   },
   {
     "Date": "2026-03-14",
@@ -337,17 +369,33 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏗️",
-    "EventType": "CC"
+    "EventType": "CC",
+    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260314",
+    "TournamentName": "FAB Chaos CC Sáb 14/03/26 : Double Cross Strap"
   },
   {
     "Date": "2026-03-14",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260314",
+    "TournamentName": "FAB Palmira Sage Sáb 14/03/26 : Verdant Tide"
+  },
+  {
+    "Date": "2026-03-17",
+    "Day": "Martes",
+    "Event": "Freeplay",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🎮",
+    "EventType": "Freeplay",
+    "TournamentURL": "https://challonge.com/fabco_chaos_freeplay_20260317",
+    "TournamentName": "FAB Chaos Freeplay Mar 17/03/26 : Helm of Safe Haven"
   },
   {
     "Date": "2026-03-17",
@@ -367,7 +415,9 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏗️",
-    "EventType": "CC"
+    "EventType": "CC",
+    "TournamentURL": "https://challonge.com/fabco_chaos_cc_20260319",
+    "TournamentName": "FAB Chaos CC Jue 19/03/26 : Valahai Riven"
   },
   {
     "Date": "2026-03-21",
@@ -377,17 +427,33 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260321",
+    "TournamentName": "FAB Chaos Sage Sáb 21/03/26 : Stormweaver's Aegis"
   },
   {
     "Date": "2026-03-21",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260321",
+    "TournamentName": "FAB Palmira Sage Sáb 21/03/26 : Feign Vengeance"
+  },
+  {
+    "Date": "2026-03-24",
+    "Day": "Martes",
+    "Event": "Freeplay",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🎮",
+    "EventType": "Freeplay",
+    "TournamentURL": "https://challonge.com/fabco_chaos_freeplay_20260324",
+    "TournamentName": "FAB Chaos Freeplay Mar 24/03/26 : Channel Galcia's Cradle"
   },
   {
     "Date": "2026-03-24",
@@ -407,7 +473,9 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260326",
+    "TournamentName": "FAB Chaos Sage Jue 26/03/26 : Shield Beater"
   },
   {
     "Date": "2026-03-28",
@@ -417,26 +485,32 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏆",
-    "EventType": "LL"
+    "EventType": "LL",
+    "TournamentURL": "https://challonge.com/fabco_chaos_ll_20260328",
+    "TournamentName": "FAB Chaos LL Sáb 28/03/26 : Oldhim"
   },
   {
     "Date": "2026-03-28",
     "Day": "Sábado",
     "Event": "Silver Age",
-    "Time": "3 PM",
+    "Time": "2 PM",
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage"
+    "EventType": "Sage",
+    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260328",
+    "TournamentName": "FAB Palmira Sage Sáb 28/03/26 : Predatory Plating"
   },
   {
     "Date": "2026-03-31",
     "Day": "Martes",
-    "Event": "Free Play",
+    "Event": "Freeplay",
     "Time": "5 PM",
     "Location": "Chaos Store",
     "Ciudad": "Cali",
-    "Emoji": "🃏",
-    "EventType": "FreePlay"
+    "Emoji": "🎮",
+    "EventType": "Freeplay",
+    "TournamentURL": "https://challonge.com/fabco_chaos_freeplay_20260331",
+    "TournamentName": "FAB Chaos Freeplay Mar 31/03/26 : Stormwind Sheath"
   }
 ]

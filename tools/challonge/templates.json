@@ -21,7 +21,7 @@
     "game_name": "Flesh and Blood",
     "private": false,
     "quick_advance": true,
-    "description": "Torneo de Flesh and Blood organizado por FABCO Colombia\n\nRankings:\n- Ranking de Temporada: https://challonge.com/communities/fabco/rankings?id=2002\n- Ranking Anual: https://challonge.com/communities/fabco/rankings?id=2589\n\nPremiación: Según participantes.\nLista de baneo y legalidad: https://fabtcg.com/en/resources/rules-and-policy-center/card-legality-policy\nReglas detalladas del juego: https://fabtcg.com/en/resources/rules-and-policy-center/comprehensive-rules/\nReglas detalladas sobre el torneo: https://fabtcg.com/en/resources/rules-and-policy-center/tournament-rules-and-policy/",
+    "description": "🎴 Torneo de Flesh and Blood\n📍 Organizado por FABCO Colombia\n🌐 https://fabtcgcolombia.club\n\n📋 RECURSOS\n• Legalidad: https://fabtcg.com/resources/rules-and-policy-center/card-legality-policy\n• Reglas: https://fabtcg.com/resources/rules-and-policy-center/comprehensive-rules\n• Torneos: https://fabtcg.com/resources/rules-and-policy-center/tournament-rules-and-policy\n\n🏆 Premiación según participantes",
     "notifications": {
       "upon_matches_open": true,
       "upon_tournament_ends": true
@@ -49,30 +49,42 @@
   "event_types": {
     "CC": {
       "name_prefix": "FABCO CC",
-      "description": "Torneo Classic Constructed - Flesh and Blood\nInventario total de 80 cartas no incluido el heroe, el deck de juego debe ser de minimo 60 cartas.\n Tiempo: Cada ronda tiene un tiempo permitido de 55 minutos.",
+      "description": "<h2>⚔️ CLASSIC CONSTRUCTED</h2>\n\n<p>El formato competitivo principal de Flesh and Blood. Construye un deck de 60+ cartas de tu inventario de 80 y demuestra tu dominio estratégico.</p>\n\n<p>Classic Constructed es donde los mejores jugadores del mundo compiten en el Pro Tour y World Championship. Cada decisión cuenta en este formato de alto nivel táctico.</p>\n\n<p>📦 <strong>Deck:</strong> 60+ cartas (inventario 80)<br>\n⏱️ <strong>Tiempo por ronda:</strong> 55 minutos</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcg.com/resources/rules-and-policy-center/formats/classic-constructed\">Reglas Classic Constructed</a></li>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n</ul>",
       "tournament_type": "swiss"
     },
     "Sage": {
       "name_prefix": "FABCO Silver Age",
-      "description": "Torneo Silver Age - Flesh and Blood\nInventario total de 55 cartas no incluido el heroe, el deck de juego debe ser de 40 cartas exactas.\n Tiempo: Cada ronda tiene un tiempo permitido de 35 minutos.",
+      "description": "<h2>🌀 SILVER AGE</h2>\n\n<p>Una forma completamente nueva de jugar Flesh and Blood usando solo cartas comunes, raras y básicas. Con los icónicos héroes jóvenes de FAB, las partidas son rápidas, divertidas y accesibles para todos.</p>\n\n<p>Desde partidas casuales en tu tienda local hasta la competencia de alto nivel del World Tour, Silver Age es la forma definitiva para que <strong>TODOS</strong> disfruten de Flesh and Blood.</p>\n\n<p>📦 <strong>Deck:</strong> 40 cartas exactas (inventario 55)<br>\n⏱️ <strong>Tiempo por ronda:</strong> 35 minutos</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcg.com/articles/silver-age\">Sobre Silver Age</a></li>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n</ul>",
       "tournament_type": "swiss"
     },
     "LL": {
       "name_prefix": "FABCO Living Legend",
-      "description": "Torneo Living Legend - Flesh and Blood\nInventario total de 80 cartas no incluido el heroe, el deck de juego debe ser de minimo 60 cartas.\n Tiempo: Cada ronda tiene un tiempo permitido de 55 minutos.",
+      "description": "<h2>🏆 LIVING LEGEND</h2>\n\n<p>El formato eterno donde los héroes que alcanzaron el estatus de Leyenda Viviente regresan a la batalla. Usa cualquier carta de la historia de FAB con los héroes más icónicos del juego.</p>\n\n<p>Living Legend celebra la historia del juego, permitiendo revivir las estrategias clásicas y los héroes legendarios que definieron épocas.</p>\n\n<p>📦 <strong>Deck:</strong> 60+ cartas (inventario 80)<br>\n⏱️ <strong>Tiempo por ronda:</strong> 55 minutos</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcg.com/resources/rules-and-policy-center/formats/living-legend\">Reglas Living Legend</a></li>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n</ul>",
       "tournament_type": "swiss"
     },
     "Blitz": {
       "name_prefix": "FABCO Blitz",
-      "description": "Torneo Blitz - Flesh and Blood\nInventario total de 55 cartas no incluido el heroe, el deck de juego debe ser de 40 cartas exactas.\n Tiempo: Cada ronda tiene un tiempo permitido de 35 minutos.",
+      "description": "<h2>⚡ BLITZ</h2>\n\n<p>Partidas rápidas e intensas perfectas para jugadores nuevos y veteranos. El formato ideal para aprender Flesh and Blood y disfrutar partidas dinámicas.</p>\n\n<p>Con héroes jóvenes y decks compactos, Blitz ofrece acción concentrada donde cada carta cuenta. ¡Perfecto para eventos rápidos!</p>\n\n<p>📦 <strong>Deck:</strong> 40 cartas exactas (inventario 55)<br>\n⏱️ <strong>Tiempo por ronda:</strong> 35 minutos</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcg.com/resources/rules-and-policy-center/formats/blitz\">Reglas Blitz</a></li>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n</ul>",
       "tournament_type": "swiss"
     },
     "Draft": {
       "name_prefix": "FABCO Sellados y Draft",
-      "description": "Torneo Sellados y Draft - Flesh and Blood\nSegún las reglas del formato",
+      "description": "<h2>🎲 DRAFT / SELLADO</h2>\n\n<p>Construye tu deck a partir de sobres en tiempo real. Pon a prueba tu capacidad de evaluación de cartas y adaptabilidad.</p>\n\n<p>El formato limitado nivela el campo de juego - no importa tu colección, todos comienzan igual. ¡Cada torneo es una experiencia única!</p>\n\n<p>📦 <strong>Deck:</strong> Según reglas de formato limitado<br>\n⏱️ <strong>Tiempo por ronda:</strong> 35 minutos</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcg.com/resources/rules-and-policy-center/formats/limited\">Reglas Limitado</a></li>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n</ul>",
       "tournament_type": "swiss",
       "registration_options": {
         "signup_cap": 16
+      }
+    },
+    "Freeplay": {
+      "name_prefix": "FABCO Freeplay",
+      "description": "<h2>🎮 FREEPLAY</h2>\n\n<p>Sesión abierta de juego libre. Ven a practicar, conocer otros jugadores y disfrutar partidas casuales en cualquier formato.</p>\n\n<p>No hay formato específico - trae el deck que quieras y encuentra oponentes para jugar. Perfecto para probar nuevas estrategias, enseñar a nuevos jugadores o simplemente pasar un buen rato.</p>\n\n<p>🎯 <strong>Objetivo:</strong> Matchmaking y registro de participación<br>\n📊 <strong>Rankings:</strong> No aplica<br>\n🃏 <strong>Formato:</strong> Libre</p>\n\n<p><strong>🔗 Recursos:</strong></p>\n<ul>\n<li><a href=\"https://fabtcgcolombia.club/formatos\">Formatos FABCO</a></li>\n<li><a href=\"https://fabtcgcolombia.club/calendar\">Calendario de eventos</a></li>\n</ul>",
+      "tournament_type": "swiss",
+      "no_rankings": true,
+      "registration_options": {
+        "signup_cap": 24
+      },
+      "swiss_options": {
+        "rounds": 3
       }
     }
   },
@@ -85,7 +97,8 @@
     "Palmira": {
       "suffix": "Palmira",
       "short_name": "Palmira",
-      "rankings": ["palmira"]
+      "rankings": ["season", "palmira"],
+      "default_time": "2 PM"
     }
   }
 }

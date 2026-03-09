@@ -80,3 +80,7 @@ Uses the calendar data defined tournaments and creates them according the templa
 ## Language
 
 All content is in Spanish. Date formatting uses Spanish locale via date-fns.
+
+## Development Rules
+
+- **Temporary files**: Always use the project-local `.tmp/` directory instead of system `/tmp`. This keeps temporary files within the project scope.

@@ -308,17 +308,28 @@ def create_tournament_payload(event, templates, cards_data=None):
     except ValueError:
         starts_at = date.replace(hour=17, minute=0).isoformat()  # Default 5 PM
 
-    # Build description with ranking links based on location
+    # Build description with ranking links based on location (HTML format)
+    # Skip rankings for event types with no_rankings flag (e.g., Freeplay)
     description = merged.get('description', '')
     rankings = templates.get('rankings', {})
     location_rankings = location_config.get('rankings', ['season', 'year'])  # Default to Chaos Store rankings
+    no_rankings = merged.get('no_rankings', False)
 
-    if rankings and location_rankings:
-        ranking_links = "\n\nRankings FABCO:\n"
+    if rankings and location_rankings and not no_rankings:
+        ranking_links = '\n\n<p><strong>📊 Rankings:</strong></p>\n<ul>\n'
         for ranking_key in location_rankings:
             if ranking_key in rankings:
-                ranking_links += f"- {rankings[ranking_key]['name']}: {rankings[ranking_key]['url']}\n"
+                name = rankings[ranking_key]['name']
+                url = rankings[ranking_key]['url']
+                ranking_links += f'<li><a href="{url}">{name}</a></li>\n'
+        ranking_links += '</ul>'
         description = description + ranking_links
+
+    # Build ranking_ids from location config
+    ranking_ids = []
+    for ranking_key in location_rankings:
+        if ranking_key in rankings and 'id' in rankings[ranking_key]:
+            ranking_ids.append(rankings[ranking_key]['id'])
 
     # Build payload in JSON:API format
     attributes = {
@@ -329,8 +340,13 @@ def create_tournament_payload(event, templates, cards_data=None):
         'description': description,
         'private': merged.get('private', False),
         'quick_advance': merged.get('quick_advance', True),
-        'starts_at': starts_at
+        'starts_at': starts_at,
+        'group_stage_enabled': False,  # Single stage tournament
     }
+
+    # Add ranking_ids if available
+    if ranking_ids:
+        attributes['ranking_ids'] = ranking_ids
 
     # Add optional nested options
     for opt_key in ['notifications', 'match_options', 'registration_options',

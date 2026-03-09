@@ -50,32 +50,33 @@ html[data-theme='wtr'] {
 }    
 
 :root {
-  /* FAB Brand Colors: #91160D (Tamarillo), #765D2F (Old Copper), #FCF0EF (Linen) */
+  /* FAB Brand Colors - softened for better readability */
 
-  --primary-color:        #91160d;  /* FAB Tamarillo red */
-  --primary-light:        #b91e12;
-  --primary-dark:         #6b1008;
+  --primary-color:        #6d2020;  /* Softer, desaturated red */
+  --primary-light:        #8b3030;
+  --primary-dark:         #4a1515;
 
-  --secondary-color:      #765d2f;  /* FAB Old Copper */
-  --secondary-light:      #9a7a42;
-  --secondary-dark:       #5a4522;
+  --secondary-color:      #8a7245;  /* Warmer copper */
+  --secondary-light:      #a8905a;
+  --secondary-dark:       #6b5835;
 
-  --accent-color:         #91160d;  /* FAB red accent */
-  --accent-light:         #c41d10;
-  --accent-dark:          #5c0e08;
+  --accent-color:         #a83030;  /* Accent red - visible but not harsh */
+  --accent-light:         #c44040;
+  --accent-dark:          #7a2020;
 
-  --neutral-color:        #fcf0ef;  /* FAB Linen */
-  --neutral-variant:      #e8d5d3;
-  --neutral-bg:           #f5e8e6;
+  --neutral-color:        #f5ebe9;  /* Slightly warmer linen */
+  --neutral-variant:      #e0d0cc;
+  --neutral-bg:           #f0e5e2;
 
   --base-color:           #2a2320;  /* Dark brown base */
   --base-variant:         #3d3530;
   --base-bg:              #1a1410;
 
-  --text-color:           #fcf0ef;  /* FAB Linen for text */
-  --muted-color:          #a89080;
-  --border-color:         #765d2f;  /* FAB Old Copper */
-  --transparent-veil:     rgba(145, 22, 13, 0.1);
+  --text-color:           #f0e8e5;  /* Warmer, softer white */
+  --text-secondary:       #c8b8b0;  /* Secondary text */
+  --muted-color:          #9a8a80;
+  --border-color:         #5a4a3a;  /* Darker border */
+  --transparent-veil:     rgba(109, 32, 32, 0.1);
 
   /* Light backgrounds - cream/linen tones */
   --bg-light-1: #fcf0ef;
@@ -205,37 +206,54 @@ html[data-theme='highseas-light'] {
 
 body {
     margin: 0;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'Inter', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     background-color: var(--bg-dark-1);
-    
-    color:var(--text-color);
-    
+    color: var(--text-color);
     width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .welcome {
     color:var(--text-color);
 }
 
+.header {
+    overflow: visible;
+}
+
 .nav {
     background-color: var(--primary-color);
     color: var(--text-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 100;
+    padding: 0.5rem 0;
+    overflow: visible;
+    min-height: 2.5rem;
+}
+
+.nav-items-container {
+    padding: 0;
+    min-height: auto;
+    overflow: visible;
 }
 
 .nav a {
     color: var(--text-color);
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 500;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--neutral-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
 }
 
 .nav-links {
@@ -256,9 +274,68 @@ body {
 }
 
 .logo {
-    background-color: var(--transparent-veil);
-    border-bottom-left-radius: 45%;
-    border-bottom-right-radius: 45%;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: 0.25rem 0.75rem 0.75rem;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    z-index: 50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        left: 2rem;
+    }
+}
+
+/* Welcome page hero */
+.welcome-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-hero-logo {
+    width: 160px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.welcome-hero-text {
+    text-align: left;
+}
+
+.welcome-hero-text h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: var(--muted-color);
+}
+
+.welcome-hero-text h1 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+@media (max-width: 640px) {
+    .welcome-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .welcome-hero-logo {
+        width: 120px;
+    }
+
+    .welcome-hero-text {
+        text-align: center;
+    }
 }
 
 main {
