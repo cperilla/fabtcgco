@@ -1,21 +1,48 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import fs from 'node:fs';
-import path from 'node:path';
 
-export const prerender = false;
+// Import player index files
+import players2025Index from '../../../../public/r2/stats/2025/players/index.json';
+import players2026Index from '../../../../public/r2/stats/2026/players/index.json';
+
+// Import all player JSON files
+const playerFiles2025 = import.meta.glob('/public/r2/stats/2025/players/*.json', { eager: true });
+const playerFiles2026 = import.meta.glob('/public/r2/stats/2026/players/*.json', { eager: true });
+
+export const prerender = true;
+
+export function getStaticPaths() {
+    const paths = [];
+
+    // Add 2025 players
+    for (const player of players2025Index.players) {
+        paths.push({
+            params: { year: '2025', slug: player.slug }
+        });
+    }
+
+    // Add 2026 players
+    for (const player of players2026Index.players) {
+        paths.push({
+            params: { year: '2026', slug: player.slug }
+        });
+    }
+
+    return paths;
+}
 
 const { year, slug } = Astro.params;
 
-// Load player data
+// Load player data from imported files
 let playerData = null;
 let error = null;
 
-try {
-    const filePath = path.join(process.cwd(), 'public', 'r2', 'stats', year, 'players', `${slug}.json`);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    playerData = JSON.parse(fileContent);
-} catch (e) {
+const playerFiles = year === '2025' ? playerFiles2025 : playerFiles2026;
+const filePath = `/public/r2/stats/${year}/players/${slug}.json`;
+
+if (playerFiles[filePath]) {
+    playerData = playerFiles[filePath].default || playerFiles[filePath];
+} else {
     error = "Jugador no encontrado";
 }
 
