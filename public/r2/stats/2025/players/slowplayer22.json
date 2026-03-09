@@ -1,0 +1,680 @@
+{
+  "player": "SlowPlayer22",
+  "year": 2025,
+  "summary": {
+    "elo": 1441.8,
+    "tournaments": 28,
+    "matches": 90,
+    "wins": 26,
+    "losses": 51,
+    "ties": 13,
+    "win_rate": 0.338,
+    "tie_rate": 0.144,
+    "opponent_count": 24
+  },
+  "quarterly": {
+    "Q1": {
+      "tournaments": 5,
+      "matches": 14,
+      "wins": 1,
+      "losses": 9,
+      "ties": 4,
+      "win_rate": 0.071
+    },
+    "Q2": {
+      "tournaments": 8,
+      "matches": 26,
+      "wins": 9,
+      "losses": 14,
+      "ties": 3,
+      "win_rate": 0.346
+    },
+    "Q3": {
+      "tournaments": 3,
+      "matches": 10,
+      "wins": 5,
+      "losses": 4,
+      "ties": 1,
+      "win_rate": 0.5
+    },
+    "Q4": {
+      "tournaments": 12,
+      "matches": 40,
+      "wins": 11,
+      "losses": 24,
+      "ties": 5,
+      "win_rate": 0.275
+    }
+  },
+  "quarterly_rivals": {
+    "Q1": [
+      {
+        "opponent": "machetazoo",
+        "wins": 0,
+        "losses": 2,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 3
+      },
+      {
+        "opponent": "Aldturi",
+        "wins": 0,
+        "losses": 1,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Saukonen",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      }
+    ],
+    "Q2": [
+      {
+        "opponent": "machetazoo",
+        "wins": 0,
+        "losses": 1,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Corlopincho",
+        "wins": 0,
+        "losses": 1,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Alejosky",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      }
+    ],
+    "Q3": [
+      {
+        "opponent": "Feanaro26",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "Scarwolf7",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "Saukonen",
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.5,
+        "total_matches": 2
+      }
+    ],
+    "Q4": [
+      {
+        "opponent": "Corlopincho",
+        "wins": 0,
+        "losses": 3,
+        "ties": 2,
+        "win_rate": 0.0,
+        "total_matches": 5
+      },
+      {
+        "opponent": "Aldturi",
+        "wins": 0,
+        "losses": 2,
+        "ties": 1,
+        "win_rate": 0.0,
+        "total_matches": 3
+      },
+      {
+        "opponent": "Feanaro26",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      }
+    ]
+  },
+  "best_progress": {
+    "from_quarter": "Q1",
+    "to_quarter": "Q2",
+    "from_win_rate": 0.071,
+    "to_win_rate": 0.346,
+    "improvement": 0.275,
+    "improvement_pct": 27.5
+  },
+  "h2h": {
+    "Saukonen": {
+      "wins": 4,
+      "losses": 10,
+      "ties": 0
+    },
+    "Aldturi": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 3
+    },
+    "Corlopincho": {
+      "wins": 1,
+      "losses": 5,
+      "ties": 4
+    },
+    "machetazoo": {
+      "wins": 1,
+      "losses": 5,
+      "ties": 2
+    },
+    "Elmacho1992": {
+      "wins": 4,
+      "losses": 3,
+      "ties": 0
+    },
+    "RubickQ": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "Alejosky": {
+      "wins": 2,
+      "losses": 3,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "DJAMPUDIA": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "Robgiamt": {
+      "wins": 0,
+      "losses": 2,
+      "ties": 1
+    },
+    "Scarwolf7": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "Nicolas": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "MetalPrime": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 1
+    },
+    "Omniconside": {
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    },
+    "klapen": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    }
+  },
+  "best_matchups": [],
+  "worst_matchups": [
+    {
+      "opponent": "Corlopincho",
+      "wins": 1,
+      "losses": 5,
+      "ties": 4,
+      "win_rate": 0.1
+    },
+    {
+      "opponent": "machetazoo",
+      "wins": 1,
+      "losses": 5,
+      "ties": 2,
+      "win_rate": 0.125
+    },
+    {
+      "opponent": "RubickQ",
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.2
+    },
+    {
+      "opponent": "Feanaro26",
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.2
+    },
+    {
+      "opponent": "Aldturi",
+      "wins": 3,
+      "losses": 5,
+      "ties": 3,
+      "win_rate": 0.273
+    }
+  ],
+  "elo_history": [
+    {
+      "date": "2025-01-11T17:00:00",
+      "elo": 1500
+    },
+    {
+      "date": "2025-01-11T17:00:00",
+      "elo": 1500.9
+    },
+    {
+      "date": "2025-01-11T17:00:00",
+      "elo": 1501.8
+    },
+    {
+      "date": "2025-01-11T17:00:00",
+      "elo": 1489.4
+    },
+    {
+      "date": "2025-01-26T15:00:00",
+      "elo": 1489.9
+    },
+    {
+      "date": "2025-01-26T15:00:00",
+      "elo": 1477.9
+    },
+    {
+      "date": "2025-01-26T15:00:00",
+      "elo": 1459.5
+    },
+    {
+      "date": "2025-01-26T15:00:00",
+      "elo": 1473.4
+    },
+    {
+      "date": "2025-02-01T17:00:00",
+      "elo": 1458.5
+    },
+    {
+      "date": "2025-02-01T17:00:00",
+      "elo": 1451.0
+    },
+    {
+      "date": "2025-02-08T17:00:00",
+      "elo": 1436.0
+    },
+    {
+      "date": "2025-02-08T17:00:00",
+      "elo": 1424.4
+    },
+    {
+      "date": "2025-03-29T16:30:00",
+      "elo": 1414.2
+    },
+    {
+      "date": "2025-03-29T16:30:00",
+      "elo": 1403.9
+    },
+    {
+      "date": "2025-03-29T16:30:00",
+      "elo": 1408.6
+    },
+    {
+      "date": "2025-04-12T17:00:00",
+      "elo": 1399.4
+    },
+    {
+      "date": "2025-04-12T17:00:00",
+      "elo": 1423.2
+    },
+    {
+      "date": "2025-04-12T17:00:00",
+      "elo": 1416.3
+    },
+    {
+      "date": "2025-04-12T17:00:00",
+      "elo": 1403.1
+    },
+    {
+      "date": "2025-04-17T18:00:00",
+      "elo": 1426.4
+    },
+    {
+      "date": "2025-04-17T18:00:00",
+      "elo": 1410.8
+    },
+    {
+      "date": "2025-04-17T18:00:00",
+      "elo": 1435.5
+    },
+    {
+      "date": "2025-05-03T18:30:00",
+      "elo": 1441.4
+    },
+    {
+      "date": "2025-05-03T18:30:00",
+      "elo": 1459.0
+    },
+    {
+      "date": "2025-05-03T18:30:00",
+      "elo": 1480.9
+    },
+    {
+      "date": "2025-05-03T18:30:00",
+      "elo": 1503.2
+    },
+    {
+      "date": "2025-05-17T18:30:00",
+      "elo": 1517.0
+    },
+    {
+      "date": "2025-05-17T18:30:00",
+      "elo": 1499.4
+    },
+    {
+      "date": "2025-05-17T18:30:00",
+      "elo": 1486.5
+    },
+    {
+      "date": "2025-06-07T17:00:00",
+      "elo": 1487.6
+    },
+    {
+      "date": "2025-06-07T17:00:00",
+      "elo": 1475.8
+    },
+    {
+      "date": "2025-06-14T17:00:00",
+      "elo": 1495.1
+    },
+    {
+      "date": "2025-06-14T17:00:00",
+      "elo": 1499.4
+    },
+    {
+      "date": "2025-06-14T17:00:00",
+      "elo": 1482.8
+    },
+    {
+      "date": "2025-06-14T17:00:00",
+      "elo": 1499.3
+    },
+    {
+      "date": "2025-06-21T18:00:00",
+      "elo": 1482.9
+    },
+    {
+      "date": "2025-06-21T18:00:00",
+      "elo": 1467.8
+    },
+    {
+      "date": "2025-06-21T18:00:00",
+      "elo": 1455.9
+    },
+    {
+      "date": "2025-06-28T18:00:00",
+      "elo": 1441.9
+    },
+    {
+      "date": "2025-06-28T18:00:00",
+      "elo": 1431.0
+    },
+    {
+      "date": "2025-06-28T18:00:00",
+      "elo": 1414.1
+    },
+    {
+      "date": "2025-08-30T18:00:00",
+      "elo": 1433.9
+    },
+    {
+      "date": "2025-08-30T18:00:00",
+      "elo": 1426.9
+    },
+    {
+      "date": "2025-08-30T18:00:00",
+      "elo": 1447.7
+    },
+    {
+      "date": "2025-09-06T17:00:00",
+      "elo": 1473.5
+    },
+    {
+      "date": "2025-09-06T17:00:00",
+      "elo": 1491.6
+    },
+    {
+      "date": "2025-09-06T17:00:00",
+      "elo": 1477.6
+    },
+    {
+      "date": "2025-09-20T16:00:00",
+      "elo": 1477.8
+    },
+    {
+      "date": "2025-09-20T16:00:00",
+      "elo": 1490.4
+    },
+    {
+      "date": "2025-09-20T16:00:00",
+      "elo": 1473.7
+    },
+    {
+      "date": "2025-09-20T16:00:00",
+      "elo": 1457.8
+    },
+    {
+      "date": "2025-10-11T16:30:00",
+      "elo": 1448.9
+    },
+    {
+      "date": "2025-10-11T16:30:00",
+      "elo": 1433.4
+    },
+    {
+      "date": "2025-10-11T16:30:00",
+      "elo": 1421.8
+    },
+    {
+      "date": "2025-10-18T17:30:00",
+      "elo": 1411.1
+    },
+    {
+      "date": "2025-10-18T17:30:00",
+      "elo": 1430.5
+    },
+    {
+      "date": "2025-11-01T17:00:00",
+      "elo": 1431.7
+    },
+    {
+      "date": "2025-11-01T17:00:00",
+      "elo": 1422.8
+    },
+    {
+      "date": "2025-11-01T17:00:00",
+      "elo": 1429.3
+    },
+    {
+      "date": "2025-11-20T18:30:00",
+      "elo": 1420.4
+    },
+    {
+      "date": "2025-11-20T18:30:00",
+      "elo": 1443.6
+    },
+    {
+      "date": "2025-11-20T18:30:00",
+      "elo": 1437.1
+    },
+    {
+      "date": "2025-11-22T16:30:00",
+      "elo": 1440.5
+    },
+    {
+      "date": "2025-11-22T16:30:00",
+      "elo": 1448.5
+    },
+    {
+      "date": "2025-11-22T16:30:00",
+      "elo": 1437.6
+    },
+    {
+      "date": "2025-11-22T16:30:00",
+      "elo": 1423.3
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1410.7
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1393.2
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1413.7
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1405.1
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1413.1
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1401.9
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1386.3
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1409.1
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1401.0
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1397.4
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1425.9
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1417.5
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1433.0
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1422.4
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1437.8
+    },
+    {
+      "date": "2025-11-27T18:30:00",
+      "elo": 1425.4
+    },
+    {
+      "date": "2025-12-05T15:00:00",
+      "elo": 1406.9
+    },
+    {
+      "date": "2025-12-05T15:00:00",
+      "elo": 1393.1
+    },
+    {
+      "date": "2025-12-05T15:00:00",
+      "elo": 1380.3
+    },
+    {
+      "date": "2025-12-05T15:00:00",
+      "elo": 1399.7
+    },
+    {
+      "date": "2025-12-14T10:00:00",
+      "elo": 1425.6
+    },
+    {
+      "date": "2025-12-14T10:00:00",
+      "elo": 1442.4
+    },
+    {
+      "date": "2025-12-14T10:00:00",
+      "elo": 1436.9
+    },
+    {
+      "date": "2025-12-14T10:00:00",
+      "elo": 1457.2
+    },
+    {
+      "date": "2025-12-14T10:00:00",
+      "elo": 1441.8
+    }
+  ],
+  "radar_values": {
+    "win_rate": 0.338,
+    "tie_rate": 0.144,
+    "opponents_normalized": 1.0,
+    "matches_normalized": 0.471,
+    "dominance": 0.325
+  },
+  "medals": [
+    {
+      "name": "Coleccionista",
+      "description": "Mas rivales unicos enfrentados",
+      "icon": "users",
+      "emoji": "👥",
+      "color": "#3b82f6",
+      "positive": true,
+      "stat": "24 rivales"
+    },
+    {
+      "name": "El Empatador",
+      "description": "Mayor tasa de empates",
+      "icon": "handshake",
+      "emoji": "🤝",
+      "color": "#f59e0b",
+      "positive": false,
+      "stat": "14% empates"
+    },
+    {
+      "name": "Ascenso Meteorico",
+      "description": "Mayor mejora entre trimestres",
+      "icon": "rocket",
+      "emoji": "🚀",
+      "color": "#8b5cf6",
+      "positive": true,
+      "stat": "+27.5% (Q1→Q2)"
+    }
+  ]
+}

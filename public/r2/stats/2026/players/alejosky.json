@@ -1,0 +1,289 @@
+{
+  "player": "Alejosky",
+  "year": 2026,
+  "summary": {
+    "elo": 1442.7,
+    "tournaments": 9,
+    "matches": 29,
+    "wins": 9,
+    "losses": 20,
+    "ties": 0,
+    "win_rate": 0.31,
+    "tie_rate": 0.0,
+    "opponent_count": 11
+  },
+  "quarterly": {
+    "Q1": {
+      "tournaments": 9,
+      "matches": 29,
+      "wins": 9,
+      "losses": 20,
+      "ties": 0,
+      "win_rate": 0.31
+    }
+  },
+  "quarterly_rivals": {
+    "Q1": [
+      {
+        "opponent": "Feanaro26",
+        "wins": 0,
+        "losses": 3,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 3
+      },
+      {
+        "opponent": "Wolfmortem",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "Corlopincho",
+        "wins": 1,
+        "losses": 5,
+        "ties": 0,
+        "win_rate": 0.167,
+        "total_matches": 6
+      }
+    ]
+  },
+  "best_progress": null,
+  "h2h": {
+    "Corlopincho": {
+      "wins": 1,
+      "losses": 5,
+      "ties": 0
+    },
+    "Aldturi": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0
+    },
+    "Saukonen": {
+      "wins": 1,
+      "losses": 3,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "Scarwolf7": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 0,
+      "losses": 3,
+      "ties": 0
+    },
+    "machetazoo": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "Wolfmortem": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Kiimaa": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Elnugget05": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "Elmacho1992": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  "best_matchups": [],
+  "worst_matchups": [
+    {
+      "opponent": "Feanaro26",
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "Corlopincho",
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "win_rate": 0.167
+    },
+    {
+      "opponent": "Saukonen",
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25
+    },
+    {
+      "opponent": "SlowPlayer22",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.333
+    },
+    {
+      "opponent": "Scarwolf7",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.333
+    }
+  ],
+  "elo_history": [
+    {
+      "date": "2026-01-31T15:00:00",
+      "elo": 1500
+    },
+    {
+      "date": "2026-01-31T15:00:00",
+      "elo": 1484.0
+    },
+    {
+      "date": "2026-01-31T15:00:00",
+      "elo": 1500.0
+    },
+    {
+      "date": "2026-01-31T15:00:00",
+      "elo": 1484.0
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1501.5
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1484.8
+    },
+    {
+      "date": "2026-02-05T17:00:00",
+      "elo": 1470.2
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1455.6
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1439.6
+    },
+    {
+      "date": "2026-02-07T15:00:00",
+      "elo": 1423.1
+    },
+    {
+      "date": "2026-02-14T15:00:00",
+      "elo": 1412.8
+    },
+    {
+      "date": "2026-02-14T15:00:00",
+      "elo": 1404.4
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1390.8
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1379.3
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1369.1
+    },
+    {
+      "date": "2026-02-21T15:00:00",
+      "elo": 1359.9
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1386.7
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1377.8
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1365.2
+    },
+    {
+      "date": "2026-02-26T17:00:00",
+      "elo": 1387.0
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1411.7
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1402.1
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1424.9
+    },
+    {
+      "date": "2026-03-05T18:30:00",
+      "elo": 1418.1
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1404.0
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1421.7
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1410.0
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1430.6
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1422.9
+    },
+    {
+      "date": "2026-03-08T22:52:29.346566",
+      "elo": 1442.7
+    }
+  ],
+  "radar_values": {
+    "win_rate": 0.31,
+    "tie_rate": 0.0,
+    "opponents_normalized": 0.733,
+    "matches_normalized": 0.725,
+    "dominance": 0.379
+  },
+  "medals": [
+    {
+      "name": "Resiliente",
+      "description": "Sigue jugando a pesar de las derrotas",
+      "icon": "heart",
+      "emoji": "💪",
+      "color": "#ec4899",
+      "positive": true,
+      "stat": "29 partidas, sigue adelante"
+    }
+  ]
+}

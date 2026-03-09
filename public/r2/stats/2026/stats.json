@@ -1,0 +1,135 @@
+{
+  "year": 2026,
+  "tournaments": 16,
+  "total_matches": 179,
+  "total_players": 24,
+  "qualified_players": 9,
+  "min_tournaments": 4,
+  "date_range": {
+    "start": "2026-01-29T18:30:00",
+    "end": "2026-03-08T22:26:26.412428"
+  },
+  "elo_ratings": {
+    "machetazoo": 1511.0408524100887,
+    "Feanaro26": 1465.9977926760694,
+    "Scarwolf7": 1629.3855138035062,
+    "Corlopincho": 1571.958062968258,
+    "Saukonen": 1649.208977165644,
+    "SlowPlayer22": 1439.524786513673,
+    "Aldturi": 1457.692330544281,
+    "Alejosky": 1442.706525421161,
+    "Wolfmortem": 1539.0237897957038
+  },
+  "top_elo": [
+    [
+      "Saukonen",
+      1649.208977165644
+    ],
+    [
+      "Scarwolf7",
+      1629.3855138035062
+    ],
+    [
+      "Corlopincho",
+      1571.958062968258
+    ],
+    [
+      "Wolfmortem",
+      1539.0237897957038
+    ],
+    [
+      "machetazoo",
+      1511.0408524100887
+    ],
+    [
+      "Feanaro26",
+      1465.9977926760694
+    ],
+    [
+      "Aldturi",
+      1457.692330544281
+    ],
+    [
+      "Alejosky",
+      1442.706525421161
+    ],
+    [
+      "SlowPlayer22",
+      1439.524786513673
+    ]
+  ],
+  "player_stats": {
+    "machetazoo": {
+      "matches": 35,
+      "wins": 16,
+      "losses": 18,
+      "ties": 1,
+      "win_rate": 0.47058823529411764,
+      "tournaments": 11
+    },
+    "Feanaro26": {
+      "matches": 16,
+      "wins": 6,
+      "losses": 10,
+      "ties": 0,
+      "win_rate": 0.375,
+      "tournaments": 5
+    },
+    "Scarwolf7": {
+      "matches": 26,
+      "wins": 19,
+      "losses": 7,
+      "ties": 0,
+      "win_rate": 0.7307692307692307,
+      "tournaments": 8
+    },
+    "Corlopincho": {
+      "matches": 36,
+      "wins": 20,
+      "losses": 13,
+      "ties": 3,
+      "win_rate": 0.6060606060606061,
+      "tournaments": 11
+    },
+    "Saukonen": {
+      "matches": 36,
+      "wins": 27,
+      "losses": 9,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 11
+    },
+    "SlowPlayer22": {
+      "matches": 24,
+      "wins": 8,
+      "losses": 16,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 8
+    },
+    "Aldturi": {
+      "matches": 40,
+      "wins": 21,
+      "losses": 18,
+      "ties": 1,
+      "win_rate": 0.5384615384615384,
+      "tournaments": 13
+    },
+    "Alejosky": {
+      "matches": 29,
+      "wins": 9,
+      "losses": 20,
+      "ties": 0,
+      "win_rate": 0.3103448275862069,
+      "tournaments": 9
+    },
+    "Wolfmortem": {
+      "matches": 25,
+      "wins": 12,
+      "losses": 11,
+      "ties": 2,
+      "win_rate": 0.5217391304347826,
+      "tournaments": 7
+    }
+  }
+}
