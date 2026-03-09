@@ -57,15 +57,6 @@
       "win_rate": 0.5,
       "is_significant": false
     },
-    "DRAFT": {
-      "tournaments": 1,
-      "matches": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "win_rate": 0.0,
-      "is_significant": false
-    },
     "CC": {
       "tournaments": 24,
       "matches": 74,
@@ -74,6 +65,15 @@
       "ties": 0,
       "win_rate": 0.554,
       "is_significant": true
+    },
+    "DRAFT": {
+      "tournaments": 1,
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.0,
+      "is_significant": false
     }
   },
   "quarterly_rivals": {

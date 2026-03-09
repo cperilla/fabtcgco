@@ -56,15 +56,6 @@
       "win_rate": 0.25,
       "is_significant": false
     },
-    "DRAFT": {
-      "tournaments": 1,
-      "matches": 4,
-      "wins": 2,
-      "losses": 1,
-      "ties": 1,
-      "win_rate": 0.5,
-      "is_significant": false
-    },
     "CC": {
       "tournaments": 23,
       "matches": 71,
@@ -81,6 +72,15 @@
       "losses": 4,
       "ties": 2,
       "win_rate": 0.143,
+      "is_significant": false
+    },
+    "DRAFT": {
+      "tournaments": 1,
+      "matches": 4,
+      "wins": 2,
+      "losses": 1,
+      "ties": 1,
+      "win_rate": 0.5,
       "is_significant": false
     }
   },

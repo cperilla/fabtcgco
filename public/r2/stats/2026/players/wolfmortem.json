@@ -32,15 +32,6 @@
       "win_rate": 0.571,
       "is_significant": false
     },
-    "SAGE": {
-      "tournaments": 4,
-      "matches": 15,
-      "wins": 6,
-      "losses": 8,
-      "ties": 1,
-      "win_rate": 0.4,
-      "is_significant": true
-    },
     "LL": {
       "tournaments": 1,
       "matches": 3,
@@ -49,6 +40,15 @@
       "ties": 0,
       "win_rate": 0.667,
       "is_significant": false
+    },
+    "SAGE": {
+      "tournaments": 4,
+      "matches": 15,
+      "wins": 6,
+      "losses": 8,
+      "ties": 1,
+      "win_rate": 0.4,
+      "is_significant": true
     }
   },
   "quarterly_rivals": {
