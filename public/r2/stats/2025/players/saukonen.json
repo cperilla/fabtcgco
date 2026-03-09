@@ -47,6 +47,33 @@
     }
   },
   "format_breakdown": {
+    "SAGE": {
+      "tournaments": 5,
+      "matches": 16,
+      "wins": 14,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.875,
+      "is_significant": true
+    },
+    "SEALED": {
+      "tournaments": 1,
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "is_significant": false
+    },
+    "BLITZ": {
+      "tournaments": 7,
+      "matches": 20,
+      "wins": 11,
+      "losses": 6,
+      "ties": 3,
+      "win_rate": 0.55,
+      "is_significant": true
+    },
     "CC": {
       "tournaments": 47,
       "matches": 147,
@@ -64,33 +91,6 @@
       "ties": 1,
       "win_rate": 0.0,
       "is_significant": false
-    },
-    "SEALED": {
-      "tournaments": 1,
-      "matches": 4,
-      "wins": 3,
-      "losses": 1,
-      "ties": 0,
-      "win_rate": 0.75,
-      "is_significant": false
-    },
-    "SAGE": {
-      "tournaments": 5,
-      "matches": 16,
-      "wins": 14,
-      "losses": 2,
-      "ties": 0,
-      "win_rate": 0.875,
-      "is_significant": true
-    },
-    "BLITZ": {
-      "tournaments": 7,
-      "matches": 20,
-      "wins": 11,
-      "losses": 6,
-      "ties": 3,
-      "win_rate": 0.55,
-      "is_significant": true
     }
   },
   "quarterly_rivals": {

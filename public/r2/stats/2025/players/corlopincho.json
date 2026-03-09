@@ -47,24 +47,6 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 38,
-      "matches": 119,
-      "wins": 52,
-      "losses": 44,
-      "ties": 23,
-      "win_rate": 0.437,
-      "is_significant": true
-    },
-    "DRAFT": {
-      "tournaments": 1,
-      "matches": 4,
-      "wins": 1,
-      "losses": 2,
-      "ties": 1,
-      "win_rate": 0.25,
-      "is_significant": false
-    },
     "SAGE": {
       "tournaments": 5,
       "matches": 15,
@@ -82,6 +64,24 @@
       "ties": 10,
       "win_rate": 0.2,
       "is_significant": true
+    },
+    "CC": {
+      "tournaments": 38,
+      "matches": 119,
+      "wins": 52,
+      "losses": 44,
+      "ties": 23,
+      "win_rate": 0.437,
+      "is_significant": true
+    },
+    "DRAFT": {
+      "tournaments": 1,
+      "matches": 4,
+      "wins": 1,
+      "losses": 2,
+      "ties": 1,
+      "win_rate": 0.25,
+      "is_significant": false
     }
   },
   "quarterly_rivals": {

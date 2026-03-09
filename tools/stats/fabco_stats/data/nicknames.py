@@ -92,13 +92,24 @@ def normalize_player_name(
             mappings = load_nicknames()
         reverse_map = build_reverse_mapping(mappings)
 
+    name = name.strip()
+
     # Lookup by lowercase
     normalized = reverse_map.get(name.lower())
     if normalized:
         return normalized
 
-    # No mapping found, return original (with title case cleanup)
-    return name.strip()
+    # Handle "Nickname - Hero" pattern (e.g., "PlayerName - Dorinthea")
+    if " - " in name:
+        base_name = name.split(" - ")[0].strip()
+        normalized = reverse_map.get(base_name.lower())
+        if normalized:
+            return normalized
+        # Return just the base name if no mapping found
+        return base_name
+
+    # No mapping found, return original
+    return name
 
 
 class NicknameNormalizer:

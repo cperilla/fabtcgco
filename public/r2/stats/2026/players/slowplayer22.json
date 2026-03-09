@@ -23,14 +23,14 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 6,
-      "matches": 17,
-      "wins": 5,
-      "losses": 12,
+    "SAGE": {
+      "tournaments": 1,
+      "matches": 4,
+      "wins": 1,
+      "losses": 3,
       "ties": 0,
-      "win_rate": 0.294,
-      "is_significant": true
+      "win_rate": 0.25,
+      "is_significant": false
     },
     "LL": {
       "tournaments": 1,
@@ -41,14 +41,14 @@
       "win_rate": 0.667,
       "is_significant": false
     },
-    "SAGE": {
-      "tournaments": 1,
-      "matches": 4,
-      "wins": 1,
-      "losses": 3,
+    "CC": {
+      "tournaments": 6,
+      "matches": 17,
+      "wins": 5,
+      "losses": 12,
       "ties": 0,
-      "win_rate": 0.25,
-      "is_significant": false
+      "win_rate": 0.294,
+      "is_significant": true
     }
   },
   "quarterly_rivals": {
@@ -266,27 +266,27 @@
       "elo": 1449.6
     },
     {
-      "date": "2026-03-09T14:31:47.594159",
+      "date": "2026-03-09T14:41:47.263250",
       "elo": 1469.5
     },
     {
-      "date": "2026-03-09T14:31:47.594159",
+      "date": "2026-03-09T14:41:47.263250",
       "elo": 1453.4
     },
     {
-      "date": "2026-03-09T14:31:47.594159",
+      "date": "2026-03-09T14:41:47.263250",
       "elo": 1444.6
     },
     {
-      "date": "2026-03-09T14:31:47.611229",
+      "date": "2026-03-09T14:41:47.279925",
       "elo": 1434.7
     },
     {
-      "date": "2026-03-09T14:31:47.611229",
+      "date": "2026-03-09T14:41:47.279925",
       "elo": 1421.0
     },
     {
-      "date": "2026-03-09T14:31:47.611229",
+      "date": "2026-03-09T14:41:47.279925",
       "elo": 1439.5
     }
   ],

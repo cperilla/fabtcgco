@@ -23,15 +23,6 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 3,
-      "matches": 9,
-      "wins": 3,
-      "losses": 6,
-      "ties": 0,
-      "win_rate": 0.333,
-      "is_significant": true
-    },
     "SAGE": {
       "tournaments": 2,
       "matches": 7,
@@ -40,6 +31,15 @@
       "ties": 0,
       "win_rate": 0.429,
       "is_significant": false
+    },
+    "CC": {
+      "tournaments": 3,
+      "matches": 9,
+      "wins": 3,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.333,
+      "is_significant": true
     }
   },
   "quarterly_rivals": {

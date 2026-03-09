@@ -23,14 +23,14 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 2,
-      "matches": 7,
-      "wins": 4,
-      "losses": 2,
+    "SAGE": {
+      "tournaments": 4,
+      "matches": 15,
+      "wins": 6,
+      "losses": 8,
       "ties": 1,
-      "win_rate": 0.571,
-      "is_significant": false
+      "win_rate": 0.4,
+      "is_significant": true
     },
     "LL": {
       "tournaments": 1,
@@ -41,14 +41,14 @@
       "win_rate": 0.667,
       "is_significant": false
     },
-    "SAGE": {
-      "tournaments": 4,
-      "matches": 15,
-      "wins": 6,
-      "losses": 8,
+    "CC": {
+      "tournaments": 2,
+      "matches": 7,
+      "wins": 4,
+      "losses": 2,
       "ties": 1,
-      "win_rate": 0.4,
-      "is_significant": true
+      "win_rate": 0.571,
+      "is_significant": false
     }
   },
   "quarterly_rivals": {

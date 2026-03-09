@@ -47,6 +47,24 @@
     }
   },
   "format_breakdown": {
+    "SAGE": {
+      "tournaments": 2,
+      "matches": 7,
+      "wins": 1,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.143,
+      "is_significant": false
+    },
+    "SEALED": {
+      "tournaments": 2,
+      "matches": 8,
+      "wins": 2,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.25,
+      "is_significant": false
+    },
     "CC": {
       "tournaments": 23,
       "matches": 71,
@@ -63,24 +81,6 @@
       "losses": 1,
       "ties": 1,
       "win_rate": 0.5,
-      "is_significant": false
-    },
-    "SEALED": {
-      "tournaments": 2,
-      "matches": 8,
-      "wins": 2,
-      "losses": 4,
-      "ties": 2,
-      "win_rate": 0.25,
-      "is_significant": false
-    },
-    "SAGE": {
-      "tournaments": 2,
-      "matches": 7,
-      "wins": 1,
-      "losses": 4,
-      "ties": 2,
-      "win_rate": 0.143,
       "is_significant": false
     }
   },

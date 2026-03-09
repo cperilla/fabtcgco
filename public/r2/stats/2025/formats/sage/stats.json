@@ -20,7 +20,7 @@
       1533.6971191369705
     ],
     [
-      "Wolfang - Decimator (invitation pending)",
+      "Wolfang",
       1532.0
     ],
     [
@@ -36,7 +36,7 @@
       1508.950219584145
     ],
     [
-      "John Gonzales - Iislander",
+      "John Gonzales",
       1500.0
     ],
     [
@@ -169,7 +169,7 @@
       "win_rate": 0.3333333333333333,
       "tournaments": 3
     },
-    "Adrian Contresas - Ira": {
+    "Adrian Contresas": {
       "matches": 1,
       "wins": 0,
       "losses": 1,
@@ -177,7 +177,7 @@
       "win_rate": 0.0,
       "tournaments": 1
     },
-    "John Gonzales - Iislander": {
+    "John Gonzales": {
       "matches": 2,
       "wins": 1,
       "losses": 1,
@@ -185,7 +185,7 @@
       "win_rate": 0.5,
       "tournaments": 1
     },
-    "Camilo Cortez - Bravo": {
+    "Camilo Cortez": {
       "matches": 1,
       "wins": 0,
       "losses": 1,
@@ -193,7 +193,7 @@
       "win_rate": 0.0,
       "tournaments": 1
     },
-    "Wolfang - Decimator (invitation pending)": {
+    "Wolfang": {
       "matches": 2,
       "wins": 2,
       "losses": 0,

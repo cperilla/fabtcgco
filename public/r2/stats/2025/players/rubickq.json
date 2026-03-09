@@ -39,24 +39,6 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 24,
-      "matches": 74,
-      "wins": 41,
-      "losses": 33,
-      "ties": 0,
-      "win_rate": 0.554,
-      "is_significant": true
-    },
-    "DRAFT": {
-      "tournaments": 1,
-      "matches": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "win_rate": 0.0,
-      "is_significant": false
-    },
     "SEALED": {
       "tournaments": 1,
       "matches": 4,
@@ -74,6 +56,24 @@
       "ties": 2,
       "win_rate": 0.429,
       "is_significant": true
+    },
+    "CC": {
+      "tournaments": 24,
+      "matches": 74,
+      "wins": 41,
+      "losses": 33,
+      "ties": 0,
+      "win_rate": 0.554,
+      "is_significant": true
+    },
+    "DRAFT": {
+      "tournaments": 1,
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.0,
+      "is_significant": false
     }
   },
   "quarterly_rivals": {

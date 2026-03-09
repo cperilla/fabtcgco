@@ -47,15 +47,6 @@
     }
   },
   "format_breakdown": {
-    "CC": {
-      "tournaments": 19,
-      "matches": 60,
-      "wins": 20,
-      "losses": 39,
-      "ties": 1,
-      "win_rate": 0.333,
-      "is_significant": true
-    },
     "SEALED": {
       "tournaments": 2,
       "matches": 8,
@@ -73,6 +64,15 @@
       "ties": 0,
       "win_rate": 0.0,
       "is_significant": false
+    },
+    "CC": {
+      "tournaments": 19,
+      "matches": 60,
+      "wins": 20,
+      "losses": 39,
+      "ties": 1,
+      "win_rate": 0.333,
+      "is_significant": true
     }
   },
   "quarterly_rivals": {
