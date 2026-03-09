@@ -1,0 +1,21 @@
+{
+  "year": 2026,
+  "formats": [
+    "CC",
+    "SAGE"
+  ],
+  "format_stats": {
+    "CC": {
+      "tournaments": 10,
+      "matches": 101,
+      "players": 21,
+      "qualified": 12
+    },
+    "SAGE": {
+      "tournaments": 5,
+      "matches": 69,
+      "players": 17,
+      "qualified": 17
+    }
+  }
+}

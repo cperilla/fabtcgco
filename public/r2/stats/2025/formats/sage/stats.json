@@ -1,0 +1,205 @@
+{
+  "format": "SAGE",
+  "year": 2025,
+  "tournaments": 6,
+  "total_matches": 66,
+  "total_players": 19,
+  "qualified_players": 19,
+  "min_tournaments": 1,
+  "top_elo": [
+    [
+      "Saukonen",
+      1656.086410984045
+    ],
+    [
+      "Corlopincho",
+      1556.1282155467024
+    ],
+    [
+      "AlvaroFDO2001",
+      1533.6971191369705
+    ],
+    [
+      "Wolfang - Decimator (invitation pending)",
+      1532.0
+    ],
+    [
+      "Scarwolf7",
+      1531.6235055073942
+    ],
+    [
+      "machetazoo",
+      1527.0280396121775
+    ],
+    [
+      "Elmacho1992",
+      1508.950219584145
+    ],
+    [
+      "John Gonzales - Iislander",
+      1500.0
+    ],
+    [
+      "MetalPrime",
+      1490.010547049375
+    ],
+    [
+      "Robgiamt",
+      1486.9382840460123
+    ]
+  ],
+  "player_stats": {
+    "Elmacho1992": {
+      "matches": 12,
+      "wins": 6,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 4
+    },
+    "juanda211": {
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Corlopincho": {
+      "matches": 15,
+      "wins": 9,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.6923076923076923,
+      "tournaments": 5
+    },
+    "machetazoo": {
+      "matches": 15,
+      "wins": 8,
+      "losses": 7,
+      "ties": 0,
+      "win_rate": 0.5333333333333333,
+      "tournaments": 5
+    },
+    "Scarwolf7": {
+      "matches": 16,
+      "wins": 9,
+      "losses": 6,
+      "ties": 1,
+      "win_rate": 0.6,
+      "tournaments": 5
+    },
+    "Saukonen": {
+      "matches": 16,
+      "wins": 14,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.875,
+      "tournaments": 5
+    },
+    "Alejosky": {
+      "matches": 9,
+      "wins": 2,
+      "losses": 6,
+      "ties": 1,
+      "win_rate": 0.25,
+      "tournaments": 3
+    },
+    "Wolfmortem": {
+      "matches": 7,
+      "wins": 2,
+      "losses": 4,
+      "ties": 1,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 2
+    },
+    "SlowPlayer22": {
+      "matches": 7,
+      "wins": 1,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.2,
+      "tournaments": 2
+    },
+    "Feanaro26": {
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "MetalPrime": {
+      "matches": 4,
+      "wins": 1,
+      "losses": 2,
+      "ties": 1,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 1
+    },
+    "AlejoCartagena": {
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Robgiamt": {
+      "matches": 3,
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 1
+    },
+    "AlvaroFDO2001": {
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 1
+    },
+    "Aldturi": {
+      "matches": 9,
+      "wins": 3,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 3
+    },
+    "Adrian Contresas - Ira": {
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "John Gonzales - Iislander": {
+      "matches": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 1
+    },
+    "Camilo Cortez - Bravo": {
+      "matches": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Wolfang - Decimator (invitation pending)": {
+      "matches": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "tournaments": 1
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "format": "SEALED",
+  "year": 2025,
+  "tournaments": 2,
+  "total_matches": 38,
+  "total_players": 13,
+  "qualified_players": 13,
+  "min_tournaments": 1,
+  "top_elo": [
+    [
+      "machetazoo",
+      1560.4152741870628
+    ],
+    [
+      "Aldturi",
+      1538.681414264625
+    ],
+    [
+      "Elmacho1992",
+      1536.3276087170934
+    ],
+    [
+      "Saukonen",
+      1530.5627942852475
+    ],
+    [
+      "RubickQ",
+      1515.2975359824393
+    ],
+    [
+      "Scarwolf7",
+      1507.5218352149595
+    ],
+    [
+      "Nicolas",
+      1503.389847934136
+    ],
+    [
+      "MetalPrime",
+      1499.3853163757508
+    ],
+    [
+      "Feanaro26",
+      1497.417430619786
+    ],
+    [
+      "SlowPlayer22",
+      1470.9237345815106
+    ]
+  ],
+  "player_stats": {
+    "Saukonen": {
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 1
+    },
+    "Aldturi": {
+      "matches": 8,
+      "wins": 4,
+      "losses": 1,
+      "ties": 3,
+      "win_rate": 0.8,
+      "tournaments": 2
+    },
+    "SlowPlayer22": {
+      "matches": 8,
+      "wins": 2,
+      "losses": 4,
+      "ties": 2,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 2
+    },
+    "klapen": {
+      "matches": 4,
+      "wins": 0,
+      "losses": 3,
+      "ties": 1,
+      "win_rate": 0.0,
+      "tournaments": 1
+    },
+    "Scarwolf7": {
+      "matches": 8,
+      "wins": 3,
+      "losses": 3,
+      "ties": 2,
+      "win_rate": 0.5,
+      "tournaments": 2
+    },
+    "RubickQ": {
+      "matches": 4,
+      "wins": 2,
+      "losses": 1,
+      "ties": 1,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 1
+    },
+    "Alejosky": {
+      "matches": 6,
+      "wins": 1,
+      "losses": 3,
+      "ties": 2,
+      "win_rate": 0.25,
+      "tournaments": 2
+    },
+    "Nicolas": {
+      "matches": 8,
+      "wins": 3,
+      "losses": 3,
+      "ties": 2,
+      "win_rate": 0.5,
+      "tournaments": 2
+    },
+    "Elmacho1992": {
+      "matches": 6,
+      "wins": 4,
+      "losses": 1,
+      "ties": 1,
+      "win_rate": 0.8,
+      "tournaments": 2
+    },
+    "DJAMPUDIA": {
+      "matches": 8,
+      "wins": 1,
+      "losses": 7,
+      "ties": 0,
+      "win_rate": 0.125,
+      "tournaments": 2
+    },
+    "MetalPrime": {
+      "matches": 4,
+      "wins": 1,
+      "losses": 1,
+      "ties": 2,
+      "win_rate": 0.5,
+      "tournaments": 1
+    },
+    "Feanaro26": {
+      "matches": 4,
+      "wins": 2,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 1
+    },
+    "machetazoo": {
+      "matches": 4,
+      "wins": 4,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "tournaments": 1
+    }
+  }
+}

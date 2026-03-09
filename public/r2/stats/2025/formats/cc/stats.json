@@ -1,0 +1,149 @@
+{
+  "format": "CC",
+  "year": 2025,
+  "tournaments": 57,
+  "total_matches": 657,
+  "total_players": 33,
+  "qualified_players": 12,
+  "min_tournaments": 11,
+  "top_elo": [
+    [
+      "Saukonen",
+      1714.6382967137124
+    ],
+    [
+      "Elmacho1992",
+      1655.1196339826954
+    ],
+    [
+      "Scarwolf7",
+      1628.8873759538276
+    ],
+    [
+      "machetazoo",
+      1616.128394615193
+    ],
+    [
+      "Corlopincho",
+      1567.946728533143
+    ],
+    [
+      "Aldturi",
+      1567.3762253600446
+    ],
+    [
+      "RubickQ",
+      1565.1646904850422
+    ],
+    [
+      "Robgiamt",
+      1519.0721440960315
+    ],
+    [
+      "Feanaro26",
+      1461.3984278460155
+    ],
+    [
+      "SlowPlayer22",
+      1447.2629350911295
+    ]
+  ],
+  "player_stats": {
+    "machetazoo": {
+      "matches": 135,
+      "wins": 73,
+      "losses": 50,
+      "ties": 12,
+      "win_rate": 0.5934959349593496,
+      "tournaments": 43
+    },
+    "Alejosky": {
+      "matches": 100,
+      "wins": 34,
+      "losses": 61,
+      "ties": 5,
+      "win_rate": 0.35789473684210527,
+      "tournaments": 33
+    },
+    "Saukonen": {
+      "matches": 147,
+      "wins": 108,
+      "losses": 37,
+      "ties": 2,
+      "win_rate": 0.7448275862068966,
+      "tournaments": 47
+    },
+    "RubickQ": {
+      "matches": 74,
+      "wins": 41,
+      "losses": 33,
+      "ties": 0,
+      "win_rate": 0.5540540540540541,
+      "tournaments": 24
+    },
+    "Aldturi": {
+      "matches": 152,
+      "wins": 72,
+      "losses": 69,
+      "ties": 11,
+      "win_rate": 0.5106382978723404,
+      "tournaments": 50
+    },
+    "Elmacho1992": {
+      "matches": 90,
+      "wins": 51,
+      "losses": 37,
+      "ties": 2,
+      "win_rate": 0.5795454545454546,
+      "tournaments": 28
+    },
+    "Scarwolf7": {
+      "matches": 72,
+      "wins": 36,
+      "losses": 36,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 23
+    },
+    "Feanaro26": {
+      "matches": 88,
+      "wins": 34,
+      "losses": 48,
+      "ties": 6,
+      "win_rate": 0.4146341463414634,
+      "tournaments": 29
+    },
+    "Robgiamt": {
+      "matches": 40,
+      "wins": 20,
+      "losses": 18,
+      "ties": 2,
+      "win_rate": 0.5263157894736842,
+      "tournaments": 12
+    },
+    "SlowPlayer22": {
+      "matches": 71,
+      "wins": 21,
+      "losses": 42,
+      "ties": 8,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 23
+    },
+    "DJAMPUDIA": {
+      "matches": 60,
+      "wins": 20,
+      "losses": 39,
+      "ties": 1,
+      "win_rate": 0.3389830508474576,
+      "tournaments": 19
+    },
+    "Corlopincho": {
+      "matches": 119,
+      "wins": 52,
+      "losses": 44,
+      "ties": 23,
+      "win_rate": 0.5416666666666666,
+      "tournaments": 38
+    }
+  }
+}

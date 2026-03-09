@@ -69,16 +69,44 @@ class TournamentFetcher:
                 pass
         return None
 
-    def _parse_format_from_url(self, url: str) -> str:
-        """Extract tournament format from URL slug."""
-        # URL format: fabco_location_format_date
+    def _parse_format_from_url(self, url: str, name: str = "") -> str:
+        """Extract tournament format from URL slug or tournament name.
+
+        Args:
+            url: Tournament URL slug.
+            name: Tournament name (optional, used as fallback).
+
+        Returns:
+            Format string (CC, SAGE, LL, BLITZ, DRAFT, SEALED).
+        """
+        # First try URL format: fabco_location_format_date
         parts = url.lower().split("_")
         if len(parts) >= 3:
-            # Try to identify format from known types
             known_formats = ["cc", "sage", "ll", "blitz", "draft", "sealed"]
             for part in parts:
                 if part in known_formats:
                     return part.upper()
+
+        # Then try to parse from tournament name
+        if name:
+            name_lower = name.lower()
+
+            # Check for explicit format keywords (order matters - check more specific first)
+            if "sage" in name_lower or "ságe" in name_lower:
+                return "SAGE"
+            if " ll " in name_lower or name_lower.startswith("ll ") or " ll:" in name_lower:
+                return "LL"
+            if "living legend" in name_lower:
+                return "LL"
+            if "blitz" in name_lower:
+                return "BLITZ"
+            if "draft" in name_lower:
+                return "DRAFT"
+            if "sealed" in name_lower or "pre release" in name_lower or "pre-release" in name_lower or "prerelease" in name_lower:
+                return "SEALED"
+            if " cc " in name_lower or name_lower.startswith("cc ") or " cc:" in name_lower or name_lower.endswith(" cc"):
+                return "CC"
+
         return "CC"  # Default to Classic Constructed
 
     def _parse_match(
@@ -258,7 +286,7 @@ class TournamentFetcher:
             name=tournament_name,
             url=tournament_url,
             date=tournament_date,
-            format=self._parse_format_from_url(tournament_url),
+            format=self._parse_format_from_url(tournament_url, tournament_name),
             location=self._extract_location(tournament_name),
             participants=participant_names,
             matches=matches,
@@ -318,7 +346,7 @@ class TournamentFetcher:
             name=tournament_name,
             url=tournament_url,
             date=tournament_date,
-            format=self._parse_format_from_url(tournament_url),
+            format=self._parse_format_from_url(tournament_url, tournament_name),
             location=self._extract_location(tournament_name),
             participants=participant_names,
             matches=matches,
@@ -425,7 +453,7 @@ class TournamentFetcher:
             name=tournament_name,
             url=tournament_url,
             date=tournament_date,
-            format=self._parse_format_from_url(tournament_url),
+            format=self._parse_format_from_url(tournament_url, tournament_name),
             location=self._extract_location(tournament_name),
             participants=participant_names,
             matches=matches,

@@ -46,6 +46,44 @@
       "win_rate": 0.379
     }
   },
+  "format_breakdown": {
+    "BLITZ": {
+      "tournaments": 5,
+      "matches": 15,
+      "wins": 5,
+      "losses": 6,
+      "ties": 4,
+      "win_rate": 0.333,
+      "is_significant": true
+    },
+    "SEALED": {
+      "tournaments": 2,
+      "matches": 6,
+      "wins": 1,
+      "losses": 3,
+      "ties": 2,
+      "win_rate": 0.167,
+      "is_significant": false
+    },
+    "CC": {
+      "tournaments": 33,
+      "matches": 100,
+      "wins": 34,
+      "losses": 61,
+      "ties": 5,
+      "win_rate": 0.34,
+      "is_significant": true
+    },
+    "SAGE": {
+      "tournaments": 3,
+      "matches": 9,
+      "wins": 2,
+      "losses": 6,
+      "ties": 1,
+      "win_rate": 0.222,
+      "is_significant": true
+    }
+  },
   "quarterly_rivals": {
     "Q1": [
       {

@@ -1,0 +1,35 @@
+{
+  "year": 2025,
+  "formats": [
+    "BLITZ",
+    "CC",
+    "SAGE",
+    "SEALED"
+  ],
+  "format_stats": {
+    "BLITZ": {
+      "tournaments": 8,
+      "matches": 82,
+      "players": 18,
+      "qualified": 18
+    },
+    "CC": {
+      "tournaments": 57,
+      "matches": 657,
+      "players": 33,
+      "qualified": 12
+    },
+    "SAGE": {
+      "tournaments": 6,
+      "matches": 66,
+      "players": 19,
+      "qualified": 19
+    },
+    "SEALED": {
+      "tournaments": 2,
+      "matches": 38,
+      "players": 13,
+      "qualified": 13
+    }
+  }
+}

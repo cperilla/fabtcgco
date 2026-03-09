@@ -100,5 +100,25 @@
         "Resiliente"
       ]
     }
+  ],
+  "formats": [
+    {
+      "format": "CC",
+      "tournaments": 10,
+      "matches": 101,
+      "players": 21
+    },
+    {
+      "format": "SAGE",
+      "tournaments": 5,
+      "matches": 69,
+      "players": 17
+    },
+    {
+      "format": "LL",
+      "tournaments": 1,
+      "matches": 9,
+      "players": 6
+    }
   ]
 }

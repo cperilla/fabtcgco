@@ -1,0 +1,149 @@
+{
+  "format": "CC",
+  "year": 2026,
+  "tournaments": 10,
+  "total_matches": 101,
+  "total_players": 21,
+  "qualified_players": 12,
+  "min_tournaments": 2,
+  "top_elo": [
+    [
+      "Saukonen",
+      1613.134262836133
+    ],
+    [
+      "Scarwolf7",
+      1582.2332757822087
+    ],
+    [
+      "Wolfmortem",
+      1536.8518004963948
+    ],
+    [
+      "Corlopincho",
+      1536.1166386791747
+    ],
+    [
+      "machetazoo",
+      1523.1984904983642
+    ],
+    [
+      "Robgiamt",
+      1505.552292216185
+    ],
+    [
+      "Aldturi",
+      1471.93549179507
+    ],
+    [
+      "Feanaro26",
+      1466.0236379640962
+    ],
+    [
+      "Alejosky",
+      1455.5352431528522
+    ],
+    [
+      "Elnugget05",
+      1440.376255254959
+    ]
+  ],
+  "player_stats": {
+    "machetazoo": {
+      "matches": 21,
+      "wins": 10,
+      "losses": 10,
+      "ties": 1,
+      "win_rate": 0.5,
+      "tournaments": 7
+    },
+    "Feanaro26": {
+      "matches": 9,
+      "wins": 3,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 3
+    },
+    "Scarwolf7": {
+      "matches": 15,
+      "wins": 11,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.7333333333333333,
+      "tournaments": 5
+    },
+    "Corlopincho": {
+      "matches": 21,
+      "wins": 11,
+      "losses": 8,
+      "ties": 2,
+      "win_rate": 0.5789473684210527,
+      "tournaments": 7
+    },
+    "Saukonen": {
+      "matches": 21,
+      "wins": 16,
+      "losses": 5,
+      "ties": 0,
+      "win_rate": 0.7619047619047619,
+      "tournaments": 7
+    },
+    "SlowPlayer22": {
+      "matches": 17,
+      "wins": 5,
+      "losses": 12,
+      "ties": 0,
+      "win_rate": 0.29411764705882354,
+      "tournaments": 6
+    },
+    "Aldturi": {
+      "matches": 23,
+      "wins": 12,
+      "losses": 10,
+      "ties": 1,
+      "win_rate": 0.5454545454545454,
+      "tournaments": 8
+    },
+    "Alejosky": {
+      "matches": 18,
+      "wins": 6,
+      "losses": 12,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 6
+    },
+    "Elnugget05": {
+      "matches": 10,
+      "wins": 2,
+      "losses": 6,
+      "ties": 2,
+      "win_rate": 0.25,
+      "tournaments": 3
+    },
+    "Wolfmortem": {
+      "matches": 7,
+      "wins": 4,
+      "losses": 2,
+      "ties": 1,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 2
+    },
+    "Robgiamt": {
+      "matches": 7,
+      "wins": 3,
+      "losses": 3,
+      "ties": 1,
+      "win_rate": 0.5,
+      "tournaments": 2
+    },
+    "DJAMPUDIA": {
+      "matches": 6,
+      "wins": 0,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.0,
+      "tournaments": 2
+    }
+  }
+}

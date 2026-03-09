@@ -22,6 +22,26 @@
       "win_rate": 0.375
     }
   },
+  "format_breakdown": {
+    "CC": {
+      "tournaments": 3,
+      "matches": 9,
+      "wins": 3,
+      "losses": 6,
+      "ties": 0,
+      "win_rate": 0.333,
+      "is_significant": true
+    },
+    "SAGE": {
+      "tournaments": 2,
+      "matches": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.429,
+      "is_significant": false
+    }
+  },
   "quarterly_rivals": {
     "Q1": [
       {

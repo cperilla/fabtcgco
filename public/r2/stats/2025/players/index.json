@@ -145,5 +145,37 @@
         "Ascenso Meteorico"
       ]
     }
+  ],
+  "formats": [
+    {
+      "format": "CC",
+      "tournaments": 57,
+      "matches": 657,
+      "players": 33
+    },
+    {
+      "format": "BLITZ",
+      "tournaments": 8,
+      "matches": 82,
+      "players": 18
+    },
+    {
+      "format": "SAGE",
+      "tournaments": 6,
+      "matches": 66,
+      "players": 19
+    },
+    {
+      "format": "SEALED",
+      "tournaments": 2,
+      "matches": 38,
+      "players": 13
+    },
+    {
+      "format": "DRAFT",
+      "tournaments": 1,
+      "matches": 16,
+      "players": 9
+    }
   ]
 }
