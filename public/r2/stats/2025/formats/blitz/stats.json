@@ -3,49 +3,49 @@
   "year": 2025,
   "tournaments": 8,
   "total_matches": 82,
-  "total_players": 18,
-  "qualified_players": 18,
+  "total_players": 17,
+  "qualified_players": 17,
   "min_tournaments": 1,
   "top_elo": [
     [
       "Aldturi",
-      1554.1567277288814
-    ],
-    [
-      "Saukonen",
-      1543.8970640644457
+      1554.0173749369003
     ],
     [
       "AlvaroFDO2001",
-      1543.7041086072154
+      1543.3551522838031
+    ],
+    [
+      "Saukonen",
+      1543.2713634210734
     ],
     [
       "Robgiamt",
-      1540.796178204787
+      1540.3750594553512
     ],
     [
       "DarkGentleman",
-      1528.575985503639
+      1528.2474093440385
     ],
     [
       "Wolfmortem",
-      1522.0392456970976
+      1521.912396184969
     ],
     [
       "Elmacho1992",
-      1516.8993698599884
+      1514.4293590099126
     ],
     [
       "RubickQ",
-      1505.0765334012349
+      1504.6644905373043
     ],
     [
       "machetazoo",
-      1497.5780217818885
+      1497.17328159223
     ],
     [
       "Alejosky",
-      1485.9554646279182
+      1485.842637113429
     ]
   ],
   "player_stats": {
@@ -98,12 +98,12 @@
       "tournaments": 3
     },
     "Scarwolf7": {
-      "matches": 18,
+      "matches": 20,
       "wins": 6,
-      "losses": 11,
-      "ties": 1,
-      "win_rate": 0.35294117647058826,
-      "tournaments": 6
+      "losses": 12,
+      "ties": 2,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 7
     },
     "RubickQ": {
       "matches": 14,
@@ -143,14 +143,6 @@
       "losses": 1,
       "ties": 0,
       "win_rate": 0.6666666666666666,
-      "tournaments": 1
-    },
-    "Scarwolf (invitation pending)": {
-      "matches": 2,
-      "wins": 0,
-      "losses": 1,
-      "ties": 1,
-      "win_rate": 0.0,
       "tournaments": 1
     },
     "MetalPrime": {

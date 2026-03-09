@@ -5,7 +5,7 @@
     {
       "player": "Saukonen",
       "slug": "saukonen",
-      "elo": 1748.2,
+      "elo": 1747.4,
       "matches": 191,
       "tournaments": 61,
       "win_rate": 0.735,
@@ -19,7 +19,7 @@
     {
       "player": "Elmacho1992",
       "slug": "elmacho1992",
-      "elo": 1670.8,
+      "elo": 1669.9,
       "matches": 111,
       "tournaments": 35,
       "win_rate": 0.583,
@@ -30,10 +30,10 @@
     {
       "player": "Scarwolf7",
       "slug": "scarwolf7",
-      "elo": 1648.1,
-      "matches": 114,
-      "tournaments": 36,
-      "win_rate": 0.491,
+      "elo": 1647.3,
+      "matches": 116,
+      "tournaments": 37,
+      "win_rate": 0.486,
       "medals": [
         "Ascenso Meteorico"
       ]
@@ -41,7 +41,7 @@
     {
       "player": "machetazoo",
       "slug": "machetazoo",
-      "elo": 1633.1,
+      "elo": 1632.3,
       "matches": 168,
       "tournaments": 53,
       "win_rate": 0.6,
@@ -56,7 +56,7 @@
     {
       "player": "Corlopincho",
       "slug": "corlopincho",
-      "elo": 1583.5,
+      "elo": 1582.7,
       "matches": 158,
       "tournaments": 51,
       "win_rate": 0.541,
@@ -70,7 +70,7 @@
     {
       "player": "Aldturi",
       "slug": "aldturi",
-      "elo": 1563.5,
+      "elo": 1562.8,
       "matches": 191,
       "tournaments": 62,
       "win_rate": 0.511,
@@ -86,7 +86,7 @@
     {
       "player": "RubickQ",
       "slug": "rubickq",
-      "elo": 1559.5,
+      "elo": 1558.8,
       "matches": 93,
       "tournaments": 31,
       "win_rate": 0.544,
@@ -97,7 +97,7 @@
     {
       "player": "Feanaro26",
       "slug": "feanaro26",
-      "elo": 1446.1,
+      "elo": 1445.5,
       "matches": 111,
       "tournaments": 36,
       "win_rate": 0.404,
@@ -110,7 +110,7 @@
     {
       "player": "SlowPlayer22",
       "slug": "slowplayer22",
-      "elo": 1441.8,
+      "elo": 1441.2,
       "matches": 90,
       "tournaments": 28,
       "win_rate": 0.338,
@@ -123,7 +123,7 @@
     {
       "player": "Alejosky",
       "slug": "alejosky",
-      "elo": 1391.0,
+      "elo": 1390.3,
       "matches": 130,
       "tournaments": 43,
       "win_rate": 0.356,
@@ -137,7 +137,7 @@
     {
       "player": "DJAMPUDIA",
       "slug": "djampudia",
-      "elo": 1370.9,
+      "elo": 1370.3,
       "matches": 71,
       "tournaments": 22,
       "win_rate": 0.3,
@@ -157,7 +157,7 @@
       "format": "BLITZ",
       "tournaments": 8,
       "matches": 82,
-      "players": 18
+      "players": 17
     },
     {
       "format": "SAGE",
