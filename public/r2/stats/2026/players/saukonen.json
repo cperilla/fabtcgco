@@ -2,94 +2,159 @@
   "player": "Saukonen",
   "year": 2026,
   "summary": {
-    "elo": 1649.2,
-    "tournaments": 11,
-    "matches": 36,
-    "wins": 27,
-    "losses": 9,
-    "ties": 0,
+    "elo": 1663.7,
+    "tournaments": 17,
+    "matches": 57,
+    "wins": 42,
+    "losses": 14,
+    "ties": 1,
     "win_rate": 0.75,
-    "tie_rate": 0.0,
-    "opponent_count": 12
+    "tie_rate": 0.018,
+    "opponent_count": 14
   },
   "quarterly": {
     "Q1": {
-      "tournaments": 11,
-      "matches": 36,
-      "wins": 27,
-      "losses": 9,
+      "tournaments": 15,
+      "matches": 51,
+      "wins": 38,
+      "losses": 12,
+      "ties": 1,
+      "win_rate": 0.745
+    },
+    "Q2": {
+      "tournaments": 2,
+      "matches": 6,
+      "wins": 4,
+      "losses": 2,
       "ties": 0,
-      "win_rate": 0.75
+      "win_rate": 0.667
     }
   },
   "format_breakdown": {
     "SAGE": {
-      "tournaments": 4,
-      "matches": 15,
-      "wins": 11,
-      "losses": 4,
+      "tournaments": 7,
+      "matches": 25,
+      "wins": 19,
+      "losses": 6,
       "ties": 0,
-      "win_rate": 0.733,
+      "win_rate": 0.76,
       "is_significant": true
     },
-    "CC": {
-      "tournaments": 7,
-      "matches": 21,
-      "wins": 16,
-      "losses": 5,
+    "LL": {
+      "tournaments": 1,
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
       "ties": 0,
-      "win_rate": 0.762,
+      "win_rate": 0.75,
+      "is_significant": false
+    },
+    "CC": {
+      "tournaments": 9,
+      "matches": 28,
+      "wins": 20,
+      "losses": 7,
+      "ties": 1,
+      "win_rate": 0.714,
       "is_significant": true
     }
   },
   "quarterly_rivals": {
     "Q1": [
       {
-        "opponent": "Corlopincho",
-        "wins": 3,
-        "losses": 3,
+        "opponent": "Scarwolf7",
+        "wins": 2,
+        "losses": 2,
         "ties": 0,
         "win_rate": 0.5,
-        "total_matches": 6
+        "total_matches": 4
       },
       {
-        "opponent": "Scarwolf7",
-        "wins": 1,
-        "losses": 1,
+        "opponent": "machetazoo",
+        "wins": 2,
+        "losses": 2,
         "ties": 0,
         "win_rate": 0.5,
-        "total_matches": 2
+        "total_matches": 4
+      },
+      {
+        "opponent": "Alejosky",
+        "wins": 2,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.667,
+        "total_matches": 3
+      }
+    ],
+    "Q2": [
+      {
+        "opponent": "Corlopincho",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
       },
       {
         "opponent": "Aldturi",
-        "wins": 3,
-        "losses": 2,
+        "wins": 0,
+        "losses": 1,
         "ties": 0,
-        "win_rate": 0.6,
-        "total_matches": 5
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "machetazoo",
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "win_rate": 1.0,
+        "total_matches": 2
       }
     ]
   },
-  "best_progress": null,
+  "best_progress": {
+    "from_quarter": "Q1",
+    "to_quarter": "Q2",
+    "from_win_rate": 0.745,
+    "to_win_rate": 0.667,
+    "improvement": -0.078,
+    "improvement_pct": -7.8
+  },
   "h2h": {
-    "Corlopincho": {
-      "wins": 3,
-      "losses": 3,
-      "ties": 0
-    },
     "Wolfmortem": {
-      "wins": 4,
+      "wins": 7,
       "losses": 1,
       "ties": 0
     },
     "Aldturi": {
-      "wins": 3,
-      "losses": 2,
+      "wins": 5,
+      "losses": 3,
+      "ties": 0
+    },
+    "Corlopincho": {
+      "wins": 5,
+      "losses": 3,
       "ties": 0
     },
     "machetazoo": {
-      "wins": 3,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 4,
       "losses": 1,
+      "ties": 0
+    },
+    "Scarwolf7": {
+      "wins": 2,
+      "losses": 2,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 4,
+      "losses": 0,
       "ties": 0
     },
     "Alejosky": {
@@ -97,23 +162,13 @@
       "losses": 1,
       "ties": 0
     },
-    "Feanaro26": {
-      "wins": 3,
-      "losses": 0,
-      "ties": 0
-    },
-    "Scarwolf7": {
-      "wins": 1,
-      "losses": 1,
-      "ties": 0
-    },
-    "SlowPlayer22": {
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
     "Elmacho1992": {
       "wins": 2,
+      "losses": 0,
+      "ties": 1
+    },
+    "DJAMPUDIA": {
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
@@ -127,40 +182,45 @@
       "losses": 0,
       "ties": 0
     },
-    "DJAMPUDIA": {
+    "Elnugget05": {
       "wins": 1,
       "losses": 0,
+      "ties": 0
+    },
+    "RubickQ": {
+      "wins": 0,
+      "losses": 1,
       "ties": 0
     }
   },
   "best_matchups": [
     {
-      "opponent": "Feanaro26",
-      "wins": 3,
+      "opponent": "SlowPlayer22",
+      "wins": 4,
       "losses": 0,
       "ties": 0,
       "win_rate": 1.0
     },
     {
-      "opponent": "SlowPlayer22",
-      "wins": 2,
+      "opponent": "DJAMPUDIA",
+      "wins": 3,
       "losses": 0,
       "ties": 0,
       "win_rate": 1.0
     },
     {
       "opponent": "Wolfmortem",
+      "wins": 7,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.875
+    },
+    {
+      "opponent": "Feanaro26",
       "wins": 4,
       "losses": 1,
       "ties": 0,
       "win_rate": 0.8
-    },
-    {
-      "opponent": "machetazoo",
-      "wins": 3,
-      "losses": 1,
-      "ties": 0,
-      "win_rate": 0.75
     },
     {
       "opponent": "Alejosky",
@@ -297,38 +357,131 @@
       "elo": 1652.9
     },
     {
-      "date": "2026-03-09T14:41:47.259407",
-      "elo": 1661.2
+      "date": "2026-03-12T17:00:00",
+      "elo": 1629.2
     },
     {
-      "date": "2026-03-09T14:41:47.259407",
-      "elo": 1641.6
+      "date": "2026-03-12T17:00:00",
+      "elo": 1637.8
     },
     {
-      "date": "2026-03-09T14:41:47.259407",
-      "elo": 1619.9
+      "date": "2026-03-12T17:00:00",
+      "elo": 1648.7
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1630.7
+      "date": "2026-03-12T17:00:00",
+      "elo": 1659.9
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1638.4
+      "date": "2026-03-14T15:00:00",
+      "elo": 1667.2
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1649.2
+      "date": "2026-03-14T15:00:00",
+      "elo": 1677.3
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1670.9
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1647.8
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1663.9
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1669.4
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1679.8
+    },
+    {
+      "date": "2026-03-26T17:00:00",
+      "elo": 1690.5
+    },
+    {
+      "date": "2026-03-26T17:00:00",
+      "elo": 1698.4
+    },
+    {
+      "date": "2026-03-26T17:00:00",
+      "elo": 1679.9
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1688.4
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1695.2
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1700.6
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1676.8
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1682.1
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1659.3
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1668.7
+    },
+    {
+      "date": "2026-04-09T10:30:03.809946",
+      "elo": 1678.5
+    },
+    {
+      "date": "2026-04-09T10:30:03.809946",
+      "elo": 1657.2
+    },
+    {
+      "date": "2026-04-09T10:30:03.809946",
+      "elo": 1635.0
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1646.1
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1651.7
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1663.7
     }
   ],
   "radar_values": {
     "win_rate": 0.75,
-    "tie_rate": 0.0,
-    "opponents_normalized": 0.8,
-    "matches_normalized": 0.9,
+    "tie_rate": 0.018,
+    "opponents_normalized": 0.875,
+    "matches_normalized": 1.0,
     "dominance": 0.5
   },
   "medals": [
+    {
+      "name": "Titan",
+      "description": "Mas partidas jugadas",
+      "icon": "trophy",
+      "emoji": "🏆",
+      "color": "#ffd700",
+      "positive": true,
+      "stat": "57 partidas"
+    },
     {
       "name": "Inquebrantable",
       "description": "Mayor tasa de victorias",
@@ -337,15 +490,6 @@
       "color": "#ffd700",
       "positive": true,
       "stat": "75% victorias"
-    },
-    {
-      "name": "Veterano",
-      "description": "Jugador experimentado con historia",
-      "icon": "shield",
-      "emoji": "🛡️",
-      "color": "#6366f1",
-      "positive": true,
-      "stat": "36 partidas, 12 rivales"
     }
   ]
 }

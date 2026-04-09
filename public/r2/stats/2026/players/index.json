@@ -1,47 +1,37 @@
 {
   "year": 2026,
-  "min_tournaments": 4,
+  "min_tournaments": 6,
   "players": [
     {
-      "player": "Saukonen",
-      "slug": "saukonen",
-      "elo": 1649.2,
+      "player": "Scarwolf7",
+      "slug": "scarwolf7",
+      "elo": 1669.3,
       "matches": 36,
       "tournaments": 11,
       "win_rate": 0.75,
       "medals": [
-        "Inquebrantable",
-        "Veterano"
+        "Inquebrantable"
       ]
     },
     {
-      "player": "Scarwolf7",
-      "slug": "scarwolf7",
-      "elo": 1629.4,
-      "matches": 26,
-      "tournaments": 8,
-      "win_rate": 0.731,
-      "medals": []
+      "player": "Saukonen",
+      "slug": "saukonen",
+      "elo": 1663.7,
+      "matches": 57,
+      "tournaments": 17,
+      "win_rate": 0.75,
+      "medals": [
+        "Titan",
+        "Inquebrantable"
+      ]
     },
     {
       "player": "Corlopincho",
       "slug": "corlopincho",
-      "elo": 1572.0,
-      "matches": 36,
-      "tournaments": 11,
-      "win_rate": 0.606,
-      "medals": [
-        "El Empatador",
-        "Veterano"
-      ]
-    },
-    {
-      "player": "Wolfmortem",
-      "slug": "wolfmortem",
-      "elo": 1539.0,
-      "matches": 25,
-      "tournaments": 7,
-      "win_rate": 0.522,
+      "elo": 1556.5,
+      "matches": 46,
+      "tournaments": 14,
+      "win_rate": 0.571,
       "medals": [
         "El Empatador"
       ]
@@ -49,76 +39,100 @@
     {
       "player": "machetazoo",
       "slug": "machetazoo",
-      "elo": 1511.0,
-      "matches": 35,
-      "tournaments": 11,
-      "win_rate": 0.471,
+      "elo": 1550.8,
+      "matches": 50,
+      "tournaments": 15,
+      "win_rate": 0.521,
       "medals": [
-        "Coleccionista"
+        "Coleccionista",
+        "Veterano"
       ]
     },
     {
       "player": "Feanaro26",
       "slug": "feanaro26",
-      "elo": 1466.0,
-      "matches": 16,
-      "tournaments": 5,
-      "win_rate": 0.375,
+      "elo": 1529.9,
+      "matches": 30,
+      "tournaments": 9,
+      "win_rate": 0.467,
       "medals": []
+    },
+    {
+      "player": "Wolfmortem",
+      "slug": "wolfmortem",
+      "elo": 1496.2,
+      "matches": 38,
+      "tournaments": 11,
+      "win_rate": 0.457,
+      "medals": [
+        "Coleccionista",
+        "El Empatador"
+      ]
     },
     {
       "player": "Aldturi",
       "slug": "aldturi",
-      "elo": 1457.7,
-      "matches": 40,
-      "tournaments": 13,
-      "win_rate": 0.538,
+      "elo": 1455.7,
+      "matches": 57,
+      "tournaments": 18,
+      "win_rate": 0.537,
       "medals": [
         "Titan",
-        "Asistencia Perfecta"
+        "Asistencia Perfecta",
+        "El Empatador"
       ]
     },
     {
       "player": "Alejosky",
       "slug": "alejosky",
-      "elo": 1442.7,
-      "matches": 29,
-      "tournaments": 9,
-      "win_rate": 0.31,
+      "elo": 1395.3,
+      "matches": 39,
+      "tournaments": 12,
+      "win_rate": 0.282,
       "medals": [
+        "Ascenso Meteorico",
         "Resiliente"
       ]
     },
     {
       "player": "SlowPlayer22",
       "slug": "slowplayer22",
-      "elo": 1439.5,
-      "matches": 24,
-      "tournaments": 8,
-      "win_rate": 0.333,
+      "elo": 1391.1,
+      "matches": 35,
+      "tournaments": 12,
+      "win_rate": 0.286,
       "medals": [
         "Resiliente"
       ]
+    },
+    {
+      "player": "DJAMPUDIA",
+      "slug": "djampudia",
+      "elo": 1373.4,
+      "matches": 19,
+      "tournaments": 6,
+      "win_rate": 0.158,
+      "medals": []
     }
   ],
   "formats": [
     {
       "format": "CC",
-      "tournaments": 10,
-      "matches": 101,
-      "players": 21
+      "tournaments": 12,
+      "matches": 131,
+      "players": 22
     },
     {
       "format": "SAGE",
-      "tournaments": 5,
-      "matches": 69,
-      "players": 17
+      "tournaments": 8,
+      "matches": 103,
+      "players": 19
     },
     {
       "format": "LL",
-      "tournaments": 1,
-      "matches": 9,
-      "players": 6
+      "tournaments": 2,
+      "matches": 25,
+      "players": 10
     }
   ]
 }

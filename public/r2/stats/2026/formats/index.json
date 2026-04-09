@@ -2,20 +2,27 @@
   "year": 2026,
   "formats": [
     "CC",
+    "LL",
     "SAGE"
   ],
   "format_stats": {
     "CC": {
-      "tournaments": 10,
-      "matches": 101,
-      "players": 21,
-      "qualified": 12
+      "tournaments": 12,
+      "matches": 131,
+      "players": 22,
+      "qualified": 15
+    },
+    "LL": {
+      "tournaments": 2,
+      "matches": 25,
+      "players": 10,
+      "qualified": 10
     },
     "SAGE": {
-      "tournaments": 5,
-      "matches": 69,
-      "players": 17,
-      "qualified": 17
+      "tournaments": 8,
+      "matches": 103,
+      "players": 19,
+      "qualified": 19
     }
   }
 }
