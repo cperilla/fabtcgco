@@ -1,0 +1,294 @@
+{
+  "player": "DJAMPUDIA",
+  "year": 2026,
+  "summary": {
+    "elo": 1373.4,
+    "tournaments": 6,
+    "matches": 19,
+    "wins": 3,
+    "losses": 16,
+    "ties": 0,
+    "win_rate": 0.158,
+    "tie_rate": 0.0,
+    "opponent_count": 11
+  },
+  "quarterly": {
+    "Q1": {
+      "tournaments": 5,
+      "matches": 16,
+      "wins": 3,
+      "losses": 13,
+      "ties": 0,
+      "win_rate": 0.188
+    },
+    "Q2": {
+      "tournaments": 1,
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0
+    }
+  },
+  "format_breakdown": {
+    "SAGE": {
+      "tournaments": 1,
+      "matches": 3,
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0,
+      "is_significant": false
+    },
+    "LL": {
+      "tournaments": 2,
+      "matches": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.429,
+      "is_significant": false
+    },
+    "CC": {
+      "tournaments": 3,
+      "matches": 9,
+      "wins": 0,
+      "losses": 9,
+      "ties": 0,
+      "win_rate": 0.0,
+      "is_significant": true
+    }
+  },
+  "quarterly_rivals": {
+    "Q1": [
+      {
+        "opponent": "Saukonen",
+        "wins": 0,
+        "losses": 3,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 3
+      },
+      {
+        "opponent": "SlowPlayer22",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "Wolfmortem",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      }
+    ],
+    "Q2": [
+      {
+        "opponent": "machetazoo",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      },
+      {
+        "opponent": "Scarwolf7",
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 1
+      }
+    ]
+  },
+  "best_progress": {
+    "from_quarter": "Q1",
+    "to_quarter": "Q2",
+    "from_win_rate": 0.188,
+    "to_win_rate": 0.0,
+    "improvement": -0.188,
+    "improvement_pct": -18.8
+  },
+  "h2h": {
+    "Aldturi": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "Saukonen": {
+      "wins": 0,
+      "losses": 3,
+      "ties": 0
+    },
+    "machetazoo": {
+      "wins": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    },
+    "Elmacho1992": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "Wolfmortem": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Elnugget05": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Corlopincho": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Scarwolf7": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "Robgiamt": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  "best_matchups": [],
+  "worst_matchups": [
+    {
+      "opponent": "Saukonen",
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "SlowPlayer22",
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "Aldturi",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.333
+    },
+    {
+      "opponent": "machetazoo",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.333
+    }
+  ],
+  "elo_history": [
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1500
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1518.0
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1501.5
+    },
+    {
+      "date": "2026-02-28T15:00:00",
+      "elo": 1482.8
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1474.3
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1459.5
+    },
+    {
+      "date": "2026-03-07T18:00:00",
+      "elo": 1441.8
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1428.6
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1413.1
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1402.4
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1392.0
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1386.4
+    },
+    {
+      "date": "2026-03-21T15:00:00",
+      "elo": 1372.1
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1394.4
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1417.3
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1411.9
+    },
+    {
+      "date": "2026-03-28T15:00:00",
+      "elo": 1401.2
+    },
+    {
+      "date": "2026-04-09T10:30:03.814471",
+      "elo": 1390.0
+    },
+    {
+      "date": "2026-04-09T10:30:03.814471",
+      "elo": 1384.3
+    },
+    {
+      "date": "2026-04-09T10:30:03.814471",
+      "elo": 1373.4
+    }
+  ],
+  "radar_values": {
+    "win_rate": 0.158,
+    "tie_rate": 0.0,
+    "opponents_normalized": 0.688,
+    "matches_normalized": 0.333,
+    "dominance": 0.684
+  },
+  "medals": []
+}

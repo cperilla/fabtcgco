@@ -1,0 +1,133 @@
+{
+  "format": "LL",
+  "year": 2026,
+  "tournaments": 2,
+  "total_matches": 25,
+  "total_players": 10,
+  "qualified_players": 10,
+  "min_tournaments": 1,
+  "top_elo": [
+    [
+      "RubickQ",
+      1535.3534564403546
+    ],
+    [
+      "Saukonen",
+      1530.483701603059
+    ],
+    [
+      "Aldturi",
+      1529.4244704415394
+    ],
+    [
+      "Elmacho1992",
+      1514.7783967186742
+    ],
+    [
+      "Elnugget05",
+      1499.2833124565816
+    ],
+    [
+      "Wolfmortem",
+      1496.1306370468592
+    ],
+    [
+      "DJAMPUDIA",
+      1486.2478167573365
+    ],
+    [
+      "MetalPrime",
+      1482.5981711137829
+    ],
+    [
+      "SlowPlayer22",
+      1467.8125664629474
+    ],
+    [
+      "machetazoo",
+      1457.8874709588652
+    ]
+  ],
+  "player_stats": {
+    "machetazoo": {
+      "matches": 7,
+      "wins": 2,
+      "losses": 5,
+      "ties": 0,
+      "win_rate": 0.2857142857142857,
+      "tournaments": 2
+    },
+    "MetalPrime": {
+      "matches": 3,
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 1
+    },
+    "Wolfmortem": {
+      "matches": 6,
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 2
+    },
+    "SlowPlayer22": {
+      "matches": 6,
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.3333333333333333,
+      "tournaments": 2
+    },
+    "DJAMPUDIA": {
+      "matches": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.42857142857142855,
+      "tournaments": 2
+    },
+    "Aldturi": {
+      "matches": 6,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 2
+    },
+    "RubickQ": {
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 1
+    },
+    "Elnugget05": {
+      "matches": 4,
+      "wins": 2,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.5,
+      "tournaments": 1
+    },
+    "Saukonen": {
+      "matches": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.75,
+      "tournaments": 1
+    },
+    "Elmacho1992": {
+      "matches": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.6666666666666666,
+      "tournaments": 1
+    }
+  }
+}

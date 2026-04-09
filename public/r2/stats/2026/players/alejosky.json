@@ -2,43 +2,51 @@
   "player": "Alejosky",
   "year": 2026,
   "summary": {
-    "elo": 1442.7,
-    "tournaments": 9,
-    "matches": 29,
-    "wins": 9,
-    "losses": 20,
+    "elo": 1395.3,
+    "tournaments": 12,
+    "matches": 39,
+    "wins": 11,
+    "losses": 28,
     "ties": 0,
-    "win_rate": 0.31,
+    "win_rate": 0.282,
     "tie_rate": 0.0,
-    "opponent_count": 11
+    "opponent_count": 12
   },
   "quarterly": {
     "Q1": {
-      "tournaments": 9,
-      "matches": 29,
+      "tournaments": 11,
+      "matches": 36,
       "wins": 9,
-      "losses": 20,
+      "losses": 27,
       "ties": 0,
-      "win_rate": 0.31
+      "win_rate": 0.25
+    },
+    "Q2": {
+      "tournaments": 1,
+      "matches": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "win_rate": 0.667
     }
   },
   "format_breakdown": {
     "SAGE": {
-      "tournaments": 3,
-      "matches": 11,
-      "wins": 3,
-      "losses": 8,
+      "tournaments": 4,
+      "matches": 15,
+      "wins": 5,
+      "losses": 10,
       "ties": 0,
-      "win_rate": 0.273,
+      "win_rate": 0.333,
       "is_significant": true
     },
     "CC": {
-      "tournaments": 6,
-      "matches": 18,
+      "tournaments": 8,
+      "matches": 24,
       "wins": 6,
-      "losses": 12,
+      "losses": 18,
       "ties": 0,
-      "win_rate": 0.333,
+      "win_rate": 0.25,
       "is_significant": true
     }
   },
@@ -47,13 +55,31 @@
       {
         "opponent": "Feanaro26",
         "wins": 0,
-        "losses": 3,
+        "losses": 4,
         "ties": 0,
         "win_rate": 0.0,
-        "total_matches": 3
+        "total_matches": 4
       },
       {
         "opponent": "Wolfmortem",
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "win_rate": 0.0,
+        "total_matches": 2
+      },
+      {
+        "opponent": "SlowPlayer22",
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "win_rate": 0.25,
+        "total_matches": 4
+      }
+    ],
+    "Q2": [
+      {
+        "opponent": "Saukonen",
         "wins": 0,
         "losses": 1,
         "ties": 0,
@@ -61,25 +87,47 @@
         "total_matches": 1
       },
       {
-        "opponent": "Corlopincho",
+        "opponent": "Aldturi",
         "wins": 1,
-        "losses": 5,
+        "losses": 0,
         "ties": 0,
-        "win_rate": 0.167,
-        "total_matches": 6
+        "win_rate": 1.0,
+        "total_matches": 1
       }
     ]
   },
-  "best_progress": null,
+  "best_progress": {
+    "from_quarter": "Q1",
+    "to_quarter": "Q2",
+    "from_win_rate": 0.25,
+    "to_win_rate": 0.667,
+    "improvement": 0.417,
+    "improvement_pct": 41.7
+  },
   "h2h": {
     "Corlopincho": {
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
       "ties": 0
     },
     "Aldturi": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
+      "ties": 0
+    },
+    "SlowPlayer22": {
+      "wins": 1,
+      "losses": 3,
+      "ties": 0
+    },
+    "Scarwolf7": {
+      "wins": 1,
+      "losses": 3,
+      "ties": 0
+    },
+    "Feanaro26": {
+      "wins": 0,
+      "losses": 4,
       "ties": 0
     },
     "Saukonen": {
@@ -87,29 +135,19 @@
       "losses": 3,
       "ties": 0
     },
-    "SlowPlayer22": {
-      "wins": 1,
-      "losses": 2,
-      "ties": 0
-    },
-    "Scarwolf7": {
-      "wins": 1,
-      "losses": 2,
-      "ties": 0
-    },
-    "Feanaro26": {
-      "wins": 0,
-      "losses": 3,
-      "ties": 0
-    },
     "machetazoo": {
       "wins": 1,
-      "losses": 1,
+      "losses": 3,
       "ties": 0
     },
     "Wolfmortem": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
+      "ties": 0
+    },
+    "MetalPrime": {
+      "wins": 0,
+      "losses": 2,
       "ties": 0
     },
     "Kiimaa": {
@@ -128,21 +166,43 @@
       "ties": 0
     }
   },
-  "best_matchups": [],
+  "best_matchups": [
+    {
+      "opponent": "Aldturi",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "win_rate": 0.6
+    }
+  ],
   "worst_matchups": [
     {
       "opponent": "Feanaro26",
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
       "win_rate": 0.0
     },
     {
-      "opponent": "Corlopincho",
-      "wins": 1,
-      "losses": 5,
+      "opponent": "Wolfmortem",
+      "wins": 0,
+      "losses": 2,
       "ties": 0,
-      "win_rate": 0.167
+      "win_rate": 0.0
+    },
+    {
+      "opponent": "SlowPlayer22",
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25
+    },
+    {
+      "opponent": "Scarwolf7",
+      "wins": 1,
+      "losses": 3,
+      "ties": 0,
+      "win_rate": 0.25
     },
     {
       "opponent": "Saukonen",
@@ -150,20 +210,6 @@
       "losses": 3,
       "ties": 0,
       "win_rate": 0.25
-    },
-    {
-      "opponent": "SlowPlayer22",
-      "wins": 1,
-      "losses": 2,
-      "ties": 0,
-      "win_rate": 0.333
-    },
-    {
-      "opponent": "Scarwolf7",
-      "wins": 1,
-      "losses": 2,
-      "ties": 0,
-      "win_rate": 0.333
     }
   ],
   "elo_history": [
@@ -276,26 +322,75 @@
       "elo": 1410.0
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1430.6
+      "date": "2026-03-12T17:00:00",
+      "elo": 1432.8
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1422.9
+      "date": "2026-03-12T17:00:00",
+      "elo": 1453.7
     },
     {
-      "date": "2026-03-09T14:41:47.279925",
-      "elo": 1442.7
+      "date": "2026-03-12T17:00:00",
+      "elo": 1445.2
+    },
+    {
+      "date": "2026-03-12T17:00:00",
+      "elo": 1431.9
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1416.3
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1405.0
+    },
+    {
+      "date": "2026-03-14T15:00:00",
+      "elo": 1391.2
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1380.7
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1369.7
+    },
+    {
+      "date": "2026-03-31T17:00:00",
+      "elo": 1355.3
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1378.1
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1372.5
+    },
+    {
+      "date": "2026-04-09T10:30:03.834453",
+      "elo": 1395.3
     }
   ],
   "radar_values": {
-    "win_rate": 0.31,
+    "win_rate": 0.282,
     "tie_rate": 0.0,
-    "opponents_normalized": 0.733,
-    "matches_normalized": 0.725,
-    "dominance": 0.379
+    "opponents_normalized": 0.75,
+    "matches_normalized": 0.684,
+    "dominance": 0.436
   },
   "medals": [
+    {
+      "name": "Ascenso Meteorico",
+      "description": "Mayor mejora entre trimestres",
+      "icon": "rocket",
+      "emoji": "🚀",
+      "color": "#8b5cf6",
+      "positive": true,
+      "stat": "+41.7% (Q1→Q2)"
+    },
     {
       "name": "Resiliente",
       "description": "Sigue jugando a pesar de las derrotas",
@@ -303,7 +398,7 @@
       "emoji": "💪",
       "color": "#ec4899",
       "positive": true,
-      "stat": "29 partidas, sigue adelante"
+      "stat": "39 partidas, sigue adelante"
     }
   ]
 }
