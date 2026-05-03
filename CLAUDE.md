@@ -72,6 +72,7 @@ Themes are CSS custom properties in `src/css/base.css`, activated via `data-them
  - There are two challonge APIs v1 and v2.1, v1 is deprecated.
  - New work should never use v1 api or urls
  - Local keys are located in the keys files at the base of the repo as env variables CHALLONGE CLIENT KEY AND SECRETS and one OATH Code obtained from the oauth login
+ - **API Rate Limits**: Challonge has a low monthly API limit. Always cache API responses aggressively. Use local file caching (e.g., in `.tmp/` or `tools/stats/data/raw/`) and avoid redundant API calls.
 
 ### Tournament creation tool
 
