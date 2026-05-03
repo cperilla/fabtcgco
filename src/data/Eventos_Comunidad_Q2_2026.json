@@ -71,9 +71,7 @@
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260411",
-    "TournamentName": "FAB Palmira Sage Sáb 11/04/26 : Ebon Fold"
+    "EventType": "Sage"
   },
   {
     "Date": "2026-04-14",
@@ -117,9 +115,7 @@
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260418",
-    "TournamentName": "FAB Palmira Sage Sáb 18/04/26 : Plunder Run"
+    "EventType": "Sage"
   },
   {
     "Date": "2026-04-21",
@@ -139,9 +135,7 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🌀",
-    "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_chaos_sage_20260423",
-    "TournamentName": "FAB Chaos Sage Jue 23/04/26 : Channel Lake Frigid"
+    "EventType": "Sage"
   },
   {
     "Date": "2026-04-25",
@@ -151,9 +145,7 @@
     "Location": "Chaos Store",
     "Ciudad": "Cali",
     "Emoji": "🏆",
-    "EventType": "LL",
-    "TournamentURL": "https://challonge.com/fabco_chaos_ll_20260425",
-    "TournamentName": "FAB Chaos LL Sáb 25/04/26 : Spell Fray Cloak"
+    "EventType": "LL"
   },
   {
     "Date": "2026-04-25",
@@ -163,9 +155,7 @@
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260425",
-    "TournamentName": "FAB Palmira Sage Sáb 25/04/26 : Herald of Erudition"
+    "EventType": "Sage"
   },
   {
     "Date": "2026-04-28",
@@ -209,9 +199,7 @@
     "Location": "Palmira",
     "Ciudad": "Palmira",
     "Emoji": "🌀",
-    "EventType": "Sage",
-    "TournamentURL": "https://challonge.com/fabco_palmira_sage_20260502",
-    "TournamentName": "FAB Palmira Sage Sáb 02/05/26 : Go Again"
+    "EventType": "Sage"
   },
   {
     "Date": "2026-05-05",
