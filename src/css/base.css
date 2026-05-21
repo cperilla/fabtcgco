@@ -982,7 +982,6 @@ main {
 
 /* Legacy article styles - keep for non-blog articles (exclude event tickets) */
 article:not(.blog-post):not(.event-ticket) {
-    background: var(--bg-light-1);
     color: var(--base-color);
     line-height: 1.6;
 }
