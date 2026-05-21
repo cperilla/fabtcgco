@@ -684,4 +684,94 @@ const referencias = [
     .conduct-references a:hover {
         text-decoration: underline;
     }
+
+    /* Light theme overrides - use bg-light instead of bg-dark for better contrast */
+    :global(html[data-theme='highseas-light']) .conduct-preambulo {
+        background: linear-gradient(135deg, var(--bg-light-2) 0%, var(--bg-light-1) 100%);
+    }
+
+    :global(html[data-theme='highseas-light']) .conduct-section {
+        background: var(--bg-light-2);
+    }
+
+    :global(html[data-theme='highseas-light']) .conduct-section h2 {
+        color: var(--primary-dark);
+        border-bottom-color: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .marco-section {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .marco-item {
+        background: var(--bg-light-1);
+    }
+
+    :global(html[data-theme='highseas-light']) .marco-item h3 {
+        color: var(--secondary-dark);
+    }
+
+    :global(html[data-theme='highseas-light']) .excepcion,
+    :global(html[data-theme='highseas-light']) .enfasis {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .conductas-esperadas,
+    :global(html[data-theme='highseas-light']) .conductas-no-aceptadas {
+        background: var(--bg-light-1);
+    }
+
+    :global(html[data-theme='highseas-light']) .conductas-esperadas h3 {
+        color: #2d7a2d;
+    }
+
+    :global(html[data-theme='highseas-light']) .conductas-no-aceptadas h3 {
+        color: #a03030;
+    }
+
+    :global(html[data-theme='highseas-light']) .faltas-leves,
+    :global(html[data-theme='highseas-light']) .faltas-graves {
+        background: var(--bg-light-1);
+    }
+
+    :global(html[data-theme='highseas-light']) .faltas-leves h3 {
+        color: #8a6d20;
+    }
+
+    :global(html[data-theme='highseas-light']) .faltas-graves h3 {
+        color: #a03030;
+    }
+
+    :global(html[data-theme='highseas-light']) .medidas-lista,
+    :global(html[data-theme='highseas-light']) .medidas-nota {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .excepcion-box {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .autoridad-section .conclusion {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .limites-section {
+        border-color: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .limites-nota {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .conduct-references {
+        background: var(--bg-light-3);
+    }
+
+    :global(html[data-theme='highseas-light']) .conduct-references h2 {
+        color: var(--primary-dark);
+    }
+
+    :global(html[data-theme='highseas-light']) .conduct-references a {
+        color: var(--accent-dark);
+    }
 </style>
