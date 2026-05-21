@@ -1,50 +1,182 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const secciones = [
+// Preámbulo - Principios de Comunidad
+const principios = {
+  titulo: "Principios de Comunidad",
+  contenido: "FAB Colombia existe para fomentar el juego organizado de Flesh and Blood en el país, elevar el nivel competitivo y construir una comunidad respetuosa, sólida y duradera. Creemos en la competencia intensa pero limpia, el respeto entre jugadores, y la construcción colectiva de espacios de juego."
+};
+
+// Marco Normativo
+const marco = [
   {
-    titulo: "1. Respeto y trato entre jugadores",
-    contenido: `Se espera que todos los jugadores mantengan un trato respetuoso, directo y sin hostilidad.
-No se permiten agresiones verbales, burlas reiteradas ni provocaciones personales.
-El lenguaje puede ser expresivo, pero nunca debe degradar ni excluir a otros jugadores.`
+    titulo: "Alcance y Aplicación",
+    contenido: `Este documento aplica exclusivamente a espacios administrados por FAB Colombia:`,
+    lista: [
+      "Grupos de WhatsApp y Discord de FAB Colombia",
+      "Redes sociales oficiales de FAB Colombia",
+      "Rankings y estadísticas administrados por FAB Colombia",
+      "Actividades comunitarias organizadas por FAB Colombia",
+      "Eventos donde FAB Colombia actúe como organizador o coorganizador"
+    ]
   },
   {
-    titulo: "2. Juego competitivo y limpio",
-    contenido: `Jugar fuerte está bien. Hacer trampa, no.
-Todos los jugadores deben conocer y seguir las reglas oficiales del juego y del torneo.
-No se toleran trampas, acuerdos ilegales, colusión ni manipulación de resultados.`
+    titulo: "Relación con Legend Story Studios",
+    contenido: `Para reglas de torneo, juego organizado, infracciones de juego, slow play, trampas, comunicación de partida, jueces y sanciones competitivas, FAB Colombia se remite íntegramente a los documentos oficiales de Legend Story Studios.`,
+    enfasis: "Este documento no reemplaza, modifica ni interpreta las reglas oficiales de LSS."
   },
   {
-    titulo: "3. Comportamiento durante la partida",
-    contenido: `Queremos jugadores intensos, no destructivos.
-Está prohibido romper cartas, lanzar objetos, golpear mobiliario o generar ambientes agresivos, incluso si la frustración va dirigida a uno mismo.
-Actitudes de este tipo pueden llevar a intervención inmediata.`
+    titulo: "Relación con Organizadores de Eventos",
+    contenido: `En eventos organizados por una tienda, Tournament Organizer (TO) o juez independiente, la autoridad sobre el desarrollo del evento corresponde al organizador designado.`,
+    noInterviene: [
+      "Decisiones de jueces durante partidas",
+      "Aplicación de penalidades competitivas",
+      "Gestión interna del evento",
+      "Resolución de disputas de juego"
+    ],
+    excepcion: "FAB Colombia podrá actuar cuando la conducta en un evento afecte directamente espacios comunitarios administrados por FAB Colombia, o cuando el evento esté bajo administración directa de FAB Colombia."
   },
   {
-    titulo: "4. Participación en comunidad",
-    contenido: `Ser parte de FAB Colombia implica construir, no dividir.
-La crítica es bienvenida, el desprecio o el sabotaje no.
-Quien insista en dañar la comunidad o crear conflicto sistemático perderá el derecho a participar en espacios organizados.`
-  },
-  {
-    titulo: "5. Autoridad del evento",
-    contenido: `Durante cualquier torneo o evento organizado, las decisiones del organizador y de los jueces se respetan.
-El desacuerdo no justifica la desobediencia.
-Si hay espacio para apelar una decisión, se hace por los canales que existen, sin escalar el conflicto.`
+    titulo: "Relación con Tiendas",
+    contenido: `Cada tienda puede establecer su propio reglamento sobre:`,
+    lista: [
+      "Permanencia en el local",
+      "Consumo y uso del espacio",
+      "Horarios y comportamiento"
+    ],
+    enfasis: "FAB Colombia no administra, reemplaza ni anula las reglas internas de ninguna tienda. Las decisiones de las tiendas sobre su espacio físico son soberanas."
   }
 ];
 
+// Conductas
+const conductas = {
+  esperadas: {
+    titulo: "Conductas Esperadas",
+    intro: "En los espacios de FAB Colombia se espera:",
+    lista: [
+      "Respeto básico en la comunicación",
+      "Juego limpio y buena fe",
+      "Puntualidad razonable",
+      "Cuidado del material ajeno",
+      "Aceptación de las decisiones del juez o TO",
+      "Comunicación honesta",
+      "Trato digno entre todos los participantes",
+      "Disposición constructiva ante conflictos"
+    ]
+  },
+  noAceptadas: {
+    titulo: "Conductas No Aceptadas",
+    intro: "No se toleran en espacios de FAB Colombia:",
+    lista: [
+      "Acoso en cualquier forma",
+      "Insultos reiterados o sistemáticos",
+      "Amenazas de cualquier tipo",
+      "Discriminación por cualquier motivo",
+      "Sabotaje de eventos o actividades comunitarias",
+      "Trampas o manipulación deliberada de resultados",
+      "Agresividad persistente hacia otros miembros",
+      "Daño intencional a propiedad ajena",
+      "Uso de la comunidad para estafas o negocios ilegales",
+      "Conductas que pongan en riesgo la seguridad de los participantes"
+    ]
+  }
+};
+
+// Clasificación de Faltas
+const faltas = {
+  leves: {
+    titulo: "Faltas Leves",
+    lista: [
+      "Discusiones que excedan el tono apropiado",
+      "Retrasos o incumplimientos menores",
+      "Conflictos interpersonales aislados",
+      "Comentarios inapropiados no reiterados"
+    ]
+  },
+  graves: {
+    titulo: "Faltas Graves",
+    lista: [
+      "Acoso o amenazas",
+      "Trampas comprobadas",
+      "Violencia física o verbal sistemática",
+      "Sabotaje de eventos",
+      "Estafas o conductas fraudulentas",
+      "Reincidencia en faltas leves",
+      "Conductas que causen daño comprobable a terceros"
+    ]
+  }
+};
+
+// Medidas Aplicables
+const medidas = [
+  { nombre: "Advertencia informal", descripcion: "Comunicación privada sobre la conducta" },
+  { nombre: "Advertencia formal", descripcion: "Comunicación documentada con registro" },
+  { nombre: "Restricción temporal", descripcion: "Suspensión de acceso a espacios comunitarios por tiempo definido" },
+  { nombre: "Remoción", descripcion: "Exclusión de grupos, rankings o plataformas administradas por FAB Colombia" },
+  { nombre: "Exclusión", descripcion: "Prohibición de participar en actividades organizadas por FAB Colombia" },
+  { nombre: "Reporte externo", descripcion: "Comunicación al TO, tienda o LSS cuando la conducta exceda el ámbito comunitario" }
+];
+
+// Procedimiento
+const procedimiento = {
+  titulo: "Procedimiento",
+  intro: "Antes de aplicar una medida de restricción, remoción o exclusión, la persona afectada tendrá derecho a:",
+  derechos: [
+    "Ser informada de la conducta que se le atribuye",
+    "Presentar su versión de los hechos",
+    "Recibir comunicación de la decisión tomada"
+  ],
+  excepcion: {
+    intro: "Este derecho podrá limitarse en casos de:",
+    casos: [
+      "Riesgo inmediato para otros participantes",
+      "Amenazas o agresiones",
+      "Conductas flagrantes incompatibles con la seguridad del grupo"
+    ]
+  }
+};
+
+// Autoridad Decisoria
+const autoridad = {
+  titulo: "Autoridad Decisoria",
+  contenido: "Las decisiones sobre conducta comunitaria serán tomadas por los administradores designados de FAB Colombia.",
+  casosConsulta: {
+    intro: "En casos que involucren:",
+    lista: [
+      "Exclusión de espacios comunitarios",
+      "Conductas graves",
+      "Situaciones sensibles o de alta visibilidad"
+    ],
+    conclusion: "Se consultará a más de un administrador antes de tomar una decisión final, para evitar decisiones individuales arbitrarias."
+  }
+};
+
+// Límites de Autoridad
+const limites = {
+  titulo: "Límites de Autoridad",
+  intro: "FAB Colombia no actúa como autoridad sobre:",
+  lista: [
+    "Conflictos privados entre personas fuera de espacios comunitarios",
+    "Decisiones internas de tiendas sobre su espacio",
+    "Disputas comerciales entre particulares",
+    "Sanciones competitivas de eventos que no administra",
+    "Interpretación de reglas de juego (competencia de LSS)"
+  ],
+  nota: "FAB Colombia podrá actuar únicamente cuando estas situaciones afecten directamente los espacios comunitarios que administra."
+};
+
+// Referencias oficiales
 const referencias = [
-  { nombre: "Tournament Rules and Policy", url: "https://fabtcg.com/resources/tournament-rules-and-policy/" },
-  { nombre: "Penalty Guidelines", url: "https://fabtcg.com/resources/penalty-guidelines/" },
-  { nombre: "Comprehensive Rules", url: "https://fabtcg.com/resources/rules/" }
+  { nombre: "Tournament Rules and Policy (TRP)", url: "https://rules.fabtcg.com/en/trp/" },
+  { nombre: "Penalty and Procedure Guidelines (PPG)", url: "https://rules.fabtcg.com/en/ppg/" },
+  { nombre: "Comprehensive Rules (CR)", url: "https://rules.fabtcg.com/en/cr/" }
 ];
 ---
 
 <Layout>
 <div class="mechanics-page">
     <div class="mechanics-header">
-        <h1>Código de Conducta</h1>
+        <h1>Código de Conducta y Principios de Comunidad</h1>
         <div class="stars">
             <span style="color: #91160d;">★</span>
             <span style="color: #765d2f;">★</span>
@@ -54,86 +186,447 @@ const referencias = [
     </div>
 
     <div class="mechanics-container">
-        <div class="conduct-intro">
-            <p>FAB Colombia existe para fomentar el juego organizado de Flesh and Blood en el país, elevar el nivel competitivo y construir una comunidad respetuosa, sólida y duradera. En nuestros espacios de juego esperamos competencia fuerte, trato claro y cero tolerancia a actitudes que dañen el ambiente colectivo.</p>
-        </div>
+        <!-- Preámbulo -->
+        <section class="conduct-preambulo">
+            <h2>{principios.titulo}</h2>
+            <p>{principios.contenido}</p>
+        </section>
 
-        {secciones.map((seccion) => (
-            <article class="mechanic-ticket mechanic-green">
-                <div class="mechanic-ticket-name">
-                    <span class="name">{seccion.titulo}</span>
-                </div>
-                <div class="mechanic-ticket-content">
-                    <p class="description" set:html={seccion.contenido.replace(/\n/g, '<br>')} />
-                </div>
+        <!-- Marco Normativo -->
+        <section class="conduct-section marco-section">
+            <h2>Marco Normativo</h2>
+
+            {marco.map((item) => (
+                <article class="marco-item">
+                    <h3>{item.titulo}</h3>
+                    <p>{item.contenido}</p>
+                    {item.lista && (
+                        <ul>
+                            {item.lista.map((punto) => (
+                                <li>{punto}</li>
+                            ))}
+                        </ul>
+                    )}
+                    {item.noInterviene && (
+                        <>
+                            <p class="no-interviene-label">FAB Colombia <strong>no interviene</strong> en:</p>
+                            <ul class="no-interviene-list">
+                                {item.noInterviene.map((punto) => (
+                                    <li>{punto}</li>
+                                ))}
+                            </ul>
+                        </>
+                    )}
+                    {item.excepcion && (
+                        <p class="excepcion"><strong>Excepción:</strong> {item.excepcion}</p>
+                    )}
+                    {item.enfasis && (
+                        <p class="enfasis">{item.enfasis}</p>
+                    )}
+                </article>
+            ))}
+        </section>
+
+        <!-- Conductas -->
+        <section class="conduct-section conductas-section">
+            <h2>Conductas</h2>
+
+            <article class="conductas-esperadas">
+                <h3>{conductas.esperadas.titulo}</h3>
+                <p>{conductas.esperadas.intro}</p>
+                <ul>
+                    {conductas.esperadas.lista.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
             </article>
-        ))}
 
-        <div class="conduct-footer">
-            <p>Este código aplica en todos los espacios presenciales y virtuales organizados bajo el nombre de FAB Colombia. No buscamos corregir personas, sino proteger la posibilidad de jugar más, jugar mejor y hacerlo juntos.</p>
-        </div>
+            <article class="conductas-no-aceptadas">
+                <h3>{conductas.noAceptadas.titulo}</h3>
+                <p>{conductas.noAceptadas.intro}</p>
+                <ul>
+                    {conductas.noAceptadas.lista.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </article>
+        </section>
 
-        <div class="conduct-references">
-            <h3>Referencias oficiales Flesh and Blood</h3>
-            <p>Este código complementa y respeta los lineamientos globales de Flesh and Blood. Aplican en todos los eventos de FAB Colombia:</p>
+        <!-- Clasificación de Faltas -->
+        <section class="conduct-section faltas-section">
+            <h2>Clasificación de Faltas</h2>
+
+            <div class="faltas-grid">
+                <article class="faltas-leves">
+                    <h3>{faltas.leves.titulo}</h3>
+                    <ul>
+                        {faltas.leves.lista.map((item) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                </article>
+
+                <article class="faltas-graves">
+                    <h3>{faltas.graves.titulo}</h3>
+                    <ul>
+                        {faltas.graves.lista.map((item) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Medidas Aplicables -->
+        <section class="conduct-section medidas-section">
+            <h2>Medidas Aplicables</h2>
+            <p class="medidas-intro">Escala progresiva de intervención:</p>
+
+            <ol class="medidas-lista">
+                {medidas.map((medida) => (
+                    <li>
+                        <strong>{medida.nombre}:</strong> {medida.descripcion}
+                    </li>
+                ))}
+            </ol>
+
+            <p class="medidas-nota">Las medidas se aplicarán de forma <strong>progresiva y proporcional</strong> a la gravedad de la falta. En casos de faltas graves o riesgo inmediato, podrá omitirse la progresividad.</p>
+        </section>
+
+        <!-- Procedimiento -->
+        <section class="conduct-section procedimiento-section">
+            <h2>{procedimiento.titulo}</h2>
+            <p>{procedimiento.intro}</p>
+            <ul>
+                {procedimiento.derechos.map((derecho) => (
+                    <li>{derecho}</li>
+                ))}
+            </ul>
+
+            <div class="excepcion-box">
+                <p><strong>Excepción:</strong> {procedimiento.excepcion.intro}</p>
+                <ul>
+                    {procedimiento.excepcion.casos.map((caso) => (
+                        <li>{caso}</li>
+                    ))}
+                </ul>
+            </div>
+        </section>
+
+        <!-- Autoridad Decisoria -->
+        <section class="conduct-section autoridad-section">
+            <h2>{autoridad.titulo}</h2>
+            <p>{autoridad.contenido}</p>
+
+            <p>{autoridad.casosConsulta.intro}</p>
+            <ul>
+                {autoridad.casosConsulta.lista.map((caso) => (
+                    <li>{caso}</li>
+                ))}
+            </ul>
+            <p class="conclusion">{autoridad.casosConsulta.conclusion}</p>
+        </section>
+
+        <!-- Límites de Autoridad -->
+        <section class="conduct-section limites-section">
+            <h2>{limites.titulo}</h2>
+            <p class="limites-intro">{limites.intro}</p>
+            <ul>
+                {limites.lista.map((limite) => (
+                    <li>{limite}</li>
+                ))}
+            </ul>
+            <p class="limites-nota">{limites.nota}</p>
+        </section>
+
+        <!-- Referencias Oficiales -->
+        <section class="conduct-references">
+            <h2>Referencias Oficiales</h2>
+            <p>Para reglas de torneo, infracciones y sanciones competitivas, consulte los documentos oficiales de Legend Story Studios:</p>
             <ul>
                 {referencias.map((ref) => (
                     <li><a href={ref.url} target="_blank" rel="noopener noreferrer">{ref.nombre}</a></li>
                 ))}
             </ul>
-        </div>
+        </section>
     </div>
 </div>
 </Layout>
 
 <style>
-    .conduct-intro {
+    /* Preámbulo */
+    .conduct-preambulo {
+        background: linear-gradient(135deg, var(--bg-dark-2) 0%, var(--bg-dark-1) 100%);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--primary-color);
+        text-align: center;
+    }
+
+    .conduct-preambulo h2 {
+        color: var(--primary-color);
+        margin: 0 0 1rem 0;
+        font-size: 1.4rem;
+    }
+
+    .conduct-preambulo p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.8;
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+
+    /* Secciones generales */
+    .conduct-section {
         background: var(--bg-dark-2);
         border-radius: 1rem;
         padding: 1.5rem;
         margin-bottom: 1.5rem;
-        border-left: 4px solid var(--primary-color);
     }
 
-    .conduct-intro p {
-        margin: 0;
+    .conduct-section h2 {
+        color: var(--neutral-color);
+        margin: 0 0 1.25rem 0;
+        font-size: 1.3rem;
+        border-bottom: 1px solid var(--bg-dark-1);
+        padding-bottom: 0.75rem;
+    }
+
+    .conduct-section h3 {
         color: var(--text-color);
-        line-height: 1.7;
-        font-size: 1.05rem;
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
     }
 
-    .conduct-footer {
-        background: var(--bg-dark-2);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        margin-top: 1.5rem;
-        border-left: 4px solid var(--secondary-color);
-    }
-
-    .conduct-footer p {
-        margin: 0;
-        color: var(--muted-color);
+    .conduct-section p {
+        color: var(--text-color);
         line-height: 1.6;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .conduct-section ul, .conduct-section ol {
+        margin: 0.5rem 0 1rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .conduct-section li {
+        color: var(--text-color);
+        margin-bottom: 0.4rem;
+        line-height: 1.5;
+    }
+
+    /* Marco Normativo */
+    .marco-section {
+        background: var(--bg-dark-1);
+    }
+
+    .marco-item {
+        background: var(--bg-dark-2);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .marco-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .marco-item h3 {
+        color: var(--secondary-color);
+    }
+
+    .no-interviene-label {
+        color: var(--muted-color);
+        margin-top: 1rem;
+    }
+
+    .no-interviene-list li {
+        color: var(--muted-color);
+    }
+
+    .excepcion {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .enfasis {
+        background: var(--bg-dark-1);
+        border-left: 3px solid var(--accent-light);
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        font-weight: 500;
+    }
+
+    /* Conductas */
+    .conductas-esperadas {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #4a9d4a;
+    }
+
+    .conductas-esperadas h3 {
+        color: #6abf6a;
+    }
+
+    .conductas-esperadas li::marker {
+        color: #6abf6a;
+    }
+
+    .conductas-no-aceptadas {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        border-left: 4px solid #c45c5c;
+    }
+
+    .conductas-no-aceptadas h3 {
+        color: #e07070;
+    }
+
+    .conductas-no-aceptadas li::marker {
+        color: #e07070;
+    }
+
+    /* Clasificación de Faltas */
+    .faltas-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .faltas-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .faltas-leves {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        border-top: 3px solid #d4a84b;
+    }
+
+    .faltas-leves h3 {
+        color: #e8c36b;
+    }
+
+    .faltas-leves li::marker {
+        color: #e8c36b;
+    }
+
+    .faltas-graves {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        border-top: 3px solid #c45c5c;
+    }
+
+    .faltas-graves h3 {
+        color: #e07070;
+    }
+
+    .faltas-graves li::marker {
+        color: #e07070;
+    }
+
+    /* Medidas Aplicables */
+    .medidas-intro {
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .medidas-lista {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    }
+
+    .medidas-lista li {
+        margin-bottom: 0.75rem;
+        padding-left: 0.5rem;
+    }
+
+    .medidas-lista li:last-child {
+        margin-bottom: 0;
+    }
+
+    .medidas-nota {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: 0.95rem;
+        border-left: 3px solid var(--secondary-color);
+    }
+
+    /* Procedimiento */
+    .excepcion-box {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        margin-top: 1rem;
+        border-left: 3px solid #d4a84b;
+    }
+
+    .excepcion-box p {
+        margin-bottom: 0.5rem;
+    }
+
+    .excepcion-box ul {
+        margin-bottom: 0;
+    }
+
+    /* Autoridad */
+    .autoridad-section .conclusion {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
         font-style: italic;
     }
 
+    /* Límites */
+    .limites-section {
+        border: 1px solid var(--bg-dark-1);
+    }
+
+    .limites-intro {
+        font-weight: 500;
+    }
+
+    .limites-nota {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Referencias */
     .conduct-references {
         background: var(--bg-dark-1);
         border-radius: 1rem;
         padding: 1.5rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
-    .conduct-references h3 {
+    .conduct-references h2 {
         color: var(--neutral-color);
         margin: 0 0 0.75rem 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .conduct-references p {
         color: var(--muted-color);
         margin: 0 0 1rem 0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .conduct-references ul {
