@@ -1,0 +1,534 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schedule = [
+  { day: "Martes", event: "Free Play", time: "5 PM", location: "Chaos Store, Cali" },
+  { day: "Jueves", event: "Silver Age / CC", time: "5 PM", location: "Chaos Store, Cali" },
+  { day: "Sabados", event: "CC / Silver Age", time: "3 PM", location: "Chaos Store, Cali" },
+  { day: "Ultimo Sabado", event: "Living Legend", time: "3 PM", location: "Chaos Store, Cali", special: true },
+  { day: "Sabados", event: "Silver Age", time: "3 PM", location: "Palmira" },
+];
+
+const faq = [
+  {
+    q: "¿Donde compro cartas?",
+    a: "Chaos Store en Cali, MercadoLibre, o cambios con otros jugadores de la comunidad."
+  },
+  {
+    q: "¿Necesito un deck caro para competir?",
+    a: "No. Silver Age es muy accesible y hay decks prestados para empezar. Puedes ser competitivo con un presupuesto modesto."
+  },
+  {
+    q: "¿Como funcionan los torneos?",
+    a: "Inscripcion en la tienda, formato suizo (todos juegan todas las rondas). Todos los niveles de experiencia son bienvenidos."
+  },
+  {
+    q: "¿Que pasa si no se las reglas?",
+    a: "No hay problema. Los martes son de Free Play donde puedes aprender sin presion. Siempre hay alguien dispuesto a ensenar."
+  }
+];
+---
+
+<Layout>
+<div class="empezar-page">
+    <div class="empezar-header">
+        <h1>Empezar a Jugar</h1>
+        <div class="stars">
+            <span style="color: #4a7c4e;">★</span>
+            <span style="color: #c41e3a;">★</span>
+            <span style="color: #c9a227;">★</span>
+        </div>
+        <p class="subtitle">Todo lo que necesitas saber para unirte</p>
+    </div>
+
+    <div class="empezar-container">
+        <!-- Que es FAB -->
+        <section class="empezar-section">
+            <h2>¿Que es Flesh and Blood?</h2>
+            <p>
+                Un juego de cartas competitivo donde cada jugador es un heroe con su propio estilo de combate.
+                Se juega 1 contra 1, en persona, con torneos semanales en tiendas locales.
+            </p>
+            <p class="highlight-text">
+                No necesitas experiencia previa en TCGs. Si te gustan los juegos de estrategia, te va a gustar FAB.
+            </p>
+        </section>
+
+        <!-- Horarios -->
+        <section class="empezar-section empezar-section--schedule">
+            <h2>¿Cuando y donde jugamos?</h2>
+            <div class="schedule-table">
+                {schedule.map((item) => (
+                    <div class={`schedule-row ${item.special ? 'schedule-row--special' : ''}`}>
+                        <div class="schedule-day">{item.day}</div>
+                        <div class="schedule-event">{item.event}</div>
+                        <div class="schedule-time">{item.time}</div>
+                        <div class="schedule-location">{item.location}</div>
+                    </div>
+                ))}
+            </div>
+            <p class="schedule-note">
+                Los horarios pueden cambiar. Revisa el <a href="/calendar">calendario</a> para fechas exactas.
+            </p>
+        </section>
+
+        <!-- Que necesitas -->
+        <section class="empezar-section empezar-section--highlight">
+            <h2>¿Que necesito para empezar?</h2>
+            <div class="need-nothing">
+                <span class="need-icon">✓</span>
+                <div>
+                    <strong>Para tu primera vez: nada.</strong>
+                    <p>Tenemos decks prestados para que pruebes el juego sin compromiso.</p>
+                </div>
+            </div>
+            <div class="need-options">
+                <p><strong>Si quieres tu propio mazo:</strong></p>
+                <ul>
+                    <li>Un <strong>Blitz Deck</strong> listo para jugar (~$15 USD)</li>
+                    <li>Armar un deck de <strong>Silver Age</strong> con cartas sueltas (~$20-40 USD)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Que formato -->
+        <section class="empezar-section">
+            <h2>¿Que formato jugar primero?</h2>
+            <div class="formato-recomendado">
+                <div class="formato-badge">Recomendado</div>
+                <h3>Silver Age</h3>
+                <ul>
+                    <li>Mazos de 40 cartas (mas facil de armar)</li>
+                    <li>Card pool limitado (menos cartas que aprender)</li>
+                    <li>Partidas rapidas de 35 minutos</li>
+                    <li>El formato mas accesible economicamente</li>
+                </ul>
+                <p>Jugamos Silver Age los <strong>jueves a las 5 PM</strong> y algunos sabados.</p>
+                <a href="/formato/sage" class="formato-link">Ver mas sobre Silver Age →</a>
+            </div>
+        </section>
+
+        <!-- Puedo ir solo -->
+        <section class="empezar-section empezar-section--community">
+            <h2>¿Puedo ir solo?</h2>
+            <p>
+                <strong>Si, claro.</strong> La mayoria llegamos solos la primera vez.
+                Avisa en el grupo de WhatsApp que vas a ir y te recibimos.
+            </p>
+            <div class="contact-links">
+                <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="contact-link contact-link--whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://discord.gg/u783DZ9kGE" class="contact-link contact-link--discord" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="empezar-section empezar-section--faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+                {faq.map((item) => (
+                    <div class="faq-item">
+                        <h4>{item.q}</h4>
+                        <p>{item.a}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section class="empezar-cta">
+            <p>¿Listo para empezar?</p>
+            <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="cta-button" target="_blank" rel="noopener noreferrer">
+                Unete al grupo de WhatsApp
+            </a>
+            <span class="cta-subtext">o revisa el <a href="/calendar">calendario</a> para ver el proximo evento</span>
+        </section>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .empezar-page {
+        background: linear-gradient(180deg, #1a1410 0%, #0d0a08 100%);
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .empezar-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .empezar-header h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--neutral-color);
+        margin: 0 0 0.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .empezar-header .stars {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .empezar-header .stars span {
+        margin: 0 0.25rem;
+    }
+
+    .empezar-header .subtitle {
+        font-size: 1rem;
+        color: var(--muted-color);
+        margin: 0;
+    }
+
+    .empezar-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .empezar-section {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .empezar-section h2 {
+        color: var(--primary-color);
+        margin: 0 0 1rem 0;
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .empezar-section p {
+        color: var(--text-color);
+        line-height: 1.7;
+        margin: 0 0 1rem 0;
+    }
+
+    .empezar-section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .highlight-text {
+        background: var(--bg-dark-1);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-left: 3px solid var(--accent-color);
+        font-style: italic;
+    }
+
+    /* Schedule section */
+    .schedule-table {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .schedule-row {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 0.75fr 1.5fr;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        align-items: center;
+    }
+
+    .schedule-row--special {
+        background: rgba(118, 93, 47, 0.3);
+        border: 1px solid rgba(201, 162, 39, 0.3);
+    }
+
+    .schedule-day {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .schedule-event {
+        color: var(--text-color);
+    }
+
+    .schedule-time {
+        color: var(--accent-light);
+        font-weight: 500;
+    }
+
+    .schedule-location {
+        color: var(--muted-color);
+        font-size: 0.9rem;
+    }
+
+    .schedule-note {
+        font-size: 0.875rem;
+        color: var(--muted-color);
+        font-style: italic;
+    }
+
+    .schedule-note a {
+        color: var(--accent-light);
+    }
+
+    /* What you need section */
+    .empezar-section--highlight {
+        border-left: 4px solid #4a7c4e;
+    }
+
+    .need-nothing {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        background: rgba(74, 124, 78, 0.15);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .need-icon {
+        font-size: 1.5rem;
+        color: #4a7c4e;
+        flex-shrink: 0;
+    }
+
+    .need-nothing strong {
+        color: #4a7c4e;
+        font-size: 1.1rem;
+    }
+
+    .need-nothing p {
+        margin: 0.25rem 0 0 0;
+        color: var(--text-color);
+    }
+
+    .need-options {
+        padding-left: 0.5rem;
+    }
+
+    .need-options ul {
+        margin: 0.5rem 0 0 0;
+        padding-left: 1.25rem;
+    }
+
+    .need-options li {
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* Recommended format */
+    .formato-recomendado {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        position: relative;
+        border-top: 3px solid #4a7c4e;
+    }
+
+    .formato-badge {
+        position: absolute;
+        top: -0.75rem;
+        right: 1rem;
+        background: #4a7c4e;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+    }
+
+    .formato-recomendado h3 {
+        color: #4a7c4e;
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .formato-recomendado ul {
+        margin: 0 0 1rem 0;
+        padding-left: 1.25rem;
+    }
+
+    .formato-recomendado li {
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    .formato-recomendado p {
+        margin: 0 0 1rem 0;
+    }
+
+    .formato-link {
+        display: inline-block;
+        color: #4a7c4e;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .formato-link:hover {
+        color: #5a9c5e;
+        text-decoration: underline;
+    }
+
+    /* Community section */
+    .empezar-section--community {
+        text-align: center;
+    }
+
+    .empezar-section--community h2 {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-link:hover {
+        transform: translateY(-2px);
+    }
+
+    .contact-link--whatsapp {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+    }
+
+    .contact-link--whatsapp:hover {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .contact-link--discord {
+        background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+        color: white;
+    }
+
+    .contact-link--discord:hover {
+        box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+    }
+
+    /* FAQ section */
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .faq-item {
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    .faq-item h4 {
+        color: var(--accent-light);
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .faq-item p {
+        margin: 0;
+        color: var(--text-color);
+        font-size: 0.95rem;
+    }
+
+    /* Final CTA */
+    .empezar-cta {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--bg-dark-2) 0%, var(--bg-dark-3) 100%);
+        border-radius: 1rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .empezar-cta p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    }
+
+    .cta-subtext {
+        display: block;
+        margin-top: 1rem;
+        color: var(--muted-color);
+        font-size: 0.9rem;
+    }
+
+    .cta-subtext a {
+        color: var(--accent-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .empezar-page {
+            padding: 1rem 0.5rem;
+        }
+
+        .empezar-header h1 {
+            font-size: 1.75rem;
+        }
+
+        .schedule-row {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .schedule-location {
+            grid-column: span 2;
+        }
+
+        .contact-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-link {
+            width: 100%;
+            max-width: 250px;
+            justify-content: center;
+        }
+    }
+</style>
