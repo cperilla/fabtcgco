@@ -1,0 +1,494 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const herramientas = [
+  {
+    title: "Goldfish",
+    description: "Practica tu mazo en solitario para conocer sus lineas de juego",
+    link: "/blog/sobre-el-goldfishing",
+    linkText: "Ver guia →",
+    tip: "Haz 10 turnos con tu mazo antes de cada torneo",
+    external: false
+  },
+  {
+    title: "Talishar",
+    description: "Juega FAB online gratis contra personas reales",
+    link: "https://talishar.net/",
+    linkText: "Ir a Talishar →",
+    tip: "Ideal para probar matchups o decks nuevos",
+    external: true
+  },
+  {
+    title: "Felt Table",
+    description: "Simulador con IA y modo sealed",
+    link: "https://felttable.com/fab",
+    linkText: "Ir a Felt Table →",
+    tip: "Practica a tu ritmo sin presion de tiempo",
+    external: true
+  }
+];
+
+const habitos = [
+  {
+    title: "Pregunta despues de perder",
+    description: "\"¿Que hubiera hecho diferente?\" — tu oponente te puede dar perspectiva que no viste."
+  },
+  {
+    title: "Anota tus dudas",
+    description: "Si algo no te quedo claro durante la partida, pregunta en el grupo despues."
+  },
+  {
+    title: "Juega con heroes distintos",
+    description: "Entender como funcionan otros decks te ayuda a jugar mejor contra ellos."
+  }
+];
+---
+
+<Layout>
+<div class="mejorar-page">
+    <div class="mejorar-header">
+        <h1>Mejorar tu Juego</h1>
+        <div class="stars">
+            <span style="color: #4a7c4e;">★</span>
+            <span style="color: #4a7c4e;">★</span>
+            <span style="color: #4a7c4e;">★</span>
+        </div>
+        <p class="subtitle">Herramientas y habitos para jugar mejor</p>
+    </div>
+
+    <div class="mejorar-container">
+        <!-- Herramientas de practica -->
+        <section class="mejorar-section">
+            <h2>Herramientas de Practica</h2>
+            <div class="herramientas-grid">
+                {herramientas.map((h) => (
+                    <div class="herramienta-card">
+                        <h3>{h.title}</h3>
+                        <p class="herramienta-desc">{h.description}</p>
+                        <a
+                            href={h.link}
+                            class="herramienta-link"
+                            target={h.external ? "_blank" : undefined}
+                            rel={h.external ? "noopener noreferrer" : undefined}
+                        >
+                            {h.linkText}
+                        </a>
+                        <p class="herramienta-tip">{h.tip}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <!-- Habitos -->
+        <section class="mejorar-section">
+            <h2>Habitos que Ayudan</h2>
+            <div class="habitos-list">
+                {habitos.map((h) => (
+                    <div class="habito-item">
+                        <h3>{h.title}</h3>
+                        <p>{h.description}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <!-- Donde practicar -->
+        <section class="mejorar-section">
+            <h2>Donde Practicar</h2>
+            <div class="practica-grid">
+                <div class="practica-item">
+                    <h3>Free Play — Martes 5 PM</h3>
+                    <p>Partidas casuales sin ranking. Buen momento para probar cosas nuevas.</p>
+                    <a href="/calendar" class="practica-link">Ver calendario →</a>
+                </div>
+                <div class="practica-item">
+                    <h3>Torneos — Jueves y Sabados</h3>
+                    <p>Partidas con stakes reales. Aqui aprendes a manejar la presion.</p>
+                    <a href="/calendar" class="practica-link">Ver calendario →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analiza tus partidas -->
+        <section class="mejorar-section">
+            <h2>Analiza tus Partidas</h2>
+            <div class="analizar-content">
+                <p>Revisa tus estadisticas y las de la comunidad para identificar patrones.</p>
+                <div class="analizar-links">
+                    <a href="/competitivo" class="analizar-link">Ver competitivo →</a>
+                    <a href="/reportes" class="analizar-link">Ver reportes →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pregunta -->
+        <section class="mejorar-section mejorar-section--comunidad">
+            <h2>Pregunta en el Grupo</h2>
+            <p>Si tienes dudas sobre reglas, matchups, o sideboard — pregunta. Siempre hay alguien que puede ayudar.</p>
+            <div class="contact-links">
+                <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="contact-link contact-link--whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://discord.gg/u783DZ9kGE" class="contact-link contact-link--discord" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section class="mejorar-cta">
+            <p>¿Quieres empezar a practicar?</p>
+            <a href="/calendar" class="cta-button">
+                Ver proximo evento
+            </a>
+            <span class="cta-subtext">o vuelve a <a href="/empezar">empezar</a> si aun no has jugado tu primera partida</span>
+        </section>
+    </div>
+</div>
+</Layout>
+
+<style>
+    .mejorar-page {
+        background: linear-gradient(180deg, #1a1410 0%, #0d0a08 100%);
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .mejorar-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .mejorar-header h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--neutral-color);
+        margin: 0 0 0.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .mejorar-header .stars {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .mejorar-header .stars span {
+        margin: 0 0.25rem;
+    }
+
+    .mejorar-header .subtitle {
+        font-size: 1rem;
+        color: var(--muted-color);
+        margin: 0;
+    }
+
+    .mejorar-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mejorar-section {
+        background: var(--bg-dark-2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .mejorar-section h2 {
+        color: var(--primary-color);
+        margin: 0 0 1rem 0;
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .mejorar-section p {
+        color: var(--text-color);
+        line-height: 1.7;
+        margin: 0 0 1rem 0;
+    }
+
+    .mejorar-section p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Herramientas grid */
+    .herramientas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .herramienta-card {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .herramienta-card h3 {
+        color: var(--accent-light);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.1rem;
+    }
+
+    .herramienta-desc {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        margin: 0 0 0.75rem 0;
+        flex-grow: 1;
+    }
+
+    .herramienta-link {
+        display: inline-block;
+        color: #4a7c4e;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+        transition: color 0.2s;
+    }
+
+    .herramienta-link:hover {
+        color: #5a9c5e;
+        text-decoration: underline;
+    }
+
+    .herramienta-tip {
+        color: var(--muted-color);
+        font-size: 0.8rem;
+        font-style: italic;
+        margin: 0;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--border-color);
+    }
+
+    /* Habitos list */
+    .habitos-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .habito-item {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        border-left: 3px solid #4a7c4e;
+    }
+
+    .habito-item h3 {
+        color: var(--accent-light);
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .habito-item p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* Practica grid */
+    .practica-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .practica-item {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .practica-item h3 {
+        color: var(--accent-light);
+        margin: 0 0 0.75rem 0;
+        font-size: 1rem;
+    }
+
+    .practica-item p {
+        font-size: 0.9rem;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .practica-link {
+        display: inline-block;
+        color: #4a7c4e;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+    }
+
+    .practica-link:hover {
+        color: #5a9c5e;
+        text-decoration: underline;
+    }
+
+    /* Analizar section */
+    .analizar-content {
+        background: var(--bg-dark-1);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .analizar-content p {
+        margin: 0 0 1rem 0;
+    }
+
+    .analizar-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .analizar-link {
+        color: #4a7c4e;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+    }
+
+    .analizar-link:hover {
+        color: #5a9c5e;
+        text-decoration: underline;
+    }
+
+    /* Comunidad section */
+    .mejorar-section--comunidad {
+        text-align: center;
+    }
+
+    .mejorar-section--comunidad h2 {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-link:hover {
+        transform: translateY(-2px);
+    }
+
+    .contact-link--whatsapp {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+    }
+
+    .contact-link--whatsapp:hover {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .contact-link--discord {
+        background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+        color: white;
+    }
+
+    .contact-link--discord:hover {
+        box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+    }
+
+    /* Final CTA */
+    .mejorar-cta {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--bg-dark-2) 0%, var(--bg-dark-3) 100%);
+        border-radius: 1rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .mejorar-cta p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #4a7c4e 0%, #3a6c3e 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(74, 124, 78, 0.4);
+    }
+
+    .cta-subtext {
+        display: block;
+        margin-top: 1rem;
+        color: var(--muted-color);
+        font-size: 0.9rem;
+    }
+
+    .cta-subtext a {
+        color: var(--accent-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .herramientas-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .practica-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .mejorar-page {
+            padding: 1rem 0.5rem;
+        }
+
+        .mejorar-header h1 {
+            font-size: 1.75rem;
+        }
+
+        .contact-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-link {
+            width: 100%;
+            max-width: 250px;
+            justify-content: center;
+        }
+
+        .analizar-links {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+</style>
