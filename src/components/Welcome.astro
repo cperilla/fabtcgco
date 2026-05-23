@@ -12,6 +12,12 @@ const title = "Bienvenido a FAB Colombia";
     </div>
   </div>
 
+  <!-- CTA para nuevos jugadores -->
+  <div class="nuevo-cta">
+    <span class="nuevo-label">¿Nuevo en FAB?</span>
+    <a href="/empezar" class="nuevo-link">Empieza aqui →</a>
+  </div>
+
   <div class="welcome-grid">
     <!-- Site Overview -->
     <div class="welcome-card">
@@ -233,5 +239,47 @@ const title = "Bienvenido a FAB Colombia";
   .goldfish-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(74, 124, 78, 0.4);
+  }
+
+  /* CTA para nuevos jugadores */
+  .nuevo-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(196, 30, 58, 0.05) 100%);
+    border: 1px solid rgba(196, 30, 58, 0.3);
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nuevo-label {
+    color: var(--text-color, #e0e0e0);
+    font-size: 1rem;
+  }
+
+  .nuevo-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #c41e3a 0%, #91160d 100%);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nuevo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.4);
+  }
+
+  @media (max-width: 640px) {
+    .nuevo-cta {
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: center;
+    }
   }
 </style>
