@@ -11,8 +11,8 @@ const schedule = [
 
 const faq = [
   {
-    q: "¿Donde compro cartas?",
-    a: "Chaos Store en Cali, MercadoLibre, o cambios con otros jugadores de la comunidad."
+    q: "¿Que es GEM?",
+    a: "GEM es la plataforma de Legend Story Studios para gestionar torneos. La necesitas para participar en Armories. No es necesaria para empezar a jugar."
   },
   {
     q: "¿Necesito un deck caro para competir?",
@@ -20,7 +20,7 @@ const faq = [
   },
   {
     q: "¿Como funcionan los torneos?",
-    a: "Inscripcion en la tienda, formato suizo (todos juegan todas las rondas). Todos los niveles de experiencia son bienvenidos."
+    a: "Inscripcion en la tienda. Tenemos Free Play, torneos locales, y Armories para explorar el competitivo. Todos los niveles son bienvenidos."
   },
   {
     q: "¿Que pasa si no se las reglas?",
@@ -84,10 +84,11 @@ const faq = [
             </div>
             <div class="need-options">
                 <p><strong>Si quieres tu propio mazo:</strong></p>
-                <ul>
-                    <li>Un <strong>Blitz Deck</strong> listo para jugar (~$15 USD)</li>
-                    <li>Armar un deck de <strong>Silver Age</strong> con cartas sueltas (~$20-40 USD)</li>
-                </ul>
+                <p>Pregunta en el grupo — te ayudamos a armar un deck de Silver Age con cartas sueltas o te indicamos donde conseguir uno listo.</p>
+            </div>
+            <div class="need-competitive">
+                <p><strong>Para explorar el competitivo:</strong></p>
+                <p>Los Armories son eventos casuales donde puedes probar el ambiente competitivo sin presion. Para participar necesitas una cuenta <a href="https://gem.fabtcg.com" target="_blank" rel="noopener noreferrer">GEM</a>. Pregunta en el grupo y te ayudamos a crearla.</p>
             </div>
         </section>
 
@@ -324,6 +325,26 @@ const faq = [
         color: var(--text-color);
         margin-bottom: 0.5rem;
         line-height: 1.5;
+    }
+
+    .need-competitive {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--bg-dark-1);
+        border-radius: 0.5rem;
+        border-left: 3px solid var(--accent-color);
+    }
+
+    .need-competitive p {
+        margin: 0;
+    }
+
+    .need-competitive p + p {
+        margin-top: 0.5rem;
+    }
+
+    .need-competitive a {
+        color: var(--accent-light);
     }
 
     /* Recommended format */
