@@ -141,6 +141,13 @@ const faq = [
             </div>
         </section>
 
+        <!-- Link a mejorar -->
+        <section class="empezar-section empezar-section--next">
+            <h2>¿Ya empezaste y quieres mejorar?</h2>
+            <p>Tenemos recursos para ayudarte a crecer como jugador.</p>
+            <a href="/mejorar" class="next-link">Ver como mejorar →</a>
+        </section>
+
         <!-- CTA final -->
         <section class="empezar-cta">
             <p>¿Listo para empezar?</p>
@@ -477,6 +484,31 @@ const faq = [
         margin: 0;
         color: var(--text-color);
         font-size: 0.95rem;
+    }
+
+    /* Next step section */
+    .empezar-section--next {
+        text-align: center;
+        border-top: 2px solid #4a7c4e;
+    }
+
+    .empezar-section--next h2 {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .next-link {
+        display: inline-block;
+        color: #4a7c4e;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .next-link:hover {
+        color: #5a9c5e;
+        text-decoration: underline;
     }
 
     /* Final CTA */
