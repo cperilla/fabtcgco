@@ -55,6 +55,14 @@ const transitionGoals = [
           Un espacio temporal y guiado para que los jugadores nuevos tengan sus primeras experiencias,
           construyan comodidad y entiendan cómo integrarse naturalmente al resto de FAB Colombia.
         </p>
+        <a
+          href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ"
+          class="hero-action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unirse al WhatsApp de Mesa Inicial
+        </a>
       </div>
     </section>
 
@@ -149,6 +157,21 @@ const transitionGoals = [
           acompañar el proceso.
         </p>
       </section>
+
+      <section class="mesa-section join-section">
+        <h2>Entrar a Mesa Inicial</h2>
+        <p>
+          Si estás empezando o vas a acompañar a alguien nuevo, este es el enlace recomendado para entrar primero.
+        </p>
+        <a
+          href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ"
+          class="join-action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unirse al WhatsApp de Mesa Inicial
+        </a>
+      </section>
     </section>
   </main>
 </Layout>
@@ -201,6 +224,25 @@ const transitionGoals = [
     line-height: 1.65;
   }
 
+  .hero-action,
+  .join-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    padding: 0.9rem 1.15rem;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .hero-action:hover,
+  .join-action:hover {
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  }
+
   .mesa-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -243,6 +285,11 @@ const transitionGoals = [
 
   .mesa-section--closing {
     border-color: rgba(74, 124, 78, 0.35);
+  }
+
+  .join-section {
+    text-align: center;
+    border-color: rgba(37, 211, 102, 0.35);
   }
 
   h2 {

@@ -121,9 +121,13 @@ const faq = [
                 Mesa Inicial te ayuda a entender horarios, formatos, decks y a quien preguntar antes de pasar naturalmente al resto de la comunidad.
             </p>
             <div class="contact-links">
-                <a href="/mesa-inicial" class="contact-link contact-link--mesa">
-                    <i class="fa-solid fa-door-open"></i>
-                    Mesa Inicial
+                <a href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ" class="contact-link contact-link--mesa" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp Mesa Inicial
+                </a>
+                <a href="/mesa-inicial" class="contact-link contact-link--docs">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Ver documentacion
                 </a>
                 <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="contact-link contact-link--whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -159,10 +163,10 @@ const faq = [
         <!-- CTA final -->
         <section class="empezar-cta">
             <p>¿Listo para empezar?</p>
-            <a href="/mesa-inicial" class="cta-button">
-                Ver Mesa Inicial
+            <a href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ" class="cta-button" target="_blank" rel="noopener noreferrer">
+                Unete a Mesa Inicial
             </a>
-            <span class="cta-subtext">La forma recomendada de entrada. Tambien puedes revisar el <a href="/calendar">calendario</a> para ver el proximo evento.</span>
+            <span class="cta-subtext">La forma recomendada de entrada. Tambien puedes <a href="/mesa-inicial">leer la documentacion</a> o revisar el <a href="/calendar">calendario</a>.</span>
         </section>
     </div>
 </div>
@@ -458,6 +462,16 @@ const faq = [
 
     .contact-link--mesa:hover {
         box-shadow: 0 4px 12px rgba(201, 162, 39, 0.4);
+    }
+
+    .contact-link--docs {
+        background: var(--bg-dark-1);
+        color: var(--accent-light);
+        border: 1px solid var(--border-color);
+    }
+
+    .contact-link--docs:hover {
+        box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
     }
 
     .contact-link--whatsapp {
