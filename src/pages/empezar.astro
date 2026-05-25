@@ -84,11 +84,11 @@ const faq = [
             </div>
             <div class="need-options">
                 <p><strong>Si quieres tu propio mazo:</strong></p>
-                <p>Pregunta en el grupo — te ayudamos a armar un deck de Silver Age con cartas sueltas o te indicamos donde conseguir uno listo.</p>
+                <p>Pregunta primero en Mesa Inicial — te ayudamos a armar un deck de Silver Age con cartas sueltas o te indicamos donde conseguir uno listo.</p>
             </div>
             <div class="need-competitive">
                 <p><strong>Para explorar el competitivo:</strong></p>
-                <p>Los Armories son eventos casuales donde puedes probar el ambiente competitivo sin presion. Para participar necesitas una cuenta <a href="https://gem.fabtcg.com" target="_blank" rel="noopener noreferrer">GEM</a>. Pregunta en el grupo y te ayudamos a crearla.</p>
+                <p>Los Armories son eventos casuales donde puedes probar el ambiente competitivo sin presion. Para participar necesitas una cuenta <a href="https://gem.fabtcg.com" target="_blank" rel="noopener noreferrer">GEM</a>. En Mesa Inicial te ayudamos a crearla cuando sea el momento.</p>
             </div>
         </section>
 
@@ -114,16 +114,24 @@ const faq = [
             <h2>¿Puedo ir solo?</h2>
             <p>
                 <strong>Si, claro.</strong> La mayoria llegamos solos la primera vez.
-                Avisa en el grupo de WhatsApp que vas a ir y te recibimos.
+                La entrada recomendada es Mesa Inicial, un espacio guiado para tus primeras semanas.
+            </p>
+            <p>
+                Los grupos principales de WhatsApp y Discord tienen mas movimiento y pueden sentirse intensos si apenas estas llegando.
+                Mesa Inicial te ayuda a entender horarios, formatos, decks y a quien preguntar antes de pasar naturalmente al resto de la comunidad.
             </p>
             <div class="contact-links">
+                <a href="/mesa-inicial" class="contact-link contact-link--mesa">
+                    <i class="fa-solid fa-door-open"></i>
+                    Mesa Inicial
+                </a>
                 <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="contact-link contact-link--whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp
+                    WhatsApp Comunidad
                 </a>
                 <a href="https://discord.gg/u783DZ9kGE" class="contact-link contact-link--discord" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-discord"></i>
-                    Discord
+                    Discord Comunidad
                 </a>
             </div>
         </section>
@@ -151,10 +159,10 @@ const faq = [
         <!-- CTA final -->
         <section class="empezar-cta">
             <p>¿Listo para empezar?</p>
-            <a href="https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE" class="cta-button" target="_blank" rel="noopener noreferrer">
-                Unete al grupo de WhatsApp
+            <a href="/mesa-inicial" class="cta-button">
+                Ver Mesa Inicial
             </a>
-            <span class="cta-subtext">o revisa el <a href="/calendar">calendario</a> para ver el proximo evento</span>
+            <span class="cta-subtext">La forma recomendada de entrada. Tambien puedes revisar el <a href="/calendar">calendario</a> para ver el proximo evento.</span>
         </section>
     </div>
 </div>
@@ -443,6 +451,15 @@ const faq = [
         transform: translateY(-2px);
     }
 
+    .contact-link--mesa {
+        background: linear-gradient(135deg, #c9a227 0%, #765d2f 100%);
+        color: #1a1410;
+    }
+
+    .contact-link--mesa:hover {
+        box-shadow: 0 4px 12px rgba(201, 162, 39, 0.4);
+    }
+
     .contact-link--whatsapp {
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
         color: white;
@@ -528,8 +545,8 @@ const faq = [
 
     .cta-button {
         display: inline-block;
-        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-        color: white;
+        background: linear-gradient(135deg, #c9a227 0%, #765d2f 100%);
+        color: #1a1410;
         padding: 1rem 2rem;
         border-radius: 0.5rem;
         text-decoration: none;
@@ -540,7 +557,7 @@ const faq = [
 
     .cta-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        box-shadow: 0 6px 16px rgba(201, 162, 39, 0.4);
     }
 
     .cta-subtext {
