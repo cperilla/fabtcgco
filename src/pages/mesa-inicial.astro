@@ -1,0 +1,376 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const communitySpaces = [
+  {
+    title: 'FAB: Comunidad',
+    description: 'Grupo principal de conversación sobre Flesh and Blood.',
+    items: [
+      'discusión general',
+      'organización de juego',
+      'conversación de torneos',
+      'resultados',
+      'coordinación semanal',
+      'conversación normal de comunidad',
+    ],
+  },
+  {
+    title: 'FAB: Off Topics',
+    description: 'Espacio social para temas fuera de FAB.',
+    items: [
+      'conversación social',
+      'temas no relacionados con Flesh and Blood',
+      'interacción relajada entre miembros de la comunidad',
+    ],
+  },
+  {
+    title: 'FAB: Compra Venta',
+    description: 'Grupo dedicado a cartas, producto y movimiento de colección.',
+    items: [
+      'compra y venta de cartas',
+      'búsqueda de producto',
+      'cambios',
+      'consultas sobre disponibilidad',
+    ],
+  },
+];
+
+const transitionGoals = [
+  'cómo funcionan los eventos',
+  'qué formatos jugamos',
+  'cómo se usan los distintos grupos',
+  'cómo pedir ayuda',
+  'cómo conseguir decks',
+  'cómo prepararse para Armories y eventualmente CC',
+];
+---
+
+<Layout>
+  <main class="mesa-page">
+    <section class="mesa-hero">
+      <div class="mesa-hero__content">
+        <p class="eyebrow">Onboarding FAB Colombia</p>
+        <h1>FAB: Mesa Inicial</h1>
+        <p class="subtitle">
+          Un espacio temporal y guiado para que los jugadores nuevos tengan sus primeras experiencias,
+          construyan comodidad y entiendan cómo integrarse naturalmente al resto de FAB Colombia.
+        </p>
+        <a
+          href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ"
+          class="hero-action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unirse al WhatsApp de Mesa Inicial
+        </a>
+      </div>
+    </section>
+
+    <section class="mesa-container">
+      <div class="intro-grid">
+        <article class="intro-block intro-block--primary">
+          <h2>Qué es Mesa Inicial</h2>
+          <p>
+            Mesa Inicial existe para acompañar las primeras semanas de una persona que está entrando a Flesh and Blood.
+            La idea es que pueda preguntar sin pena, probar decks, entender formatos, conocer horarios y encontrar un
+            siguiente paso claro.
+          </p>
+          <p>
+            No se espera que un jugador nuevo entienda inmediatamente toda la cultura, formatos, grupos y dinámicas de
+            la comunidad. Mesa Inicial existe para hacer esa transición gradual.
+          </p>
+        </article>
+
+        <aside class="expectations">
+          <h2>Expectativas claras</h2>
+          <ul>
+            <li>Permanencia máxima esperada: <strong>90 días</strong>.</li>
+            <li>Algunos jugadores pueden pasar antes si ya están integrados.</li>
+            <li>Mesa Inicial <strong>no</strong> es un grupo permanente.</li>
+            <li>El objetivo es evitar fragmentar permanentemente la comunidad.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <section class="mesa-section">
+        <h2>Para qué sirve</h2>
+        <p>
+          Este espacio ayuda a construir continuidad durante las primeras semanas. Sirve para que la persona no se quede
+          sola después de la primera partida y pueda avanzar con guía hacia los espacios donde ocurre la vida normal de
+          la comunidad.
+        </p>
+        <p>
+          Parte del objetivo es que los jugadores entiendan progresivamente:
+        </p>
+        <div class="goal-list">
+          {transitionGoals.map((goal) => <span>{goal}</span>)}
+        </div>
+      </section>
+
+      <section class="mesa-section transition-section">
+        <h2>Transición hacia la comunidad</h2>
+        <p>
+          Mesa Inicial existe para ayudar a construir comodidad y continuidad durante las primeras semanas. Después de
+          cierto tiempo, los jugadores deben integrarse al resto de espacios de FAB Colombia.
+        </p>
+        <p>
+          Esa transición debe ser transparente y positiva. No es una expulsión, un filtro elitista ni una forma de sacar
+          a alguien del grupo. Es el paso natural para que el jugador participe donde se organizan las partidas, se
+          conversan los torneos y se vive la comunidad completa.
+        </p>
+        <p>
+          Eventualmente los jugadores pasarán a <strong>FAB: Comunidad</strong>. Mesa Inicial está diseñado para
+          onboarding y primeras experiencias; la idea es preparar jugadores para participar naturalmente en el resto de
+          espacios de FAB Colombia.
+        </p>
+      </section>
+
+      <section class="mesa-section">
+        <h2>Espacios de FAB Colombia</h2>
+        <p>
+          Mesa Inicial prepara jugadores para poder participar cómodamente en todos estos espacios, entendiendo poco a
+          poco qué ocurre en cada uno y cuándo usarlo.
+        </p>
+
+        <div class="spaces-grid">
+          {communitySpaces.map((space) => (
+            <article class="space-card">
+              <h3>{space.title}</h3>
+              <p>{space.description}</p>
+              <ul>
+                {space.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="mesa-section mesa-section--closing">
+        <h2>Cómo saber que alguien está listo para pasar</h2>
+        <p>
+          No hace falta que el jugador sepa todo. Basta con que ya tenga suficiente comodidad para preguntar, asistir a
+          eventos, entender qué grupo usar y reconocer el camino básico para seguir jugando.
+        </p>
+        <p>
+          Algunos jugadores necesitarán varias semanas. Otros se integrarán mucho antes. En ambos casos, Mesa Inicial
+          debe empujarlos con cuidado hacia la comunidad principal, manteniendo la puerta abierta para resolver dudas y
+          acompañar el proceso.
+        </p>
+      </section>
+
+      <section class="mesa-section join-section">
+        <h2>Entrar a Mesa Inicial</h2>
+        <p>
+          Si estás empezando o vas a acompañar a alguien nuevo, este es el enlace recomendado para entrar primero.
+        </p>
+        <a
+          href="https://chat.whatsapp.com/EunrS89j2gCH9iDMhWdRGJ"
+          class="join-action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unirse al WhatsApp de Mesa Inicial
+        </a>
+      </section>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .mesa-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #17120f 0%, #0d0a08 100%);
+    color: var(--neutral-color);
+  }
+
+  .mesa-hero {
+    padding: 4rem 1rem 2rem;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+  }
+
+  .mesa-hero__content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: #c9a227;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    letter-spacing: 0;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.25rem, 8vw, 4rem);
+    line-height: 1;
+    color: #f4ead5;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    max-width: 760px;
+    margin: 0;
+    color: #e2d6c3;
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+
+  .hero-action,
+  .join-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    padding: 0.9rem 1.15rem;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .hero-action:hover,
+  .join-action:hover {
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  }
+
+  .mesa-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .intro-block,
+  .expectations,
+  .mesa-section,
+  .space-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  .intro-block,
+  .expectations,
+  .mesa-section {
+    padding: 1.5rem;
+  }
+
+  .intro-block--primary {
+    border-color: rgba(201, 162, 39, 0.28);
+  }
+
+  .expectations {
+    background: rgba(145, 22, 13, 0.2);
+  }
+
+  .mesa-section {
+    margin-bottom: 1.25rem;
+  }
+
+  .mesa-section--closing {
+    border-color: rgba(74, 124, 78, 0.35);
+  }
+
+  .join-section {
+    text-align: center;
+    border-color: rgba(37, 211, 102, 0.35);
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    color: #f4ead5;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    color: #f4ead5;
+    font-size: 1.1rem;
+  }
+
+  p {
+    color: #d7c9b5;
+    line-height: 1.7;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #d7c9b5;
+    line-height: 1.65;
+  }
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  strong {
+    color: #f4ead5;
+  }
+
+  .goal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .goal-list span {
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    border-radius: 999px;
+    padding: 0.55rem 0.8rem;
+    color: #f4ead5;
+    background: rgba(201, 162, 39, 0.1);
+    font-size: 0.95rem;
+  }
+
+  .transition-section {
+    border-color: rgba(201, 162, 39, 0.28);
+  }
+
+  .spaces-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .space-card {
+    padding: 1.25rem;
+  }
+
+  .space-card p {
+    margin-top: 0;
+  }
+
+  @media (max-width: 820px) {
+    .intro-grid,
+    .spaces-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .mesa-hero {
+      padding-top: 3rem;
+    }
+  }
+</style>
