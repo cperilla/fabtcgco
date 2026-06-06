@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageBanner from '../components/PageBanner.astro';
 
 const mechanics = [
   { name: "Dominante", description: "El Héroe defensor no puede defender este ataque con más de 1 carta de su mano (incluidas cartas de Reacción Defensa).", color: "green" },
@@ -54,6 +55,7 @@ const mechanics = [
         </div>
         <p class="subtitle">Referencia rápida de mecánicas</p>
     </div>
+    <PageBanner image="/images/home/mechanics-guides.webp" alt="Mesa de estudio con cartas y diagramas de mecánicas" />
     <div class="mechanics-container">
         {mechanics.map((mechanic, index) => (
             <article class={`mechanic-ticket mechanic-${mechanic.color}`}>

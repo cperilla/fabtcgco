@@ -1,6 +1,7 @@
 ---
 import EventTicket from '../components/EventTicket.astro';
 import Layout from '../layouts/Layout.astro';
+import PageBanner from '../components/PageBanner.astro';
 
 import { loadEventsData } from '../utils/dataLoader';
 import { formatMonthName } from '../utils/calendarUtils';
@@ -50,6 +51,7 @@ let globalIndex = 0;
         </div>
         <p class="subtitle">Próximos eventos de la comunidad</p>
     </div>
+    <PageBanner image="/images/home/calendar-events.webp" alt="Mesa de planificación de eventos de Flesh and Blood" />
     <div class="events-container" id="events-container">
         {months.map((month) => {
             const events = eventsByMonth[month];

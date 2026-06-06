@@ -1,5 +1,64 @@
 ---
 const title = "Bienvenido a FAB Colombia";
+
+const sectionCards = [
+  {
+    href: "/empezar",
+    title: "Empezar",
+    description: "Guía rápida para jugar tu primera partida.",
+    image: "/images/home/new-players.webp",
+    alt: "Nuevos jugadores aprendiendo Flesh and Blood"
+  },
+  {
+    href: "/mejorar",
+    title: "Mejorar",
+    description: "Herramientas y hábitos para jugar mejor.",
+    image: "/images/home/improve-game.webp",
+    alt: "Jugador practicando secuencias y mejorando su juego"
+  },
+  {
+    href: "/calendar",
+    title: "Calendario",
+    description: "Eventos, torneos y sesiones de juego.",
+    image: "/images/home/calendar-events.webp",
+    alt: "Mesa de planificación de eventos de Flesh and Blood"
+  },
+  {
+    href: "/rankings",
+    title: "Rankings",
+    description: "Resultados y posiciones locales.",
+    image: "/images/home/local-rankings.webp",
+    alt: "Trofeo y ambiente competitivo de rankings locales"
+  },
+  {
+    href: "/competitivo",
+    title: "Competitivo",
+    description: "Rankings, reportes y estadísticas locales.",
+    image: "/images/home/local-rankings.webp",
+    alt: "Trofeo y ambiente competitivo de rankings locales"
+  },
+  {
+    href: "/blog",
+    title: "Blog",
+    description: "Notas, noticias y reflexiones de comunidad.",
+    image: "/images/home/blog-news.webp",
+    alt: "Escritorio editorial con cartas y notas de estrategia"
+  },
+  {
+    href: "/formatos",
+    title: "Formatos",
+    description: "Conoce las formas de jugar en la comunidad.",
+    image: "/images/home/game-formats.webp",
+    alt: "Formatos de juego de Flesh and Blood representados en una mesa"
+  },
+  {
+    href: "/mechanics",
+    title: "Mecánicas",
+    description: "Guías para entender mejor el juego.",
+    image: "/images/home/mechanics-guides.webp",
+    alt: "Mesa de estudio con cartas y diagramas de mecánicas"
+  }
+];
 ---
 
 <section class="py-8 px-4 max-w-5xl mx-auto backdrop-blur-md">
@@ -21,7 +80,7 @@ const title = "Bienvenido a FAB Colombia";
   <div class="welcome-grid">
     <!-- Site Overview -->
     <div class="welcome-card">
-      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_02.png" alt="FAB Colombia Community" class="welcome-image">
+      <img src="/images/home/organized-play.webp" alt="Evento organizado de Flesh and Blood en Colombia" class="welcome-image">
       <div class="welcome-content">
         <h2>Juego Organizado en Colombia</h2>
         <p>
@@ -39,7 +98,7 @@ const title = "Bienvenido a FAB Colombia";
 
     <!-- Weekly Schedule -->
     <div class="welcome-card">
-      <img src="https://static.fabtcgcolombia.club/public/r2/FABCO_IA_INSPIRATIONAL_04.png" alt="Weekly Events" class="welcome-image">
+      <img src="/images/home/weekly-schedule.webp" alt="Horario semanal de eventos de Flesh and Blood" class="welcome-image">
       <div class="welcome-content">
         <h2>Horario Semanal</h2>
 
@@ -92,6 +151,20 @@ const title = "Bienvenido a FAB Colombia";
       </div>
     </div>
   </div>
+
+  <section class="section-directory" aria-label="Secciones principales">
+    <div class="section-card-grid">
+      {sectionCards.map((card) => (
+        <a href={card.href} class="section-card">
+          <img src={card.image} alt={card.alt} />
+          <div class="section-card-content">
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 </section>
 
 <style>
@@ -132,13 +205,19 @@ const title = "Bienvenido a FAB Colombia";
 
   .welcome-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
   }
 
   @media (min-width: 768px) {
     .welcome-card-wide .welcome-image {
       height: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .welcome-image {
+      height: 180px;
     }
   }
 
@@ -239,6 +318,75 @@ const title = "Bienvenido a FAB Colombia";
   .goldfish-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(74, 124, 78, 0.4);
+  }
+
+  .section-directory {
+    margin-top: 2rem;
+  }
+
+  .section-directory h2 {
+    color: var(--neutral-color, #f5ebe9);
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+  }
+
+  .section-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    background: var(--bg-dark-2, rgba(0, 0, 0, 0.3));
+    border: 1px solid rgba(118, 93, 47, 0.28);
+    border-radius: 0.75rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .section-card:hover {
+    border-color: rgba(221, 173, 46, 0.65);
+    transform: translateY(-2px);
+  }
+
+  .section-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .section-card-content {
+    padding: 1rem;
+  }
+
+  .section-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--accent-light, #f6ce59);
+    font-size: 1rem;
+  }
+
+  .section-card p {
+    margin: 0;
+    color: var(--text-secondary, #c8b8b0);
+    font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   /* CTA para nuevos jugadores */
