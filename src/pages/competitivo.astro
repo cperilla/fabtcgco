@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageBanner from '../components/PageBanner.astro';
 import rankingsData from '../data/rankings.json';
 
 // Import player profile indexes
@@ -77,6 +78,7 @@ const reportes = [
         </div>
         <p class="subtitle">Rankings y estadisticas de la comunidad FAB Colombia</p>
     </div>
+    <PageBanner image="/images/home/local-rankings.webp" alt="Trofeo y ambiente competitivo de rankings locales" />
 
     <div class="competitivo-container">
         <!-- Rankings Section -->

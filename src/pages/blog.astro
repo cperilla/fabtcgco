@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageBanner from '../components/PageBanner.astro';
 import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
@@ -22,6 +23,7 @@ const posts = (await getCollection('posts')).sort(
       </div>
       <p class="subtitle">Artículos de la comunidad</p>
     </div>
+    <PageBanner image="/images/home/blog-news.webp" alt="Escritorio editorial con cartas y notas de estrategia" />
     <div class="blog-container">
       {posts.map((post, index) => {
         const postDate = new Date(post.data.publishDate);

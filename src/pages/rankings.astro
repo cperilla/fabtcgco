@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageBanner from '../components/PageBanner.astro';
 import rankingsData from '../data/rankings.json';
 ---
 
@@ -16,6 +17,8 @@ import rankingsData from '../data/rankings.json';
       </div>
       <p class="subtitle">Rankings activos de la comunidad</p>
     </div>
+
+    <PageBanner image="/images/home/local-rankings.webp" alt="Trofeo y ambiente competitivo de rankings locales" />
 
     <div class="rankings-container">
       <section class="rankings-section rankings-active">
