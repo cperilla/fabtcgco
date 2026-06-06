@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const whatsappUrl = "https://chat.whatsapp.com/Gc5KHwAWkE3IksjknvuoUE";
+const fabLogo = "/images/print/fab-logo-official-trimmed.png";
+const heroImage = "/images/print/primera-partida-campanella-hero.png";
+
+const points = [
+  "No necesita experiencia previa.",
+  "Le prestamos mazos, cartas y materiales.",
+  "Aprende jugando una partida real, con guía paso a paso.",
+  "Sesiones pequeñas para resolver dudas con calma."
+];
+---
+
+<Layout>
+  <article class="introPage">
+    <section class="introHero">
+      <img class="introHero__bg" src={heroImage} alt="" />
+      <div class="introHero__shade"></div>
+      <div class="introHero__content">
+        <p class="eyebrow">Sesión de introducción para nuevos jugadores</p>
+        <img class="fabWordmark" src={fabLogo} alt="Flesh and Blood" />
+        <p class="heroCopy">
+          Un juego coleccionable de estrategia 1 vs 1 para quienes disfrutan tomar decisiones,
+          leer al rival y aprender un sistema profundo jugando en persona.
+        </p>
+        <a class="primaryCta" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          Reservar un cupo
+        </a>
+      </div>
+    </section>
+
+    <section class="contentBand">
+      <div class="contentGrid">
+        <section class="panel">
+          <h2>¿Qué es Flesh and Blood?</h2>
+          <p>
+            Es un juego de cartas competitivo donde cada jugador representa a un héroe.
+            La partida se juega 1 vs 1: administras recursos, defiendes, atacas
+            y construyes una línea de juego con cada mano.
+          </p>
+          <p>
+            No es una clase teórica. En la sesión explicamos lo necesario y pasamos rápido
+            a jugar una partida acompañada.
+          </p>
+        </section>
+
+        <section class="panel panel--accent">
+          <h2>Primera sesión</h2>
+          <dl>
+            <div>
+              <dt>Duración</dt>
+              <dd>90 minutos aproximadamente</dd>
+            </div>
+            <div>
+              <dt>Lugar</dt>
+              <dd>Se anuncia con anticipación y se coordina según el grupo.</dd>
+            </div>
+            <div>
+              <dt>Grupo</dt>
+              <dd>Máximo 4 personas</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+
+      <section class="why">
+        <h2>Qué incluye</h2>
+        <ul>
+          {points.map((point) => <li>{point}</li>)}
+        </ul>
+      </section>
+
+      <section class="important">
+        <div>
+          <h2>Antes de reservar</h2>
+          <p>
+            El contenido de las cartas está en inglés. La actividad está recomendada para
+            mayores de 15 años y está pensada para adultos que quieran probar un hobby
+            estratégico, presencial y de largo recorrido.
+          </p>
+        </div>
+        <a class="primaryCta primaryCta--compact" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          Reservar por WhatsApp
+        </a>
+      </section>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .introPage {
+    margin: -1rem -1rem 0;
+    color: #f6efe4;
+    background: #15110e;
+    font-family: Inter, Arial, sans-serif;
+  }
+
+  .introHero {
+    position: relative;
+    min-height: 620px;
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+  }
+
+  .introHero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.95) contrast(1.08);
+  }
+
+  .introHero__shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(8, 6, 5, 0.28), rgba(8, 6, 5, 0.5) 45%, #15110e 100%),
+      linear-gradient(90deg, rgba(8, 6, 5, 0.8), rgba(8, 6, 5, 0.16) 58%, rgba(8, 6, 5, 0.64));
+  }
+
+  .introHero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 840px;
+    padding: 4rem clamp(1.25rem, 6vw, 5rem);
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: #efd89e;
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .fabWordmark {
+    display: block;
+    width: min(620px, 92vw);
+    height: auto;
+    margin: -0.5rem 0 0.25rem -0.5rem;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
+  }
+
+  .heroCopy {
+    max-width: 680px;
+    margin: 0 0 1.75rem;
+    color: #e7dbcc;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  .primaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid rgba(239, 216, 158, 0.72);
+    color: #17120f;
+    background: #efd89e;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .contentBand {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .contentGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 1.5rem;
+  }
+
+  .panel,
+  .why,
+  .important {
+    border-top: 1px solid rgba(215, 178, 106, 0.42);
+    background: rgba(35, 28, 22, 0.55);
+    padding: 1.5rem;
+  }
+
+  .panel h2,
+  .why h2,
+  .important h2 {
+    margin: 0 0 0.85rem;
+    color: #efd89e;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .panel p,
+  .important p {
+    margin: 0 0 1rem;
+    color: #e6d9c8;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .panel p:last-child,
+  .important p {
+    margin-bottom: 0;
+  }
+
+  dl {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  dt {
+    color: #a99a88;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.2rem 0 0;
+    color: #fff4df;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 900;
+  }
+
+  .why {
+    margin-top: 1.5rem;
+  }
+
+  .why ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 1.25rem;
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .why li {
+    color: #f6efe4;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .why li::marker {
+    color: #d7b26a;
+  }
+
+  .important {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .important > div {
+    max-width: 680px;
+  }
+
+  .primaryCta--compact {
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 760px) {
+    .introHero {
+      min-height: 560px;
+    }
+
+    .contentGrid,
+    .why ul {
+      grid-template-columns: 1fr;
+    }
+
+    .important {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+</style>
