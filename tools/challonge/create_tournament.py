@@ -36,7 +36,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OAUTH_CONFIG_PATH = os.path.join(SCRIPT_DIR, 'oauth_config.json')
 TEMPLATES_PATH = os.path.join(SCRIPT_DIR, 'templates.json')
 CARDS_PATH = os.path.join(SCRIPT_DIR, 'cards.json')
-CALENDAR_PATH = os.path.join(SCRIPT_DIR, '..', '..', 'src', 'data', 'Eventos_Comunidad_Q2_2026.json')
+CALENDAR_PATH = os.path.join(SCRIPT_DIR, '..', '..', 'src', 'data', 'Eventos_Comunidad_Q3_2026.json')
 
 # API endpoints
 AUTH_URL = 'https://api.challonge.com/oauth/authorize'

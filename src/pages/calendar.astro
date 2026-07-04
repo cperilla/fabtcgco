@@ -22,6 +22,8 @@ const allEvents = eventsData
         key: `${e.Date}-${e.Event}-${e.Time}`,
         tournamentUrl: e.TournamentURL,
         tournamentName: e.TournamentName,
+        registrationFee: e.RegistrationFee,
+        description: e.Description,
     }))
     .sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
 
