@@ -318,7 +318,7 @@ Simplemente debemos imponer el ritmo desde el primer turno y obligarla a respond
 
 <div class="card-row">
   <img src="/images/cards/puffin-guide/arakni-marionette.png" alt="Arakni, Marionette" loading="lazy" />
-  <img src="/images/cards/puffin-guide/gas-up.png" alt="Gas Up" loading="lazy" />
+  <img src="/images/cards/puffin-guide/soup-up.png" alt="Soup Up" loading="lazy" />
   <img src="/images/cards/puffin-guide/leave-no-witnesses.png" alt="Leave No Witnesses" loading="lazy" />
   <img src="/images/cards/puffin-guide/codex-of-frailty.png" alt="Codex of Frailty" loading="lazy" />
   <img src="/images/cards/puffin-guide/persuasive-prognosis.png" alt="Persuasive Prognosis" loading="lazy" />
@@ -334,7 +334,7 @@ Normalmente podemos calcular con bastante precisión cuánto daño terminará pr
 
 #### Cartas importantes
 
-*Gas Up* resulta excelente en este enfrentamiento.
+*Soup Up* resulta excelente en este enfrentamiento.
 
 Gracias a Galvanize puede defender cuatro, funcionando como un bloqueo muy eficiente contra cartas como *Leave No Witnesses*.
 
