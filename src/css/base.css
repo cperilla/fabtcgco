@@ -1564,6 +1564,33 @@ article ul, article ol {
     color: rgba(255, 255, 255, 0.9);
 }
 
+.event-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0.25rem 0 0.5rem;
+    color: rgba(255, 255, 255, 0.88);
+    text-align: center;
+}
+
+.event-details p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.registration-fee {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.25rem;
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
 /* Primary action link - prominent tournament button */
 .action-link--primary {
     background: rgba(255, 215, 0, 0.25) !important;
@@ -1660,6 +1687,10 @@ article ul, article ol {
 .event-ticket--past .event-ticket-content .location {
     font-size: 0.7rem;
     margin-bottom: 0;
+}
+
+.event-ticket--past .event-details {
+    display: none;
 }
 
 .event-ticket--past .actions {

@@ -1,5 +1,5 @@
 ---
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 import type { Event } from './interfaces';
 import { generateICS, getGoogleCalendarLink } from './interfaces';
@@ -11,7 +11,7 @@ interface Props {
 
 const { event, index } = Astro.props;
 
-const eventDate = new Date(event.date);
+const eventDate = parseISO(event.date);
 const dayNumber = format(eventDate, 'd');
 const monthAbbr = format(eventDate, 'MMM', { locale: es }).toUpperCase();
 
@@ -79,6 +79,12 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
       <span class="time">{event.time}</span>
       <span class="location-full">{event.location.city}, {event.location.spot}</span>
     </div>
+    {(event.registrationFee || event.description) && (
+      <div class="event-details">
+        {event.registrationFee && <span class="registration-fee">Inscripción: {event.registrationFee}</span>}
+        {event.description && <p>{event.description}</p>}
+      </div>
+    )}
     <div class="actions">
       {hasTournament && (
         <a href={event.tournamentUrl} target="_blank" rel="noopener noreferrer" class="action-link action-link--tournament action-link--primary">

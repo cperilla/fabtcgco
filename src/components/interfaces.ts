@@ -12,6 +12,8 @@ export interface Event {
     date: string;
     tournamentUrl?: string;
     tournamentName?: string;
+    registrationFee?: string;
+    description?: string;
 }
 
 export interface Day {
@@ -29,30 +31,38 @@ function estimateEndTime(dtStart: string): string {
   const minute = parseInt(dtStart.slice(11, 13), 10);
   const second = parseInt(dtStart.slice(13, 15), 10);
 
-  const startDate = new Date(Date.UTC(year, month, day, hour, minute, second));
-  const endDate = new Date(startDate.getTime() + 3 * 60 * 60 * 1000); // Add 3 hours
+  const endDate = new Date(year, month, day, hour, minute, second);
+  endDate.setHours(endDate.getHours() + 3);
 
   const pad = (n: number) => String(n).padStart(2, '0');
   return (
-    endDate.getUTCFullYear().toString() +
-    pad(endDate.getUTCMonth() + 1) +
-    pad(endDate.getUTCDate()) + 'T' +
-    pad(endDate.getUTCHours()) +
-    pad(endDate.getUTCMinutes()) +
-    pad(endDate.getUTCSeconds()) + 'Z'
+    endDate.getFullYear().toString() +
+    pad(endDate.getMonth() + 1) +
+    pad(endDate.getDate()) + 'T' +
+    pad(endDate.getHours()) +
+    pad(endDate.getMinutes()) +
+    pad(endDate.getSeconds())
   );
 }
 
-function formatDateTimeICS(date, time) {
+function formatDateTimeICS(date: string, time: string): string {
   // Example input: date = '2025-05-03', time = '3 PM'
   const [hourStr, modifier] = time.split(' ');
   const hour = parseInt(hourStr, 10) + (modifier === 'PM' && hourStr !== '12' ? 12 : 0);
-  return date.replace(/-/g, '') + 'T' + String(hour).padStart(2, '0') + '0000Z'; // e.g. 20250503T150000Z
+  return date.replace(/-/g, '') + 'T' + String(hour).padStart(2, '0') + '0000'; // e.g. 20250503T150000
 }
 
-export function generateICS(event) {
+function getEventDescription(event: Event): string {
+  return [
+    event.description,
+    event.registrationFee ? `Inscripción: ${event.registrationFee}` : null,
+  ].filter(Boolean).join('\\n') || 'Evento de Flesh and Blood en CHAOS Hobby Store.';
+}
+
+export function generateICS(event: Event) {
   const dtStart = formatDateTimeICS(event.date, event.time);
   const dtEnd = estimateEndTime(dtStart); // add 2 hours for example
+  const description = getEventDescription(event);
 
   return `BEGIN:VCALENDAR
 VERSION:2.0
@@ -64,13 +74,14 @@ DTSTART:${dtStart}
 DTEND:${dtEnd}
 SUMMARY:${event.title}
 LOCATION:${event.location.spot}, ${event.location.city}
-DESCRIPTION:Evento de Flesh and Blood en Chaos Store.
+DESCRIPTION:${description}
 END:VEVENT
 END:VCALENDAR`;
 }
-export function getGoogleCalendarLink(event) {
+export function getGoogleCalendarLink(event: Event) {
   const start = formatDateTimeICS(event.date, event.time);
   const end = estimateEndTime(start);
+  const details = getEventDescription(event);
 
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${start}/${end}&details=${encodeURIComponent('Flesh and Blood - Chaos Store')}&location=${encodeURIComponent(event.location.spot + ', ' + event.location.city)}&sf=true&output=xml`;
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${start}/${end}&ctz=America%2FBogota&details=${encodeURIComponent(details)}&location=${encodeURIComponent(event.location.spot + ', ' + event.location.city)}&sf=true&output=xml`;
 }
