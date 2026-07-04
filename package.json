@@ -4,14 +4,13 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node ./tools/patch-cloudflare-pages-build.mjs",
+    "build": "astro build",
     "preview": "astro build && wrangler pages dev",
     "astro": "astro",
     "deploy": "astro build && wrangler pages deploy",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.1.1",
     "@astrojs/mdx": "^7.0.2",
     "@fortawesome/fontawesome-free": "^7.3.0",
     "@tailwindcss/vite": "^4.3.2",

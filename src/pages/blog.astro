@@ -31,7 +31,7 @@ const posts = (await getCollection('posts')).sort(
         const monthAbbr = format(postDate, 'MMM', { locale: es }).toUpperCase();
         const isEven = index % 2 === 0;
         return (
-          <a class={`blog-card ${isEven ? 'blog-card--left' : 'blog-card--right'}`} href={`/blog/${post.slug}/`}>
+          <a class={`blog-card ${isEven ? 'blog-card--left' : 'blog-card--right'}`} href={`/blog/${post.id}/`}>
             <div class="blog-card-date">
               <span class="day">{dayNumber}</span>
               <span class="month">{monthAbbr}</span>
