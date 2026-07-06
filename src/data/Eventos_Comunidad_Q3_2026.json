@@ -1,5 +1,205 @@
 [
   {
+    "Date": "2026-07-04",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-07-04",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-07",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-07-09",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-11",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-07-11",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-14",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-07-16",
+    "Day": "Jueves",
+    "Event": "Classic Constructed",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-07-18",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-18",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-21",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-07-23",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-25",
+    "Day": "Sábado",
+    "Event": "Living Legend",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏆",
+    "EventType": "LL"
+  },
+  {
+    "Date": "2026-07-25",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-07-28",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-07-30",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-01",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-08-01",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-04",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-08-06",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
     "Date": "2026-08-08",
     "Day": "Sábado",
     "Event": "Skirmish Season 15 - Silver Age",
@@ -10,5 +210,305 @@
     "EventType": "Sage",
     "RegistrationFee": "$80.000 COP",
     "Description": "Primera Skirmish oficial en Colombia. Jornada competitiva de Flesh and Blood para jugadores nuevos y experimentados, con estrategia y premios para la comunidad."
+  },
+  {
+    "Date": "2026-08-08",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-11",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-08-13",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-15",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-15",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-18",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-08-20",
+    "Day": "Jueves",
+    "Event": "Classic Constructed",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-08-22",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-08-22",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-25",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-08-27",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-08-29",
+    "Day": "Sábado",
+    "Event": "Living Legend",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏆",
+    "EventType": "LL"
+  },
+  {
+    "Date": "2026-08-29",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-01",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-09-03",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-05",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-09-05",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-08",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-09-10",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-12",
+    "Day": "Sábado",
+    "Event": "Classic Constructed",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-09-12",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-15",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-09-17",
+    "Day": "Jueves",
+    "Event": "Classic Constructed",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏗️",
+    "EventType": "CC"
+  },
+  {
+    "Date": "2026-09-19",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-19",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-22",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
+  },
+  {
+    "Date": "2026-09-24",
+    "Day": "Jueves",
+    "Event": "Silver Age",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-26",
+    "Day": "Sábado",
+    "Event": "Living Legend",
+    "Time": "3 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🏆",
+    "EventType": "LL"
+  },
+  {
+    "Date": "2026-09-26",
+    "Day": "Sábado",
+    "Event": "Silver Age",
+    "Time": "3 PM",
+    "Location": "Palmira",
+    "Ciudad": "Palmira",
+    "Emoji": "🌀",
+    "EventType": "Sage"
+  },
+  {
+    "Date": "2026-09-29",
+    "Day": "Martes",
+    "Event": "Free Play",
+    "Time": "5 PM",
+    "Location": "Chaos Store",
+    "Ciudad": "Cali",
+    "Emoji": "🃏",
+    "EventType": "FreePlay"
   }
 ]
