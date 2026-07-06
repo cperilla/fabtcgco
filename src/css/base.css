@@ -671,6 +671,17 @@ main {
     margin: 1.5rem 0;
 }
 
+.blog-post-content iframe {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
 .blog-post-content blockquote {
     border-left: 4px solid #91160d;
     padding-left: 1rem;

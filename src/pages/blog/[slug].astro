@@ -17,7 +17,12 @@ const post = await getEntry('posts', slug);
 if (!post) throw new Error(`Post not found: ${slug}`);
 const { Content } = await render(post);
 
-const postDate = new Date(post.data.publishDate);
+const toDisplayDate = (date: Date) => new Date(
+  date.getUTCFullYear(),
+  date.getUTCMonth(),
+  date.getUTCDate()
+);
+const postDate = toDisplayDate(post.data.publishDate);
 const formattedDate = format(postDate, "d 'de' MMMM, yyyy", { locale: es });
 ---
 

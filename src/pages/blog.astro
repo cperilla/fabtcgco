@@ -8,6 +8,12 @@ import { es } from 'date-fns/locale';
 const posts = (await getCollection('posts')).sort(
   (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
+
+const toDisplayDate = (date: Date) => new Date(
+  date.getUTCFullYear(),
+  date.getUTCMonth(),
+  date.getUTCDate()
+);
 ---
 
 <Layout>
@@ -26,7 +32,7 @@ const posts = (await getCollection('posts')).sort(
     <PageBanner image="/images/home/blog-news.webp" alt="Escritorio editorial con cartas y notas de estrategia" />
     <div class="blog-container">
       {posts.map((post, index) => {
-        const postDate = new Date(post.data.publishDate);
+        const postDate = toDisplayDate(post.data.publishDate);
         const dayNumber = format(postDate, 'd');
         const monthAbbr = format(postDate, 'MMM', { locale: es }).toUpperCase();
         const isEven = index % 2 === 0;
