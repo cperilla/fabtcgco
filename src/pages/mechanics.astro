@@ -95,6 +95,132 @@ const mechanicSections = [
     ],
   },
 ];
+
+const categoryDefinitions = [
+  {
+    title: "Ataque y evasión",
+    icon: "fa-solid fa-burst",
+    description: "Restricciones de defensa, modificación del ataque y resultados del combate.",
+    names: ["Dominate", "Overpower", "Piercing N", "Phantasm", "Mirage", "Spectra", "Wager"],
+  },
+  {
+    title: "Bloqueo y prevención",
+    icon: "fa-solid fa-shield-halved",
+    description: "Formas especiales de defender, prevenir daño o mejorar una defensa.",
+    names: ["Ward N", "Ambush", "Protect", "Galvanize", "Unity"],
+  },
+  {
+    title: "Modificación de costos",
+    icon: "fa-solid fa-coins",
+    description: "Costos adicionales, opcionales o alternativos para jugar una carta y obtener sus beneficios.",
+    names: ["Boost", "[SUPERTYPES] Fusion", "Scrap", "Beat Chest", "Rune Gate", "Meld", "Usurp", "Decompose"],
+  },
+  {
+    title: "Economía de acciones y preparación",
+    icon: "fa-solid fa-bolt",
+    description: "Puntos de acción y efectos que preparan cartas para continuar este turno o uno posterior.",
+    names: ["Go again", "Crank", "Heave N", "Reload"],
+  },
+  {
+    title: "Recursos, pitch y alma",
+    icon: "fa-solid fa-gem",
+    description: "Mecánicas que verifican el pitch o mueven cartas al alma del héroe.",
+    names: ["[ELEMENT] Bond", "Charge"],
+  },
+  {
+    title: "Modificación de daño y poder",
+    icon: "fa-solid fa-chart-line",
+    description: "Efectos que aumentan o reducen el daño o el poder de una fuente.",
+    names: ["Fragment", "Amp N", "Sharpen"],
+  },
+  {
+    title: "Efectos condicionales",
+    icon: "fa-solid fa-code-branch",
+    description: "Efectos que se aplican cuando una condición indicada ya es verdadera.",
+    names: ["Combo", "Reprise", "Evo Upgrade", "Tower", "Material", "Rupture", "Surge", "[ELEMENT] Flow", "Heavy", "High Tide", "Quickstrike", "Starfall"],
+  },
+  {
+    title: "Efectos disparados",
+    icon: "fa-solid fa-clock-rotate-left",
+    description: "Habilidades que se disparan cuando ocurre un evento o se cumple un estado del juego.",
+    names: ["Blood Debt", "Contract", "Crush", "Channel [SUPERTYPE]", "Solflare", "Go Fish", "Suspense", "Decay"],
+  },
+  {
+    title: "Construcción e identidad",
+    icon: "fa-solid fa-layer-group",
+    description: "Reglas que cambian cómo una carta entra al mazo, qué clase tiene o cuántas copias admite.",
+    names: ["Ephemeral", "Essence of [SUPERTYPES]", "Universal", "Unlimited", "Incarnate", "Unique"],
+  },
+  {
+    title: "Condiciones y estados",
+    icon: "fa-solid fa-toggle-on",
+    description: "Etiquetas, vínculos y estados persistentes que afectan héroes o permanentes.",
+    names: ["Stealth", "Binds [to CARD]", "Mark", "Tap", "Untap", "The Crowd Cheers / Boos"],
+  },
+  {
+    title: "Transformación y caras",
+    icon: "fa-solid fa-arrows-rotate",
+    description: "Cambios de cara, transformación y retorno de una carta o héroe a su estado base.",
+    names: ["Watery Grave", "Transcend", "Return to the Brood", "Traverse"],
+  },
+  {
+    title: "Información, azar y mazo",
+    icon: "fa-solid fa-shuffle",
+    description: "Consultar, comparar o reorganizar cartas del mazo y ocultar información de la mano.",
+    names: ["Opt N", "Clash", "Intimidate", "Cut"],
+  },
+  {
+    title: "Control, equipo y zonas",
+    icon: "fa-solid fa-arrow-right-arrow-left",
+    description: "Intercambiar control, equipar o mover objetos entre jugadores y zonas.",
+    names: ["Exchange", "Give", "Steal", "Retrieve"],
+  },
+];
+
+const mechanicsByName = new Map(
+  mechanicSections.flatMap((section) => section.mechanics.map((mechanic) => [
+    mechanic.name,
+    { ...mechanic, rulesKind: section.title },
+  ]))
+);
+
+const categorizedSections = categoryDefinitions.map((category) => ({
+  ...category,
+  mechanics: category.names
+    .map((name) => mechanicsByName.get(name))
+    .filter(Boolean)
+    .sort((a, b) => a.name.localeCompare(b.name, "es", { sensitivity: "base" })),
+}));
+
+const categorizedNames = new Set(categoryDefinitions.flatMap(({ names }) => names));
+const uncategorized = [...mechanicsByName.keys()].filter((name) => !categorizedNames.has(name));
+if (uncategorized.length > 0) {
+  throw new Error(`Mecánicas sin categoría: ${uncategorized.join(", ")}`);
+}
+
+const triggeredMechanics = new Set([
+  "Blood Debt", "Phantasm", "Spectra", "Mirage", "Fragment", "Suspense", "Decay",
+  "Contract", "Crush", "Channel [SUPERTYPE]", "Solflare", "Unity", "Galvanize", "Go Fish",
+]);
+
+const conditionalMechanics = new Set([
+  "Combo", "Reprise", "Evo Upgrade", "Tower", "Material", "Rupture", "Surge",
+  "Decompose", "[ELEMENT] Bond", "[ELEMENT] Flow", "Heavy", "High Tide", "Quickstrike", "Starfall",
+]);
+
+const mechanicId = (name) => `mecanica-${name
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-|-$)/g, "")}`;
+
+const sectionId = (title) => `seccion-${title
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")}`;
+
 ---
 
 <Layout>
@@ -108,29 +234,339 @@ const mechanicSections = [
             <span style="color: #765d2f;">★</span>
             <span style="color: #91160d;">★</span>
         </div>
-        <p class="subtitle">Referencia rápida de mecánicas</p>
+        <p class="subtitle">Referencia organizada por función y comportamiento</p>
     </div>
     <PageBanner image="/images/home/mechanics-guides.webp" alt="Mesa de estudio con cartas y diagramas de mecánicas" />
-    <p class="mechanics-note">Esta es una referencia resumida. El texto de las cartas y las Comprehensive Rules determinan las interacciones específicas.</p>
-    {mechanicSections.map((section) => (
-        <section class="mechanics-section">
+    <nav class="mechanics-index" id="indice-mecanicas" aria-labelledby="index-title">
+        <div class="index-heading">
+            <p class="section-kicker">Índice funcional</p>
+            <h2 id="index-title">Mapa de mecánicas</h2>
+            <p>Cada mecánica aparece en la categoría que mejor describe su función principal.</p>
+        </div>
+        <div class="category-nav">
+            {categorizedSections.map((section) => (
+                <a href={`#${sectionId(section.title)}`}>
+                    <i class={section.icon} aria-hidden="true"></i>
+                    <span>
+                        <strong>{section.title}</strong>
+                        <small>{section.mechanics.length} mecánicas</small>
+                    </span>
+                </a>
+            ))}
+        </div>
+    </nav>
+
+    <aside class="taxonomy-legend" aria-label="Tipos de mecánica">
+        <span><b class="legend-dot legend-dot--ability"></b><strong>Habilidad:</strong> regla propia de la carta.</span>
+        <span><b class="legend-dot legend-dot--label"></b><strong>Etiqueta:</strong> agrupa un efecto escrito en la carta.</span>
+        <span><b class="legend-dot legend-dot--effect"></b><strong>Efecto:</strong> instrucción definida por las reglas.</span>
+    </aside>
+
+    {categorizedSections.map((section, sectionIndex) => (
+        <section class="mechanics-section" id={sectionId(section.title)}>
             <div class="mechanics-section-header">
-                <h2>{section.title}</h2>
+                <div class="section-title">
+                    <span class="section-icon"><i class={section.icon} aria-hidden="true"></i></span>
+                    <div>
+                        <p class="section-kicker">Categoría {String(sectionIndex + 1).padStart(2, "0")}</p>
+                        <h2>{section.title}</h2>
+                    </div>
+                </div>
                 <p>{section.description}</p>
             </div>
             <div class="mechanics-container">
                 {section.mechanics.map((mechanic) => (
-                    <article class={`mechanic-ticket mechanic-${mechanic.color}`}>
+                    <article class={`mechanic-ticket kind-${mechanic.rulesKind === "Habilidades" ? "ability" : mechanic.rulesKind === "Etiquetas de habilidad" ? "label" : "effect"}`} id={mechanicId(mechanic.name)}>
                         <div class="mechanic-ticket-name">
-                            <span class="name">{mechanic.name}</span>
+                            <h3 class="name">{mechanic.name}</h3>
                         </div>
                         <div class="mechanic-ticket-content">
                             <p class="description">{mechanic.description}</p>
+                            <div class="mechanic-tags">
+                                <span>{mechanic.rulesKind === "Etiquetas de habilidad" ? "Etiqueta" : mechanic.rulesKind.slice(0, -1)}</span>
+                                {triggeredMechanics.has(mechanic.name) && <span>Disparada</span>}
+                                {conditionalMechanics.has(mechanic.name) && <span>Condicional</span>}
+                            </div>
                         </div>
                     </article>
                 ))}
             </div>
+            <a class="back-to-index" href="#indice-mecanicas">↑ Volver al índice</a>
         </section>
     ))}
 </div>
 </Layout>
+
+<style>
+    :global(html) {
+        scroll-behavior: smooth;
+    }
+
+    .mechanics-index {
+        max-width: 900px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .mechanics-index {
+        padding: clamp(1.25rem, 4vw, 2rem);
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        background: var(--bg-dark-2);
+    }
+
+    .index-heading {
+        margin-bottom: 1.25rem;
+    }
+
+    .index-heading h2 {
+        margin: 0.1rem 0 0.35rem;
+        color: var(--neutral-color);
+        font-size: clamp(1.35rem, 4vw, 1.75rem);
+    }
+
+    .index-heading p {
+        margin: 0;
+    }
+
+    .index-heading p:not(.section-kicker) {
+        color: var(--muted-color);
+    }
+
+    .section-kicker {
+        margin: 0;
+        color: #d7b26a;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .category-nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .category-nav > a {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.15rem 0.65rem;
+        align-items: center;
+        min-height: 4.25rem;
+        padding: 0.7rem 0.8rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background: var(--bg-dark-1);
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .category-nav > a:hover {
+        border-color: #a68850;
+        background: rgba(118, 93, 47, 0.16);
+    }
+
+    .category-nav i {
+        grid-row: span 2;
+        width: 1.25rem;
+        color: #d7b26a;
+        text-align: center;
+    }
+
+    .category-nav strong,
+    .category-nav small {
+        display: block;
+    }
+
+    .category-nav small {
+        color: var(--muted-color);
+    }
+
+    .taxonomy-legend {
+        max-width: 900px;
+        margin: 0 auto 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        color: var(--muted-color);
+        font-size: 0.78rem;
+    }
+
+    .taxonomy-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .taxonomy-legend strong {
+        color: var(--text-color);
+    }
+
+    .legend-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+    }
+
+    .legend-dot--ability { background: #4c8a61; }
+    .legend-dot--label { background: #b29335; }
+    .legend-dot--effect { background: #b36f35; }
+
+    .mechanics-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .mechanics-section {
+        scroll-margin-top: 1rem;
+    }
+
+    .mechanics-section-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: end;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-title {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .section-icon {
+        display: grid;
+        width: 2.5rem;
+        height: 2.5rem;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid #765d2f;
+        border-radius: 0.65rem;
+        color: #d7b26a;
+        background: rgba(118, 93, 47, 0.2);
+    }
+
+    .mechanics-section-header h2 {
+        margin-bottom: 0;
+    }
+
+    .mechanics-section-header > p {
+        max-width: 31rem;
+        text-align: right;
+    }
+
+    .mechanic-ticket {
+        display: block;
+        height: 100%;
+        overflow: visible;
+        border: 1px solid rgba(90, 74, 58, 0.65);
+        border-left-width: 3px;
+        border-radius: 0.5rem;
+        background: var(--bg-dark-2);
+        box-shadow: none;
+        scroll-margin-top: 1rem;
+    }
+
+    .mechanic-ticket:hover {
+        transform: none;
+        border-color: rgba(166, 136, 80, 0.72);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .mechanic-ticket-name {
+        width: auto;
+        display: block;
+        padding: 0.9rem 1rem 0.25rem;
+        text-align: left;
+    }
+
+    .kind-ability {
+        border-left-color: #4c8a61;
+    }
+
+    .kind-label {
+        border-left-color: #b29335;
+    }
+
+    .kind-effect {
+        border-left-color: #b36f35;
+    }
+
+    .mechanic-ticket-name .name {
+        margin: 0;
+        color: var(--neutral-color);
+        font-size: 1rem;
+        text-shadow: none;
+    }
+
+    .mechanic-ticket-content {
+        display: block;
+        padding: 0.25rem 1rem 0.9rem;
+        background: transparent;
+    }
+
+    .mechanic-ticket-content .description {
+        min-height: 3.9em;
+        color: var(--text-secondary);
+    }
+
+    .mechanic-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: 0.65rem;
+    }
+
+    .mechanic-tags span {
+        padding: 0.15rem 0.45rem;
+        border: 1px solid var(--border-color);
+        border-radius: 999px;
+        color: var(--muted-color);
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .back-to-index {
+        display: block;
+        width: fit-content;
+        margin: 1rem 0 0 auto;
+        color: #efd89e;
+        font-size: 0.85rem;
+        text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+        .mechanics-container {
+            grid-template-columns: 1fr;
+        }
+
+        .category-nav {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .mechanics-section-header {
+            display: block;
+        }
+
+        .mechanics-section-header > p {
+            margin-top: 0.4rem;
+            text-align: left;
+        }
+
+    }
+
+    @media (max-width: 420px) {
+        .category-nav {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
