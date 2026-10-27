@@ -1189,6 +1189,39 @@ article ul, article ol {
     gap: 1rem;
 }
 
+.mechanics-note,
+.mechanics-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mechanics-note {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--muted-color);
+    text-align: center;
+}
+
+.mechanics-section + .mechanics-section {
+    margin-top: 3rem;
+}
+
+.mechanics-section-header {
+    margin-bottom: 1rem;
+}
+
+.mechanics-section-header h2 {
+    margin: 0 0 0.25rem;
+    color: var(--neutral-color);
+    font-size: 1.5rem;
+}
+
+.mechanics-section-header p {
+    margin: 0;
+    color: var(--muted-color);
+}
+
 .mechanic-ticket {
     display: flex;
     border-radius: 1rem;

@@ -2,43 +2,98 @@
 import Layout from '../layouts/Layout.astro';
 import PageBanner from '../components/PageBanner.astro';
 
-const mechanics = [
-  { name: "Dominante", description: "El Héroe defensor no puede defender este ataque con más de 1 carta de su mano (incluidas cartas de Reacción Defensa).", color: "green" },
-  { name: "Go Again", description: "Go again permite que podamos realizar diversas acciones en un turno. Una carta con go again le da al jugador que la utiliza un punto de acción adicional.", color: "green" },
-  { name: "Opt X", description: "Observe X cartas del tope de su baraja. Puede colocarlas ya sea en el tope o en el fondo de la baraja en cualquier orden.", color: "green" },
-  { name: "Overpower", description: "El Héroe defensor no puede defender con más de una carta de acción.", color: "green" },
-  { name: "Ward X", description: "Si el Héroe fuera a recibir daño, previene X de ese daño y se destruye esta carta.", color: "yellow" },
-  { name: "Blood Debt", description: "Al inicio de su fase final, si esta carta se encuentra en su zona de removidos o desterrados, el Héroe decide si pagar 3 recursos o de lo contrario pierde 2 puntos de vida.", color: "yellow" },
-  { name: "Boost", description: "Como costo adicional para jugar esta carta, puedes remover o desterrar la carta del tope de tu baraja. Si esa carta es de mecha Esta carta obtiene go again.", color: "yellow" },
-  { name: "Clash", description: "Los Héroes enfrentados revelan la carta del tope de sus respectivas barajas. Si se revela la carta con el mayor valor, gana el enfrentamiento. No hay efecto si no hay un ganador. Si la carta no tiene valor de ataque se considera 0", color: "yellow" },
-  { name: "Combo", description: "Una mecánica Ninjas que obtiene su poder en la secuenciación de distintos ataques.", color: "yellow" },
-  { name: "Contract", description: "Contract le da una serie de instrucciones al jugador para que las complete y cumpla con el Contract. Pueden ser completados cualquier número de veces mientras estén activos en la cadena de combate.", color: "green" },
-  { name: "Crush", description: "Una mecánica de Guardians enfocada en aprovechar el valor de sus ataques. Cuando un ataque con Crush causa 4 o más de daño al Héroe enemigo, el efecto de Crush se activa.", color: "green" },
-  { name: "Intimidate", description: "El Héroe objetivo remueve o destierra de su mano una carta al azar. Se destierra boca abajo, solo su dueño puede verla", color: "green" },
-  { name: "Phantasm", description: "Si esta carta es defendida por una carta, que no sea de Ilusionista, con poder de ataque 6 o más, destruye esta carta. El ataque no se resuelve.", color: "green" },
-  { name: "Reload", description: "Si no tienes cartas en tu arsenal, puedes colocar una carta boca abajo de tu mano en el arsenal.", color: "green" },
-  { name: "Reprise", description: "Se activa reprise cuando el héroe defensor ha defendido con una carta desde su mano", color: "yellow" },
-  { name: "Spectra", description: "Esta carta puede ser atacada. Cuando esta carta se convierte en el objetivo de un ataque, se destrye. El ataque no se resuelve.", color: "yellow" },
-  { name: "Stealth", description: "Stealth es una habilidad sin reglas que funciona específica para esta clase como una habilidad \"vacía\".", color: "yellow" },
-  { name: "Transcend", description: "Pon esta carta en la mano de su dueño volteada.", color: "yellow" },
-  { name: "Wager", description: "Cuando la cadena de este ataque se resuelve, si el ataque golpea, creas un [token], de lo contrario el Héroe objetivo crea un [token].", color: "green" },
-  { name: "~X Element~ Fusion", description: "Como un costo adicional para jugar esta carta, puedes revelar una carta de ~X Element~ desde tu mano.", color: "yellow" },
-  { name: "Charge", description: "Como un costo adicional para jugar esta carta, puedes cargar el Alma de tu Héroe. Coloque una carta de tu mano boca arriba bajo su carta de Héroe.", color: "orange" },
-  { name: "Crank", description: "Cuando esta carta entra en la arena, puedes remover uno de sus \"Steam Counter\". Si lo haces, ganas 1 punto de Acción.", color: "orange" },
-  { name: "Galvanize", description: "Galvanize - cuando esta carta defiende, puedes destruir un Item bajo tu control. Si lo haces, [...]", color: "orange" },
-  { name: "Piercing X", description: "Si esta carta es defendida por un equipo, gana +X de poder.", color: "orange" },
-  { name: "Scrap", description: "Como un costo adicional para jugar esta carta, puedes remover un Item o Equipo de tu cementerio.", color: "orange" },
-  { name: "Amp", description: "La próxima vez que vayas a infligir Daño Arcano este turno, en su lugar infliges esa cifra mas X.", color: "orange" },
-  { name: "Beat Chest", description: "Como un costo adicional para jugar esta carta, puedes descartar una carta con 6 o mas de poder.", color: "orange" },
-  { name: "Channel", description: "Channel es una mecánica que usa cartas de Element para cumplir ciertas condiciones para mantener ciertas auras elementales poderosas en la arena.", color: "orange" },
-  { name: "Ephemeral", description: "Si esta carta fuera a ser colocada en el cementerio desde cualquier lugar, en lugar de eso cesa de existir.", color: "orange" },
-  { name: "Essence of ~X Element(s)~", description: "Puedes tener cartas de ~X Element(s)~ en tu baraja.", color: "orange" },
-  { name: "Evo Upgrade", description: "Evo Upgrade - [...] por cada Evo que tengas equipada. Evo Upgrade - Donde X es el numero de Evos que tienes equipado.", color: "orange" },
-  { name: "Heave X", description: "Al inicio de su fase final, si esta carta esta en su mano y tienes una espacio en el arsenal, puedes pagar X y poner esta carta boca arriba en la zona de arsenal. Si lo haces, crea X Seismic Surge tokens.", color: "orange" },
-  { name: "Tower", description: "Tower - Si esta carta tiene 13 o mas poder, [...].", color: "orange" },
-  { name: "Ambush", description: "Mientras esta carta este en tu Arsenal, puedes defender con ella.", color: "red" },
-  { name: "Protect", description: "Puedes defender cualquier Héroe que sea atacado por un oponente con esta carta.", color: "red" },
-  { name: "Universal", description: "Cuando esta carta se encuentra en cualquier zona, es de la misma clase que tu Héroe.", color: "red" },
+const mechanicSections = [
+  {
+    title: "Habilidades",
+    description: "Palabras clave que definen habilidades de cartas.",
+    mechanics: [
+      { name: "Dominate", description: "Este ataque no puede ser defendido por más de 1 carta de la mano. Esto incluye las reacciones de defensa jugadas desde la mano.", color: "green" },
+      { name: "Go again", description: "Al resolverse, otorga 1 punto de acción. Un objeto no puede tener más de una habilidad go again.", color: "green" },
+      { name: "Overpower", description: "Este ataque no puede ser defendido por más de 1 carta de acción.", color: "green" },
+      { name: "Ward N", description: "Si fueras a recibir daño, destruye esta carta para prevenir N de ese daño.", color: "green" },
+      { name: "Blood Debt", description: "Mientras esta carta esté pública en tu zona de destierro, al comienzo de tu fase final pierdes 1 vida.", color: "green" },
+      { name: "Boost", description: "Como costo adicional opcional para jugar esta carta, puedes desterrar la carta superior de tu mazo. Si es Mechanologist, esta carta obtiene go again.", color: "green" },
+      { name: "Phantasm", description: "Cuando esta carta sea defendida por una carta de acción de ataque no Illusionist con 6 o más de poder, destruye esta carta.", color: "green" },
+      { name: "Spectra", description: "Esta carta puede ser atacada. Cuando se convierta en objetivo de un ataque, destrúyela. Si no quedan otros objetivos legales, la cadena de combate se cierra.", color: "green" },
+      { name: "Stealth", description: "Esta habilidad no tiene un efecto propio; otras habilidades y efectos pueden hacer referencia a ella.", color: "green" },
+      { name: "[SUPERTYPES] Fusion", description: "Como costo adicional opcional para jugar esta carta, puedes revelar desde tu mano cartas con los supertipos indicados.", color: "green" },
+      { name: "Crank", description: "Mientras esta carta entra en la arena, puedes removerle 1 steam counter. Si lo haces, ganas 1 punto de acción.", color: "green" },
+      { name: "Piercing N", description: "Si esta carta es defendida por un equipo, obtiene +N de poder.", color: "green" },
+      { name: "Scrap", description: "Como costo adicional opcional para jugar esta carta, puedes desterrar un Item o Equipment de tu cementerio.", color: "green" },
+      { name: "Beat Chest", description: "Como costo adicional opcional para jugar esta carta, puedes descartar una carta con 6 o más de poder.", color: "green" },
+      { name: "Ephemeral", description: "No puedes comenzar la partida con esta carta en tu mazo. Si fuera a ir a un cementerio desde cualquier lugar, en vez de eso remuévela del juego.", color: "green" },
+      { name: "Essence of [SUPERTYPES]", description: "Puedes incluir cartas con los supertipos indicados en tu mazo como si tu héroe tuviera esos supertipos.", color: "green" },
+      { name: "Heave N", description: "Mientras esté en tu mano, al comienzo de tu fase final puedes pagar N recursos y poner esta carta boca arriba en un arsenal vacío. Si lo haces, crea N Seismic Surge tokens.", color: "green" },
+      { name: "Ambush", description: "Mientras esta carta esté en tu arsenal, puedes defender con ella.", color: "green" },
+      { name: "Protect", description: "Puedes defender con esta carta a cualquier héroe atacado por un oponente.", color: "green" },
+      { name: "Universal", description: "Mientras esté en cualquier zona, esta carta es de la misma clase que tu héroe.", color: "green" },
+      { name: "Mirage", description: "Cuando esta carta defienda un ataque no Illusionist con 6 o más de poder, destrúyela.", color: "red" },
+      { name: "Rune Gate", description: "Si controlas una cantidad de Runechants igual o mayor al costo de esta carta, puedes jugarla desde tu zona de destierro sin pagar su costo de recursos.", color: "red" },
+      { name: "Meld", description: "Puedes pagar el doble del costo base de esta carta dividida para jugar ambas mitades. La carta conserva las propiedades combinadas de ambos lados mientras permanezca melded.", color: "red" },
+      { name: "Unlimited", description: "Puedes incluir cualquier cantidad de copias de esta carta en tu mazo.", color: "red" },
+      { name: "Watery Grave", description: "Cuando esta carta vaya de la arena a tu cementerio, voltéala boca abajo.", color: "red" },
+      { name: "Suspense", description: "Entra en la arena con 2 suspense counters. Al inicio de tu turno, remueve 1; cuando no tenga ninguno, destrúyela.", color: "red" },
+      { name: "Fragment", description: "Cuando una carta con 2 o más de defensa defienda este ataque, este obtiene -2 de poder.", color: "red" },
+      { name: "Binds [to CARD]", description: "Al entrar en la arena, vincula esta carta a una carta válida del tipo indicado. Si queda desvinculada, se limpia como acción de estado de juego.", color: "red" },
+      { name: "Decay", description: "Al comienzo de tu fase final, pon un contador de -1 de vida sobre esta carta.", color: "red" },
+      { name: "Incarnate", description: "No puedes comenzar la partida con esta carta en tu mazo. Si fuera a morir, en vez de eso remuévela del juego; no se considera que murió.", color: "red" },
+      { name: "Unique", description: "Solo puedes controlar 1 permanente con este nombre o moniker.", color: "red" },
+      { name: "Usurp", description: "Como costo adicional para jugar esta carta, destruye un Runechant si puedes. Si destruyes uno de esta manera, esta carta obtiene +2 de poder.", color: "red" },
+    ],
+  },
+  {
+    title: "Etiquetas de habilidad",
+    description: "Condiciones identificadas por una etiqueta cuyo efecto completo aparece en la carta.",
+    mechanics: [
+      { name: "Combo", description: "Si una de las cartas indicadas fue el último ataque de esta cadena de combate, aplica el efecto impreso después de Combo.", color: "yellow" },
+      { name: "Contract", description: "Te asigna una condición y una recompensa. Puedes completar el contrato cualquier cantidad de veces mientras exista su efecto.", color: "yellow" },
+      { name: "Crush", description: "Cuando este ataque cause 4 o más de daño, aplica el efecto impreso después de Crush.", color: "yellow" },
+      { name: "Reprise", description: "Si el héroe defensor defendió con una carta de su mano en este eslabón de cadena, aplica el efecto impreso después de Reprise. La condición se comprueba al resolver.", color: "yellow" },
+      { name: "Channel [SUPERTYPE]", description: "Al comienzo de tu fase final, pon un flow counter sobre esta carta y luego destrúyela, a menos que pongas en el fondo de tu mazo una carta del supertipo indicado desde tu zona de pitch por cada flow counter.", color: "yellow" },
+      { name: "Evo Upgrade", description: "El efecto impreso escala por cada Evo que tengas equipada, o usa como X la cantidad de Evos que tengas equipadas.", color: "yellow" },
+      { name: "Galvanize", description: "Cuando esta carta defienda, puedes destruir un Item que controles. Si lo haces, aplica el efecto impreso después de Galvanize.", color: "yellow" },
+      { name: "Tower", description: "Si esta carta tiene 13 o más de poder, aplica el efecto impreso después de Tower.", color: "yellow" },
+      { name: "Material", description: "Mientras esta carta esté debajo de un permanente, aplica el efecto impreso después de Material.", color: "red" },
+      { name: "Rupture", description: "Si esta carta se juega como o en el eslabón 4 o superior de la cadena, aplica el efecto impreso después de Rupture.", color: "red" },
+      { name: "Surge", description: "Si esta carta causa la cantidad indicada de daño, aplica el efecto impreso después de Surge.", color: "red" },
+      { name: "Solflare", description: "Cuando esta carta sea cargada al alma de tu héroe, aplica el efecto impreso después de Solflare.", color: "red" },
+      { name: "Unity", description: "Cuando esta carta defienda junto con una carta de la mano, aplica el efecto impreso después de Unity.", color: "red" },
+      { name: "Decompose", description: "Puedes desterrar de tu cementerio 2 cartas Earth y 1 carta de acción. Si lo haces, aplica el efecto impreso después de Decompose.", color: "red" },
+      { name: "[ELEMENT] Bond", description: "Si se usó una carta del elemento indicado como pitch para jugar esta carta, aplica el efecto impreso después de Bond.", color: "red" },
+      { name: "[ELEMENT] Flow", description: "Si jugaste una carta del elemento indicado este turno, aplica el efecto impreso después de Flow.", color: "red" },
+      { name: "Heavy", description: "Si esta es la única carta equipada en tus zonas de armas, aplica el efecto impreso después de Heavy.", color: "red" },
+      { name: "High Tide", description: "Si hay 2 o más cartas azules en tu zona de pitch, aplica el efecto impreso después de High Tide.", color: "red" },
+      { name: "Go Fish", description: "Cuando este ataque impacte a un héroe, ese jugador elige y revela una carta de su mano. Si cumple la cualidad indicada, la descarta y tú creas un Gold token.", color: "red" },
+      { name: "Quickstrike", description: "Si esta carta tiene go again, aplica el efecto impreso después de Quickstrike.", color: "red" },
+      { name: "Starfall", description: "Si una carta de instant fue puesta en tu cementerio este turno, aplica el efecto impreso después de Starfall.", color: "red" },
+    ],
+  },
+  {
+    title: "Efectos",
+    description: "Acciones de juego definidas por las reglas.",
+    mechanics: [
+      { name: "Opt N", description: "Mira las N cartas superiores de tu mazo. Pon cualquier cantidad arriba o abajo del mazo, en cualquier orden.", color: "orange" },
+      { name: "Clash", description: "Los jugadores enfrentados revelan la carta superior de sus mazos. Gana quien revele la carta con mayor poder. Una carta sin propiedad de poder pierde frente a cualquier carta que sí la tenga; si no hay un valor mayor que todos los demás, nadie gana.", color: "orange" },
+      { name: "Intimidate", description: "El jugador destierra boca abajo una carta al azar de su mano. Al comienzo de la fase final, esa carta regresa a su mano.", color: "orange" },
+      { name: "Reload", description: "Si todos tus arsenales están vacíos, puedes poner una carta de tu mano boca abajo en tu arsenal.", color: "orange" },
+      { name: "Charge", description: "Mueve una carta de tu mano al alma de tu héroe. Moverla al alma por otro efecto no cuenta como haberla cargado.", color: "orange" },
+      { name: "Wager", description: "Al resolverse el eslabón, el controlador del ataque gana el premio si el ataque impactó; de lo contrario lo gana el otro jugador. Si el premio es un token, quien gane lo crea bajo su control.", color: "orange" },
+      { name: "Amp N", description: "La próxima vez que un evento que controles fuera a causar daño arcano este turno, causa esa cantidad más N.", color: "orange" },
+      { name: "Transcend", description: "Pon la carta que genera este efecto en la mano de su dueño con su cara posterior activa. Esa cara permanece activa durante el resto de la partida.", color: "orange" },
+      { name: "Exchange", description: "Los objetos intercambian simultáneamente sus zonas, visibilidad y control. Si alguno no puede completar el movimiento, el efecto falla.", color: "red" },
+      { name: "Mark", description: "El héroe obtiene la condición marked hasta que sea impactado por una fuente controlada por un oponente o deje de existir.", color: "red" },
+      { name: "Retrieve", description: "Puedes pagar 1 recurso para equipar la carta. No puedes pagar si la carta no existe o no puede ser equipada.", color: "red" },
+      { name: "Return to the Brood", description: "Dejan de existir los efectos de transformación o copia que se estén aplicando a tu héroe.", color: "red" },
+      { name: "Give", description: "El jugador indicado obtiene el control del objeto. Si está equipado, debe poder equiparlo como parte del cambio de control.", color: "red" },
+      { name: "Steal", description: "Obtienes el control de la carta. Si está equipada, debes poder equiparla como parte del cambio de control.", color: "red" },
+      { name: "Tap", description: "Cambia un permanente de su estado untapped a tapped. El efecto falla si ya está tapped.", color: "red" },
+      { name: "Untap", description: "Cambia un permanente de su estado tapped a untapped. El efecto falla si ya está untapped.", color: "red" },
+      { name: "The Crowd Cheers / Boos", description: "El jugador es considerado cheered o booed. Si ocurren ambos, conserva las dos condiciones; no se anulan entre sí.", color: "red" },
+      { name: "Sharpen", description: "Pon un contador de +1 de poder sobre la carta. Al comienzo de la fase final, remueve de ella todos los contadores de +1 de poder.", color: "red" },
+      { name: "Cut", description: "Mueve entre 1 y X cartas de la parte superior del mazo al fondo, conservando su orden, donde X es la cantidad de cartas del mazo menos 1.", color: "red" },
+      { name: "Traverse", description: "La cara no activa de una carta de doble cara pasa a ser su cara activa.", color: "red" },
+    ],
+  },
 ];
 ---
 
@@ -56,17 +111,26 @@ const mechanics = [
         <p class="subtitle">Referencia rápida de mecánicas</p>
     </div>
     <PageBanner image="/images/home/mechanics-guides.webp" alt="Mesa de estudio con cartas y diagramas de mecánicas" />
-    <div class="mechanics-container">
-        {mechanics.map((mechanic, index) => (
-            <article class={`mechanic-ticket mechanic-${mechanic.color}`}>
-                <div class="mechanic-ticket-name">
-                    <span class="name">{mechanic.name}</span>
-                </div>
-                <div class="mechanic-ticket-content">
-                    <p class="description">{mechanic.description}</p>
-                </div>
-            </article>
-        ))}
-    </div>
+    <p class="mechanics-note">Esta es una referencia resumida. El texto de las cartas y las Comprehensive Rules determinan las interacciones específicas.</p>
+    {mechanicSections.map((section) => (
+        <section class="mechanics-section">
+            <div class="mechanics-section-header">
+                <h2>{section.title}</h2>
+                <p>{section.description}</p>
+            </div>
+            <div class="mechanics-container">
+                {section.mechanics.map((mechanic) => (
+                    <article class={`mechanic-ticket mechanic-${mechanic.color}`}>
+                        <div class="mechanic-ticket-name">
+                            <span class="name">{mechanic.name}</span>
+                        </div>
+                        <div class="mechanic-ticket-content">
+                            <p class="description">{mechanic.description}</p>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+    ))}
 </div>
 </Layout>
