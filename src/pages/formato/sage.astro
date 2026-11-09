@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ShinseiAnnouncement from '../../components/ShinseiAnnouncement.astro';
+import shinsei from '../../data/shinsei.json';
 
 const secciones = [
   {
@@ -31,8 +33,8 @@ Si el tiempo expira y no hay ganador, el jugador en turno completa su turno y se
   },
   {
     titulo: "Horario local",
-    contenido: `<strong>Jueves:</strong> 5 PM en Chaos Store (Cali)
-<strong>Sabados:</strong> 3 PM en Chaos Store (Cali) o Palmira
+    contenido: `<strong>Jueves:</strong> ${shinsei.displayTime} en ${shinsei.name}, ${shinsei.address} (${shinsei.city}), desde el 12 de noviembre de 2026. Sin actividad el 24 y 31 de diciembre.
+<strong>Sábados:</strong> 3 PM en Palmira
 
 Silver Age es nuestro formato mas frecuente. Ideal para practicar y mejorar tu juego competitivo.`
   }
@@ -58,6 +60,7 @@ const referencias = [
     </div>
 
     <div class="mechanics-container">
+        <ShinseiAnnouncement compact />
         <div class="conduct-intro">
             <p>Silver Age es el formato ideal para entrar al juego competitivo de Flesh and Blood. Con partidas mas rapidas y un pool de cartas mas accesible, ofrece una experiencia intensa y estrategica.</p>
         </div>

@@ -1,5 +1,6 @@
 ---
-const title = "Bienvenido a FAB Colombia";
+import ShinseiAnnouncement from './ShinseiAnnouncement.astro';
+import shinsei from '../data/shinsei.json';
 
 const sectionCards = [
   {
@@ -77,6 +78,8 @@ const sectionCards = [
     <a href="/empezar" class="nuevo-link">Empieza aqui →</a>
   </div>
 
+  <ShinseiAnnouncement />
+
   <div class="welcome-grid">
     <!-- Site Overview -->
     <div class="welcome-card">
@@ -102,6 +105,14 @@ const sectionCards = [
       <div class="welcome-content">
         <h2>Horario Semanal</h2>
 
+        <h3 class="location-header">{shinsei.name} - {shinsei.city}</h3>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="schedule-day">Jueves</span>
+            <span class="schedule-event">Silver Age - {shinsei.displayTime}</span>
+          </div>
+        </div>
+        <p>{shinsei.address} · Desde el 12 de noviembre de 2026.<br />Sin actividad el 24 y 31 de diciembre.</p>
         <h3 class="location-header">Chaos Store - Cali</h3>
         <div class="schedule-list">
           <div class="schedule-item">
@@ -109,16 +120,8 @@ const sectionCards = [
             <span class="schedule-event">Free Play - 5 PM</span>
           </div>
           <div class="schedule-item">
-            <span class="schedule-day">Jueves</span>
-            <span class="schedule-event">Silver Age / CC - 5 PM</span>
-          </div>
-          <div class="schedule-item">
             <span class="schedule-day">Sabados</span>
-            <span class="schedule-event">CC / Silver Age - 3 PM</span>
-          </div>
-          <div class="schedule-item schedule-special">
-            <span class="schedule-day">Ultimo Sabado</span>
-            <span class="schedule-event">Living Legend - 3 PM</span>
+            <span class="schedule-event">Classic Constructed - 3 PM</span>
           </div>
         </div>
 

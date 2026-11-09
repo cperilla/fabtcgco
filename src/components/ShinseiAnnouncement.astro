@@ -1,0 +1,50 @@
+---
+import shinsei from '../data/shinsei.json';
+const { compact = false } = Astro.props;
+---
+
+<section class:list={['shinsei-announcement', { compact }]} aria-label="Silver Age en Shinsei Store">
+  <div class="content">
+    <div class="host">
+      <img src={shinsei.logo} width="80" height="83" alt="Shinsei Store" />
+      <p>FAB Colombia × {shinsei.name}</p>
+    </div>
+    <p class="eyebrow">¿Ya juegas TCG? Descubre Flesh and Blood.</p>
+    <h2>Silver Age llega a Shinsei</h2>
+    <img class="format-logo" src={shinsei.formatLogo} width="1200" height="175" alt="Silver Age" />
+    <p>Mazos accesibles para empezar a competir, aprender estrategias y conocer a la comunidad FAB Colombia.</p>
+    <p><strong>Todos los jueves · {shinsei.displayTime}</strong><br />Desde el 12 de noviembre de 2026.<br />{shinsei.name} · {shinsei.address}, {shinsei.city}.</p>
+    <div class="prizes">
+      <img src={shinsei.prizeLogo} width="720" height="274" alt={shinsei.prizeSet} />
+      <p><strong>Premios del set {shinsei.prizeSet}.</strong></p>
+    </div>
+    <p>¿Quieres prepararte o aprender a jugar? Podemos enseñarte y prestarte un mazo ese día. <strong>Avísanos con anticipación en Mesa Inicial para coordinar.</strong></p>
+    <div class="actions">
+      <a class="primary" href={shinsei.preparationUrl}>Únete a Mesa Inicial →</a>
+      <a href="/calendar">Ver calendario</a>
+    </div>
+    <p class="note">Sin actividad el 24 y 31 de diciembre. Chaos Store continúa con Classic Constructed los sábados a las 3 p. m.</p>
+  </div>
+</section>
+
+<style>
+  .shinsei-announcement { background: #efd6e9; color: #30203f; border: 1px solid #b89bc9; border-radius: 1rem; overflow: hidden; margin: 1.5rem 0 2rem; text-align: left; }
+  .content { padding: clamp(1rem, 3vw, 2rem); align-self: center; min-width: 0; }
+  .host { display: flex; align-items: center; gap: .8rem; margin-bottom: .8rem; }
+  .host img { width: 70px; height: auto; }
+  .host p { font-size: .85rem; font-weight: 700; }
+  .format-logo { display: block; width: min(100%, 280px); height: auto; background: #392447; padding: .65rem; border-radius: .4rem; margin: 0 0 1rem; }
+  .prizes { display: flex; align-items: center; gap: .8rem; padding: .8rem; margin: 0 0 1rem; border: 1px solid #b89bc9; border-radius: .5rem; }
+  .prizes img { width: 100px; height: auto; flex-shrink: 0; }
+  .prizes p { margin: 0; font-size: .9rem; }
+  .eyebrow { color: #604174; font-weight: 700; }
+  h2 { font-family: Inter, Arial, sans-serif; color: #392447; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.1; margin: .5rem 0 1rem; }
+  p { line-height: 1.55; margin: 0 0 1rem; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+  a { color: #392447; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  .primary { background: #392447; color: #fff3f4; border-radius: .5rem; padding: .8rem 1rem; text-decoration: none; }
+  a:focus-visible { outline: 3px solid #765d2f; outline-offset: 4px; }
+  .note { margin: 1rem 0 0; font-size: .85rem; }
+  .compact { display: block; }
+  .compact .content { padding: 1.5rem; }
+</style>

@@ -1,13 +1,12 @@
 ---
 import EventTicket from '../components/EventTicket.astro';
 import Layout from '../layouts/Layout.astro';
-import PageBanner from '../components/PageBanner.astro';
+import ShinseiAnnouncement from '../components/ShinseiAnnouncement.astro';
 
 import { loadEventsData } from '../utils/dataLoader';
 import { formatMonthName } from '../utils/calendarUtils';
 
 const eventsData = loadEventsData();
-const year = new Date(eventsData[0].Date).getFullYear().toString();
 
 // Transform and sort all events (no date filtering - done client-side)
 const allEvents = eventsData
@@ -16,26 +15,25 @@ const allEvents = eventsData
         type: e.EventType,
         title: e.Event,
         time: e.Time,
-        location: { spot: e.Location, city: e.Ciudad },
+        location: { spot: e.Location, city: e.Ciudad, address: e.LocationAddress },
         date: e.Date,
-        dateObj: new Date(e.Date),
-        key: `${e.Date}-${e.Event}-${e.Time}`,
+        key: `${e.Date}-${e.Event}-${e.Time}-${e.Location}`,
         tournamentUrl: e.TournamentURL,
         tournamentName: e.TournamentName,
         registrationFee: e.RegistrationFee,
         description: e.Description,
     }))
-    .sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
+    .sort((a, b) => a.date.localeCompare(b.date));
 
 // Group events by month for display
 const eventsByMonth = allEvents.reduce((acc, event) => {
-    const month = event.dateObj.getMonth() + 1;
+    const month = event.date.slice(0, 7);
     if (!acc[month]) acc[month] = [];
     acc[month].push(event);
     return acc;
-}, {} as Record<number, typeof allEvents>);
+}, {} as Record<string, typeof allEvents>);
 
-const months = Object.keys(eventsByMonth).map(Number).sort((a, b) => a - b);
+const months = Object.keys(eventsByMonth).sort();
 
 let globalIndex = 0;
 ---
@@ -53,11 +51,12 @@ let globalIndex = 0;
         </div>
         <p class="subtitle">Próximos eventos de la comunidad</p>
     </div>
-    <PageBanner image="/images/home/calendar-events.webp" alt="Mesa de planificación de eventos de Flesh and Blood" />
+    <ShinseiAnnouncement compact />
     <div class="events-container" id="events-container">
         {months.map((month) => {
             const events = eventsByMonth[month];
-            const monthName = formatMonthName(month, year);
+            const [year, monthNumber] = month.split('-').map(Number);
+            const monthName = formatMonthName(monthNumber, year);
             return (
                 <section data-month={month}>
                     <h2 class="calendar-month-header">{monthName} {year}</h2>
