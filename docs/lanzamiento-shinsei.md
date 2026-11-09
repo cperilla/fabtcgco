@@ -18,7 +18,7 @@ Los eventos siguen almacenados como JSON trimestral en `src/data/Eventos_Comunid
 
 Para añadir o actualizar torneos, editar el registro trimestral existente, conservando `TournamentURL` y `TournamentName`. No crear otro registro para el mismo evento. Al cambiar de período, actualizar el manifiesto de archivos activos. Los datos de Shinsei y las rutas de sus imágenes están en `src/data/shinsei.json`.
 
-La portada, calendario, Empezar, Mejorar, Mesa Inicial y páginas de formatos reflejan la nueva programación. `ShinseiAnnouncement.astro` comparte la invitación, ubicación, premios y coordinación previa. Los afiches, imágenes sociales y promocionales de preconstruidos se conservan como entregables puntuales fuera de `public/`; no se muestran ni se ofrecen como descargas en el sitio.
+La portada, calendario, Empezar, Mejorar, Mesa Inicial y páginas de formatos reflejan la nueva programación. La invitación completa, con ubicación, premios y coordinación previa, se publica en `/blog/silver-age-shinsei-2026/` mediante `ShinseiAnnouncement.astro`; el anuncio no se repite como banner en las páginas principales. Los afiches, imágenes sociales y promocionales de preconstruidos se conservan como entregables puntuales fuera de `public/`; no se muestran ni se ofrecen como descargas en el sitio.
 
 El calendario agrupa por año y mes para cruzar correctamente de 2026 a 2027. Cada evento de Shinsei muestra el logo transparente, dirección y acceso a Mesa Inicial. iCal y Google Calendar incluyen la sede correcta, dirección y zona horaria de Colombia; no se inventa una hora de finalización.
 

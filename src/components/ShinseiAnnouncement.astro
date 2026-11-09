@@ -1,9 +1,8 @@
 ---
 import shinsei from '../data/shinsei.json';
-const { compact = false } = Astro.props;
 ---
 
-<section class:list={['shinsei-announcement', { compact }]} aria-label="Silver Age en Shinsei Store">
+<section class="shinsei-announcement" aria-label="Silver Age en Shinsei Store">
   <div class="content">
     <div class="host">
       <img src={shinsei.logo} width="80" height="83" alt="Shinsei Store" />
@@ -30,6 +29,7 @@ const { compact = false } = Astro.props;
 <style>
   .shinsei-announcement { background: #efd6e9; color: #30203f; border: 1px solid #b89bc9; border-radius: 1rem; overflow: hidden; margin: 1.5rem 0 2rem; text-align: left; }
   .content { padding: clamp(1rem, 3vw, 2rem); align-self: center; min-width: 0; }
+  .shinsei-announcement img { margin: 0; }
   .host { display: flex; align-items: center; gap: .8rem; margin-bottom: .8rem; }
   .host img { width: 70px; height: auto; }
   .host p { font-size: .85rem; font-weight: 700; }
@@ -37,14 +37,12 @@ const { compact = false } = Astro.props;
   .prizes { display: flex; align-items: center; gap: .8rem; padding: .8rem; margin: 0 0 1rem; border: 1px solid #b89bc9; border-radius: .5rem; }
   .prizes img { width: 100px; height: auto; flex-shrink: 0; }
   .prizes p { margin: 0; font-size: .9rem; }
-  .eyebrow { color: #604174; font-weight: 700; }
-  h2 { font-family: Inter, Arial, sans-serif; color: #392447; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.1; margin: .5rem 0 1rem; }
-  p { line-height: 1.55; margin: 0 0 1rem; }
+  .shinsei-announcement .eyebrow { color: #604174; font-weight: 700; }
+  .shinsei-announcement h2 { font-family: Inter, Arial, sans-serif; color: #392447; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.1; margin: .5rem 0 1rem; }
+  .shinsei-announcement p { color: inherit; line-height: 1.55; margin: 0 0 1rem; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
-  a { color: #392447; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-  .primary { background: #392447; color: #fff3f4; border-radius: .5rem; padding: .8rem 1rem; text-decoration: none; }
+  .shinsei-announcement a { color: #392447; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  .shinsei-announcement .primary { background: #392447; color: #fff3f4; border-radius: .5rem; padding: .8rem 1rem; text-decoration: none; }
   a:focus-visible { outline: 3px solid #765d2f; outline-offset: 4px; }
   .note { margin: 1rem 0 0; font-size: .85rem; }
-  .compact { display: block; }
-  .compact .content { padding: 1.5rem; }
 </style>
