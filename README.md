@@ -76,7 +76,7 @@ Los eventos se guardan en archivos JSON por trimestre en `src/data/`. Estructura
 }
 ```
 
-**Para cambiar de trimestre**: Editar el import en `src/utils/dataLoader.js`.
+**Para cambiar de trimestre**: Actualizar `src/data/active-calendars.json` con los archivos trimestrales que se deben mostrar. Astro y la herramienta de Challonge usan este manifiesto compartido. Puede incluir varios trimestres y años.
 
 ### Rankings
 
@@ -126,3 +126,7 @@ Temas adicionales disponibles via `data-theme` en HTML:
 - [Astro Documentation](https://docs.astro.build)
 - [FAB Official Rules](https://fabtcg.com/resources/rules/)
 - [Challonge Community](https://challonge.com/communities/fabco)
+
+## Lanzamiento en Shinsei
+
+Programación, recursos gráficos, fuentes editables y validación: [lanzamiento de Silver Age en Shinsei](docs/lanzamiento-shinsei.md).

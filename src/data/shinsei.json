@@ -1,0 +1,19 @@
+{
+  "name": "Shinsei Store",
+  "city": "Cali",
+  "address": "Cra. 52B #18-40",
+  "day": "Jueves",
+  "time": "5 PM",
+  "displayTime": "5 p. m.",
+  "startDate": "2026-11-12",
+  "endDate": "2027-02-12",
+  "excludedDates": [
+    "2026-12-24",
+    "2026-12-31"
+  ],
+  "logo": "/images/stores/shinsei.png",
+  "preparationUrl": "/mesa-inicial",
+  "formatLogo": "/images/shinsei/silver-age.webp",
+  "prizeSet": "Omens of the Third Age",
+  "prizeLogo": "/images/shinsei/omens/logo.webp"
+}

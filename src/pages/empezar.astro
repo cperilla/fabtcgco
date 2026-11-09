@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageBanner from '../components/PageBanner.astro';
+import ShinseiAnnouncement from '../components/ShinseiAnnouncement.astro';
+import shinsei from '../data/shinsei.json';
 
 const schedule = [
   { day: "Martes", event: "Free Play", time: "5 PM", location: "Chaos Store, Cali" },
-  { day: "Jueves", event: "Silver Age / CC", time: "5 PM", location: "Chaos Store, Cali" },
-  { day: "Sabados", event: "CC / Silver Age", time: "3 PM", location: "Chaos Store, Cali" },
-  { day: "Ultimo Sabado", event: "Living Legend", time: "3 PM", location: "Chaos Store, Cali", special: true },
+  { day: "Jueves", event: "Silver Age", time: shinsei.displayTime, location: `${shinsei.name}, ${shinsei.address}, ${shinsei.city}` },
+  { day: "Sábados", event: "Classic Constructed", time: "3 PM", location: "Chaos Store, Cali" },
   { day: "Sabados", event: "Silver Age", time: "3 PM", location: "Palmira" },
 ];
 
@@ -17,7 +18,7 @@ const faq = [
   },
   {
     q: "¿Necesito un deck caro para competir?",
-    a: "No. Silver Age es muy accesible y hay decks prestados para empezar. Puedes ser competitivo con un presupuesto modesto."
+    a: "Silver Age permite empezar con mazos accesibles. Si necesitas un mazo prestado en Shinsei, avisa con anticipación en Mesa Inicial para coordinar."
   },
   {
     q: "¿Como funcionan los torneos?",
@@ -25,7 +26,7 @@ const faq = [
   },
   {
     q: "¿Que pasa si no se las reglas?",
-    a: "No hay problema. Los martes son de Free Play donde puedes aprender sin presion. Siempre hay alguien dispuesto a ensenar."
+    a: "Únete a Mesa Inicial antes de asistir. Podemos enseñarte a jugar en Shinsei los jueves; necesitamos que avises con anticipación para coordinar."
   }
 ];
 ---
@@ -44,6 +45,7 @@ const faq = [
     <PageBanner image="/images/home/new-players.webp" alt="Nuevos jugadores aprendiendo Flesh and Blood" />
 
     <div class="empezar-container">
+        <ShinseiAnnouncement compact />
         <!-- Que es FAB -->
         <section class="empezar-section">
             <h2>¿Que es Flesh and Blood?</h2>
@@ -61,7 +63,7 @@ const faq = [
             <h2>¿Cuando y donde jugamos?</h2>
             <div class="schedule-table">
                 {schedule.map((item) => (
-                    <div class={`schedule-row ${item.special ? 'schedule-row--special' : ''}`}>
+                    <div class="schedule-row">
                         <div class="schedule-day">{item.day}</div>
                         <div class="schedule-event">{item.event}</div>
                         <div class="schedule-time">{item.time}</div>
@@ -70,7 +72,7 @@ const faq = [
                 ))}
             </div>
             <p class="schedule-note">
-                Los horarios pueden cambiar. Revisa el <a href="/calendar">calendario</a> para fechas exactas.
+                No hay actividad en Shinsei el 24 ni el 31 de diciembre. Revisa el <a href="/calendar">calendario</a> para fechas exactas.
             </p>
         </section>
 
@@ -80,8 +82,8 @@ const faq = [
             <div class="need-nothing">
                 <span class="need-icon">✓</span>
                 <div>
-                    <strong>Para tu primera vez: nada.</strong>
-                    <p>Tenemos decks prestados para que pruebes el juego sin compromiso.</p>
+                    <strong>Coordina tu primera partida en Mesa Inicial.</strong>
+                    <p>Podemos enseñarte y prestarte un mazo los jueves en Shinsei. <a href="/mesa-inicial">Avísanos con anticipación</a> para coordinar.</p>
                 </div>
             </div>
             <div class="need-options">
@@ -106,7 +108,7 @@ const faq = [
                     <li>Partidas rapidas de 35 minutos</li>
                     <li>El formato mas accesible economicamente</li>
                 </ul>
-                <p>Jugamos Silver Age los <strong>jueves a las 5 PM</strong> y algunos sabados.</p>
+                <p>Jugamos Silver Age los <strong>jueves a las 5 p. m. en Shinsei Store</strong>, Cali, y los sábados a las 3 p. m. en Palmira.</p>
                 <a href="/formato/sage" class="formato-link">Ver mas sobre Silver Age →</a>
             </div>
         </section>
