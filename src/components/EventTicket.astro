@@ -3,6 +3,7 @@ import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 import type { Event } from './interfaces';
 import { generateICS, getGoogleCalendarLink } from './interfaces';
+import shinsei from '../data/shinsei.json';
 
 interface Props {
   event: Event;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const { event, index } = Astro.props;
+const isShinsei = event.location.spot === shinsei.name;
 
 const eventDate = parseISO(event.date);
 const dayNumber = format(eventDate, 'd');
@@ -22,7 +24,7 @@ const googleCalUrl = getGoogleCalendarLink(event);
 const isEven = index % 2 === 0;
 const layoutClass = isEven ? 'event-ticket--left' : 'event-ticket--right';
 const typeClass = `event-type-${(event.type || 'default').toLowerCase()}`;
-const eventKey = `${event.date}-${event.title}-${event.time}`;
+const eventKey = `${event.date}-${event.title}-${event.time}-${event.location.spot}`;
 
 // Extract card name from tournament name (strip date portion)
 // Format: "FAB Chaos Sage Jue 12/02/26 : Brothers in Arms" -> "Brothers in Arms"
@@ -46,7 +48,7 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
 ---
 
 <article
-  class={`event-ticket ${layoutClass} ${typeClass} ${hasTournament ? 'event-ticket--has-tournament' : ''}`}
+  class={`event-ticket ${layoutClass} ${typeClass} ${hasTournament ? 'event-ticket--has-tournament' : ''} ${isShinsei ? 'event-ticket--shinsei' : ''}`}
   data-event-date={event.date}
   data-event-key={eventKey}
 >
@@ -55,6 +57,7 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
     <span class="month">{monthAbbr}</span>
   </div>
   <div class="event-ticket-content">
+    {isShinsei && <div class="shinsei-host"><img src={shinsei.logo} width="48" height="50" alt="Shinsei Store" /><span>Tienda anfitriona · {shinsei.name}</span></div>}
     {cardName ? (
       <h3 class="tournament-title">
         <span class="card-name-part">{cardName}</span>
@@ -77,7 +80,7 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
     )}
     <div class="event-meta">
       <span class="time">{event.time}</span>
-      <span class="location-full">{event.location.city}, {event.location.spot}</span>
+      <span class="location-full">{event.location.city}, {event.location.spot}{event.location.address && ` · ${event.location.address}`}</span>
     </div>
     {(event.registrationFee || event.description) && (
       <div class="event-details">
@@ -86,6 +89,7 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
       </div>
     )}
     <div class="actions">
+      {isShinsei && <a href={shinsei.preparationUrl} class="action-link">Prepararme en Mesa Inicial →</a>}
       {hasTournament && (
         <a href={event.tournamentUrl} target="_blank" rel="noopener noreferrer" class="action-link action-link--tournament action-link--primary">
           🏆 Inscribirse
@@ -100,3 +104,9 @@ const formatUrl = event.type ? formatUrls[event.type] : null;
     </div>
   </div>
 </article>
+
+<style>
+  .shinsei-host { display: flex; align-items: center; gap: .65rem; margin-bottom: .75rem; color: #edd2ed; font-weight: 600; font-size: .85rem; }
+  .shinsei-host img { width: 48px; height: auto; }
+  .event-ticket--shinsei { border-color: #b89bc9; }
+</style>

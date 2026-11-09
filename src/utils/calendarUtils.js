@@ -1,4 +1,4 @@
-import { endOfMonth, startOfWeek, endOfWeek, format, isToday } from 'date-fns';
+import { endOfMonth, startOfWeek, endOfWeek, format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 
 export const formatMonthName = (monthNumber, year) => {
@@ -8,7 +8,7 @@ export const formatMonthName = (monthNumber, year) => {
 export const getMonths = (eventsData) => {
   const months = new Set();
   eventsData.forEach((event) => {
-    const month = new Date(event.Date).getMonth() + 1;
+    const month = parseISO(event.Date).getMonth() + 1;
     months.add(month);
   });
   return Array.from(months).sort((a, b) => a - b);
@@ -16,7 +16,7 @@ export const getMonths = (eventsData) => {
 
 export const getEventsOfMonth = (eventsData, month) => {
   const eventsByMonth = eventsData.filter((event) => {
-    const eventMonth = new Date(event.Date).getMonth() + 1;
+    const eventMonth = parseISO(event.Date).getMonth() + 1;
     return eventMonth === month;
   });
 
@@ -34,6 +34,7 @@ export const getEventsOfMonth = (eventsData, month) => {
       location: {
         spot: event.Location,
         city: event.Ciudad,
+        address: event.LocationAddress,
       },
       date: event.Date,
       tournamentUrl: event.TournamentURL,
@@ -70,14 +71,14 @@ export const getCalendarDays = (year, month, eventsOfMonth) => {
 
 export const getEventsAsFlatList = (eventsData, month) => {
   return eventsData
-    .filter(event => new Date(event.Date).getMonth() + 1 === month)
+    .filter(event => parseISO(event.Date).getMonth() + 1 === month)
     .sort((a, b) => new Date(a.Date) - new Date(b.Date))
     .map(event => ({
       icon: event.Emoji,
       type: event.EventType,
       title: event.Event,
       time: event.Time,
-      location: { spot: event.Location, city: event.Ciudad },
+      location: { spot: event.Location, city: event.Ciudad, address: event.LocationAddress },
       date: event.Date,
       tournamentUrl: event.TournamentURL,
       tournamentName: event.TournamentName,

@@ -99,6 +99,11 @@
       "short_name": "Palmira",
       "rankings": ["season", "palmira"],
       "default_time": "2 PM"
+    },
+    "Shinsei Store": {
+      "suffix": "Shinsei Cali",
+      "short_name": "Shinsei",
+      "rankings": []
     }
   }
 }

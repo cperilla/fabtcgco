@@ -23,6 +23,7 @@ Settings applied to new/updated tournaments:
 """
 
 import argparse
+import html
 import json
 import os
 import random
@@ -36,7 +37,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OAUTH_CONFIG_PATH = os.path.join(SCRIPT_DIR, 'oauth_config.json')
 TEMPLATES_PATH = os.path.join(SCRIPT_DIR, 'templates.json')
 CARDS_PATH = os.path.join(SCRIPT_DIR, 'cards.json')
-CALENDAR_PATH = os.path.join(SCRIPT_DIR, '..', '..', 'src', 'data', 'Eventos_Comunidad_Q3_2026.json')
+CALENDAR_DATA_DIR = os.path.join(SCRIPT_DIR, '..', '..', 'src', 'data')
+CALENDAR_PATH = None  # --calendar can still select a single quarterly file.
 
 # API endpoints
 AUTH_URL = 'https://api.challonge.com/oauth/authorize'
@@ -81,7 +83,12 @@ def get_random_card_name(cards_data):
 
 def load_calendar():
     """Load calendar events."""
-    return load_json(CALENDAR_PATH)
+    if CALENDAR_PATH:
+        return load_json(CALENDAR_PATH)
+    filenames = load_json(os.path.join(CALENDAR_DATA_DIR, 'active-calendars.json'))
+    events = [event for filename in filenames
+              for event in load_json(os.path.join(CALENDAR_DATA_DIR, filename))]
+    return sorted(events, key=lambda event: event['Date'])
 
 
 def get_token_path(config):
@@ -311,6 +318,11 @@ def create_tournament_payload(event, templates, cards_data=None):
     # Build description with ranking links based on location (HTML format)
     # Skip rankings for event types with no_rankings flag (e.g., Freeplay)
     description = merged.get('description', '')
+    if event.get('Description'):
+        description += f"\n\n<p>{html.escape(event['Description'])}</p>"
+    if event.get('LocationAddress'):
+        venue = f"{event_location}, {event['LocationAddress']}, {event.get('Ciudad', '')}"
+        description += f"\n<p>📍 {html.escape(venue)}</p>"
     rankings = templates.get('rankings', {})
     location_rankings = location_config.get('rankings', ['season', 'year'])  # Default to Chaos Store rankings
     no_rankings = merged.get('no_rankings', False)
