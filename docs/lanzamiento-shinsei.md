@@ -48,7 +48,7 @@ Todos estos entregables están fuera de `public/` y no se despliegan con el siti
 - Instagram 1: `output/shinsei/final/instagram-01-aurora.png`, 1080 × 1080. Este jueves en Shinsei, horario, dirección, inicio y excepciones de diciembre.
 - Instagram 2: `output/shinsei/final/instagram-02-oscilio.png`, 1080 × 1080. Silver Age, mazos accesibles, preconstruidos, comunidad y premios de Omens.
 - Instagram 3: `output/shinsei/final/instagram-03-zyggy.png`, 1080 × 1080. Mesa Inicial, enseñanza, préstamo de mazos y coordinación con anticipación.
-- Los tres cuadrados tienen un héroe prominente cada uno y no tienen QR. Pueden publicarse como carrusel o como tres posts consecutivos.
+- Los tres cuadrados tienen un héroe a fondo completo cada uno y no tienen QR. Se usan fondos oscuros y el lila claro se reserva para acentos de texto. Pueden publicarse como carrusel o como tres posts consecutivos.
 - Afiche permanente: `output/shinsei/final/afiche-tienda-a3.pdf`, una página A3 sin fechas concretas. Conserva el collage, horario semanal, dirección, preconstruidos, premios y preparación mediante Mesa Inicial. Puede imprimirse a A4 ajustando a página. Vista PNG: `output/shinsei/final/afiche-tienda.png`, 1080 × 1527.
 - Pie de Instagram: `output/shinsei/propuestas/instagram-caption.txt`.
 

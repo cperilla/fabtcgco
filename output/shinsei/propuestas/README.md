@@ -10,7 +10,7 @@ Archivos finales de 1080 × 1080 en `../final/`:
 2. `instagram-02-oscilio.png`: Silver Age, mazos accesibles, preconstruidos y premios de Omens of the Third Age.
 3. `instagram-03-zyggy.png`: Mesa Inicial, enseñanza y préstamo de mazos con aviso previo.
 
-Cada pieza tiene un héroe protagonista. La información se reparte en las tres y pueden usarse como carrusel o como tres posts consecutivos. El texto complementario está en `instagram-caption.txt`.
+Cada pieza tiene un héroe protagonista a fondo completo, sin paneles claros; el lila claro se usa solo en acentos de texto. La información se reparte en las tres y pueden usarse como carrusel o como tres posts consecutivos. El texto complementario está en `instagram-caption.txt`.
 
 ## Afiche permanente
 
