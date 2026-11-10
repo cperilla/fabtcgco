@@ -1,0 +1,20 @@
+---
+import report from '../../public/data/calling-paris/summary.json';
+---
+
+<a class="calling-paris-card" href="/reportes/calling-paris/">
+  <span class="eyebrow">Análisis internacional</span>
+  <h2>Calling: Paris</h2>
+  <p>{report.observed_players.toLocaleString('es-CO')} jugadores, 18 rondas y un campeón: Matt Muus con Teklovossen.</p>
+  <p>Explora la participación de héroes, sus tasas de victoria y los resultados de cada jugador.</p>
+  <strong>Explorar resultados →</strong>
+</a>
+
+<style>
+  .calling-paris-card { display:block; padding:1.75rem; margin:1.5rem 0 2rem; border:1px solid var(--border-color); border-left:5px solid var(--secondary-color); border-radius:1rem; background:var(--base-variant); color:var(--text-color); text-decoration:none; }
+  .calling-paris-card:hover { outline:2px solid var(--secondary-color); outline-offset:3px; }
+  .eyebrow { font-size:.8rem; text-transform:uppercase; letter-spacing:.12em; }
+  h2 { font-size:1.75rem; margin:.4rem 0; }
+  p { margin:.5rem 0; line-height:1.65; }
+  strong { display:block; margin-top:1rem; }
+</style>
