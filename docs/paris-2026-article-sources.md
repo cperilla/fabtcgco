@@ -36,7 +36,11 @@ Los tres `summary.json` de `public/data/` y sus resultados normalizados verifica
 
 El nombre del campeón del Mundial aparece como `nicolas Jamoulle` en el resultado guardado; el artículo normaliza la inicial. El anuncio de campeón de la cuenta oficial, visible en la misma fuente social, confirma Nicolas Jamoulle. Los ganadores se identifican en las finales de rondas 18, 19 y 13, respectivamente.
 
-Son nombres identificados en capturas, no cifras presentadas como inscripciones oficiales ni personas únicas del fin de semana. No se suman, y no se cuentan los marcadores «Player 2» como personas.
+Son nombres identificados en capturas, no cifras presentadas como inscripciones oficiales. El cruce de los tres listados produce **1.831 jugadores únicos observados** y **2.611 participaciones**. Hay 1.130 nombres en un solo evento, 622 en dos y 79 en los tres. Las coincidencias por parejas son: Calling/Mundial 312, Calling/Showdown 366, Mundial/Showdown 181; cada cifra por pareja incluye a los 79 de los tres eventos. Así, 2.611 − 312 − 366 − 181 + 79 = 1.831.
+
+Se normalizan Unicode NFKC, mayúsculas y espacios, conservando acentos. En estas fuentes coinciden tanto el cruce normalizado como el cruce exacto: 1.831 nombres, sin variantes ni conflictos de país. No se cuentan marcadores «Player 2». Al no tener identificadores únicos de GEM, no se pueden descartar homónimos; el alcance son jugadores observados en estos tres torneos, no todo el público o los eventos paralelos.
+
+Solo aparecen en cada listado: Calling 819, Mundial 147, Showdown 164. El resto de cada torneo también está en alguno de los otros dos. El detalle se publica en `public/data/paris-2026/players.csv`, y `attendance.json` registra los totales, cruces, método y hashes de las fuentes. Regenerar con `python -B tools/stats/summarize_paris_attendance.py` después de regenerar las estadísticas de los torneos.
 
 El artículo enlaza las limitaciones del reporte del Mundial y menciona que falta ronda 16. No publica el registro global incompleto del campeón. Draft se limita a registros de jugadores y no se atribuye a las estadísticas de héroes.
 

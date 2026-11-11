@@ -1,0 +1,62 @@
+{
+  "unique_players": 1831,
+  "tournament_entries": 2611,
+  "players_in_one_event": 1130,
+  "players_in_two_events": 622,
+  "players_in_three_events": 79,
+  "events": [
+    {
+      "slug": "calling-paris",
+      "name": "Calling: Paris",
+      "players": 1418,
+      "source": "calling-paris/summary.json",
+      "sha256": "69c708bdde2f363811c91da5e4d79a9f6ab3f7048db3ed7b5888b94eb4658a4e",
+      "exclusive_players": 819,
+      "shared_players": 599
+    },
+    {
+      "slug": "world-championship-paris-2026",
+      "name": "World Championship: Paris 2026",
+      "players": 561,
+      "source": "world-championship-paris-2026/summary.json",
+      "sha256": "74352ed4281fb52b8ad3a665957a82804ba3ffe36f61b6ed1f2eda28b8ba12bd",
+      "exclusive_players": 147,
+      "shared_players": 414
+    },
+    {
+      "slug": "showdown-paris-2026",
+      "name": "Sunday Showdown: Paris 2026",
+      "players": 632,
+      "source": "showdown-paris-2026/summary.json",
+      "sha256": "5c7fa84558e3aed90055bc40d733ac01373f72a7d69dc98c5a5e98acaee3d9e0",
+      "exclusive_players": 164,
+      "shared_players": 468
+    }
+  ],
+  "pairwise_overlaps": [
+    {
+      "events": [
+        "calling-paris",
+        "world-championship-paris-2026"
+      ],
+      "players": 312
+    },
+    {
+      "events": [
+        "calling-paris",
+        "showdown-paris-2026"
+      ],
+      "players": 366
+    },
+    {
+      "events": [
+        "world-championship-paris-2026",
+        "showdown-paris-2026"
+      ],
+      "players": 181
+    }
+  ],
+  "name_variants": [],
+  "method": "Unicode NFKC, case-folding and whitespace normalization of player names; accents preserved; conflicting countries require manual review.",
+  "scope": "Observed named players in the three saved event rosters. No unique player IDs; homonyms cannot be ruled out. Excludes spectators and other side events, not a census of the whole convention."
+}

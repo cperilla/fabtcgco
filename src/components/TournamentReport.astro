@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import attendance from '../../public/data/paris-2026/attendance.json';
 const { data, playerRounds } = Astro.props;
 const event = data.event;
+const eventAttendance = attendance.events.find(entry => entry.slug === event.slug);
 import { formatHeroSample, formatPlayerHeroRate, formatPlayerRecord } from '../utils/tournamentReport.js';
 
 const base = `/data/${event.slug}`;
@@ -41,6 +43,7 @@ const top8Composition = [...new Set(top8.map(p => p.hero))].map(hero => `${hero}
         <div><strong>{event.day2_start ? data.players.filter(p => p.day2).length : "No aplica"}</strong><span>{event.day2_start ? `Jugadores en ronda ${event.day2_start}` : "Día 2: evento de un día"}</span></div>
         <div><strong>{data.heroes.filter(h => h.hero !== "N/A").length}</strong><span>Héroes identificados</span></div>
       </div>
+      {eventAttendance && <p>El cruce de los tres eventos de París identifica <strong>{attendance.unique_players.toLocaleString('es-CO')} jugadores únicos observados</strong> en {attendance.tournament_entries.toLocaleString('es-CO')} participaciones. De los {eventAttendance.players.toLocaleString('es-CO')} jugadores de este torneo, <strong>{eventAttendance.exclusive_players.toLocaleString('es-CO')}</strong> aparecen solo aquí y <strong>{eventAttendance.shared_players.toLocaleString('es-CO')}</strong> también aparecen en alguno de los otros dos. <a href="/data/paris-2026/players.csv" download>Descargar el cruce por jugador</a>. La identificación usa nombres; el recuento no incluye público ni todos los eventos paralelos.</p>}
       <div class="insights">
         <div><h3>{data.champion} · Campeón</h3><p>{champion.hero}: <strong>{champion.all_wins}–{champion.all_losses}–{champion.all_draws}</strong> en las rondas observadas. Suizo: <strong>{record(champion)}</strong>.</p><p>Finalista: {data.finalist}. {data.missing_rounds.length > 0 && 'Los registros están incompletos por la ronda ausente.'}</p></div>
         <div><h3>{bestHero?.hero || data.heroes[0].hero}</h3><p>{bestHero ? `${percent(bestHero.nonmirror_win_pct)} sin espejos, la tasa más alta entre los héroes con al menos 30 jugadores.` : 'Consulta el tamaño de muestra junto a cada tasa.'}</p><p>Más jugado: {data.heroes[0].hero}, con {data.heroes[0].players} jugadores ({percent(data.heroes[0].field_pct)}).</p></div>
