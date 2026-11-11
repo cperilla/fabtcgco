@@ -1,0 +1,473 @@
+﻿hero,opponent_hero,matches,wins,losses,draws,win_pct
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Aurora, Legacy of Tempest",4,1,3,0,25.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Betsy, Skin in the Game",1,0,1,0,0.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X",Dorinthea Ironsong,2,1,1,0,50.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Fang, Dracai of Blades",5,4,1,0,80.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Gravy Bones, Shipwrecked Looter",6,4,2,0,66.67
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Ira, Scarlet Revenger",3,1,2,0,33.33
+"Arakni, 5L!p3d 7hRu 7h3 cR4X",Jarl Vetreiði,4,2,2,0,50.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Levia, Shadowborn Abomination",4,3,1,0,75.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Marlynn, Treasure Hunter",1,0,1,0,0.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Oscilio, Forked Continuum",1,1,0,0,100.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X","Ser Boltyn, Breaker of Dawn",5,0,5,0,0.0
+"Arakni, 5L!p3d 7hRu 7h3 cR4X",Zyggy Starlight,1,0,1,0,0.0
+"Arakni, Huntsman","Aurora, Legacy of Tempest",1,1,0,0,100.0
+"Arakni, Huntsman","Betsy, Skin in the Game",2,1,1,0,50.0
+"Arakni, Huntsman",Dorinthea Ironsong,2,2,0,0,100.0
+"Arakni, Huntsman","Fang, Dracai of Blades",6,3,2,1,50.0
+"Arakni, Huntsman","Gravy Bones, Shipwrecked Looter",2,0,2,0,0.0
+"Arakni, Huntsman","Hala, Bladesaint of the Vow",1,1,0,0,100.0
+"Arakni, Huntsman","Ira, Scarlet Revenger",1,0,1,0,0.0
+"Arakni, Huntsman",Jarl Vetreiði,7,1,6,0,14.29
+"Arakni, Huntsman","Kayo, Underhanded Cheat",1,0,1,0,0.0
+"Arakni, Huntsman","Levia, Shadowborn Abomination",7,4,3,0,57.14
+"Arakni, Huntsman","Oscilio, Forked Continuum",4,2,2,0,50.0
+"Arakni, Huntsman","Puffin, Hightail",2,1,1,0,50.0
+"Arakni, Huntsman","Rhinar, Reckless Rampage",1,0,1,0,0.0
+"Arakni, Huntsman","Ser Boltyn, Breaker of Dawn",6,4,2,0,66.67
+"Arakni, Huntsman","Tuffnut, Bumbling Hulkster",1,0,1,0,0.0
+"Arakni, Huntsman","Viserai, the Forsaken",1,1,0,0,100.0
+"Arakni, Huntsman","Vynnset, Iron Maiden",1,1,0,0,100.0
+"Arakni, Huntsman",Zyggy Starlight,1,1,0,0,100.0
+"Aurora, Legacy of Tempest","Arakni, 5L!p3d 7hRu 7h3 cR4X",4,3,1,0,75.0
+"Aurora, Legacy of Tempest","Arakni, Huntsman",1,0,1,0,0.0
+"Aurora, Legacy of Tempest","Betsy, Skin in the Game",6,0,6,0,0.0
+"Aurora, Legacy of Tempest",Dorinthea Ironsong,8,0,8,0,0.0
+"Aurora, Legacy of Tempest","Fang, Dracai of Blades",57,35,22,0,61.4
+"Aurora, Legacy of Tempest","Gravy Bones, Shipwrecked Looter",24,11,13,0,45.83
+"Aurora, Legacy of Tempest","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Aurora, Legacy of Tempest","Ira, Scarlet Revenger",23,13,10,0,56.52
+"Aurora, Legacy of Tempest",Jarl Vetreiði,29,6,23,0,20.69
+"Aurora, Legacy of Tempest","Katsu, the Wanderer",3,2,1,0,66.67
+"Aurora, Legacy of Tempest","Levia, Shadowborn Abomination",47,29,18,0,61.7
+"Aurora, Legacy of Tempest","Lyath Goldmane, Vile Savant",2,0,2,0,0.0
+"Aurora, Legacy of Tempest","Marlynn, Treasure Hunter",5,2,3,0,40.0
+"Aurora, Legacy of Tempest","Olympia, Prized Fighter",5,2,3,0,40.0
+"Aurora, Legacy of Tempest","Oscilio, Forked Continuum",11,6,5,0,54.55
+"Aurora, Legacy of Tempest","Puffin, Hightail",5,3,2,0,60.0
+"Aurora, Legacy of Tempest","Rhinar, Reckless Rampage",3,3,0,0,100.0
+"Aurora, Legacy of Tempest","Riptide, Lurker of the Deep",2,0,2,0,0.0
+"Aurora, Legacy of Tempest","Ser Boltyn, Breaker of Dawn",23,10,13,0,43.48
+"Aurora, Legacy of Tempest","Teklovossen, Esteemed Magnate",2,1,1,0,50.0
+"Aurora, Legacy of Tempest","Tuffnut, Bumbling Hulkster",1,1,0,0,100.0
+"Aurora, Legacy of Tempest","Valda, Seismic Impact",1,1,0,0,100.0
+"Aurora, Legacy of Tempest","Viserai, the Forsaken",3,2,1,0,66.67
+"Aurora, Legacy of Tempest","Vynnset, Iron Maiden",8,3,5,0,37.5
+"Aurora, Legacy of Tempest",Zyggy Starlight,3,1,2,0,33.33
+"Betsy, Skin in the Game","Arakni, 5L!p3d 7hRu 7h3 cR4X",1,1,0,0,100.0
+"Betsy, Skin in the Game","Arakni, Huntsman",2,1,1,0,50.0
+"Betsy, Skin in the Game","Aurora, Legacy of Tempest",6,6,0,0,100.0
+"Betsy, Skin in the Game",Dorinthea Ironsong,1,1,0,0,100.0
+"Betsy, Skin in the Game","Fang, Dracai of Blades",12,4,8,0,33.33
+"Betsy, Skin in the Game","Gravy Bones, Shipwrecked Looter",4,0,4,0,0.0
+"Betsy, Skin in the Game","Hala, Bladesaint of the Vow",2,1,1,0,50.0
+"Betsy, Skin in the Game","Ira, Scarlet Revenger",4,1,3,0,25.0
+"Betsy, Skin in the Game",Jarl Vetreiði,5,4,1,0,80.0
+"Betsy, Skin in the Game","Levia, Shadowborn Abomination",9,3,6,0,33.33
+"Betsy, Skin in the Game","Lyath Goldmane, Vile Savant",1,0,1,0,0.0
+"Betsy, Skin in the Game","Oscilio, Forked Continuum",1,1,0,0,100.0
+"Betsy, Skin in the Game","Puffin, Hightail",2,2,0,0,100.0
+"Betsy, Skin in the Game","Rhinar, Reckless Rampage",2,2,0,0,100.0
+"Betsy, Skin in the Game","Riptide, Lurker of the Deep",1,1,0,0,100.0
+"Betsy, Skin in the Game","Ser Boltyn, Breaker of Dawn",3,2,1,0,66.67
+"Betsy, Skin in the Game","Tuffnut, Bumbling Hulkster",1,0,1,0,0.0
+"Betsy, Skin in the Game","Viserai, the Forsaken",2,2,0,0,100.0
+"Betsy, Skin in the Game","Vynnset, Iron Maiden",3,2,1,0,66.67
+"Betsy, Skin in the Game",Zyggy Starlight,1,0,1,0,0.0
+Dorinthea Ironsong,"Arakni, 5L!p3d 7hRu 7h3 cR4X",2,1,1,0,50.0
+Dorinthea Ironsong,"Arakni, Huntsman",2,0,2,0,0.0
+Dorinthea Ironsong,"Aurora, Legacy of Tempest",8,8,0,0,100.0
+Dorinthea Ironsong,"Betsy, Skin in the Game",1,0,1,0,0.0
+Dorinthea Ironsong,"Fang, Dracai of Blades",11,6,5,0,54.55
+Dorinthea Ironsong,"Gravy Bones, Shipwrecked Looter",4,4,0,0,100.0
+Dorinthea Ironsong,"Hala, Bladesaint of the Vow",2,2,0,0,100.0
+Dorinthea Ironsong,"Ira, Scarlet Revenger",2,1,1,0,50.0
+Dorinthea Ironsong,Jarl Vetreiði,8,6,2,0,75.0
+Dorinthea Ironsong,"Levia, Shadowborn Abomination",8,5,3,0,62.5
+Dorinthea Ironsong,"Lyath Goldmane, Vile Savant",1,0,0,1,0.0
+Dorinthea Ironsong,"Olympia, Prized Fighter",1,0,1,0,0.0
+Dorinthea Ironsong,"Oscilio, Forked Continuum",5,2,3,0,40.0
+Dorinthea Ironsong,"Puffin, Hightail",1,1,0,0,100.0
+Dorinthea Ironsong,"Ser Boltyn, Breaker of Dawn",5,5,0,0,100.0
+Dorinthea Ironsong,"Teklovossen, Esteemed Magnate",1,1,0,0,100.0
+Dorinthea Ironsong,"Valda, Seismic Impact",2,1,1,0,50.0
+Dorinthea Ironsong,Zyggy Starlight,2,0,2,0,0.0
+"Fang, Dracai of Blades","Arakni, 5L!p3d 7hRu 7h3 cR4X",5,1,4,0,20.0
+"Fang, Dracai of Blades","Arakni, Huntsman",6,2,3,1,33.33
+"Fang, Dracai of Blades","Aurora, Legacy of Tempest",57,22,35,0,38.6
+"Fang, Dracai of Blades","Betsy, Skin in the Game",12,8,4,0,66.67
+"Fang, Dracai of Blades",Dorinthea Ironsong,11,5,6,0,45.45
+"Fang, Dracai of Blades","Gravy Bones, Shipwrecked Looter",42,30,12,0,71.43
+"Fang, Dracai of Blades","Hala, Bladesaint of the Vow",5,3,2,0,60.0
+"Fang, Dracai of Blades","Ira, Scarlet Revenger",26,20,6,0,76.92
+"Fang, Dracai of Blades",Jarl Vetreiði,73,43,27,3,58.9
+"Fang, Dracai of Blades","Katsu, the Wanderer",4,0,4,0,0.0
+"Fang, Dracai of Blades","Kayo, Underhanded Cheat",3,0,3,0,0.0
+"Fang, Dracai of Blades","Levia, Shadowborn Abomination",81,34,47,0,41.98
+"Fang, Dracai of Blades","Lyath Goldmane, Vile Savant",5,3,2,0,60.0
+"Fang, Dracai of Blades","Marlynn, Treasure Hunter",4,4,0,0,100.0
+"Fang, Dracai of Blades","Olympia, Prized Fighter",7,5,2,0,71.43
+"Fang, Dracai of Blades","Oscilio, Forked Continuum",24,6,18,0,25.0
+"Fang, Dracai of Blades","Puffin, Hightail",11,4,7,0,36.36
+"Fang, Dracai of Blades","Rhinar, Reckless Rampage",2,0,2,0,0.0
+"Fang, Dracai of Blades","Riptide, Lurker of the Deep",3,1,2,0,33.33
+"Fang, Dracai of Blades","Ser Boltyn, Breaker of Dawn",39,28,11,0,71.79
+"Fang, Dracai of Blades","Teklovossen, Esteemed Magnate",3,3,0,0,100.0
+"Fang, Dracai of Blades","Tuffnut, Bumbling Hulkster",1,1,0,0,100.0
+"Fang, Dracai of Blades","Uzuri, Switchblade",1,1,0,0,100.0
+"Fang, Dracai of Blades","Valda, Seismic Impact",1,1,0,0,100.0
+"Fang, Dracai of Blades","Viserai, the Forsaken",6,4,2,0,66.67
+"Fang, Dracai of Blades","Vynnset, Iron Maiden",2,0,2,0,0.0
+"Fang, Dracai of Blades",Zyggy Starlight,8,4,4,0,50.0
+"Gravy Bones, Shipwrecked Looter","Arakni, 5L!p3d 7hRu 7h3 cR4X",6,2,4,0,33.33
+"Gravy Bones, Shipwrecked Looter","Arakni, Huntsman",2,2,0,0,100.0
+"Gravy Bones, Shipwrecked Looter","Aurora, Legacy of Tempest",24,13,11,0,54.17
+"Gravy Bones, Shipwrecked Looter","Betsy, Skin in the Game",4,4,0,0,100.0
+"Gravy Bones, Shipwrecked Looter",Dorinthea Ironsong,4,0,4,0,0.0
+"Gravy Bones, Shipwrecked Looter","Fang, Dracai of Blades",42,12,30,0,28.57
+"Gravy Bones, Shipwrecked Looter","Hala, Bladesaint of the Vow",3,1,2,0,33.33
+"Gravy Bones, Shipwrecked Looter","Ira, Scarlet Revenger",12,8,4,0,66.67
+"Gravy Bones, Shipwrecked Looter",Jarl Vetreiði,32,10,22,0,31.25
+"Gravy Bones, Shipwrecked Looter","Katsu, the Wanderer",1,0,1,0,0.0
+"Gravy Bones, Shipwrecked Looter","Kayo, Underhanded Cheat",2,1,1,0,50.0
+"Gravy Bones, Shipwrecked Looter","Levia, Shadowborn Abomination",36,11,25,0,30.56
+"Gravy Bones, Shipwrecked Looter","Lyath Goldmane, Vile Savant",2,0,2,0,0.0
+"Gravy Bones, Shipwrecked Looter","Malice, Domina of the Dead",3,2,1,0,66.67
+"Gravy Bones, Shipwrecked Looter","Marlynn, Treasure Hunter",5,3,2,0,60.0
+"Gravy Bones, Shipwrecked Looter","Olympia, Prized Fighter",4,1,3,0,25.0
+"Gravy Bones, Shipwrecked Looter","Oscilio, Forked Continuum",12,9,3,0,75.0
+"Gravy Bones, Shipwrecked Looter","Puffin, Hightail",5,2,3,0,40.0
+"Gravy Bones, Shipwrecked Looter","Riptide, Lurker of the Deep",3,3,0,0,100.0
+"Gravy Bones, Shipwrecked Looter","Ser Boltyn, Breaker of Dawn",26,12,14,0,46.15
+"Gravy Bones, Shipwrecked Looter","Teklovossen, Esteemed Magnate",2,2,0,0,100.0
+"Gravy Bones, Shipwrecked Looter","Tuffnut, Bumbling Hulkster",1,1,0,0,100.0
+"Gravy Bones, Shipwrecked Looter","Valda, Seismic Impact",2,0,2,0,0.0
+"Gravy Bones, Shipwrecked Looter","Viserai, the Forsaken",3,2,1,0,66.67
+"Gravy Bones, Shipwrecked Looter","Vynnset, Iron Maiden",5,5,0,0,100.0
+"Gravy Bones, Shipwrecked Looter",Zyggy Starlight,5,3,2,0,60.0
+"Hala, Bladesaint of the Vow","Arakni, 5L!p3d 7hRu 7h3 cR4X",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Arakni, Huntsman",1,0,1,0,0.0
+"Hala, Bladesaint of the Vow","Aurora, Legacy of Tempest",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Betsy, Skin in the Game",2,1,1,0,50.0
+"Hala, Bladesaint of the Vow",Dorinthea Ironsong,2,0,2,0,0.0
+"Hala, Bladesaint of the Vow","Fang, Dracai of Blades",5,2,3,0,40.0
+"Hala, Bladesaint of the Vow","Gravy Bones, Shipwrecked Looter",3,2,1,0,66.67
+"Hala, Bladesaint of the Vow","Ira, Scarlet Revenger",1,0,1,0,0.0
+"Hala, Bladesaint of the Vow",Jarl Vetreiði,7,5,2,0,71.43
+"Hala, Bladesaint of the Vow","Katsu, the Wanderer",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Kayo, Underhanded Cheat",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Levia, Shadowborn Abomination",11,2,9,0,18.18
+"Hala, Bladesaint of the Vow","Olympia, Prized Fighter",1,0,1,0,0.0
+"Hala, Bladesaint of the Vow","Oscilio, Forked Continuum",3,1,2,0,33.33
+"Hala, Bladesaint of the Vow","Puffin, Hightail",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Riptide, Lurker of the Deep",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow","Ser Boltyn, Breaker of Dawn",7,5,2,0,71.43
+"Hala, Bladesaint of the Vow","Viserai, the Forsaken",1,1,0,0,100.0
+"Hala, Bladesaint of the Vow",Zyggy Starlight,1,1,0,0,100.0
+"Ira, Scarlet Revenger","Arakni, 5L!p3d 7hRu 7h3 cR4X",3,2,1,0,66.67
+"Ira, Scarlet Revenger","Arakni, Huntsman",1,1,0,0,100.0
+"Ira, Scarlet Revenger","Aurora, Legacy of Tempest",23,10,13,0,43.48
+"Ira, Scarlet Revenger","Betsy, Skin in the Game",4,3,1,0,75.0
+"Ira, Scarlet Revenger",Dorinthea Ironsong,2,1,1,0,50.0
+"Ira, Scarlet Revenger","Fang, Dracai of Blades",26,6,20,0,23.08
+"Ira, Scarlet Revenger","Gravy Bones, Shipwrecked Looter",12,4,8,0,33.33
+"Ira, Scarlet Revenger","Hala, Bladesaint of the Vow",1,1,0,0,100.0
+"Ira, Scarlet Revenger",Jarl Vetreiði,27,15,12,0,55.56
+"Ira, Scarlet Revenger","Katsu, the Wanderer",1,0,1,0,0.0
+"Ira, Scarlet Revenger","Kayo, Underhanded Cheat",2,1,1,0,50.0
+"Ira, Scarlet Revenger","Levia, Shadowborn Abomination",22,11,11,0,50.0
+"Ira, Scarlet Revenger","Marlynn, Treasure Hunter",1,1,0,0,100.0
+"Ira, Scarlet Revenger","Olympia, Prized Fighter",1,0,1,0,0.0
+"Ira, Scarlet Revenger","Oscilio, Forked Continuum",6,3,3,0,50.0
+"Ira, Scarlet Revenger","Puffin, Hightail",4,4,0,0,100.0
+"Ira, Scarlet Revenger","Rhinar, Reckless Rampage",2,0,2,0,0.0
+"Ira, Scarlet Revenger","Ser Boltyn, Breaker of Dawn",21,4,17,0,19.05
+"Ira, Scarlet Revenger","Teklovossen, Esteemed Magnate",2,0,2,0,0.0
+"Ira, Scarlet Revenger","Tuffnut, Bumbling Hulkster",3,1,2,0,33.33
+"Ira, Scarlet Revenger","Viserai, the Forsaken",3,2,1,0,66.67
+"Ira, Scarlet Revenger","Vynnset, Iron Maiden",4,3,1,0,75.0
+"Ira, Scarlet Revenger",Zyggy Starlight,3,2,1,0,66.67
+Jarl Vetreiði,"Arakni, 5L!p3d 7hRu 7h3 cR4X",4,2,2,0,50.0
+Jarl Vetreiði,"Arakni, Huntsman",7,6,1,0,85.71
+Jarl Vetreiði,"Aurora, Legacy of Tempest",29,23,6,0,79.31
+Jarl Vetreiði,"Betsy, Skin in the Game",5,1,4,0,20.0
+Jarl Vetreiði,Dorinthea Ironsong,8,2,6,0,25.0
+Jarl Vetreiði,"Fang, Dracai of Blades",73,27,43,3,36.99
+Jarl Vetreiði,"Gravy Bones, Shipwrecked Looter",32,22,10,0,68.75
+Jarl Vetreiði,"Hala, Bladesaint of the Vow",7,2,5,0,28.57
+Jarl Vetreiði,"Ira, Scarlet Revenger",27,12,15,0,44.44
+Jarl Vetreiði,"Katsu, the Wanderer",2,1,1,0,50.0
+Jarl Vetreiði,"Kayo, Underhanded Cheat",5,3,2,0,60.0
+Jarl Vetreiði,"Levia, Shadowborn Abomination",66,29,37,0,43.94
+Jarl Vetreiði,"Lyath Goldmane, Vile Savant",5,3,2,0,60.0
+Jarl Vetreiði,"Marlynn, Treasure Hunter",2,0,2,0,0.0
+Jarl Vetreiði,"Olympia, Prized Fighter",5,0,5,0,0.0
+Jarl Vetreiði,"Oscilio, Forked Continuum",17,5,12,0,29.41
+Jarl Vetreiði,"Puffin, Hightail",13,8,5,0,61.54
+Jarl Vetreiði,"Rhinar, Reckless Rampage",2,1,1,0,50.0
+Jarl Vetreiði,"Riptide, Lurker of the Deep",7,3,4,0,42.86
+Jarl Vetreiði,"Ser Boltyn, Breaker of Dawn",46,34,12,0,73.91
+Jarl Vetreiði,"Teklovossen, Esteemed Magnate",2,0,2,0,0.0
+Jarl Vetreiði,"Tuffnut, Bumbling Hulkster",1,0,1,0,0.0
+Jarl Vetreiði,"Valda, Seismic Impact",3,1,2,0,33.33
+Jarl Vetreiði,"Viserai, the Forsaken",9,5,4,0,55.56
+Jarl Vetreiði,"Vynnset, Iron Maiden",8,5,3,0,62.5
+Jarl Vetreiði,Zyggy Starlight,8,1,7,0,12.5
+"Katsu, the Wanderer","Aurora, Legacy of Tempest",3,1,2,0,33.33
+"Katsu, the Wanderer","Fang, Dracai of Blades",4,4,0,0,100.0
+"Katsu, the Wanderer","Gravy Bones, Shipwrecked Looter",1,1,0,0,100.0
+"Katsu, the Wanderer","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Katsu, the Wanderer","Ira, Scarlet Revenger",1,1,0,0,100.0
+"Katsu, the Wanderer",Jarl Vetreiði,2,1,1,0,50.0
+"Katsu, the Wanderer","Kayo, Underhanded Cheat",1,1,0,0,100.0
+"Katsu, the Wanderer","Marlynn, Treasure Hunter",1,0,1,0,0.0
+"Katsu, the Wanderer","Olympia, Prized Fighter",1,1,0,0,100.0
+"Katsu, the Wanderer","Puffin, Hightail",3,2,1,0,66.67
+"Katsu, the Wanderer","Riptide, Lurker of the Deep",1,1,0,0,100.0
+"Kayo, Underhanded Cheat","Arakni, Huntsman",1,1,0,0,100.0
+"Kayo, Underhanded Cheat","Fang, Dracai of Blades",3,3,0,0,100.0
+"Kayo, Underhanded Cheat","Gravy Bones, Shipwrecked Looter",2,1,1,0,50.0
+"Kayo, Underhanded Cheat","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Kayo, Underhanded Cheat","Ira, Scarlet Revenger",2,1,1,0,50.0
+"Kayo, Underhanded Cheat",Jarl Vetreiði,5,2,3,0,40.0
+"Kayo, Underhanded Cheat","Katsu, the Wanderer",1,0,1,0,0.0
+"Kayo, Underhanded Cheat","Levia, Shadowborn Abomination",3,1,2,0,33.33
+"Kayo, Underhanded Cheat","Oscilio, Forked Continuum",1,1,0,0,100.0
+"Kayo, Underhanded Cheat","Ser Boltyn, Breaker of Dawn",3,1,2,0,33.33
+"Kayo, Underhanded Cheat","Viserai, the Forsaken",1,0,1,0,0.0
+"Kayo, Underhanded Cheat",Zyggy Starlight,1,1,0,0,100.0
+"Levia, Shadowborn Abomination","Arakni, 5L!p3d 7hRu 7h3 cR4X",4,1,3,0,25.0
+"Levia, Shadowborn Abomination","Arakni, Huntsman",7,3,4,0,42.86
+"Levia, Shadowborn Abomination","Aurora, Legacy of Tempest",47,18,29,0,38.3
+"Levia, Shadowborn Abomination","Betsy, Skin in the Game",9,6,3,0,66.67
+"Levia, Shadowborn Abomination",Dorinthea Ironsong,8,3,5,0,37.5
+"Levia, Shadowborn Abomination","Fang, Dracai of Blades",81,47,34,0,58.02
+"Levia, Shadowborn Abomination","Gravy Bones, Shipwrecked Looter",36,25,11,0,69.44
+"Levia, Shadowborn Abomination","Hala, Bladesaint of the Vow",11,9,2,0,81.82
+"Levia, Shadowborn Abomination","Ira, Scarlet Revenger",22,11,11,0,50.0
+"Levia, Shadowborn Abomination",Jarl Vetreiði,66,37,29,0,56.06
+"Levia, Shadowborn Abomination","Kayo, Underhanded Cheat",3,2,1,0,66.67
+"Levia, Shadowborn Abomination","Lyath Goldmane, Vile Savant",1,0,1,0,0.0
+"Levia, Shadowborn Abomination","Marlynn, Treasure Hunter",8,5,3,0,62.5
+"Levia, Shadowborn Abomination","Olympia, Prized Fighter",6,3,3,0,50.0
+"Levia, Shadowborn Abomination","Oscilio, Forked Continuum",27,14,13,0,51.85
+"Levia, Shadowborn Abomination","Puffin, Hightail",12,7,5,0,58.33
+"Levia, Shadowborn Abomination","Rhinar, Reckless Rampage",5,2,3,0,40.0
+"Levia, Shadowborn Abomination","Riptide, Lurker of the Deep",4,1,3,0,25.0
+"Levia, Shadowborn Abomination","Ser Boltyn, Breaker of Dawn",49,17,32,0,34.69
+"Levia, Shadowborn Abomination","Teklovossen, Esteemed Magnate",5,4,1,0,80.0
+"Levia, Shadowborn Abomination","Tuffnut, Bumbling Hulkster",3,2,1,0,66.67
+"Levia, Shadowborn Abomination","Uzuri, Switchblade",2,1,1,0,50.0
+"Levia, Shadowborn Abomination","Valda, Seismic Impact",1,0,1,0,0.0
+"Levia, Shadowborn Abomination","Viserai, the Forsaken",6,3,3,0,50.0
+"Levia, Shadowborn Abomination","Vynnset, Iron Maiden",10,6,4,0,60.0
+"Levia, Shadowborn Abomination",Zyggy Starlight,8,5,3,0,62.5
+"Lyath Goldmane, Vile Savant","Aurora, Legacy of Tempest",2,2,0,0,100.0
+"Lyath Goldmane, Vile Savant","Betsy, Skin in the Game",1,1,0,0,100.0
+"Lyath Goldmane, Vile Savant",Dorinthea Ironsong,1,0,0,1,0.0
+"Lyath Goldmane, Vile Savant","Fang, Dracai of Blades",5,2,3,0,40.0
+"Lyath Goldmane, Vile Savant","Gravy Bones, Shipwrecked Looter",2,2,0,0,100.0
+"Lyath Goldmane, Vile Savant",Jarl Vetreiði,5,2,3,0,40.0
+"Lyath Goldmane, Vile Savant","Levia, Shadowborn Abomination",1,1,0,0,100.0
+"Lyath Goldmane, Vile Savant","Oscilio, Forked Continuum",1,1,0,0,100.0
+"Lyath Goldmane, Vile Savant","Puffin, Hightail",1,0,0,1,0.0
+"Malice, Domina of the Dead","Gravy Bones, Shipwrecked Looter",3,1,2,0,33.33
+"Malice, Domina of the Dead","Ser Boltyn, Breaker of Dawn",1,0,1,0,0.0
+"Malice, Domina of the Dead",Zyggy Starlight,1,0,1,0,0.0
+"Marlynn, Treasure Hunter","Arakni, 5L!p3d 7hRu 7h3 cR4X",1,1,0,0,100.0
+"Marlynn, Treasure Hunter","Aurora, Legacy of Tempest",5,3,2,0,60.0
+"Marlynn, Treasure Hunter","Fang, Dracai of Blades",4,0,4,0,0.0
+"Marlynn, Treasure Hunter","Gravy Bones, Shipwrecked Looter",5,2,3,0,40.0
+"Marlynn, Treasure Hunter","Ira, Scarlet Revenger",1,0,1,0,0.0
+"Marlynn, Treasure Hunter",Jarl Vetreiði,2,2,0,0,100.0
+"Marlynn, Treasure Hunter","Katsu, the Wanderer",1,1,0,0,100.0
+"Marlynn, Treasure Hunter","Levia, Shadowborn Abomination",8,3,5,0,37.5
+"Marlynn, Treasure Hunter","Oscilio, Forked Continuum",2,1,1,0,50.0
+"Marlynn, Treasure Hunter","Puffin, Hightail",1,0,1,0,0.0
+"Marlynn, Treasure Hunter","Ser Boltyn, Breaker of Dawn",6,2,4,0,33.33
+"Marlynn, Treasure Hunter","Tuffnut, Bumbling Hulkster",1,0,1,0,0.0
+"Marlynn, Treasure Hunter","Vynnset, Iron Maiden",1,1,0,0,100.0
+"Marlynn, Treasure Hunter",Zyggy Starlight,1,0,1,0,0.0
+"Olympia, Prized Fighter","Aurora, Legacy of Tempest",5,3,2,0,60.0
+"Olympia, Prized Fighter",Dorinthea Ironsong,1,1,0,0,100.0
+"Olympia, Prized Fighter","Fang, Dracai of Blades",7,2,5,0,28.57
+"Olympia, Prized Fighter","Gravy Bones, Shipwrecked Looter",4,3,1,0,75.0
+"Olympia, Prized Fighter","Hala, Bladesaint of the Vow",1,1,0,0,100.0
+"Olympia, Prized Fighter","Ira, Scarlet Revenger",1,1,0,0,100.0
+"Olympia, Prized Fighter",Jarl Vetreiði,5,5,0,0,100.0
+"Olympia, Prized Fighter","Katsu, the Wanderer",1,0,1,0,0.0
+"Olympia, Prized Fighter","Levia, Shadowborn Abomination",6,3,3,0,50.0
+"Olympia, Prized Fighter","Oscilio, Forked Continuum",1,0,1,0,0.0
+"Olympia, Prized Fighter","Rhinar, Reckless Rampage",1,1,0,0,100.0
+"Olympia, Prized Fighter","Ser Boltyn, Breaker of Dawn",5,4,1,0,80.0
+"Oscilio, Forked Continuum","Arakni, 5L!p3d 7hRu 7h3 cR4X",1,0,1,0,0.0
+"Oscilio, Forked Continuum","Arakni, Huntsman",4,2,2,0,50.0
+"Oscilio, Forked Continuum","Aurora, Legacy of Tempest",11,5,6,0,45.45
+"Oscilio, Forked Continuum","Betsy, Skin in the Game",1,0,1,0,0.0
+"Oscilio, Forked Continuum",Dorinthea Ironsong,5,3,2,0,60.0
+"Oscilio, Forked Continuum","Fang, Dracai of Blades",24,18,6,0,75.0
+"Oscilio, Forked Continuum","Gravy Bones, Shipwrecked Looter",12,3,9,0,25.0
+"Oscilio, Forked Continuum","Hala, Bladesaint of the Vow",3,2,1,0,66.67
+"Oscilio, Forked Continuum","Ira, Scarlet Revenger",6,3,3,0,50.0
+"Oscilio, Forked Continuum",Jarl Vetreiði,17,12,5,0,70.59
+"Oscilio, Forked Continuum","Kayo, Underhanded Cheat",1,0,1,0,0.0
+"Oscilio, Forked Continuum","Levia, Shadowborn Abomination",27,13,14,0,48.15
+"Oscilio, Forked Continuum","Lyath Goldmane, Vile Savant",1,0,1,0,0.0
+"Oscilio, Forked Continuum","Marlynn, Treasure Hunter",2,1,1,0,50.0
+"Oscilio, Forked Continuum","Olympia, Prized Fighter",1,1,0,0,100.0
+"Oscilio, Forked Continuum","Ser Boltyn, Breaker of Dawn",17,8,9,0,47.06
+"Oscilio, Forked Continuum","Teklovossen, Esteemed Magnate",1,0,1,0,0.0
+"Oscilio, Forked Continuum","Tuffnut, Bumbling Hulkster",1,1,0,0,100.0
+"Oscilio, Forked Continuum","Valda, Seismic Impact",1,1,0,0,100.0
+"Oscilio, Forked Continuum","Viserai, the Forsaken",1,1,0,0,100.0
+"Oscilio, Forked Continuum","Vynnset, Iron Maiden",1,1,0,0,100.0
+"Oscilio, Forked Continuum",Zyggy Starlight,4,0,4,0,0.0
+"Puffin, Hightail","Arakni, Huntsman",2,1,1,0,50.0
+"Puffin, Hightail","Aurora, Legacy of Tempest",5,2,3,0,40.0
+"Puffin, Hightail","Betsy, Skin in the Game",2,0,2,0,0.0
+"Puffin, Hightail",Dorinthea Ironsong,1,0,1,0,0.0
+"Puffin, Hightail","Fang, Dracai of Blades",11,7,4,0,63.64
+"Puffin, Hightail","Gravy Bones, Shipwrecked Looter",5,3,2,0,60.0
+"Puffin, Hightail","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Puffin, Hightail","Ira, Scarlet Revenger",4,0,4,0,0.0
+"Puffin, Hightail",Jarl Vetreiði,13,5,8,0,38.46
+"Puffin, Hightail","Katsu, the Wanderer",3,1,2,0,33.33
+"Puffin, Hightail","Levia, Shadowborn Abomination",12,5,7,0,41.67
+"Puffin, Hightail","Lyath Goldmane, Vile Savant",1,0,0,1,0.0
+"Puffin, Hightail","Marlynn, Treasure Hunter",1,1,0,0,100.0
+"Puffin, Hightail","Riptide, Lurker of the Deep",1,0,1,0,0.0
+"Puffin, Hightail","Ser Boltyn, Breaker of Dawn",3,1,2,0,33.33
+"Puffin, Hightail","Teklovossen, Esteemed Magnate",2,2,0,0,100.0
+"Puffin, Hightail","Tuffnut, Bumbling Hulkster",1,1,0,0,100.0
+"Puffin, Hightail","Uzuri, Switchblade",1,0,1,0,0.0
+"Puffin, Hightail","Valda, Seismic Impact",1,1,0,0,100.0
+"Puffin, Hightail","Viserai, the Forsaken",2,1,1,0,50.0
+"Puffin, Hightail",Zyggy Starlight,3,3,0,0,100.0
+"Rhinar, Reckless Rampage","Arakni, Huntsman",1,1,0,0,100.0
+"Rhinar, Reckless Rampage","Aurora, Legacy of Tempest",3,0,3,0,0.0
+"Rhinar, Reckless Rampage","Betsy, Skin in the Game",2,0,2,0,0.0
+"Rhinar, Reckless Rampage","Fang, Dracai of Blades",2,2,0,0,100.0
+"Rhinar, Reckless Rampage","Ira, Scarlet Revenger",2,2,0,0,100.0
+"Rhinar, Reckless Rampage",Jarl Vetreiði,2,1,1,0,50.0
+"Rhinar, Reckless Rampage","Levia, Shadowborn Abomination",5,3,2,0,60.0
+"Rhinar, Reckless Rampage","Olympia, Prized Fighter",1,0,1,0,0.0
+"Riptide, Lurker of the Deep","Aurora, Legacy of Tempest",2,2,0,0,100.0
+"Riptide, Lurker of the Deep","Betsy, Skin in the Game",1,0,1,0,0.0
+"Riptide, Lurker of the Deep","Fang, Dracai of Blades",3,2,1,0,66.67
+"Riptide, Lurker of the Deep","Gravy Bones, Shipwrecked Looter",3,0,3,0,0.0
+"Riptide, Lurker of the Deep","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Riptide, Lurker of the Deep",Jarl Vetreiði,7,4,3,0,57.14
+"Riptide, Lurker of the Deep","Katsu, the Wanderer",1,0,1,0,0.0
+"Riptide, Lurker of the Deep","Levia, Shadowborn Abomination",4,3,1,0,75.0
+"Riptide, Lurker of the Deep","Puffin, Hightail",1,1,0,0,100.0
+"Riptide, Lurker of the Deep","Ser Boltyn, Breaker of Dawn",5,0,5,0,0.0
+"Ser Boltyn, Breaker of Dawn","Arakni, 5L!p3d 7hRu 7h3 cR4X",5,5,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Arakni, Huntsman",6,2,4,0,33.33
+"Ser Boltyn, Breaker of Dawn","Aurora, Legacy of Tempest",23,13,10,0,56.52
+"Ser Boltyn, Breaker of Dawn","Betsy, Skin in the Game",3,1,2,0,33.33
+"Ser Boltyn, Breaker of Dawn",Dorinthea Ironsong,5,0,5,0,0.0
+"Ser Boltyn, Breaker of Dawn","Fang, Dracai of Blades",39,11,28,0,28.21
+"Ser Boltyn, Breaker of Dawn","Gravy Bones, Shipwrecked Looter",26,14,12,0,53.85
+"Ser Boltyn, Breaker of Dawn","Hala, Bladesaint of the Vow",7,2,5,0,28.57
+"Ser Boltyn, Breaker of Dawn","Ira, Scarlet Revenger",21,17,4,0,80.95
+"Ser Boltyn, Breaker of Dawn",Jarl Vetreiði,46,12,34,0,26.09
+"Ser Boltyn, Breaker of Dawn","Kayo, Underhanded Cheat",3,2,1,0,66.67
+"Ser Boltyn, Breaker of Dawn","Levia, Shadowborn Abomination",49,32,17,0,65.31
+"Ser Boltyn, Breaker of Dawn","Malice, Domina of the Dead",1,1,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Marlynn, Treasure Hunter",6,4,2,0,66.67
+"Ser Boltyn, Breaker of Dawn","Olympia, Prized Fighter",5,1,4,0,20.0
+"Ser Boltyn, Breaker of Dawn","Oscilio, Forked Continuum",17,9,8,0,52.94
+"Ser Boltyn, Breaker of Dawn","Puffin, Hightail",3,2,1,0,66.67
+"Ser Boltyn, Breaker of Dawn","Riptide, Lurker of the Deep",5,5,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Teklovossen, Esteemed Magnate",2,2,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Tuffnut, Bumbling Hulkster",2,1,1,0,50.0
+"Ser Boltyn, Breaker of Dawn","Uzuri, Switchblade",1,1,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Valda, Seismic Impact",2,2,0,0,100.0
+"Ser Boltyn, Breaker of Dawn","Viserai, the Forsaken",8,7,1,0,87.5
+"Ser Boltyn, Breaker of Dawn","Vynnset, Iron Maiden",4,1,3,0,25.0
+"Ser Boltyn, Breaker of Dawn",Zyggy Starlight,2,2,0,0,100.0
+"Teklovossen, Esteemed Magnate","Aurora, Legacy of Tempest",2,1,1,0,50.0
+"Teklovossen, Esteemed Magnate",Dorinthea Ironsong,1,0,1,0,0.0
+"Teklovossen, Esteemed Magnate","Fang, Dracai of Blades",3,0,3,0,0.0
+"Teklovossen, Esteemed Magnate","Gravy Bones, Shipwrecked Looter",2,0,2,0,0.0
+"Teklovossen, Esteemed Magnate","Ira, Scarlet Revenger",2,2,0,0,100.0
+"Teklovossen, Esteemed Magnate",Jarl Vetreiði,2,2,0,0,100.0
+"Teklovossen, Esteemed Magnate","Levia, Shadowborn Abomination",5,1,4,0,20.0
+"Teklovossen, Esteemed Magnate","Oscilio, Forked Continuum",1,1,0,0,100.0
+"Teklovossen, Esteemed Magnate","Puffin, Hightail",2,0,2,0,0.0
+"Teklovossen, Esteemed Magnate","Ser Boltyn, Breaker of Dawn",2,0,2,0,0.0
+"Teklovossen, Esteemed Magnate",Zyggy Starlight,1,1,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Arakni, Huntsman",1,1,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Aurora, Legacy of Tempest",1,0,1,0,0.0
+"Tuffnut, Bumbling Hulkster","Betsy, Skin in the Game",1,1,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Fang, Dracai of Blades",1,0,1,0,0.0
+"Tuffnut, Bumbling Hulkster","Gravy Bones, Shipwrecked Looter",1,0,1,0,0.0
+"Tuffnut, Bumbling Hulkster","Ira, Scarlet Revenger",3,2,1,0,66.67
+"Tuffnut, Bumbling Hulkster",Jarl Vetreiði,1,1,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Levia, Shadowborn Abomination",3,1,2,0,33.33
+"Tuffnut, Bumbling Hulkster","Marlynn, Treasure Hunter",1,1,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Oscilio, Forked Continuum",1,0,1,0,0.0
+"Tuffnut, Bumbling Hulkster","Puffin, Hightail",1,0,1,0,0.0
+"Tuffnut, Bumbling Hulkster","Ser Boltyn, Breaker of Dawn",2,1,1,0,50.0
+"Tuffnut, Bumbling Hulkster","Viserai, the Forsaken",2,2,0,0,100.0
+"Tuffnut, Bumbling Hulkster","Vynnset, Iron Maiden",4,3,1,0,75.0
+"Uzuri, Switchblade","Fang, Dracai of Blades",1,0,1,0,0.0
+"Uzuri, Switchblade","Levia, Shadowborn Abomination",2,1,1,0,50.0
+"Uzuri, Switchblade","Puffin, Hightail",1,1,0,0,100.0
+"Uzuri, Switchblade","Ser Boltyn, Breaker of Dawn",1,0,1,0,0.0
+"Valda, Seismic Impact","Aurora, Legacy of Tempest",1,0,1,0,0.0
+"Valda, Seismic Impact",Dorinthea Ironsong,2,1,1,0,50.0
+"Valda, Seismic Impact","Fang, Dracai of Blades",1,0,1,0,0.0
+"Valda, Seismic Impact","Gravy Bones, Shipwrecked Looter",2,2,0,0,100.0
+"Valda, Seismic Impact",Jarl Vetreiði,3,2,1,0,66.67
+"Valda, Seismic Impact","Levia, Shadowborn Abomination",1,1,0,0,100.0
+"Valda, Seismic Impact","Oscilio, Forked Continuum",1,0,1,0,0.0
+"Valda, Seismic Impact","Puffin, Hightail",1,0,1,0,0.0
+"Valda, Seismic Impact","Ser Boltyn, Breaker of Dawn",2,0,2,0,0.0
+"Viserai, the Forsaken","Arakni, Huntsman",1,0,1,0,0.0
+"Viserai, the Forsaken","Aurora, Legacy of Tempest",3,1,2,0,33.33
+"Viserai, the Forsaken","Betsy, Skin in the Game",2,0,2,0,0.0
+"Viserai, the Forsaken","Fang, Dracai of Blades",6,2,4,0,33.33
+"Viserai, the Forsaken","Gravy Bones, Shipwrecked Looter",3,1,2,0,33.33
+"Viserai, the Forsaken","Hala, Bladesaint of the Vow",1,0,1,0,0.0
+"Viserai, the Forsaken","Ira, Scarlet Revenger",3,1,2,0,33.33
+"Viserai, the Forsaken",Jarl Vetreiði,9,4,5,0,44.44
+"Viserai, the Forsaken","Kayo, Underhanded Cheat",1,1,0,0,100.0
+"Viserai, the Forsaken","Levia, Shadowborn Abomination",6,3,3,0,50.0
+"Viserai, the Forsaken","Oscilio, Forked Continuum",1,0,1,0,0.0
+"Viserai, the Forsaken","Puffin, Hightail",2,1,1,0,50.0
+"Viserai, the Forsaken","Ser Boltyn, Breaker of Dawn",8,1,7,0,12.5
+"Viserai, the Forsaken","Tuffnut, Bumbling Hulkster",2,0,2,0,0.0
+"Viserai, the Forsaken","Vynnset, Iron Maiden",1,0,1,0,0.0
+"Vynnset, Iron Maiden","Arakni, Huntsman",1,0,1,0,0.0
+"Vynnset, Iron Maiden","Aurora, Legacy of Tempest",8,5,3,0,62.5
+"Vynnset, Iron Maiden","Betsy, Skin in the Game",3,1,2,0,33.33
+"Vynnset, Iron Maiden","Fang, Dracai of Blades",2,2,0,0,100.0
+"Vynnset, Iron Maiden","Gravy Bones, Shipwrecked Looter",5,0,5,0,0.0
+"Vynnset, Iron Maiden","Ira, Scarlet Revenger",4,1,3,0,25.0
+"Vynnset, Iron Maiden",Jarl Vetreiði,8,3,5,0,37.5
+"Vynnset, Iron Maiden","Levia, Shadowborn Abomination",10,4,6,0,40.0
+"Vynnset, Iron Maiden","Marlynn, Treasure Hunter",1,0,1,0,0.0
+"Vynnset, Iron Maiden","Oscilio, Forked Continuum",1,0,1,0,0.0
+"Vynnset, Iron Maiden","Ser Boltyn, Breaker of Dawn",4,3,1,0,75.0
+"Vynnset, Iron Maiden","Tuffnut, Bumbling Hulkster",4,1,3,0,25.0
+"Vynnset, Iron Maiden","Viserai, the Forsaken",1,1,0,0,100.0
+Zyggy Starlight,"Arakni, 5L!p3d 7hRu 7h3 cR4X",1,1,0,0,100.0
+Zyggy Starlight,"Arakni, Huntsman",1,0,1,0,0.0
+Zyggy Starlight,"Aurora, Legacy of Tempest",3,2,1,0,66.67
+Zyggy Starlight,"Betsy, Skin in the Game",1,1,0,0,100.0
+Zyggy Starlight,Dorinthea Ironsong,2,2,0,0,100.0
+Zyggy Starlight,"Fang, Dracai of Blades",8,4,4,0,50.0
+Zyggy Starlight,"Gravy Bones, Shipwrecked Looter",5,2,3,0,40.0
+Zyggy Starlight,"Hala, Bladesaint of the Vow",1,0,1,0,0.0
+Zyggy Starlight,"Ira, Scarlet Revenger",3,1,2,0,33.33
+Zyggy Starlight,Jarl Vetreiði,8,7,1,0,87.5
+Zyggy Starlight,"Kayo, Underhanded Cheat",1,0,1,0,0.0
+Zyggy Starlight,"Levia, Shadowborn Abomination",8,3,5,0,37.5
+Zyggy Starlight,"Malice, Domina of the Dead",1,1,0,0,100.0
+Zyggy Starlight,"Marlynn, Treasure Hunter",1,1,0,0,100.0
+Zyggy Starlight,"Oscilio, Forked Continuum",4,4,0,0,100.0
+Zyggy Starlight,"Puffin, Hightail",3,0,3,0,0.0
+Zyggy Starlight,"Ser Boltyn, Breaker of Dawn",2,0,2,0,0.0
+Zyggy Starlight,"Teklovossen, Esteemed Magnate",1,0,1,0,0.0

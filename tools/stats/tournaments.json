@@ -1,0 +1,23 @@
+{
+  "calling-paris": {
+    "name": "Calling: Paris", "slug": "calling-paris", "source": "Scraping", "format": "Classic Constructed",
+    "swiss_end": 15, "last_round": 18, "day2_start": 10, "draft_rounds": [], "allow_missing_rounds": [],
+    "coverage": "https://fabtcg.com/coverage/calling-paris/", "notes": []
+  },
+  "showdown-paris-2026": {
+    "name": "Sunday Showdown: Paris 2026", "slug": "showdown-paris-2026", "source": "Scraping/ParisShowdown2026", "format": "Silver Age",
+    "swiss_end": 10, "last_round": 13, "day2_start": null, "draft_rounds": [], "allow_missing_rounds": [],
+    "coverage": "https://fabtcg.com/coverage/showdown-paris/",
+    "notes": ["Evento de un solo día: diez rondas suizas y tres eliminatorias. No se asigna un día 2 a las rondas 10–13."]
+  },
+  "world-championship-paris-2026": {
+    "name": "World Championship: Paris 2026", "slug": "world-championship-paris-2026", "source": "Scraping/Worlds2026", "format": "Classic Constructed",
+    "swiss_end": 16, "last_round": 19, "day2_start": 9, "draft_rounds": [6, 7, 8, 9, 10, 11], "allow_missing_rounds": [16],
+    "coverage": "https://fabtcg.com/coverage/world-championship-paris-2026/",
+    "notes": [
+      "Booster Draft (rondas 6–11) cuenta solo para los jugadores. Las tasas e intervalos de héroes y los enfrentamientos usan únicamente Classic Constructed: rondas 1–5 y 12–16 en suizo; se excluyen las eliminatorias.",
+      "Se usa el corte entre rondas 8 y 9 para separar los días, coherente con la reducción observada de participantes y los bloques de Draft. La clave guardada confirma formatos, pero no etiqueta días: esta división diaria es una inferencia.",
+      "La captura titulada archivo Results16 contiene en realidad la ronda 15. Se descarta esa copia duplicada y se marca la ronda 16 como ausente. La recuperación desde la fuente oficial devolvió HTTP 403. No se inventan resultados: los registros y las tasas de día 2 quedan incompletos."
+    ]
+  }
+}
