@@ -9,8 +9,11 @@ import html
 import json
 import math
 import re
+import random
 from collections import Counter, defaultdict
 from pathlib import Path
+
+EVENTS = json.loads(Path(__file__).with_name('tournaments.json').read_text())
 
 
 def clean(value):
@@ -24,13 +27,15 @@ def required(pattern, value):
     return found.group(1)
 
 
-def parse_page(path):
+def parse_page(path, event=None):
+    event = event or EVENTS['calling-paris']
     source = path.read_text(encoding='utf-8')
-    round_number = int(required(r'Calling: Paris - Round (\d+) Results', source))
+    round_number = int(required(r' - Round (\d+) Results', source))
     matches = []
     for index, row in enumerate(re.findall(r'<tr class="match-row">(.*?)</tr>', source, re.S), 1):
         record = dict(round=round_number, table_order=index,
-                      phase='Swiss' if round_number <= 15 else 'Elimination', source=path.name)
+                      phase='Swiss' if round_number <= event['swiss_end'] else 'Elimination', source=path.name)
+        record['format'] = 'Booster Draft' if round_number in event['draft_rounds'] else event['format']
         record['result'] = clean(required(r'<span class="winner-pill">(.*?)</span>', row))
         if record['result'] not in ('Player 1 Win', 'Player 2 Win', 'Draw', 'Double Loss'):
             raise ValueError(f'Unrecognized result: {record}')
@@ -72,6 +77,32 @@ def wilson(wins, total):
     return round(100*(center-half), 2), round(100*(center+half), 2)
 
 
+def player_bootstrap(rows, seed, resamples=2000):
+    """Percentile interval for the pooled win fraction, resampling whole players."""
+    groups = defaultdict(lambda: [0, 0])
+    for row in rows:
+        groups[row['player']][0] += row['outcome'] == 'W'
+        groups[row['player']][1] += 1
+    count = len(groups)
+    if count < 2:
+        return None, None, count, 'insufficient_players' if count else 'no_games'
+    records = [groups[name] for name in sorted(groups)]
+    rng = random.Random(seed)
+    samples = []
+    for _ in range(resamples):
+        selected = rng.choices(records, k=count)
+        samples.append(100 * sum(r[0] for r in selected) / sum(r[1] for r in selected))
+    samples.sort()
+    if samples[-1] - samples[0] < 1e-12:
+        return None, None, count, 'no_between_player_variation'
+    def quantile(p):
+        index = (len(samples)-1)*p
+        low = int(index)
+        high = min(low+1,len(samples)-1)
+        return samples[low] + (samples[high]-samples[low])*(index-low)
+    return round(quantile(.025),2), round(quantile(.975),2), count, 'estimated'
+
+
 def write_csv(path, rows):
     if rows:
         with path.open('w', newline='', encoding='utf-8-sig') as stream:
@@ -88,7 +119,9 @@ def table(headers, rows):
     return '| ' + ' | '.join(headers) + ' |\n|' + '|'.join(['---']*len(headers)) + '|\n' + '\n'.join('| ' + ' | '.join(map(str, row)) + ' |' for row in rows)
 
 
-def analyze(source_dir, output_dir, normalized=None):
+def analyze(source_dir, output_dir, normalized=None, event=None):
+    event = event or EVENTS['calling-paris']
+    duplicates = []
     paths = []
     if normalized:
         with normalized.open(encoding='utf-8-sig') as stream:
@@ -100,13 +133,33 @@ def analyze(source_dir, output_dir, normalized=None):
                 if match[key] not in ('True', 'False'):
                     raise ValueError(f'Invalid boolean in {normalized}: {key}')
                 match[key] = match[key] == 'True'
-        sources = json.loads(normalized.with_name('audit.json').read_text())['sources']
+        previous_audit = json.loads(normalized.with_name('audit.json').read_text())
+        sources = previous_audit['sources']
+        duplicates = previous_audit.get('duplicate_round_sources', [])
+        for match in matches:
+            match['format'] = 'Booster Draft' if match['round'] in event['draft_rounds'] else event['format']
     else:
-        paths = sorted(source_dir.glob('*.html'), key=lambda p: int(re.search(r'Results(\d+)', p.name).group(1)))
-        matches = [m for p in paths for m in parse_page(p)]
+        paths = sorted(source_dir.glob('*.html'))
+        matches = []
+        rounds_seen = {}
+        for path in paths:
+            if not re.search(r' - Round \d+ Results', path.read_text()):
+                continue
+            rows = parse_page(path, event)
+            rnd = rows[0]['round']
+            signature = [{k:v for k,v in row.items() if k != 'source'} for row in rows]
+            if rnd in rounds_seen:
+                if signature != rounds_seen[rnd][1]:
+                    raise ValueError(f'Conflicting snapshots for round {rnd}: {path}')
+                duplicates.append(dict(round=rnd, kept=rounds_seen[rnd][0], excluded=path.name))
+                continue
+            rounds_seen[rnd] = (path.name, signature)
+            matches.extend(rows)
+        matches.sort(key=lambda m:(m['round'],m['table_order']))
         sources = [dict(file=p.name,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in paths]
-    if {m['round'] for m in matches} != set(range(1, 19)):
-        raise ValueError('Expected the 18 Calling: Paris rounds; refusing partial analysis')
+    missing_rounds = sorted(set(range(1,event['last_round']+1))-{m['round'] for m in matches})
+    if set(missing_rounds)-set(event['allow_missing_rounds']):
+        raise ValueError(f'Unexpected missing rounds: {missing_rounds}')
     players = {}
     results = []
     seen = set()
@@ -121,16 +174,16 @@ def analyze(source_dir, output_dir, normalized=None):
             player = players.setdefault(name, dict(player=name, hero=m[f'hero{side}'], country=m[f'country{side}']))
             if player['hero'] != m[f'hero{side}']:
                 raise ValueError(f'Hero changed for {name}')
-            results.append(dict(player=name, hero=player['hero'], round=m['round'], phase=m['phase'],
+            results.append(dict(player=name, hero=player['hero'], round=m['round'], phase=m['phase'], format=m['format'],
                                 opponent=m[f'player{3-side}'], opponent_hero=m[f'hero{3-side}'],
                                 outcome=outcome(m['result'], side), source_result=m['result'],
                                 placeholder_opponent=m['placeholder_opponent'], source=m['source']))
     by_player = defaultdict(list)
     for r in results:
         by_player[r['player']].append(r)
-    top8 = {m[f'player{s}'] for m in matches if m['round'] == 16 for s in (1, 2)}
-    day2 = {r['player'] for r in results if r['round'] == 10}
-    final = next(m for m in matches if m['round'] == 18)
+    top8 = {m[f'player{s}'] for m in matches if m['round'] == event['swiss_end']+1 for s in (1, 2)}
+    day2 = {r['player'] for r in results if event['day2_start'] and r['round'] == event['day2_start']}
+    final = next(m for m in matches if m['round'] == event['last_round'])
     champion = final['player1'] if final['result'] == 'Player 1 Win' else final['player2']
     finalist = final['player2'] if champion == final['player1'] else final['player1']
     for name, p in players.items():
@@ -147,13 +200,17 @@ def analyze(source_dir, output_dir, normalized=None):
                  all_win_pct=rate(all_counts['W'],all_counts['L'],all_counts['D']),
                  first_round=min(r['round'] for r in rs), last_round=max(r['round'] for r in rs),
                  day2=name in day2, top8=name in top8,
-                 finish='Champion' if name == champion else 'Runner-up' if name == finalist else 'Top 4' if any(r['round']==17 for r in rs) else 'Top 8' if name in top8 else '')
+                 finish='Champion' if name == champion else 'Runner-up' if name == finalist else 'Top 4' if any(r['round']==event['last_round']-1 for r in rs) else 'Top 8' if name in top8 else '')
+        for prefix, fmt in [('constructed',event['format']),('draft','Booster Draft')]:
+            format_counts = Counter(r['outcome'] for r in played if r['format']==fmt)
+            p.update({f'{prefix}_wins':format_counts['W'],f'{prefix}_losses':format_counts['L'],f'{prefix}_draws':format_counts['D'],
+                      f'{prefix}_win_pct':rate(format_counts['W'],format_counts['L'],format_counts['D'])})
     leaderboard = sorted(players.values(), key=lambda p: (-p['swiss_recorded_wins'],p['swiss_losses'],p['swiss_draws'],p['player'].casefold()))
     heroes = []
-    known_contested = [m for m in matches if m['phase']=='Swiss' and m['known_heroes'] and not m['placeholder_opponent']]
+    known_contested = [m for m in matches if m['phase']=='Swiss' and m['format']==event['format'] and m['known_heroes'] and not m['placeholder_opponent']]
     for hero in sorted({p['hero'] for p in players.values()}):
         ps = [p for p in players.values() if p['hero']==hero]
-        rs = [r for r in results if r['hero']==hero and r['phase']=='Swiss' and not r['placeholder_opponent']]
+        rs = [r for r in results if r['hero']==hero and r['phase']=='Swiss' and r['format']==event['format'] and not r['placeholder_opponent']]
         counts = Counter(r['outcome'] for r in rs)
         nonmirror = Counter()
         for m in known_contested:
@@ -170,10 +227,33 @@ def analyze(source_dir, output_dir, normalized=None):
                            nonmirror_wins=nonmirror['W'],nonmirror_losses=nonmirror['L'],nonmirror_draws=nonmirror['D'],
                            nonmirror_win_pct=rate(nonmirror['W'],nonmirror['L'],nonmirror['D']),
                            nonmirror_ci95_low=lo,nonmirror_ci95_high=hi))
+        periods = [('day1',1,(event['day2_start'] or event['swiss_end']+1)-1),('day2',event['day2_start'] or event['swiss_end']+1,event['swiss_end'])]
+        for day, first, last in periods:
+            daily = [r for r in rs if first <= r['round'] <= last]
+            daily_counts = Counter(r['outcome'] for r in daily)
+            adjusted = Counter(r['outcome'] for r in daily if hero != 'N/A' and r['opponent_hero'] not in ('N/A', hero))
+            heroes[-1].update({
+                f'{day}_wins': daily_counts['W'], f'{day}_losses': daily_counts['L'], f'{day}_draws': daily_counts['D'],
+                f'{day}_matches': len(daily),
+                f'{day}_win_pct': rate(daily_counts['W'], daily_counts['L'], daily_counts['D']),
+                f'{day}_nonmirror_wins': adjusted['W'], f'{day}_nonmirror_losses': adjusted['L'], f'{day}_nonmirror_draws': adjusted['D'],
+                f'{day}_nonmirror_win_pct': rate(adjusted['W'], adjusted['L'], adjusted['D']),
+            })
+        heroes[-1]['swiss_matches'] = len(rs)
+        for period, first, last in [('swiss',1,event['swiss_end']),*periods]:
+            period_rows = [r for r in rs if first <= r['round'] <= last]
+            low, high, contributing, status = player_bootstrap(period_rows, f'{event["slug"]}:{hero}:{period}')
+            if hero == 'N/A':
+                low, high, status = None, None, 'unknown_hero'
+            heroes[-1].update({f'{period}_ci95_low':low, f'{period}_ci95_high':high,
+                              f'{period}_players':contributing, f'{period}_ci_status':status})
     heroes.sort(key=lambda h:-h['players'])
     hero_rates = {h['hero']: h['swiss_win_pct'] for h in heroes if h['hero'] != 'N/A'}
+    daily_hero_rates = {h['hero']: h for h in heroes if h['hero'] != 'N/A'}
     for player in leaderboard:
         player['hero_swiss_win_pct'] = hero_rates.get(player['hero'])
+        for day in ('day1', 'day2'):
+            player[f'hero_{day}_win_pct'] = daily_hero_rates.get(player['hero'], {}).get(f'{day}_win_pct')
     matchup_counts = defaultdict(Counter)
     for m in known_contested:
         if not m['mirror']:
@@ -181,14 +261,17 @@ def analyze(source_dir, output_dir, normalized=None):
                 matchup_counts[(m[f'hero{side}'],m[f'hero{3-side}'])][outcome(m['result'],side)]+=1
     matchups = [dict(hero=h,opponent_hero=o,matches=sum(c.values()),wins=c['W'],losses=c['L'],draws=c['D'],win_pct=rate(c['W'],c['L'],c['D'])) for (h,o),c in sorted(matchup_counts.items())]
     rounds = []
-    for rnd in range(1,19):
+    for rnd in range(1,event['last_round']+1):
         ms = [m for m in matches if m['round']==rnd]
+        if not ms:
+            continue
         counts=Counter(m['result'] for m in ms)
         rounds.append(dict(round=rnd,phase=ms[0]['phase'],rows=len(ms),named_players=sum(r['round']==rnd for r in results),
                            draws=counts['Draw'],double_losses=counts['Double Loss'],unknown_hero_rows=sum(not m['known_heroes'] for m in ms),
                            placeholders=sum(m['placeholder_opponent'] for m in ms)))
     unknowns = [p for p in leaderboard if p['hero']=='N/A']
-    audit = dict(observed_named_players=len(players),known_hero_players=len(players)-len(unknowns),unknown_hero_players=len(unknowns),
+    audit = dict(event=event,missing_rounds=missing_rounds,duplicate_round_sources=duplicates,
+                 observed_named_players=len(players),known_hero_players=len(players)-len(unknowns),unknown_hero_players=len(unknowns),
                  match_rows=len(matches),swiss_rows=sum(m['phase']=='Swiss' for m in matches),
                  elimination_rows=sum(m['phase']=='Elimination' for m in matches),
                  placeholder_rows=[m for m in matches if m['placeholder_opponent']],
@@ -198,16 +281,21 @@ def analyze(source_dir, output_dir, normalized=None):
     for filename, rows in [('matches',matches),('players',leaderboard),('player-results',results),('heroes',heroes),('matchups',matchups),('rounds',rounds)]:
         write_csv(output_dir/f'{filename}.csv',rows)
     (output_dir/'audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n')
-    site_data = dict(heroes=heroes, players=leaderboard, matchups=matchups, rounds=rounds,
+    site_data = dict(event=event,missing_rounds=missing_rounds,heroes=heroes, players=leaderboard, matchups=matchups, rounds=rounds,
                      champion=champion, finalist=finalist,
                      observed_players=len(players), known_hero_players=len(players)-len(unknowns),
-                     unknown_hero_players=len(unknowns), match_rows=len(matches))
+                     unknown_hero_players=len(unknowns), match_rows=len(matches),
+                     confidence=dict(level=.95,method='player-cluster percentile bootstrap',resamples=2000))
     (output_dir/'summary.json').write_text(json.dumps(site_data,ensure_ascii=False,separators=(',',':'))+'\n')
     details = defaultdict(list)
     for result in results:
-        details[result['player']].append({key:result[key] for key in ('round','phase','opponent','opponent_hero','outcome','placeholder_opponent')})
+        details[result['player']].append({key:result[key] for key in ('round','phase','format','opponent','opponent_hero','outcome','placeholder_opponent')})
     (output_dir/'player-rounds.json').write_text(json.dumps(details,ensure_ascii=False,separators=(',',':'))+'\n')
-    write_report(output_dir,heroes,leaderboard,matchups,rounds,audit,champion,finalist,matches)
+    if event['slug']=='calling-paris':
+        write_report(output_dir,heroes,leaderboard,matchups,rounds,audit,champion,finalist,matches)
+    else:
+        from tournament_report import write_tournament_report
+        write_tournament_report(output_dir, site_data, audit, results)
     print(json.dumps({k:v for k,v in audit.items() if k not in ('unknown_players','sources','placeholder_rows')},ensure_ascii=False,indent=2))
 
 
@@ -217,10 +305,21 @@ def write_report(out,heroes,players,matchups,rounds,audit,champion,finalist,matc
     major = sorted([h for h in heroes if h['players']>=30 and h['nonmirror_win_pct'] is not None],key=lambda h:-h['nonmirror_win_pct'])
     hero_rows = [[h['hero'],h['players'],pct(h['field_pct']),h['day2'],pct(h['day2_conversion_pct']),h['top8'],f"{h['swiss_wins']}-{h['swiss_losses']}-{h['swiss_draws']}",pct(h['swiss_win_pct']),pct(h['nonmirror_win_pct'])] for h in heroes]
     headers=['Hero','Players','Field share','Day 2','Day 2 conversion','Top 8','Swiss W-L-D','Swiss win rate','Non-mirror win rate']
+    for h, row in zip(heroes, hero_rows):
+        for day in ('day1', 'day2'):
+            row.extend([f"{h[f'{day}_wins']}-{h[f'{day}_losses']}-{h[f'{day}_draws']}", pct(h[f'{day}_win_pct']), pct(h[f'{day}_nonmirror_win_pct'])])
+    headers.extend(['Day 1 W-L-D', 'Day 1 win rate', 'Day 1 non-mirror win rate', 'Day 2 W-L-D', 'Day 2 win rate', 'Day 2 non-mirror win rate'])
+    for h, row in zip(heroes, hero_rows):
+        for period in ('swiss', 'day1', 'day2'):
+            low, high = h[f'{period}_ci95_low'], h[f'{period}_ci95_high']
+            interval = 'Not estimable' if low is None else f'{pct(low)}–{pct(high)}'
+            row.extend([interval, h[f'{period}_matches'], h[f'{period}_players']])
+    for period in ('Swiss', 'Day 1', 'Day 2'):
+        headers.extend([f'{period} 95% CI', f'{period} games', f'{period} contributing players'])
     def player_row(p):
-        return [p['player'],p['hero'],p['finish'],f"{p['swiss_wins']}-{p['swiss_losses']}-{p['swiss_draws']}",pct(p['swiss_win_pct']),pct(p['hero_swiss_win_pct']),f"{p['all_wins']}-{p['all_losses']}-{p['all_draws']}"]
+        return [p['player'],p['hero'],p['finish'],f"{p['swiss_wins']}-{p['swiss_losses']}-{p['swiss_draws']}",pct(p['swiss_win_pct']),pct(p['hero_swiss_win_pct']),pct(p['hero_day1_win_pct']),pct(p['hero_day2_win_pct']),f"{p['all_wins']}-{p['all_losses']}-{p['all_draws']}"]
     player_rows = [player_row(p) for p in players]
-    pheaders=['Player','Hero','Finish','Swiss W-L-D','Player Swiss win rate','Hero Swiss win rate','All rounds W-L-D']
+    pheaders=['Player','Hero','Finish','Swiss W-L-D','Player Swiss win rate','Hero Swiss win rate','Hero Day 1 win rate','Hero Day 2 win rate','All rounds W-L-D']
     lines=['# Calling: Paris — saved tournament results analysis','',
            f"{audit['observed_named_players']:,} observed named players; {known:,} with a known hero; {audit['unknown_hero_players']} named players with source hero `N/A`. {audit['match_rows']:,} result rows: {audit['swiss_rows']:,} Swiss (rounds 1–15) and 7 elimination (rounds 16–18).",'',
            f'**Champion: {champion} (Teklovossen). Runner-up: {finalist} (Jarl).**','',
@@ -228,6 +327,8 @@ def write_report(out,heroes,players,matchups,rounds,audit,champion,finalist,matc
            '- Participation counts distinct exact player names seen anywhere in the saved pages. This is an observed field, not a registration list. No conflicting heroes or duplicate player names within a round were found; exact names are not verified unique player IDs.',
            '- Day 2 means an appearance in round 10. The 128 observed round-10 players provide an observed Day 2 cohort; qualification rules are not inferred.',
            '- Swiss win rate = W / (W + L + D). Draws count as games without a win; a double loss is one loss for each player. Mirrors are included in the basic Swiss rate.',
+           '- Day 1 covers rounds 1–9; Day 2 covers Swiss rounds 10–15. Rounds 16–18 are eliminations and are excluded from both daily rates. Each daily rate uses only games from that day. No games means an unavailable rate, not 0%. Day 2 reflects the players who advanced, not the full original field. Daily records and non-mirror rates are shown alongside the rates.',
+           '- Confidence for overall and daily basic hero rates uses a reproducible 95% percentile bootstrap interval from 2,000 resamples of whole players. Each resampled player retains all their games in that period, and the pooled W / games ratio is recomputed. Both contributing game and player counts are shown. An interval is withheld with fewer than two players, an unknown hero, no games, or no between-player variation in the resampled ratio. Few-player intervals remain unstable; they are descriptive and conditional on this tournament cohort, not guarantees about future hero strength or comparisons between days. The CSV’s non-mirror Wilson intervals are a separate game-based approximation. Reference for percentile bootstrap construction: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html (the implementation here uses only the Python standard library).',
            '- In player tables, Hero Swiss win rate is the pooled Swiss rate of every observed player using that hero, including the current player. It uses the same denominator and exclusions as the player rate; unknown heroes show no hero rate.',
            '- Non-mirror win rate additionally excludes mirror matches and every match with an unknown hero. It uses Swiss rounds only, avoiding extra weight from the elimination bracket. CSV includes approximate 95% Wilson intervals; repeated games from the same player are correlated, so these intervals are descriptive, not a player-adjusted model.',
            '- Six rows (rounds 2, 4, 6, 7, 13 and 14) record wins against the literal placeholder “Player 2” / `N/A`. These are not counted as real opponents or played matches. They remain in raw matches and in each player’s recorded Swiss wins, with a separate placeholder-wins count in players.csv. The source does not label them as byes; other unlisted byes cannot be recovered.',
@@ -272,7 +373,8 @@ def write_report(out,heroes,players,matchups,rounds,audit,champion,finalist,matc
         individual_results=list(csv.DictReader(stream))
     document+='<h2>Player round-by-round results</h2>'+html_table(['Player','Hero','Round','Phase','Opponent','Opponent hero','Result','Placeholder opponent'],[[r[k] for k in ('player','hero','round','phase','opponent','opponent_hero','outcome','placeholder_opponent')] for r in individual_results],'round-results')
     document+='<h2>Swiss matchups</h2>'+html_table(['Hero','Opponent','Matches','W-L-D','Win rate'],[[m['hero'],m['opponent_hero'],m['matches'],f"{m['wins']}-{m['losses']}-{m['draws']}",pct(m['win_pct'])] for m in sorted(matchups,key=lambda m:-m['matches'])],'matchups')
-    document+='''<script>document.querySelectorAll('.search').forEach(input=>input.addEventListener('input',()=>{const query=input.value.toLocaleLowerCase();document.querySelectorAll('#'+input.dataset.target+' tbody tr').forEach(row=>row.hidden=!row.textContent.toLocaleLowerCase().includes(query))}));</script></html>'''
+    from tournament_report import TABLE_SCRIPT
+    document+='<script>'+TABLE_SCRIPT+'</script></html>'
     (out/'report.html').write_text(document,encoding='utf-8')
 
 
@@ -281,5 +383,8 @@ if __name__=='__main__':
     parser.add_argument('--source',type=Path,default=Path('Scraping'))
     parser.add_argument('--output',type=Path,default=Path('output/calling-paris'))
     parser.add_argument('--matches',type=Path,help='Rebuild from normalized matches.csv and its sibling audit.json')
+    parser.add_argument('--event',choices=EVENTS,default='calling-paris')
     args=parser.parse_args()
-    analyze(args.source,args.output,args.matches)
+    event=EVENTS[args.event]
+    source=Path(event['source']) if args.source==Path('Scraping') else args.source
+    analyze(source,args.output,args.matches,event)

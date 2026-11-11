@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+const { data, playerRounds } = Astro.props;
+const event = data.event;
+import { formatHeroSample, formatPlayerHeroRate, formatPlayerRecord } from '../utils/tournamentReport.js';
+
+const base = `/data/${event.slug}`;
+const percent = (value: number | null) => value === null ? '—' : `${value.toLocaleString('es-CO', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+const record = formatPlayerRecord;
+const heroName = (hero: string) => hero === 'N/A' ? 'Sin héroe registrado' : hero;
+const finishNames: Record<string, string> = {Champion:'Campeón', 'Runner-up':'Finalista', 'Top 4':'Top 4', 'Top 8':'Top 8'};
+const outcomeNames: Record<string, string> = {W:'Victoria', L:'Derrota', D:'Empate'};
+const top8 = data.players.filter(p => p.top8).sort((a,b) => {
+  const order: Record<string, number> = {Champion:0, 'Runner-up':1, 'Top 4':2, 'Top 8':3};
+  return order[a.finish] - order[b.finish] || a.player.localeCompare(b.player);
+});
+const matchups = data.matchups.filter(m => m.matches >= 10).sort((a,b) => b.matches-a.matches);
+const championRounds = playerRounds[data.champion as keyof typeof playerRounds];
+const heroInfo = new Map(data.heroes.map(hero => [hero.hero, hero]));
+const champion = data.players.find(p => p.player === data.champion);
+const bestHero = [...data.heroes].filter(h => h.players >= 30 && h.nonmirror_win_pct !== null).sort((a,b) => b.nonmirror_win_pct-a.nonmirror_win_pct)[0];
+const top8Composition = [...new Set(top8.map(p => p.hero))].map(hero => `${hero}: ${top8.filter(p => p.hero === hero).length}`).join(' · ');
+---
+
+<Layout title={`${event.name} — resultados y metajuego | FAB Colombia`}>
+  <div class="paris-report" data-paris-report data-report-base={base}>
+    <header class="report-heading">
+      <a href="/competitivo">← Juego competitivo</a>
+      <p class="eyebrow">Análisis de torneo · Cobertura guardada</p>
+      <h1>{event.name}</h1>
+      <p class="lead">El campo, los héroes y cada jugador. Explora las tasas de victoria y los enfrentamientos de las {event.last_round} rondas programadas.</p>
+      <nav aria-label="Secciones del reporte"><a href="#resumen">Resumen</a><a href="#heroes">Héroes</a><a href="#jugadores">Jugadores</a><a href="#enfrentamientos">Enfrentamientos</a><a href="#metodologia">Metodología</a><a href="#descargas">Descargas</a></nav>
+    </header>
+
+    {event.notes.length > 0 && <aside class="source-notes" aria-label="Notas del torneo"><h2>Alcance de los datos</h2>{event.notes.map(note => <p>{note}</p>)}</aside>}
+    <section id="resumen" aria-labelledby="summary-title">
+      <h2 id="summary-title">El torneo en cifras · {event.format}</h2>
+      <div class="metrics">
+        <div><strong>{data.observed_players.toLocaleString('es-CO')}</strong><span>Jugadores observados</span></div>
+        <div><strong>{data.match_rows.toLocaleString('es-CO')}</strong><span>Resultados registrados</span></div>
+        <div><strong>{event.day2_start ? data.players.filter(p => p.day2).length : "No aplica"}</strong><span>{event.day2_start ? `Jugadores en ronda ${event.day2_start}` : "Día 2: evento de un día"}</span></div>
+        <div><strong>{data.heroes.filter(h => h.hero !== "N/A").length}</strong><span>Héroes identificados</span></div>
+      </div>
+      <div class="insights">
+        <div><h3>{data.champion} · Campeón</h3><p>{champion.hero}: <strong>{champion.all_wins}–{champion.all_losses}–{champion.all_draws}</strong> en las rondas observadas. Suizo: <strong>{record(champion)}</strong>.</p><p>Finalista: {data.finalist}. {data.missing_rounds.length > 0 && 'Los registros están incompletos por la ronda ausente.'}</p></div>
+        <div><h3>{bestHero?.hero || data.heroes[0].hero}</h3><p>{bestHero ? `${percent(bestHero.nonmirror_win_pct)} sin espejos, la tasa más alta entre los héroes con al menos 30 jugadores.` : 'Consulta el tamaño de muestra junto a cada tasa.'}</p><p>Más jugado: {data.heroes[0].hero}, con {data.heroes[0].players} jugadores ({percent(data.heroes[0].field_pct)}).</p></div>
+        <div><h3>Composición del Top 8</h3><p>{top8Composition}</p><p>El Top 8 se toma directamente de las eliminatorias, no del orden descriptivo de victorias.</p></div>
+      </div>
+      <h3>Top 8</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Resultados del Top 8">
+        <table><thead><tr><th scope="col">Jugador</th><th scope="col">Héroe</th><th scope="col">Resultado</th><th scope="col">Suizo V–D–E</th><th scope="col">Victorias del jugador</th><th scope="col">Victorias del héroe</th><th scope="col">Total V–D–E</th></tr></thead>
+          <tbody>{top8.map(p => <tr><td><button type="button" data-player={p.player}>{p.player}</button></td><td>{p.hero}</td><td>{finishNames[p.finish]}</td><td>{record(p)}</td><td>{percent(p.swiss_win_pct)}</td><td class="hero-rate">{formatPlayerHeroRate(heroInfo.get(p.hero), Boolean(event.day2_start))}</td><td>{p.all_wins}–{p.all_losses}–{p.all_draws}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <p class="note">Las tasas de jugador usan todos los formatos suizos; las de héroe usan solo {event.format}, incluidos los espejos. V–D–E: victorias, derrotas y empates.</p>
+    </section>
+
+    <section id="heroes" aria-labelledby="heroes-title">
+      <h2 id="heroes-title">Participación y rendimiento por héroe</h2>
+      <p>La participación usa los {data.observed_players.toLocaleString("es-CO")} jugadores observados, incluidos {data.unknown_hero_players} sin héroe registrado. «Sin espejos» excluye tanto enfrentamientos del mismo héroe como partidas con un héroe desconocido.</p>
+      <p><strong>{event.day2_start ? `Día 1: rondas 1–${event.day2_start-1}. Día 2: rondas suizas ${event.day2_start}–${event.swiss_end}.` : `Evento de un día: rondas suizas 1–${event.swiss_end}; día 2 no aplica.`}</strong> Las eliminatorias quedan fuera. Cada tasa muestra su intervalo de confianza (IC) del 95% y las partidas y jugadores que la sustentan. Los héroes usan solo {event.format}; los jugadores conservan todos los formatos. El día 2, cuando existe, representa solo a quienes avanzaron.</p>
+      <div class="participation" aria-label="Diez héroes más jugados">
+        {data.heroes.slice(0,10).map(h => <div class="bar-row"><span>{h.hero}</span><div class="bar-track"><div class="bar-fill" style={`width:${h.players/data.heroes[0].players*100}%`}></div><span>{h.players} · {percent(h.field_pct)}</span></div></div>)}
+      </div>
+      <p class="note">Pulsa un encabezado para ordenar por nombre de héroe o valor numérico; vuelve a pulsarlo para invertir el orden. Las tablas paginadas ordenan todos los resultados filtrados.</p>
+      <label for="hero-search">Buscar héroe</label><input id="hero-search" type="search" placeholder="Nombre del héroe" />
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Participación y victorias de héroes">
+        <table><thead><tr><th scope="col">Héroe</th><th scope="col">Jugadores</th><th scope="col">Participación</th><th scope="col">Jugadores día 2</th><th scope="col">Conversión día 2</th><th scope="col">Top 8</th><th scope="col">Suizo V–D–E</th><th scope="col">Victorias suizas e IC</th><th scope="col">Sin espejos</th><th scope="col">Día 1: victorias e IC</th><th scope="col">Día 2: victorias e IC</th></tr></thead>
+          <tbody id="hero-rows">{data.heroes.map(h => <tr><th scope="row">{heroName(h.hero)}</th><td>{h.players}</td><td>{percent(h.field_pct)}</td><td>{event.day2_start ? h.day2 : "—"}</td><td>{event.day2_start ? percent(h.day2_conversion_pct) : "—"}</td><td>{h.top8}</td><td>{h.swiss_wins}–{h.swiss_losses}–{h.swiss_draws}</td><td class="hero-rate">{formatHeroSample(h)}</td><td>{percent(h.nonmirror_win_pct)}</td><td class="hero-rate">{formatHeroSample(h, 'day1')}{'\n'}Sin espejos: {percent(h.day1_nonmirror_win_pct)}</td><td class="hero-rate">{event.day2_start ? formatHeroSample(h, 'day2')+'\nSin espejos: '+percent(h.day2_nonmirror_win_pct) : 'No aplica'}</td></tr>)}</tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="jugadores" aria-labelledby="players-title">
+      <h2 id="players-title">Resultados por jugador</h2>
+      <p>Compara el rendimiento de cada jugador con el de su héroe en el mismo torneo. Selecciona un nombre para ver sus rivales y resultados por ronda.</p>
+      <p class="note">Orden descriptivo por victorias suizas registradas; no es la clasificación oficial y no incorpora desempates oficiales. Las victorias contra un rival sin identificar se excluyen de las tasas y se documentan en los archivos descargables.</p>
+      <div class="filters"><div><label for="player-search">Buscar jugador</label><input id="player-search" type="search" placeholder="Nombre o resultado (Top 8, campeón…)" /></div><div><label for="player-hero">Héroe</label><select id="player-hero"><option value="">Todos los héroes</option>{data.heroes.map(h => <option value={h.hero}>{heroName(h.hero)}</option>)}</select></div></div>
+      <p id="player-count" role="status">Mostrando 1–25 de {data.players.length} jugadores.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Resultados y tasas de victoria por jugador">
+        <table><thead><tr><th scope="col">Jugador</th><th scope="col">Héroe</th><th scope="col">Resultado</th><th scope="col">Suizo V–D–E</th><th scope="col">Victorias del jugador</th><th scope="col">Victorias del héroe</th><th scope="col">Total V–D–E</th></tr></thead>
+          <tbody id="player-rows">{data.players.slice(0,25).map(p => <tr><td><button type="button" data-player={p.player}>{p.player}</button></td><td>{heroName(p.hero)}</td><td>{finishNames[p.finish] || '—'}</td><td>{record(p)}</td><td>{percent(p.swiss_win_pct)}</td><td class="hero-rate">{formatPlayerHeroRate(heroInfo.get(p.hero), Boolean(event.day2_start))}</td><td>{p.all_wins}–{p.all_losses}–{p.all_draws}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="pagination"><button type="button" id="players-prev" disabled>← Anterior</button><button type="button" id="players-next">Siguiente →</button></div>
+      <noscript><p>Activa JavaScript para buscar jugadores o descarga el CSV con todos los resultados.</p></noscript>
+
+      <div id="player-detail" class="player-detail">
+        <h3 id="detail-name" tabindex="-1">Rondas de {data.champion}</h3>
+        <p id="detail-summary">{champion.hero} · Suizo: {record(champion)} · Victorias del jugador: {percent(champion.swiss_win_pct)} · Victorias del héroe: {formatPlayerHeroRate(heroInfo.get(champion.hero), Boolean(event.day2_start))}</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Resultados por ronda del jugador seleccionado">
+          <table><thead><tr><th scope="col">Ronda</th><th scope="col">Fase</th><th scope="col">Rival</th><th scope="col">Héroe del rival</th><th scope="col">Resultado</th></tr></thead>
+            <tbody id="detail-rows">{championRounds.map(r => <tr><td>{r.round}</td><td>{r.phase === 'Swiss' ? 'Suizo' : 'Eliminatoria'} · {r.format}</td><td>{r.opponent}</td><td>{r.format === 'Booster Draft' ? 'No indicado (Draft)' : heroName(r.opponent_hero)}</td><td>{outcomeNames[r.outcome]}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="enfrentamientos" aria-labelledby="matchups-title">
+      <h2 id="matchups-title">Enfrentamientos entre héroes</h2>
+      <p>Los enfrentamientos usan solo rondas suizas de {event.format}. Draft y eliminatorias están excluidos.</p>
+      <p class="note">Solo suizo, sin espejos ni héroes desconocidos. Cada fila muestra la perspectiva del primer héroe; se incluyen ambas direcciones. Por defecto se muestran enfrentamientos con al menos 10 partidas.</p>
+      <div class="filters"><div><label for="matchup-search">Buscar enfrentamiento</label><input id="matchup-search" type="search" placeholder="Héroe o rival" /></div><div><label for="matchup-min">Mínimo de partidas</label><select id="matchup-min"><option value="1">1 partida</option><option value="10" selected>10 partidas</option><option value="30">30 partidas</option><option value="50">50 partidas</option></select></div></div>
+      <p id="matchup-count" role="status">Mostrando 1–25 de {matchups.length} enfrentamientos.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Victorias por enfrentamiento entre héroes">
+        <table><thead><tr><th scope="col">Héroe</th><th scope="col">Rival</th><th scope="col">Partidas</th><th scope="col">V–D–E</th><th scope="col">Victorias</th></tr></thead><tbody id="matchup-rows">{matchups.slice(0,25).map(m => <tr><th scope="row">{m.hero}</th><td>{m.opponent_hero}</td><td>{m.matches}</td><td>{m.wins}–{m.losses}–{m.draws}</td><td>{percent(m.win_pct)}</td></tr>)}</tbody></table>
+      </div>
+      <div class="pagination"><button type="button" id="matchups-prev" disabled>← Anterior</button><button type="button" id="matchups-next">Siguiente →</button></div>
+    </section>
+
+    <section id="metodologia" aria-labelledby="method-title">
+      <h2 id="method-title">Cómo leer los resultados</h2>
+      <ul>
+        <li>Fuente: <a href={event.coverage} target="_blank" rel="noopener noreferrer">cobertura oficial de {event.name}</a>. Son capturas guardadas, no datos en vivo. El torneo programa {event.swiss_end} rondas suizas y tres eliminatorias. Rondas ausentes: {data.missing_rounds.join(', ') || 'ninguna'}.</li>
+        <li>La tasa de victoria es V / (V + D + E). Los empates cuentan como partidas sin victoria; una doble derrota suma una derrota a cada jugador. Las eliminatorias no entran en las tasas suizas.</li>
+        <li>Los héroes solo usan {event.format}. En eventos mixtos, Booster Draft cuenta para los registros de los jugadores y se conserva en el detalle de rondas; no se atribuye al héroe registrado de Constructed. El registro suizo del jugador incluye todos los formatos; los desgloses CC y Draft se muestran cuando existen partidas de Draft.</li>
+        <li>La tasa del héroe reúne las partidas de todos sus jugadores, incluido el jugador de la fila. La tasa básica incluye espejos; «sin espejos» excluye además partidas con héroes desconocidos. Se usan los tamaños de muestra de cada período, no el total de inscritos para un intervalo de día 2.</li>
+        <li>Los IC del 95% de las tasas básicas se calculan con 2.000 remuestreos de jugadores completos: se mantienen juntas sus partidas y se recalcula V / partidas por réplica. <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html" target="_blank" rel="noopener noreferrer">Referencia del bootstrap percentil</a>. Los intervalos Wilson sin espejos del CSV son una aproximación distinta por partida.</li>
+        <li>No se estima IC con menos de dos jugadores, sin partidas, con héroe desconocido o sin variación entre réplicas. Los intervalos con pocos jugadores son inestables. Los IC son descriptivos y condicionales al grupo observado: no garantizan la fuerza de un héroe ni comparan causalmente días con distintos grupos de jugadores.</li>
+        <li>Los nombres son identidades observadas, no identificadores verificados. {data.unknown_hero_players} jugadores tienen héroe sin registrar. No se les asignó uno. Las victorias sin rival identificado se conservan en las fuentes pero se excluyen de las tasas. No se inventan byes ni desempates oficiales.</li>
+        <li>El Top 8 y sus puestos proceden de las eliminatorias. La cobertura indica que GEM prevalece ante discrepancias; el orden descriptivo de jugadores no sustituye la clasificación oficial.</li>
+      </ul>
+    </section>
+
+    <section id="descargas" aria-labelledby="downloads-title">
+      <h2 id="downloads-title">Lleva los datos contigo</h2>
+      <div class="downloads">{[['players.csv','Jugadores · CSV'],['player-results.csv','Resultados por ronda · CSV'],['heroes.csv','Héroes · CSV'],['matchups.csv','Enfrentamientos · CSV'],['matches.csv','Partidas normalizadas · CSV'],['rounds.csv','Cobertura por ronda · CSV'],['audit.json','Fuentes y auditoría · JSON'],['report.html','Reporte independiente · HTML'],['report.md','Análisis completo · Markdown']].map(([file,label]) => <a href={`${base}/${file}`} download>{label} ↓</a>)}</div>
+      <p class="note">El HTML funciona sin conexión y contiene sus tablas y búsquedas. Para usar sus enlaces de descarga, guarda los CSV, el JSON de auditoría y el Markdown junto al HTML. {event.slug === "calling-paris" ? "El reporte independiente y el análisis Markdown están en inglés." : "El reporte independiente y el análisis Markdown están en español."}</p>
+    </section>
+    <p id="report-error" class="error" role="alert" hidden></p>
+  </div>
+</Layout>
+
+<script>
+  import '../scripts/calling-paris.ts';
+</script>
+
+<style>
+  .paris-report { max-width:1248px; margin:auto; padding:1rem 1.5rem 3rem; border-radius:1rem; background:var(--base-bg); color:var(--text-color); }
+  .source-notes { padding:1rem; margin:1rem 0 2rem; border:2px solid var(--secondary-color); border-radius:.5rem; }
+  .report-heading { padding:1.5rem 0 2rem; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; margin-top:1.5rem; }
+  h1 { font-size:clamp(2.5rem,7vw,4.5rem); line-height:1.1; margin:.5rem 0 1rem; }
+  h2 { font-size:clamp(1.5rem,4vw,2rem); margin:0 0 1rem; line-height:1.3; }
+  h3 { font-size:1.15rem; margin:1rem 0 .75rem; }
+  p, li { line-height:1.75; }
+  p { margin:.75rem 0; }
+  li { margin:.7rem 0; }
+  ul { list-style:disc; padding-left:1.3rem; }
+  .lead { max-width:760px; font-size:1.15rem; }
+  nav, .downloads { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1.5rem; }
+  nav a, .downloads a { display:inline-block; padding:.6rem 1rem; border:1px solid var(--border-color); border-radius:.5rem; }
+  a { color:var(--text-color); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { text-decoration-thickness:2px; }
+  section { margin:1rem 0 3rem; scroll-margin-top:1.5rem; }
+  .metrics, .insights { display:grid; gap:1rem; margin:1.5rem 0; grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .metrics > div, .insights > div, .player-detail { background:var(--base-variant); border:1px solid var(--border-color); border-radius:.75rem; padding:1.25rem; }
+  .metrics strong { display:block; font-size:2rem; }
+  .metrics span { font-size:.85rem; }
+  .insights { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .insights h3 { margin-top:0; }
+  .note { font-size:.9rem; }
+  .table-scroll { max-width:100%; max-height:760px; overflow:auto; margin:1rem 0; border:1px solid var(--border-color); border-radius:.5rem; }
+  .table-scroll :global(.hero-rate), #detail-summary { white-space:pre-line; min-width:210px; }
+  .table-scroll :global(td) { white-space:pre-line; }
+  .paris-report :global(button[data-sort-column]) { background:transparent; color:inherit; border:0; padding:0; text-align:left; font-weight:inherit; cursor:pointer; }
+  table { width:100%; border-collapse:collapse; font-size:.9rem; }
+  .table-scroll :global(th), .table-scroll :global(td) { padding:.8rem 1rem; text-align:left; border-bottom:1px solid var(--border-color); vertical-align:top; min-width:90px; }
+  thead { position:sticky; top:0; z-index:1; background:var(--primary-dark); color:#fff; }
+  tbody { background:var(--base-bg); }
+  tbody :global(th) { font-weight:500; }
+  .table-scroll :global(th:first-child), .table-scroll :global(td:first-child) { min-width:180px; }
+  .table-scroll :global(th:nth-child(2)), .table-scroll :global(td:nth-child(2)) { min-width:200px; }
+  label { display:block; margin:.75rem 0 .4rem; font-weight:600; }
+  input, select { width:100%; max-width:440px; padding:.7rem; border:1px solid var(--border-color); border-radius:.4rem; color:var(--text-color); background:var(--base-bg); font:inherit; }
+  .filters { display:flex; flex-wrap:wrap; gap:1rem; }
+  .filters > div { flex:1 1 250px; }
+  .pagination { display:flex; gap:1rem; justify-content:flex-end; margin:1rem 0; }
+  .paris-report :global(button) { cursor:pointer; color:var(--text-color); font:inherit; }
+  .pagination button { padding:.5rem .8rem; border:1px solid var(--border-color); border-radius:.4rem; background:var(--base-variant); }
+  button:disabled { opacity:.45; cursor:default; }
+  .paris-report :global(button[data-player]) { text-align:left; text-decoration:underline; text-underline-offset:3px; background:none; border:0; padding:0; }
+  .paris-report :global(:is(a,button,input,select,div[tabindex]):focus-visible) { outline:3px solid var(--secondary-light); outline-offset:3px; }
+  .participation { margin:1.5rem 0; }
+  .bar-row { display:grid; grid-template-columns:minmax(190px,1fr) 2fr; gap:1rem; margin:.6rem 0; align-items:center; font-size:.9rem; }
+  .bar-track { position:relative; min-height:2rem; background:var(--base-bg); border-radius:.2rem; overflow:hidden; }
+  .bar-fill { position:absolute; height:100%; background:var(--primary-color); opacity:.6; }
+  .bar-track span { position:relative; display:block; padding:.3rem .6rem; color:var(--text-color); }
+  .error { border:1px solid var(--secondary-color); padding:1rem; }
+  @media(max-width:700px) { .paris-report { padding:1rem .75rem 2rem; } .metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } .insights { grid-template-columns:1fr; } .bar-row { grid-template-columns:minmax(140px,1fr) 1fr; gap:.5rem; } .player-detail { padding:.75rem; } }
+</style>

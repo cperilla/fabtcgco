@@ -1,0 +1,562 @@
+﻿player,hero,country,swiss_wins,swiss_losses,swiss_draws,swiss_matches,swiss_win_pct,swiss_recorded_wins,placeholder_wins,all_wins,all_losses,all_draws,all_win_pct,first_round,last_round,day2,top8,finish,constructed_wins,constructed_losses,constructed_draws,constructed_win_pct,draft_wins,draft_losses,draft_draws,draft_win_pct,hero_swiss_win_pct,hero_day1_win_pct,hero_day2_win_pct
+Jin Han Toh,"Fang, Dracai of Blades",sg,14,1,0,15,93.33,14,0,16,2,0,88.89,1,19,True,True,Runner-up,9,0,0,100.0,5,1,0,83.33,52.27,52.71,50.82
+Ryosuke Urase,"Ser Boltyn, Breaker of Dawn",jp,14,1,0,15,93.33,14,0,15,2,0,88.24,1,18,True,True,Top 4,8,1,0,88.89,6,0,0,100.0,51.07,52.34,46.48
+Xiu Meng Yip,Dorinthea Ironsong,sg,12,2,1,15,80.0,12,0,13,3,1,76.47,1,18,True,True,Top 4,7,1,1,77.78,5,1,0,83.33,65.15,64.0,68.75
+Evan Tanguy,"Gravy Bones, Shipwrecked Looter",fr,12,3,0,15,80.0,12,0,12,4,0,75.0,1,17,True,True,Top 8,7,2,0,77.78,5,1,0,83.33,44.69,42.59,52.63
+Natan Tomeo,"Gravy Bones, Shipwrecked Looter",it,12,3,0,15,80.0,12,0,12,3,0,80.0,1,15,True,False,,7,2,0,77.78,5,1,0,83.33,44.69,42.59,52.63
+nicolas Jamoulle,"Fang, Dracai of Blades",ca,12,3,0,15,80.0,12,0,15,3,0,83.33,1,19,True,True,Champion,7,2,0,77.78,5,1,0,83.33,52.27,52.71,50.82
+Nova Chan,"Ser Boltyn, Breaker of Dawn",hk,12,3,0,15,80.0,12,0,12,4,0,75.0,1,17,True,True,Top 8,7,2,0,77.78,5,1,0,83.33,51.07,52.34,46.48
+Paul van Gijssel,"Gravy Bones, Shipwrecked Looter",nl,12,3,0,15,80.0,12,0,12,4,0,75.0,1,17,True,True,Top 8,7,2,0,77.78,5,1,0,83.33,44.69,42.59,52.63
+Ryan Rich,"Olympia, Prized Fighter",us,12,3,0,15,80.0,12,0,12,4,0,75.0,1,17,True,True,Top 8,6,3,0,66.67,6,0,0,100.0,63.16,63.33,62.5
+Alec Xavier Que Esteves,"Ser Boltyn, Breaker of Dawn",ph,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,6,3,0,66.67,5,1,0,83.33,51.07,52.34,46.48
+Alexander Reichhart,"Fang, Dracai of Blades",at,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,52.27,52.71,50.82
+Andrew Wilborn,"Fang, Dracai of Blades",us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,8,1,0,88.89,3,3,0,50.0,52.27,52.71,50.82
+Bernardo Cardoso,"Aurora, Legacy of Tempest",pt,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,6,3,0,66.67,5,1,0,83.33,48.52,48.45,48.94
+Brodie Spurlock,"Levia, Shadowborn Abomination",us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,52.15,51.0,55.64
+Carlos Daniel Zamora Salazar,"Betsy, Skin in the Game",mx,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,8,1,0,88.89,3,3,0,50.0,53.85,57.14,43.75
+Emlyn Ingram,"Ser Boltyn, Breaker of Dawn",gb,10,4,0,14,71.43,11,1,10,4,0,71.43,1,15,True,False,,7,2,0,77.78,3,2,0,60.0,51.07,52.34,46.48
+Gordon Koh Koh,"Fang, Dracai of Blades",sg,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,52.27,52.71,50.82
+Isaac Katsakis,Jarl Vetreiði,au,10,4,0,14,71.43,11,1,10,4,0,71.43,1,15,True,False,,7,2,0,77.78,3,2,0,60.0,50.0,49.7,51.02
+Jason Rolfe,Jarl Vetreiði,gb,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,5,4,0,55.56,6,0,0,100.0,50.0,49.7,51.02
+Johannes Schorpp,"Levia, Shadowborn Abomination",ch,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,8,1,0,88.89,3,3,0,50.0,52.15,51.0,55.64
+Jose Maria Mellado Becerra,"Fang, Dracai of Blades",es,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,6,3,0,66.67,5,1,0,83.33,52.27,52.71,50.82
+Justin Cu,"Levia, Shadowborn Abomination",ph,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,5,4,0,55.56,6,0,0,100.0,52.15,51.0,55.64
+Lucas RUZAFA,Dorinthea Ironsong,fr,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,8,1,0,88.89,3,3,0,50.0,65.15,64.0,68.75
+Michael Feng,"Levia, Shadowborn Abomination",us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,52.15,51.0,55.64
+Michael Hamilton,Jarl Vetreiði,us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,50.0,49.7,51.02
+Naib Mobassir,Jarl Vetreiði,us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,6,3,0,66.67,5,1,0,83.33,50.0,49.7,51.02
+Roman Legíň,"Aurora, Legacy of Tempest",cz,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,6,3,0,66.67,5,1,0,83.33,48.52,48.45,48.94
+shoma yamamura,"Ira, Scarlet Revenger",jp,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,8,1,0,88.89,3,3,0,50.0,43.41,48.99,18.18
+Thomas Steinle,"Oscilio, Forked Continuum",de,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,53.06,52.29,55.26
+William Bradshaw,"Aurora, Legacy of Tempest",us,11,4,0,15,73.33,11,0,11,4,0,73.33,1,15,True,False,,7,2,0,77.78,4,2,0,66.67,48.52,48.45,48.94
+Francisco Javier Camacho Vargas,"Fang, Dracai of Blades",es,10,3,2,15,66.67,10,0,10,3,2,66.67,1,15,True,False,,5,2,2,55.56,5,1,0,83.33,52.27,52.71,50.82
+Jaap IJlst,"Lyath Goldmane, Vile Savant",nl,10,4,1,15,66.67,10,0,10,4,1,66.67,1,15,True,False,,6,2,1,66.67,4,2,0,66.67,57.89,66.67,25.0
+Barrett Goss,Jarl Vetreiði,us,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,50.0,49.7,51.02
+Bino Nolting,"Gravy Bones, Shipwrecked Looter",de,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,44.69,42.59,52.63
+Cheng Peng,"Tuffnut, Bumbling Hulkster",cn,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,56.52,53.33,62.5
+Daniel Dreisziger,"Levia, Shadowborn Abomination",ca,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.15,51.0,55.64
+Dylan Thompson,Jarl Vetreiði,ie,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,50.0,49.7,51.02
+Elly Bird,"Ser Boltyn, Breaker of Dawn",ca,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,51.07,52.34,46.48
+enzo costa,"Levia, Shadowborn Abomination",fr,9,5,0,14,64.29,10,1,9,5,0,64.29,1,15,True,False,,7,2,0,77.78,2,3,0,40.0,52.15,51.0,55.64
+Finlay Freir,"Vynnset, Iron Maiden",gb,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,40.38,40.0,42.86
+Florian Vanbrakel,"Puffin, Hightail",be,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,45.45,48.33,35.29
+Franciszek Sapikowski,"Oscilio, Forked Continuum",pl,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,53.06,52.29,55.26
+George Melissakis,"Ser Boltyn, Breaker of Dawn",gr,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,51.07,52.34,46.48
+Gianluigi Lia,"Oscilio, Forked Continuum",it,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,8,1,0,88.89,2,4,0,33.33,53.06,52.29,55.26
+Gilles Molina,"Fang, Dracai of Blades",fr,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.27,52.71,50.82
+Guillem Las Heras,"Levia, Shadowborn Abomination",es,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.15,51.0,55.64
+Jacob Clements,"Levia, Shadowborn Abomination",gb,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,52.15,51.0,55.64
+Jacob Trossing,"Levia, Shadowborn Abomination",se,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,52.15,51.0,55.64
+Jonathan Magnuson,Zyggy Starlight,us,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,53.7,55.56,44.44
+Jordan Jalbert-Ross,"Levia, Shadowborn Abomination",ca,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,52.15,51.0,55.64
+Julian Felix Flury,"Levia, Shadowborn Abomination",pt,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,52.15,51.0,55.64
+Kaiser Wong,"Fang, Dracai of Blades",hk,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,52.27,52.71,50.82
+Kenni Pedersen,Jarl Vetreiði,dk,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,50.0,49.7,51.02
+Laurens Van der Beek,"Aurora, Legacy of Tempest",nl,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,48.52,48.45,48.94
+Lucas Oswald,"Ser Boltyn, Breaker of Dawn",us,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,51.07,52.34,46.48
+Luis Toeffels,"Betsy, Skin in the Game",de,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,53.85,57.14,43.75
+Léo Toulouse,"Ser Boltyn, Breaker of Dawn",fr,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,51.07,52.34,46.48
+Matthew Brown,"Fang, Dracai of Blades",gb,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.27,52.71,50.82
+Max Dieckmann,"Gravy Bones, Shipwrecked Looter",br,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,4,5,0,44.44,6,0,0,100.0,44.69,42.59,52.63
+Mirko Dolce,"Oscilio, Forked Continuum",it,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,53.06,52.29,55.26
+Nik Malev,"Fang, Dracai of Blades",au,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.27,52.71,50.82
+Panagiotis Xanthopoulos,Jarl Vetreiði,gr,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,50.0,49.7,51.02
+Ralph Schlauri,"Levia, Shadowborn Abomination",ch,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.15,51.0,55.64
+Rene Aho,"Levia, Shadowborn Abomination",fi,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.15,51.0,55.64
+Sam Sutherland,"Levia, Shadowborn Abomination",au,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.15,51.0,55.64
+Savinien Castel,"Oscilio, Forked Continuum",fr,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,53.06,52.29,55.26
+XANDRE BORGES,"Aurora, Legacy of Tempest",br,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,48.52,48.45,48.94
+Xiangjun Dai,"Hala, Bladesaint of the Vow",cn,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,50.98,51.43,50.0
+Yuki Lee Bender,"Fang, Dracai of Blades",ca,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,7,2,0,77.78,3,3,0,50.0,52.27,52.71,50.82
+Yuki Matsumoto,"Fang, Dracai of Blades",jp,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,4,5,0,44.44,6,0,0,100.0,52.27,52.71,50.82
+Zak Miller,"Levia, Shadowborn Abomination",us,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,5,4,0,55.56,5,1,0,83.33,52.15,51.0,55.64
+Zhengjia Liu,"Aurora, Legacy of Tempest",cn,10,5,0,15,66.67,10,0,10,5,0,66.67,1,15,True,False,,6,3,0,66.67,4,2,0,66.67,48.52,48.45,48.94
+Matteo Lista,"Arakni, Huntsman",it,9,5,1,15,60.0,9,0,9,5,1,60.0,1,15,True,False,,6,2,1,66.67,3,3,0,50.0,48.94,48.72,50.0
+Aaron Boyhan,"Arakni, 5L!p3d 7hRu 7h3 cR4X",gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,44.74,41.18,75.0
+Adam Urban,"Hala, Bladesaint of the Vow",pl,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.98,51.43,50.0
+Andrew Rothermel,"Levia, Shadowborn Abomination",us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,52.15,51.0,55.64
+Anthony Pham,"Aurora, Legacy of Tempest",us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,3,6,0,33.33,6,0,0,100.0,48.52,48.45,48.94
+Bartosz Dobrowolski,"Levia, Shadowborn Abomination",pl,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,52.15,51.0,55.64
+Bogdan-Andrei Oros,"Aurora, Legacy of Tempest",ro,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,48.52,48.45,48.94
+Chanon Puttaree,"Ser Boltyn, Breaker of Dawn",th,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,51.07,52.34,46.48
+Charles Dunn,"Fang, Dracai of Blades",us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,52.27,52.71,50.82
+Christian Hauck,"Fang, Dracai of Blades",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,52.27,52.71,50.82
+Christopher Iaali,"Ser Boltyn, Breaker of Dawn",us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,7,2,0,77.78,2,4,0,33.33,51.07,52.34,46.48
+Colin Eriksen,"Gravy Bones, Shipwrecked Looter",us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,44.69,42.59,52.63
+Daniel Correas,"Hala, Bladesaint of the Vow",es,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,50.98,51.43,50.0
+Daniel Hammer,"Aurora, Legacy of Tempest",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,48.52,48.45,48.94
+Etienne BARIOULET,Jarl Vetreiði,fr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.0,49.7,51.02
+Filipe L. Cardoso,"Gravy Bones, Shipwrecked Looter",br,8,6,0,14,57.14,9,1,8,6,0,57.14,1,15,True,False,,5,4,0,55.56,3,2,0,60.0,44.69,42.59,52.63
+Francesco Giorgio,"Levia, Shadowborn Abomination",gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,7,2,0,77.78,2,4,0,33.33,52.15,51.0,55.64
+Frank Hung,"Viserai, the Forsaken",ca,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,30.61,28.89,50.0
+Frazer Eastman,"Fang, Dracai of Blades",gb,8,6,0,14,57.14,9,1,8,6,0,57.14,1,15,True,False,,6,3,0,66.67,2,3,0,40.0,52.27,52.71,50.82
+Gabe Sher,"Ser Boltyn, Breaker of Dawn",nl,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,51.07,52.34,46.48
+Giulio Monaco,"Marlynn, Treasure Hunter",it,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,41.03,44.44,33.33
+Ilias Karamanis,"Levia, Shadowborn Abomination",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,52.15,51.0,55.64
+Jack Warren,"Ira, Scarlet Revenger",gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,43.41,48.99,18.18
+Jeremy Miller,"Ira, Scarlet Revenger",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,43.41,48.99,18.18
+Jesse Härmälä,"Gravy Bones, Shipwrecked Looter",fi,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,44.69,42.59,52.63
+Johannes Klaus,"Ser Boltyn, Breaker of Dawn",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,51.07,52.34,46.48
+Jonas Stoberock,"Levia, Shadowborn Abomination",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,7,2,0,77.78,2,4,0,33.33,52.15,51.0,55.64
+Joshua Lau,Dorinthea Ironsong,us,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,65.15,64.0,68.75
+Kevin Zänker,"Levia, Shadowborn Abomination",de,8,6,0,14,57.14,9,1,8,6,0,57.14,1,15,True,False,,7,2,0,77.78,1,4,0,20.0,52.15,51.0,55.64
+Kim Scheerer,Zyggy Starlight,de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,53.7,55.56,44.44
+kuba tambor,"Gravy Bones, Shipwrecked Looter",pl,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,44.69,42.59,52.63
+Law Wen,"Fang, Dracai of Blades",hk,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,52.27,52.71,50.82
+Louis Guillot,Jarl Vetreiði,fr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.0,49.7,51.02
+Michael Metallo,Jarl Vetreiði,ca,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,50.0,49.7,51.02
+Michel Remillard,"Fang, Dracai of Blades",ca,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,52.27,52.71,50.82
+Nathan Hills,"Olympia, Prized Fighter",gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,63.16,63.33,62.5
+Nikola Kramarić,Jarl Vetreiði,hr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.0,49.7,51.02
+Noah Hicks,Jarl Vetreiði,gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.0,49.7,51.02
+Panliang He,Jarl Vetreiði,cn,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,50.0,49.7,51.02
+Rafael Miller,"Levia, Shadowborn Abomination",br,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,52.15,51.0,55.64
+Richard Carr,"Fang, Dracai of Blades",gb,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,52.27,52.71,50.82
+Stefania Patsou,"Levia, Shadowborn Abomination",gr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,52.15,51.0,55.64
+"Thanthawat ""Vespa"" Chujitngamsuwong","Gravy Bones, Shipwrecked Looter",th,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,44.69,42.59,52.63
+Thomas Preyer,"Levia, Shadowborn Abomination",de,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,52.15,51.0,55.64
+Tom Escoffier,"Fang, Dracai of Blades",fr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,5,4,0,55.56,4,2,0,66.67,52.27,52.71,50.82
+Ugnius Švedas,"Oscilio, Forked Continuum",lt,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,53.06,52.29,55.26
+VITOR MILIONI,"Aurora, Legacy of Tempest",br,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,7,2,0,77.78,2,4,0,33.33,48.52,48.45,48.94
+Yorgos Samaras,Jarl Vetreiði,gr,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,6,3,0,66.67,3,3,0,50.0,50.0,49.7,51.02
+Yuki Gruaz,Dorinthea Ironsong,ch,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,8,1,0,88.89,1,5,0,16.67,65.15,64.0,68.75
+祥弘 橋本,"Gravy Bones, Shipwrecked Looter",jp,9,6,0,15,60.0,9,0,9,6,0,60.0,1,15,True,False,,4,5,0,44.44,5,1,0,83.33,44.69,42.59,52.63
+Brandon Peh,"Ser Boltyn, Breaker of Dawn",sg,8,6,0,14,57.14,8,0,8,6,0,57.14,1,14,True,False,,4,4,0,50.0,4,2,0,66.67,51.07,52.34,46.48
+Bryce Stroyek,Jarl Vetreiði,us,8,6,0,14,57.14,8,0,8,6,0,57.14,1,14,True,False,,3,5,0,37.5,5,1,0,83.33,50.0,49.7,51.02
+Angelos Maxilaris,"Tuffnut, Bumbling Hulkster",gr,8,6,1,15,53.33,8,0,8,6,1,53.33,1,15,True,False,,6,3,0,66.67,2,3,1,33.33,56.52,53.33,62.5
+Alberto Hernández Martin,"Levia, Shadowborn Abomination",es,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,52.15,51.0,55.64
+Alessio Bouko,"Fang, Dracai of Blades",be,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,6,3,0,66.67,2,4,0,33.33,52.27,52.71,50.82
+Daja Todesco,Jarl Vetreiði,ch,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,50.0,49.7,51.02
+David Lewis,"Levia, Shadowborn Abomination",mx,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,6,3,0,66.67,2,4,0,33.33,52.15,51.0,55.64
+David Yau,"Levia, Shadowborn Abomination",hk,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,52.15,51.0,55.64
+Fabian Rex,"Ser Boltyn, Breaker of Dawn",de,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,51.07,52.34,46.48
+Felix Krisch,"Gravy Bones, Shipwrecked Looter",de,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,3,6,0,33.33,5,1,0,83.33,44.69,42.59,52.63
+GRIGORIOS KOUVOUSIS,"Levia, Shadowborn Abomination",gr,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,52.15,51.0,55.64
+Hunter Platt,"Fang, Dracai of Blades",ca,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,6,3,0,66.67,2,4,0,33.33,52.27,52.71,50.82
+Jack Tang,Jarl Vetreiði,hk,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,50.0,49.7,51.02
+Jude Cornett,"Levia, Shadowborn Abomination",us,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,52.15,51.0,55.64
+Julien Desuter,Jarl Vetreiði,be,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,2,7,0,22.22,6,0,0,100.0,50.0,49.7,51.02
+Kazuya Murakami,"Fang, Dracai of Blades",jp,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,52.27,52.71,50.82
+Ken Kuwahara,"Ser Boltyn, Breaker of Dawn",jp,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,51.07,52.34,46.48
+Konrad Weiss,"Fang, Dracai of Blades",de,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,52.27,52.71,50.82
+Lillianna Student,"Gravy Bones, Shipwrecked Looter",pl,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,44.69,42.59,52.63
+Lucas Ward,"Levia, Shadowborn Abomination",ie,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,3,6,0,33.33,5,1,0,83.33,52.15,51.0,55.64
+Léo Dupraz,"Katsu, the Wanderer",fr,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,8,1,0,88.89,0,6,0,0.0,68.42,66.67,75.0
+Maniša Njegomir,"Betsy, Skin in the Game",hr,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,53.85,57.14,43.75
+Mara Faris,"Fang, Dracai of Blades",us,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,52.27,52.71,50.82
+Nicolas Kyriakou,"Ira, Scarlet Revenger",cy,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,43.41,48.99,18.18
+Noah Clark,"Gravy Bones, Shipwrecked Looter",ca,7,7,0,14,50.0,8,1,7,7,0,50.0,1,15,True,False,,4,5,0,44.44,3,2,0,60.0,44.69,42.59,52.63
+Petr Matonoha,"Hala, Bladesaint of the Vow",cz,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,50.98,51.43,50.0
+Pudding Tam,"Ira, Scarlet Revenger",hk,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,43.41,48.99,18.18
+Renzo Schietgat,"Puffin, Hightail",be,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,45.45,48.33,35.29
+Ryouichi Sakazaki,"Valda, Seismic Impact",jp,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,42.86,60.0,0.0
+Sam Davison,"Oscilio, Forked Continuum",nz,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,6,3,0,66.67,2,4,0,33.33,53.06,52.29,55.26
+Shoki Imacho,"Teklovossen, Esteemed Magnate",jp,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,34.78,36.84,25.0
+Simon Nielsen,"Levia, Shadowborn Abomination",dk,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,52.15,51.0,55.64
+Thomas Harle,Jarl Vetreiði,gb,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,50.0,49.7,51.02
+Thomas Johnson-Averette,"Kayo, Underhanded Cheat",us,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,7,2,0,77.78,1,5,0,16.67,50.0,45.0,75.0
+Thomas Van Minsel,"Betsy, Skin in the Game",be,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,53.85,57.14,43.75
+Tibor Csonka,"Aurora, Legacy of Tempest",at,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,48.52,48.45,48.94
+Tommaso Viscido,"Oscilio, Forked Continuum",it,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,4,5,0,44.44,4,2,0,66.67,53.06,52.29,55.26
+Warre Sevens,"Puffin, Hightail",be,8,7,0,15,53.33,8,0,8,7,0,53.33,1,15,True,False,,5,4,0,55.56,3,3,0,50.0,45.45,48.33,35.29
+Josh Lind,Jarl Vetreiði,us,7,5,2,14,50.0,7,0,7,5,2,50.0,1,14,True,False,,5,1,2,62.5,2,4,0,33.33,50.0,49.7,51.02
+Artur Wysocki,"Oscilio, Forked Continuum",pl,7,6,0,13,53.85,7,0,7,6,0,53.85,1,13,True,False,,4,3,0,57.14,3,3,0,50.0,53.06,52.29,55.26
+Paul Mirande,"Fang, Dracai of Blades",fr,7,6,0,13,53.85,7,0,7,6,0,53.85,1,13,True,False,,5,2,0,71.43,2,4,0,33.33,52.27,52.71,50.82
+Valentin Popov,Jarl Vetreiði,bg,7,6,0,13,53.85,7,0,7,6,0,53.85,1,13,True,False,,5,2,0,71.43,2,4,0,33.33,50.0,49.7,51.02
+Yong Yi Chua,"Fang, Dracai of Blades",sg,6,6,2,14,42.86,7,1,6,6,2,42.86,1,15,True,False,,4,3,2,44.44,2,3,0,40.0,52.27,52.71,50.82
+Antoan Yordanov,"Vynnset, Iron Maiden",bg,7,7,0,14,50.0,7,0,7,7,0,50.0,1,14,True,False,,3,5,0,37.5,4,2,0,66.67,40.38,40.0,42.86
+James Gray,Jarl Vetreiði,gb,6,7,0,13,46.15,7,1,6,7,0,46.15,1,14,True,False,,3,5,0,37.5,3,2,0,60.0,50.0,49.7,51.02
+Jirka Ilomäki,Jarl Vetreiði,fi,7,7,0,14,50.0,7,0,7,7,0,50.0,1,14,True,False,,4,4,0,50.0,3,3,0,50.0,50.0,49.7,51.02
+Jorgen Fleussu,"Fang, Dracai of Blades",be,7,7,0,14,50.0,7,0,7,7,0,50.0,1,14,True,False,,4,4,0,50.0,3,3,0,50.0,52.27,52.71,50.82
+Lucas Tenorio,"Ira, Scarlet Revenger",br,7,7,0,14,50.0,7,0,7,7,0,50.0,1,14,True,False,,2,6,0,25.0,5,1,0,83.33,43.41,48.99,18.18
+Birgir Hrafn Buason,"Fang, Dracai of Blades",is,7,7,1,15,46.67,7,0,7,7,1,46.67,1,15,True,False,,5,4,0,55.56,2,3,1,33.33,52.27,52.71,50.82
+Clément Maillet,"Arakni, Huntsman",fr,7,7,1,15,46.67,7,0,7,7,1,46.67,1,15,True,False,,5,4,0,55.56,2,3,1,33.33,48.94,48.72,50.0
+Alexander Hempelmann,"Oscilio, Forked Continuum",de,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,4,5,0,44.44,3,3,0,50.0,53.06,52.29,55.26
+Jean Luka Zorko,"Marlynn, Treasure Hunter",si,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,4,5,0,44.44,3,3,0,50.0,41.03,44.44,33.33
+Karl Naylor,"Ser Boltyn, Breaker of Dawn",gb,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,5,4,0,55.56,2,4,0,33.33,51.07,52.34,46.48
+Liam Holden,"Levia, Shadowborn Abomination",gb,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,5,4,0,55.56,2,4,0,33.33,52.15,51.0,55.64
+Matthew Foulkes,"Fang, Dracai of Blades",gb,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,2,7,0,22.22,5,1,0,83.33,52.27,52.71,50.82
+Nathanael Frautschy,"Marlynn, Treasure Hunter",us,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,4,5,0,44.44,3,3,0,50.0,41.03,44.44,33.33
+Pablo Pintor,"Ira, Scarlet Revenger",es,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,5,4,0,55.56,2,4,0,33.33,43.41,48.99,18.18
+Samuel Braben,"Levia, Shadowborn Abomination",gb,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,4,5,0,44.44,3,3,0,50.0,52.15,51.0,55.64
+Stevie Van Overtveldt,"Puffin, Hightail",be,7,8,0,15,46.67,7,0,7,8,0,46.67,1,15,True,False,,5,4,0,55.56,2,4,0,33.33,45.45,48.33,35.29
+Caroline Flamia,Jarl Vetreiði,br,6,3,0,9,66.67,6,0,6,3,0,66.67,1,9,True,False,,4,1,0,80.0,2,2,0,50.0,50.0,49.7,51.02
+Albert GUYO,"Ser Boltyn, Breaker of Dawn",fr,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,4,2,0,66.67,2,4,0,33.33,51.07,52.34,46.48
+Andrea Malpassi,"Fang, Dracai of Blades",it,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,4,2,0,66.67,2,4,0,33.33,52.27,52.71,50.82
+Andrea Mengucci,"Aurora, Legacy of Tempest",it,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,4,2,0,66.67,2,4,0,33.33,48.52,48.45,48.94
+Colin Li,"Ser Boltyn, Breaker of Dawn",hk,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,4,2,0,66.67,2,4,0,33.33,51.07,52.34,46.48
+Marcell Vass,"Puffin, Hightail",hu,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,4,2,0,66.67,2,4,0,33.33,45.45,48.33,35.29
+Nuno Miguel Correia das Neves,"Levia, Shadowborn Abomination",pt,6,6,0,12,50.0,6,0,6,6,0,50.0,1,12,True,False,,3,3,0,50.0,3,3,0,50.0,52.15,51.0,55.64
+Brendo De Lima Ferreira,"Ser Boltyn, Breaker of Dawn",br,6,7,0,13,46.15,6,0,6,7,0,46.15,1,13,True,False,,3,4,0,42.86,3,3,0,50.0,51.07,52.34,46.48
+Frédéric Marigo,"Ser Boltyn, Breaker of Dawn",fr,6,7,0,13,46.15,6,0,6,7,0,46.15,1,13,True,False,,5,2,0,71.43,1,5,0,16.67,51.07,52.34,46.48
+Connor Bryant,"Aurora, Legacy of Tempest",us,5,8,0,13,38.46,6,1,5,8,0,38.46,1,14,True,False,,3,4,0,42.86,2,4,0,33.33,48.52,48.45,48.94
+Hojin Choi,Jarl Vetreiði,kr,6,8,0,14,42.86,6,0,6,8,0,42.86,1,14,True,False,,3,5,0,37.5,3,3,0,50.0,50.0,49.7,51.02
+Ian Geraldi Cordeiro,"Ira, Scarlet Revenger",br,6,8,0,14,42.86,6,0,6,8,0,42.86,1,14,True,False,,3,5,0,37.5,3,3,0,50.0,43.41,48.99,18.18
+Boris Martinovic,Jarl Vetreiði,rs,6,9,0,15,40.0,6,0,6,9,0,40.0,1,15,True,False,,3,6,0,33.33,3,3,0,50.0,50.0,49.7,51.02
+Daniel Folch,"Fang, Dracai of Blades",es,6,9,0,15,40.0,6,0,6,9,0,40.0,1,15,True,False,,4,5,0,44.44,2,4,0,33.33,52.27,52.71,50.82
+Bird Cabrera,"Fang, Dracai of Blades",us,5,2,0,7,71.43,5,0,5,2,0,71.43,1,7,False,False,,5,0,0,100.0,0,2,0,0.0,52.27,52.71,50.82
+Adrien Krifa,"Levia, Shadowborn Abomination",fr,5,5,1,11,45.45,5,0,5,5,1,45.45,1,11,True,False,,3,2,0,60.0,2,3,1,33.33,52.15,51.0,55.64
+Lorenzo Brambilla Pisoni,"Gravy Bones, Shipwrecked Looter",it,5,7,0,12,41.67,5,0,5,7,0,41.67,1,12,True,False,,2,4,0,33.33,3,3,0,50.0,44.69,42.59,52.63
+Rasmus Møller,Zyggy Starlight,dk,5,7,0,12,41.67,5,0,5,7,0,41.67,1,12,True,False,,3,3,0,50.0,2,4,0,33.33,53.7,55.56,44.44
+Yahir Peñarrubia,Jarl Vetreiði,es,5,7,0,12,41.67,5,0,5,7,0,41.67,1,12,True,False,,3,3,0,50.0,2,4,0,33.33,50.0,49.7,51.02
+Julian Sniffen,"Ser Boltyn, Breaker of Dawn",us,5,8,0,13,38.46,5,0,5,8,0,38.46,1,13,True,False,,4,3,0,57.14,1,5,0,16.67,51.07,52.34,46.48
+Isaac Davison,"Ira, Scarlet Revenger",us,5,9,0,14,35.71,5,0,5,9,0,35.71,1,14,True,False,,3,5,0,37.5,2,4,0,33.33,43.41,48.99,18.18
+Tim Dasiukevich,"Riptide, Lurker of the Deep",gb,4,3,0,7,57.14,4,0,4,3,0,57.14,1,7,False,False,,4,1,0,80.0,0,2,0,0.0,43.33,43.33,
+Alessandro Bracci,"Aurora, Legacy of Tempest",it,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,48.52,48.45,48.94
+Alessandro Miraldi,"Levia, Shadowborn Abomination",cn,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,52.15,51.0,55.64
+Alex Chițu,"Aurora, Legacy of Tempest",gb,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Alexander Vore,"Oscilio, Forked Continuum",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.06,52.29,55.26
+Alvaro Toledano Benito,"Ira, Scarlet Revenger",es,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,43.41,48.99,18.18
+Anatoly Mukhin,Jarl Vetreiði,gb,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Andrei Sebastian Suciu,"Fang, Dracai of Blades",ro,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,52.27,52.71,50.82
+Andrew Cook,"Levia, Shadowborn Abomination",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+August Rokkanen,"Ser Boltyn, Breaker of Dawn",fi,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,51.07,52.34,46.48
+Austin Redington,Zyggy Starlight,us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.7,55.56,44.44
+Bota Claudiu,"Gravy Bones, Shipwrecked Looter",ro,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,44.69,42.59,52.63
+Brian Lorenz,Jarl Vetreiði,us,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Christopher Higashi,"Aurora, Legacy of Tempest",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Christopher Morgan,"Rhinar, Reckless Rampage",cr,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,50.0,
+Cody Gebert,Jarl Vetreiði,au,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,50.0,49.7,51.02
+Dale Low,"Gravy Bones, Shipwrecked Looter",sg,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,44.69,42.59,52.63
+Damien Riggins,"Lyath Goldmane, Vile Savant",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,57.89,66.67,25.0
+Daníel Leó Birgisson,"Betsy, Skin in the Game",is,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,53.85,57.14,43.75
+Darryn Ying,"Fang, Dracai of Blades",nz,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,1,4,0,20.0,3,0,0,100.0,52.27,52.71,50.82
+Darvydas Čepukaitis,"Ira, Scarlet Revenger",lt,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,43.41,48.99,18.18
+Dawid Mrówczyński,"Hala, Bladesaint of the Vow",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,50.98,51.43,50.0
+Demetrio Bori,"Aurora, Legacy of Tempest",fr,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Denis Medjic,"Gravy Bones, Shipwrecked Looter",at,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,44.69,42.59,52.63
+Dimitris Melissinos,"Uzuri, Switchblade",gr,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,40.0,40.0,
+Donghee Kim,Jarl Vetreiði,ca,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,50.0,49.7,51.02
+Donovan van Beek,"Aurora, Legacy of Tempest",nl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Emad Kashy,"Ser Boltyn, Breaker of Dawn",gb,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,1,4,0,20.0,3,0,0,100.0,51.07,52.34,46.48
+Eric Gaudreault,"Fang, Dracai of Blades",ca,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.27,52.71,50.82
+Eugene C,"Rhinar, Reckless Rampage",hk,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,50.0,50.0,
+Evanking Chiu,"Ser Boltyn, Breaker of Dawn",hk,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,51.07,52.34,46.48
+Fabio Albrecht,Jarl Vetreiði,de,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,50.0,49.7,51.02
+Gan Yan,"Fang, Dracai of Blades",cn,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,52.27,52.71,50.82
+Gennaro Ciampa Mango,"Betsy, Skin in the Game",it,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.85,57.14,43.75
+Guilherme Coutinho,"Rhinar, Reckless Rampage",pt,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,50.0,50.0,
+Heitor Martins,"Aurora, Legacy of Tempest",br,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,48.52,48.45,48.94
+Hiroki Saito,Zyggy Starlight,jp,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.7,55.56,44.44
+Hongkai Guo,"Viserai, the Forsaken",cn,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,30.61,28.89,50.0
+Hugo Platret,"Levia, Shadowborn Abomination",nl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,52.15,51.0,55.64
+Ignacio Riego,"Gravy Bones, Shipwrecked Looter",cl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,44.69,42.59,52.63
+Jake mccormack,"Fang, Dracai of Blades",au,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,52.27,52.71,50.82
+Jakob Pogačnik Souvent,"Levia, Shadowborn Abomination",si,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Jamie McCabe,"Ira, Scarlet Revenger",ie,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,43.41,48.99,18.18
+Jan Kučera,"Oscilio, Forked Continuum",cz,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.06,52.29,55.26
+Joseph Kaiser,"Fang, Dracai of Blades",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,52.27,52.71,50.82
+Joseph Surowaniec,Dorinthea Ironsong,ca,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,65.15,64.0,68.75
+João Pedro Mafra Vilasbôas Rodrigues,"Aurora, Legacy of Tempest",br,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,48.52,48.45,48.94
+Juan Chacon,"Gravy Bones, Shipwrecked Looter",es,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,44.69,42.59,52.63
+Juha Saarnilampi,"Aurora, Legacy of Tempest",fi,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,48.52,48.45,48.94
+Kazuki Itabashi,Zyggy Starlight,jp,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,53.7,55.56,44.44
+Kelvin Ng,"Olympia, Prized Fighter",hk,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,63.16,63.33,62.5
+Kevin Constantineau,"Ser Boltyn, Breaker of Dawn",ca,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,51.07,52.34,46.48
+Kevin Murphy,"Ser Boltyn, Breaker of Dawn",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,51.07,52.34,46.48
+Kevin Pennec,"Gravy Bones, Shipwrecked Looter",fr,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,44.69,42.59,52.63
+Khoi Dinh,"Levia, Shadowborn Abomination",vn,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Luka Kramaric,Jarl Vetreiði,hr,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,50.0,49.7,51.02
+Lukasz Ziemba,"Fang, Dracai of Blades",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,52.27,52.71,50.82
+Léo Baty,"Vynnset, Iron Maiden",fr,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,40.38,40.0,42.86
+Maciej Graszek,"Levia, Shadowborn Abomination",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Majin Bae,"Ira, Scarlet Revenger",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,43.41,48.99,18.18
+Mariano Rivero,"Arakni, 5L!p3d 7hRu 7h3 cR4X",es,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,44.74,41.18,75.0
+Mark Henderson,"Ser Boltyn, Breaker of Dawn",nl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,51.07,52.34,46.48
+Martin Holík,"Ser Boltyn, Breaker of Dawn",cz,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,51.07,52.34,46.48
+Maximilian Klein,Jarl Vetreiði,de,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,50.0,49.7,51.02
+Michael Jaszczur,Jarl Vetreiði,ca,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,50.0,49.7,51.02
+Mikael Kullström,"Aurora, Legacy of Tempest",fi,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,48.52,48.45,48.94
+Mike Knvs,Jarl Vetreiði,cy,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,50.0,49.7,51.02
+Mário Abrantes,"Ser Boltyn, Breaker of Dawn",pt,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,51.07,52.34,46.48
+Nakara Juntavong,"Aurora, Legacy of Tempest",th,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Nicolas Lazarides,"Aurora, Legacy of Tempest",cy,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,48.52,48.45,48.94
+Oliver Gehrig,"Aurora, Legacy of Tempest",ch,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Oscar Vargas,"Ira, Scarlet Revenger",mx,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,43.41,48.99,18.18
+Paweł Romanowski,"Levia, Shadowborn Abomination",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Paweł Sosnowski,"Fang, Dracai of Blades",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.27,52.71,50.82
+Peter Buddensiek,"Ira, Scarlet Revenger",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,43.41,48.99,18.18
+Philip van Donselaar,"Ser Boltyn, Breaker of Dawn",nl,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,51.07,52.34,46.48
+Pierre Rebeyrol,"Aurora, Legacy of Tempest",fr,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Raitis Zdanovskis,"Katsu, the Wanderer",lv,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,68.42,66.67,75.0
+Raphael Barrese,"Fang, Dracai of Blades",br,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.27,52.71,50.82
+Ricardo Preter Lengler,"Betsy, Skin in the Game",br,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.85,57.14,43.75
+Ryan Porter,"Puffin, Hightail",ie,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,45.45,48.33,35.29
+Sam Cornelis,"Gravy Bones, Shipwrecked Looter",be,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,44.69,42.59,52.63
+Sammy Weckx,"Levia, Shadowborn Abomination",be,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Sebastiaan Knetsch,Dorinthea Ironsong,nl,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,65.15,64.0,68.75
+Simon Duruy,"Arakni, Huntsman",fr,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,48.94,48.72,50.0
+Stefan Dyjak,"Levia, Shadowborn Abomination",pl,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,52.15,51.0,55.64
+Steffen Bergo Jenssen,"Oscilio, Forked Continuum",no,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,53.06,52.29,55.26
+Stephan Schwarz,Jarl Vetreiði,de,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,50.0,49.7,51.02
+Szymon Wrzesień-Kwiatkowski,"Aurora, Legacy of Tempest",pl,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+Takahito Natsume,"Ira, Scarlet Revenger",jp,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,43.41,48.99,18.18
+Tatsuya OKANISHI,"Ira, Scarlet Revenger",jp,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,43.41,48.99,18.18
+Tiago Polónio,"Ser Boltyn, Breaker of Dawn",pt,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,51.07,52.34,46.48
+Tigran Grigorian,"Levia, Shadowborn Abomination",ch,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,52.15,51.0,55.64
+Tim McCarthy,Jarl Vetreiði,gb,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Tobias Schmiedeberg,"Fang, Dracai of Blades",th,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,1,4,0,20.0,3,0,0,100.0,52.27,52.71,50.82
+TSUNAKI SAWAI,"Oscilio, Forked Continuum",jp,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,53.06,52.29,55.26
+Victor Brøcker,Jarl Vetreiði,dk,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,50.0,49.7,51.02
+Ville Schalin,"Aurora, Legacy of Tempest",fi,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,48.52,48.45,48.94
+Vincent Weinzierl,"Fang, Dracai of Blades",de,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,4,1,0,80.0,0,3,0,0.0,52.27,52.71,50.82
+Wesley Dong,"Aurora, Legacy of Tempest",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,48.52,48.45,48.94
+William Pistel,"Levia, Shadowborn Abomination",us,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,52.15,51.0,55.64
+Yalon S.‬‏,"Puffin, Hightail",il,3,4,0,7,42.86,4,1,3,4,0,42.86,1,8,False,False,,2,3,0,40.0,1,1,0,50.0,45.45,48.33,35.29
+Yorick Schulte,"Ser Boltyn, Breaker of Dawn",de,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,51.07,52.34,46.48
+Yuan Sean,Dorinthea Ironsong,fr,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,3,2,0,60.0,1,2,0,33.33,65.15,64.0,68.75
+Zachary Cauchi,"Levia, Shadowborn Abomination",au,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,52.15,51.0,55.64
+Átila Lima,Jarl Vetreiði,br,4,4,0,8,50.0,4,0,4,4,0,50.0,1,8,False,False,,2,3,0,40.0,2,1,0,66.67,50.0,49.7,51.02
+"Jakub ""Lemur"" Siedlecki","Fang, Dracai of Blades",pl,3,2,0,5,60.0,3,0,3,2,0,60.0,1,5,False,False,,3,2,0,60.0,0,0,0,,52.27,52.71,50.82
+Nico Grieco,"Fang, Dracai of Blades",ch,3,2,0,5,60.0,3,0,3,2,0,60.0,1,5,False,False,,3,2,0,60.0,0,0,0,,52.27,52.71,50.82
+Tim Sofsky,Jarl Vetreiði,de,3,2,0,5,60.0,3,0,3,2,0,60.0,1,5,False,False,,3,2,0,60.0,0,0,0,,50.0,49.7,51.02
+Jackson CASANOVA,"Ser Boltyn, Breaker of Dawn",au,3,3,0,6,50.0,3,0,3,3,0,50.0,1,6,False,False,,3,2,0,60.0,0,1,0,0.0,51.07,52.34,46.48
+MIN HSU,"Fang, Dracai of Blades",tw,3,3,0,6,50.0,3,0,3,3,0,50.0,1,6,False,False,,3,2,0,60.0,0,1,0,0.0,52.27,52.71,50.82
+Vadim Pilipenko,"Levia, Shadowborn Abomination",ee,3,3,0,6,50.0,3,0,3,3,0,50.0,1,6,False,False,,3,2,0,60.0,0,1,0,0.0,52.15,51.0,55.64
+Alessandro Sgura,"Levia, Shadowborn Abomination",it,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.15,51.0,55.64
+Alexandros Argyriou,"Fang, Dracai of Blades",gr,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.27,52.71,50.82
+Andrew Moore,Dorinthea Ironsong,gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,65.15,64.0,68.75
+Benjamin Westmore,"Olympia, Prized Fighter",gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,63.16,63.33,62.5
+Bun Ar,"Betsy, Skin in the Game",hk,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,53.85,57.14,43.75
+Charles London,Jarl Vetreiði,us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,50.0,49.7,51.02
+Christoph Greischberger,"Ira, Scarlet Revenger",at,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,1,4,0,20.0,2,0,0,100.0,43.41,48.99,18.18
+Clément LOUBIERE,"Riptide, Lurker of the Deep",fr,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,43.33,43.33,
+Cubi Nguyen,Zyggy Starlight,ca,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,53.7,55.56,44.44
+CYK Lionel,"Gravy Bones, Shipwrecked Looter",tw,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,44.69,42.59,52.63
+Emilis Dirmeikis,"Levia, Shadowborn Abomination",lt,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.15,51.0,55.64
+Evan Herndon,"Gravy Bones, Shipwrecked Looter",us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,44.69,42.59,52.63
+Federico Lami,"Vynnset, Iron Maiden",it,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,40.38,40.0,42.86
+Henry Phan,Jarl Vetreiði,vn,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,50.0,49.7,51.02
+Ian Zhang,"Olympia, Prized Fighter",nl,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,63.16,63.33,62.5
+Igor Makarev,"Fang, Dracai of Blades",cz,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.27,52.71,50.82
+Kilian Schellekens,"Levia, Shadowborn Abomination",nl,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.15,51.0,55.64
+Kuan Li,"Gravy Bones, Shipwrecked Looter",au,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,44.69,42.59,52.63
+Lars Seebacher,"Aurora, Legacy of Tempest",ch,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Liam Canning,"Ser Boltyn, Breaker of Dawn",gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,51.07,52.34,46.48
+Lorenzo Miele,"Oscilio, Forked Continuum",it,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,53.06,52.29,55.26
+Louis Shum,"Puffin, Hightail",au,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,1,4,0,20.0,2,0,0,100.0,45.45,48.33,35.29
+Luiz Bretas,"Ira, Scarlet Revenger",br,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,43.41,48.99,18.18
+Lukasz Bigos,"Levia, Shadowborn Abomination",pl,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.15,51.0,55.64
+Madeline Southwood,Jarl Vetreiði,au,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,50.0,49.7,51.02
+Matt Muus,Jarl Vetreiði,ca,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Matthew Gump,"Riptide, Lurker of the Deep",us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,43.33,43.33,
+Matthew McInnis,"Aurora, Legacy of Tempest",us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Matthias Verbeeck,"Fang, Dracai of Blades",be,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.27,52.71,50.82
+Mauro Annetta,"Fang, Dracai of Blades",es,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.27,52.71,50.82
+Maurício Tavares,"Fang, Dracai of Blades",br,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.27,52.71,50.82
+Max Karstenberg,Jarl Vetreiði,at,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Ognjen Marinkovic,"Levia, Shadowborn Abomination",at,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.15,51.0,55.64
+Pablo Álvarez Castillo,"Ser Boltyn, Breaker of Dawn",es,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,51.07,52.34,46.48
+Pauli Viimaranta,"Arakni, 5L!p3d 7hRu 7h3 cR4X",fi,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,44.74,41.18,75.0
+Pedro Carvalho,"Arakni, 5L!p3d 7hRu 7h3 cR4X",pt,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,44.74,41.18,75.0
+Rafał Liwerski,"Fang, Dracai of Blades",pl,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.27,52.71,50.82
+riccardo battaglia,"Levia, Shadowborn Abomination",it,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.15,51.0,55.64
+Rob Catton,"Levia, Shadowborn Abomination",gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,52.15,51.0,55.64
+Robin Wagner,Jarl Vetreiði,de,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,50.0,49.7,51.02
+Sean Knowelden,"Fang, Dracai of Blades",gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,2,3,0,40.0,1,1,0,50.0,52.27,52.71,50.82
+Shaun Leow,"Fang, Dracai of Blades",au,2,4,0,6,33.33,3,1,2,4,0,33.33,1,7,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Stefano Berian,"Aurora, Legacy of Tempest",gb,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Taotao Chu,"Arakni, Huntsman",us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,48.94,48.72,50.0
+Teo Rutisson,Zyggy Starlight,se,2,4,0,6,33.33,3,1,2,4,0,33.33,1,7,False,False,,2,3,0,40.0,0,1,0,0.0,53.7,55.56,44.44
+Thomas Battaglia,"Gravy Bones, Shipwrecked Looter",us,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,44.69,42.59,52.63
+Tov Hanssen,"Aurora, Legacy of Tempest",no,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,48.52,48.45,48.94
+Vasil Popov,"Vynnset, Iron Maiden",bg,3,4,0,7,42.86,3,0,3,4,0,42.86,1,7,False,False,,3,2,0,60.0,0,2,0,0.0,40.38,40.0,42.86
+Craig Krempels,Jarl Vetreiði,us,3,4,1,8,37.5,3,0,3,4,1,37.5,1,8,False,False,,1,3,1,20.0,2,1,0,66.67,50.0,49.7,51.02
+Dennis Krstic,"Gravy Bones, Shipwrecked Looter",de,3,4,1,8,37.5,3,0,3,4,1,37.5,1,8,False,False,,2,2,1,40.0,1,2,0,33.33,44.69,42.59,52.63
+Stefan Šćekić,"Lyath Goldmane, Vile Savant",rs,2,4,1,7,28.57,3,1,2,4,1,28.57,1,8,False,False,,2,2,1,40.0,0,2,0,0.0,57.89,66.67,25.0
+Aditya Rajan,"Gravy Bones, Shipwrecked Looter",se,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,44.69,42.59,52.63
+Antonis Kazouris,"Ser Boltyn, Breaker of Dawn",gb,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,51.07,52.34,46.48
+Björn Debremaeker,Dorinthea Ironsong,be,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,65.15,64.0,68.75
+Corentin Guillemot,"Levia, Shadowborn Abomination",fr,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,52.15,51.0,55.64
+Daniel Fernandes,"Ira, Scarlet Revenger",pt,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,43.41,48.99,18.18
+Diego Giacca,"Ira, Scarlet Revenger",it,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,43.41,48.99,18.18
+Finn Labe,"Hala, Bladesaint of the Vow",de,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,50.98,51.43,50.0
+Gabriel Harvey,"Fang, Dracai of Blades",ca,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,52.27,52.71,50.82
+Griffin Armitage,"Fang, Dracai of Blades",au,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,52.27,52.71,50.82
+Ian Holland,"Levia, Shadowborn Abomination",ie,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,52.15,51.0,55.64
+Jimmy Nguyen,Jarl Vetreiði,nl,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,50.0,49.7,51.02
+Jirawat Jaeykaew,"Ser Boltyn, Breaker of Dawn",th,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,51.07,52.34,46.48
+Jorge Yarza,"Aurora, Legacy of Tempest",cl,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,48.52,48.45,48.94
+Jurgis Krikis,"Ira, Scarlet Revenger",lv,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,43.41,48.99,18.18
+Louis Angilbert,"Aurora, Legacy of Tempest",fr,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,48.52,48.45,48.94
+Lucas Nijssen,Jarl Vetreiði,be,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,3,2,0,60.0,0,3,0,0.0,50.0,49.7,51.02
+Marcos Vassão,Jarl Vetreiði,pt,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,1,4,0,20.0,1,1,0,50.0,50.0,49.7,51.02
+Miro Nurmela,"Arakni, 5L!p3d 7hRu 7h3 cR4X",fi,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,44.74,41.18,75.0
+Paulo Resende,"Oscilio, Forked Continuum",pt,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,3,2,0,60.0,0,3,0,0.0,53.06,52.29,55.26
+Roberto Gael Busnelli Cifuentes,"Aurora, Legacy of Tempest",mx,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,48.52,48.45,48.94
+Shahmir Samee,"Levia, Shadowborn Abomination",gb,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,52.15,51.0,55.64
+Shuto Ushiro,"Fang, Dracai of Blades",jp,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,52.27,52.71,50.82
+Timothy Teo,"Rhinar, Reckless Rampage",sg,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,50.0,50.0,
+Tomas Liutvinas,"Teklovossen, Esteemed Magnate",lt,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,34.78,36.84,25.0
+Vasil Boev,"Oscilio, Forked Continuum",bg,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,53.06,52.29,55.26
+Victor Bousch,"Kayo, Underhanded Cheat",fr,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,2,3,0,40.0,1,2,0,33.33,50.0,45.0,75.0
+Viet Pham,Zyggy Starlight,de,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,53.7,55.56,44.44
+Wei Jian Gan,"Fang, Dracai of Blades",my,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,0,5,0,0.0,2,0,0,100.0,52.27,52.71,50.82
+Ximun LASTIRI,"Levia, Shadowborn Abomination",fr,3,5,0,8,37.5,3,0,3,5,0,37.5,1,8,False,False,,1,4,0,20.0,2,1,0,66.67,52.15,51.0,55.64
+‪Nitay Tabib‬‏,"Ira, Scarlet Revenger",il,2,5,0,7,28.57,3,1,2,5,0,28.57,1,8,False,False,,2,3,0,40.0,0,2,0,0.0,43.41,48.99,18.18
+Andrew Rayner,"Fang, Dracai of Blades",gb,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,52.27,52.71,50.82
+Bartłomiej Chrobak,"Ira, Scarlet Revenger",pl,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,43.41,48.99,18.18
+Benjamin Cohen,"Katsu, the Wanderer",fr,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,68.42,66.67,75.0
+Bozhidar Kyorov,"Ira, Scarlet Revenger",bg,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,43.41,48.99,18.18
+Finlay Shepherd,"Ser Boltyn, Breaker of Dawn",gb,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,51.07,52.34,46.48
+Gabriel Marengo,"Aurora, Legacy of Tempest",pr,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,48.52,48.45,48.94
+Jaber Hye,"Aurora, Legacy of Tempest",ca,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,48.52,48.45,48.94
+Jonathan YUSTE,"Aurora, Legacy of Tempest",fr,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,48.52,48.45,48.94
+Marco Casadio,"Teklovossen, Esteemed Magnate",gb,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,34.78,36.84,25.0
+Ricardo Manrique,"Olympia, Prized Fighter",de,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,63.16,63.33,62.5
+Rony MOYAL,"Fang, Dracai of Blades",fr,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,52.27,52.71,50.82
+Sébastien Spilliaert,Jarl Vetreiði,be,2,3,0,5,40.0,2,0,2,3,0,40.0,1,5,False,False,,2,3,0,40.0,0,0,0,,50.0,49.7,51.02
+William Pearlman,"Gravy Bones, Shipwrecked Looter",us,1,3,0,4,25.0,2,1,1,3,0,25.0,1,5,False,False,,1,3,0,25.0,0,0,0,,44.69,42.59,52.63
+Adam West,"Levia, Shadowborn Abomination",ie,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.15,51.0,55.64
+Afxentis Vafeiadis,Jarl Vetreiði,cy,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Alexandre Castanheira,"Fang, Dracai of Blades",br,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Andrej Erdelsky,"Ser Boltyn, Breaker of Dawn",se,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,51.07,52.34,46.48
+Andy Pham,"Viserai, the Forsaken",au,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,30.61,28.89,50.0
+Bence Androkity,"Riptide, Lurker of the Deep",hu,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,43.33,43.33,
+Connor McLaughlin,"Fang, Dracai of Blades",ie,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Daniel Brockhage,"Ser Boltyn, Breaker of Dawn",de,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,1,4,0,20.0,1,0,0,100.0,51.07,52.34,46.48
+Daniel Dertoni,"Gravy Bones, Shipwrecked Looter",br,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,44.69,42.59,52.63
+Daniel Gavotti,"Arakni, Huntsman",es,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,48.94,48.72,50.0
+David Calf,"Fang, Dracai of Blades",gb,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Dennis Fröberg,"Vynnset, Iron Maiden",se,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,40.38,40.0,42.86
+Diorge Brognara,Dorinthea Ironsong,br,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,65.15,64.0,68.75
+Drew Peastrel,"Levia, Shadowborn Abomination",us,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.15,51.0,55.64
+Emil Spangenberg,"Fang, Dracai of Blades",dk,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Filipe Coutinho,"Ser Boltyn, Breaker of Dawn",pt,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,51.07,52.34,46.48
+Filippo Barbani,Jarl Vetreiði,it,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Fredrik Maxe,"Aurora, Legacy of Tempest",se,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,48.52,48.45,48.94
+Goran Lovric,"Fang, Dracai of Blades",hr,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Gustavo Stabelini,"Fang, Dracai of Blades",ee,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Javier Isidro Illan Vicente,"Levia, Shadowborn Abomination",es,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.15,51.0,55.64
+Jesus Roman,"Levia, Shadowborn Abomination",mx,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.15,51.0,55.64
+Jinghao Shi,"Levia, Shadowborn Abomination",cn,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,1,4,0,20.0,1,0,0,100.0,52.15,51.0,55.64
+Justin Walsh,"Ser Boltyn, Breaker of Dawn",ie,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,51.07,52.34,46.48
+Kunbo Kim,"Aurora, Legacy of Tempest",kr,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,48.52,48.45,48.94
+Linnea Söderlund,"Betsy, Skin in the Game",fi,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,53.85,57.14,43.75
+Manson Hsiau,"Valda, Seismic Impact",tw,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,42.86,60.0,0.0
+Marko Leben,"Ser Boltyn, Breaker of Dawn",si,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,51.07,52.34,46.48
+Matthew Dilks,"Fang, Dracai of Blades",ca,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Maxence Gobert,Jarl Vetreiði,fr,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Maxime Dumas,Jarl Vetreiði,fr,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Pedro Lecey Opitz,"Ira, Scarlet Revenger",br,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,43.41,48.99,18.18
+Phillip Spader,"Aurora, Legacy of Tempest",us,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,48.52,48.45,48.94
+Rob Davenport,"Marlynn, Treasure Hunter",nz,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,41.03,44.44,33.33
+Rodrigo Mesquita,"Oscilio, Forked Continuum",br,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,53.06,52.29,55.26
+SERGIO PARTIDA HERNANDEZ,"Fang, Dracai of Blades",mx,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+SUMETHA Udomkosonkit,"Kayo, Underhanded Cheat",th,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,45.0,75.0
+Takis Pavlou,"Gravy Bones, Shipwrecked Looter",gr,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,44.69,42.59,52.63
+Tommy Buljan,"Ser Boltyn, Breaker of Dawn",us,1,4,0,5,20.0,2,1,1,4,0,20.0,1,6,False,False,,1,3,0,25.0,0,1,0,0.0,51.07,52.34,46.48
+Victor Johansen,"Fang, Dracai of Blades",no,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Viktor Nelipovich,"Fang, Dracai of Blades",rs,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,52.27,52.71,50.82
+Vilma Varismaa,"Aurora, Legacy of Tempest",fi,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,48.52,48.45,48.94
+Wouter Ouwehand,Jarl Vetreiði,nl,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Zhengyuan Duan,Jarl Vetreiði,cn,2,4,0,6,33.33,2,0,2,4,0,33.33,1,6,False,False,,2,3,0,40.0,0,1,0,0.0,50.0,49.7,51.02
+Andrew Manaster,Jarl Vetreiði,us,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,1,4,0,20.0,1,1,0,50.0,50.0,49.7,51.02
+Arnold Baars,"Kayo, Underhanded Cheat",nl,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,1,4,0,20.0,1,1,0,50.0,50.0,45.0,75.0
+Cedric SCHAACK,"Ser Boltyn, Breaker of Dawn",be,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,51.07,52.34,46.48
+Dominic Delmont,"Tuffnut, Bumbling Hulkster",us,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,1,4,0,20.0,1,1,0,50.0,56.52,53.33,62.5
+Elaine Cao,"Gravy Bones, Shipwrecked Looter",ca,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,44.69,42.59,52.63
+Jimmy Niro Demers,"Gravy Bones, Shipwrecked Looter",ca,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,44.69,42.59,52.63
+Kiran Ganesan,Jarl Vetreiði,my,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,50.0,49.7,51.02
+Kristiāns Kokars,"Arakni, 5L!p3d 7hRu 7h3 cR4X",lv,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,1,4,0,20.0,1,1,0,50.0,44.74,41.18,75.0
+Matthew W,"Fang, Dracai of Blades",us,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,1,4,0,20.0,1,1,0,50.0,52.27,52.71,50.82
+Noah Beygelman,"Gravy Bones, Shipwrecked Looter",us,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,44.69,42.59,52.63
+Samo Planinc,"Puffin, Hightail",si,2,5,0,7,28.57,2,0,2,5,0,28.57,1,7,False,False,,2,3,0,40.0,0,2,0,0.0,45.45,48.33,35.29
+Andrius Pečiulis,"Riptide, Lurker of the Deep",lt,2,5,1,8,25.0,2,0,2,5,1,25.0,1,8,False,False,,1,4,0,20.0,1,1,1,33.33,43.33,43.33,
+Dylan Lecocq,"Puffin, Hightail",ca,2,5,1,8,25.0,2,0,2,5,1,25.0,1,8,False,False,,2,2,1,40.0,0,3,0,0.0,45.45,48.33,35.29
+Gabriel Fonseca,"Levia, Shadowborn Abomination",br,2,5,1,8,25.0,2,0,2,5,1,25.0,1,8,False,False,,1,4,0,20.0,1,1,1,33.33,52.15,51.0,55.64
+Christopher Bizau,"Ira, Scarlet Revenger",de,1,6,0,7,14.29,2,1,1,6,0,14.29,1,8,False,False,,1,4,0,20.0,0,2,0,0.0,43.41,48.99,18.18
+Luka Leko,Jarl Vetreiði,at,1,6,0,7,14.29,2,1,1,6,0,14.29,1,8,False,False,,1,4,0,20.0,0,2,0,0.0,50.0,49.7,51.02
+Nathanaël frederic,"Arakni, Huntsman",fr,2,6,0,8,25.0,2,0,2,6,0,25.0,1,8,False,False,,2,3,0,40.0,0,3,0,0.0,48.94,48.72,50.0
+Peter Nethan Henriksen,"Viserai, the Forsaken",dk,2,6,0,8,25.0,2,0,2,6,0,25.0,1,8,False,False,,2,3,0,40.0,0,3,0,0.0,30.61,28.89,50.0
+Robert Crone,"Levia, Shadowborn Abomination",nl,2,6,0,8,25.0,2,0,2,6,0,25.0,1,8,False,False,,1,4,0,20.0,1,2,0,33.33,52.15,51.0,55.64
+Rodrigo Pacheco,"Levia, Shadowborn Abomination",cl,2,6,0,8,25.0,2,0,2,6,0,25.0,1,8,False,False,,2,3,0,40.0,0,3,0,0.0,52.15,51.0,55.64
+Mariusz Suchanecki,"Ser Boltyn, Breaker of Dawn",pl,1,2,0,3,33.33,1,0,1,2,0,33.33,1,3,False,False,,1,2,0,33.33,0,0,0,,51.07,52.34,46.48
+Enes Findik,"Ser Boltyn, Breaker of Dawn",de,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,51.07,52.34,46.48
+Ivaylo Ivanov,"Fang, Dracai of Blades",bg,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,52.27,52.71,50.82
+Joel Halvars,"Arakni, Huntsman",se,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,48.94,48.72,50.0
+Leonardo Tozato,"Levia, Shadowborn Abomination",br,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,52.15,51.0,55.64
+Lukas Knirschnig,"Marlynn, Treasure Hunter",at,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,41.03,44.44,33.33
+Nikita Laasmaa,"Oscilio, Forked Continuum",ee,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,53.06,52.29,55.26
+Tomor Péter,"Betsy, Skin in the Game",hu,1,3,0,4,25.0,1,0,1,3,0,25.0,1,4,False,False,,1,3,0,25.0,0,0,0,,53.85,57.14,43.75
+Adrien Defarge-Galet,"Malice, Domina of the Dead",fr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,20.0,20.0,
+Alexandru Tanase,"Aurora, Legacy of Tempest",ro,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Alwart Nijveld,"Ser Boltyn, Breaker of Dawn",nl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,51.07,52.34,46.48
+Andreas Ventzel,"Levia, Shadowborn Abomination",dk,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.15,51.0,55.64
+András Kovács,"Gravy Bones, Shipwrecked Looter",hu,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,44.69,42.59,52.63
+Anton Cid Mejias,"Ser Boltyn, Breaker of Dawn",gb,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,51.07,52.34,46.48
+axilleas siskopoulos,"Vynnset, Iron Maiden",gr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,40.38,40.0,42.86
+Bartosz Dominiak,"Oscilio, Forked Continuum",pl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,53.06,52.29,55.26
+Bartosz Ziemba,"Gravy Bones, Shipwrecked Looter",pl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,44.69,42.59,52.63
+Carl Boyle,"Aurora, Legacy of Tempest",ie,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Carlos Valdenegro,"Riptide, Lurker of the Deep",cl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,43.33,43.33,
+CHRISTOS KOSTAKIS,"Fang, Dracai of Blades",gr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.27,52.71,50.82
+Danny Halstad,"Aurora, Legacy of Tempest",dk,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Dimos Dafnis,"Viserai, the Forsaken",gr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,30.61,28.89,50.0
+Emma Hollingsworth,"Levia, Shadowborn Abomination",au,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.15,51.0,55.64
+Enki Dupaquier,"Fang, Dracai of Blades",fr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.27,52.71,50.82
+Giannis Kouris,"Viserai, the Forsaken",gr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,30.61,28.89,50.0
+James Vincent Wong,"Vynnset, Iron Maiden",sk,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,40.38,40.0,42.86
+John Kitsos,"Gravy Bones, Shipwrecked Looter",gr,0,4,0,4,0.0,1,1,0,4,0,0.0,1,5,False,False,,0,4,0,0.0,0,0,0,,44.69,42.59,52.63
+Jose Ricardo Ordoñez Muller,"Ira, Scarlet Revenger",de,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,43.41,48.99,18.18
+Konstantinos Paltoglou,"Gravy Bones, Shipwrecked Looter",gr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,44.69,42.59,52.63
+Lancelot Errico,"Oscilio, Forked Continuum",ch,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,53.06,52.29,55.26
+Lucas Izumi,Jarl Vetreiði,br,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,50.0,49.7,51.02
+Maciej Chmielewski,"Gravy Bones, Shipwrecked Looter",pl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,44.69,42.59,52.63
+Martin Okruhlica,"Arakni, Huntsman",cz,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.94,48.72,50.0
+Matthew Duggan,"Ser Boltyn, Breaker of Dawn",gb,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,51.07,52.34,46.48
+Matúš Martinko,"Aurora, Legacy of Tempest",sk,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Michael Collins,"Viserai, the Forsaken",nz,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,30.61,28.89,50.0
+Michael Koch,Jarl Vetreiði,at,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,50.0,49.7,51.02
+Miguel Torres,"Fang, Dracai of Blades",pr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.27,52.71,50.82
+Mirko Macchia,"Gravy Bones, Shipwrecked Looter",it,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,44.69,42.59,52.63
+Nicolas CAMPIGLIA,"Levia, Shadowborn Abomination",fr,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.15,51.0,55.64
+Niels Debosschere,"Levia, Shadowborn Abomination",be,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.15,51.0,55.64
+Peter Smyth,"Levia, Shadowborn Abomination",ie,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,52.15,51.0,55.64
+Piotr Chudobinski,"Ira, Scarlet Revenger",pl,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,43.41,48.99,18.18
+Ryan Debling,Jarl Vetreiði,gb,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,50.0,49.7,51.02
+Sebastian Grøndal,"Viserai, the Forsaken",dk,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,30.61,28.89,50.0
+Stef Ganchev,"Aurora, Legacy of Tempest",bg,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Sunny Yang,"Aurora, Legacy of Tempest",ca,1,4,0,5,20.0,1,0,1,4,0,20.0,1,5,False,False,,1,4,0,20.0,0,0,0,,48.52,48.45,48.94
+Andreas Guetz,"Levia, Shadowborn Abomination",at,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,52.15,51.0,55.64
+Bangliang Liu,"Levia, Shadowborn Abomination",cn,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,52.15,51.0,55.64
+Basile Massaly,"Gravy Bones, Shipwrecked Looter",ch,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,44.69,42.59,52.63
+Eduardo Daniel García Reyes,"Hala, Bladesaint of the Vow",mx,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,50.98,51.43,50.0
+Gary White,"Viserai, the Forsaken",nl,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,0,5,0,0.0,1,0,0,100.0,30.61,28.89,50.0
+Jeremy Coutellec,"Puffin, Hightail",fr,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,0,5,0,0.0,1,0,0,100.0,45.45,48.33,35.29
+Kenji Enomoto,"Fang, Dracai of Blades",jp,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,52.27,52.71,50.82
+Liang Zhaoyuan,"Fang, Dracai of Blades",cn,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,52.27,52.71,50.82
+Max Villarreal,"Fang, Dracai of Blades",mx,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,52.27,52.71,50.82
+Nicolas BROSSE,"Puffin, Hightail",fr,1,5,0,6,16.67,1,0,1,5,0,16.67,1,6,False,False,,1,4,0,20.0,0,1,0,0.0,45.45,48.33,35.29
+Tony Gleeson,Jarl Vetreiði,ie,0,5,0,5,0.0,1,1,0,5,0,0.0,1,6,False,False,,0,4,0,0.0,0,1,0,0.0,50.0,49.7,51.02
+Aaron Heimbeck,"Oscilio, Forked Continuum",ch,1,6,0,7,14.29,1,0,1,6,0,14.29,1,7,False,False,,1,4,0,20.0,0,2,0,0.0,53.06,52.29,55.26
+Devon Drury,"Aurora, Legacy of Tempest",ca,1,6,0,7,14.29,1,0,1,6,0,14.29,1,7,False,False,,1,4,0,20.0,0,2,0,0.0,48.52,48.45,48.94
+Logan Petersen,"Levia, Shadowborn Abomination",us,1,6,0,7,14.29,1,0,1,6,0,14.29,1,7,False,False,,0,5,0,0.0,1,1,0,50.0,52.15,51.0,55.64
+Wilmer Aguilar Ramos,"Gravy Bones, Shipwrecked Looter",cr,1,6,0,7,14.29,1,0,1,6,0,14.29,1,7,False,False,,0,5,0,0.0,1,1,0,50.0,44.69,42.59,52.63
+Alan Lynch,"Vynnset, Iron Maiden",ie,0,7,0,7,0.0,1,1,0,7,0,0.0,1,8,False,False,,0,5,0,0.0,0,2,0,0.0,40.38,40.0,42.86
+Max de Wilde,"Levia, Shadowborn Abomination",nl,1,7,0,8,12.5,1,0,1,7,0,12.5,1,8,False,False,,1,4,0,20.0,0,3,0,0.0,52.15,51.0,55.64
+Albert Schütt,"Arakni, 5L!p3d 7hRu 7h3 cR4X",se,0,1,0,1,0.0,0,0,0,1,0,0.0,1,1,False,False,,0,1,0,0.0,0,0,0,,44.74,41.18,75.0
+Joshua Therese,N/A,fr,0,1,0,1,0.0,0,0,0,1,0,0.0,1,1,False,False,,0,1,0,0.0,0,0,0,,,,
+Oh Oh,N/A,tw,0,1,0,1,0.0,0,0,0,1,0,0.0,1,1,False,False,,0,1,0,0.0,0,0,0,,,,
+zhengwen zhao,N/A,cn,0,1,0,1,0.0,0,0,0,1,0,0.0,1,1,False,False,,0,1,0,0.0,0,0,0,,,,
+Ralph Abou Hala,"Fang, Dracai of Blades",br,0,2,0,2,0.0,0,0,0,2,0,0.0,1,2,False,False,,0,2,0,0.0,0,0,0,,52.27,52.71,50.82
+Vlad Margarit,"Levia, Shadowborn Abomination",ro,0,2,0,2,0.0,0,0,0,2,0,0.0,1,2,False,False,,0,2,0,0.0,0,0,0,,52.15,51.0,55.64
+Brent Van de Staey,"Fang, Dracai of Blades",be,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,52.27,52.71,50.82
+David Jose Iglesias Lopez,"Levia, Shadowborn Abomination",es,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,52.15,51.0,55.64
+Jeppe Madsen,"Marlynn, Treasure Hunter",dk,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,41.03,44.44,33.33
+Márton Kenessey,"Fang, Dracai of Blades",hu,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,52.27,52.71,50.82
+Sherish Chowhari,"Arakni, 5L!p3d 7hRu 7h3 cR4X",nl,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,44.74,41.18,75.0
+Thorbjørn Lind Jensen,"Levia, Shadowborn Abomination",dk,0,3,0,3,0.0,0,0,0,3,0,0.0,1,3,False,False,,0,3,0,0.0,0,0,0,,52.15,51.0,55.64
+Nikos Evgenidis,"Gravy Bones, Shipwrecked Looter",gr,0,3,1,4,0.0,0,0,0,3,1,0.0,1,4,False,False,,0,3,1,0.0,0,0,0,,44.69,42.59,52.63
+Alberto Di Blasi,"Gravy Bones, Shipwrecked Looter",it,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,44.69,42.59,52.63
+Casey Schaffer,"Aurora, Legacy of Tempest",us,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,48.52,48.45,48.94
+Igor Wesołowski,Jarl Vetreiði,pl,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,50.0,49.7,51.02
+Miguel Rubio,"Fang, Dracai of Blades",mx,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,52.27,52.71,50.82
+Sebastian Spicher,"Aurora, Legacy of Tempest",ch,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,48.52,48.45,48.94
+Vangelis Giannakis,"Ira, Scarlet Revenger",gr,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,43.41,48.99,18.18
+ZongRu Wu,"Teklovossen, Esteemed Magnate",tw,0,4,0,4,0.0,0,0,0,4,0,0.0,1,4,False,False,,0,4,0,0.0,0,0,0,,34.78,36.84,25.0
+Jurij Di Carlo,Jarl Vetreiði,dk,0,5,0,5,0.0,0,0,0,5,0,0.0,1,5,False,False,,0,5,0,0.0,0,0,0,,50.0,49.7,51.02
+Luis Manuel García Luna Perez,"Levia, Shadowborn Abomination",mx,0,5,0,5,0.0,0,0,0,5,0,0.0,1,5,False,False,,0,5,0,0.0,0,0,0,,52.15,51.0,55.64
+Jiabin Chen,"Ser Boltyn, Breaker of Dawn",cn,0,6,0,6,0.0,0,0,0,6,0,0.0,1,6,False,False,,0,5,0,0.0,0,1,0,0.0,51.07,52.34,46.48
+Samed Demir,"Ser Boltyn, Breaker of Dawn",nl,0,6,0,6,0.0,0,0,0,6,0,0.0,1,6,False,False,,0,5,0,0.0,0,1,0,0.0,51.07,52.34,46.48
+Tore Eskeland,"Levia, Shadowborn Abomination",no,0,6,0,6,0.0,0,0,0,6,0,0.0,1,6,False,False,,0,5,0,0.0,0,1,0,0.0,52.15,51.0,55.64

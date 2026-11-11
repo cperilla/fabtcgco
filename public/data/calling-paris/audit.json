@@ -1,4 +1,19 @@
 {
+  "event": {
+    "name": "Calling: Paris",
+    "slug": "calling-paris",
+    "source": "Scraping",
+    "format": "Classic Constructed",
+    "swiss_end": 15,
+    "last_round": 18,
+    "day2_start": 10,
+    "draft_rounds": [],
+    "allow_missing_rounds": [],
+    "coverage": "https://fabtcg.com/coverage/calling-paris/",
+    "notes": []
+  },
+  "missing_rounds": [],
+  "duplicate_round_sources": [],
   "observed_named_players": 1418,
   "known_hero_players": 1392,
   "unknown_hero_players": 26,
@@ -20,7 +35,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     },
     {
       "round": 4,
@@ -36,7 +52,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     },
     {
       "round": 6,
@@ -52,7 +69,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     },
     {
       "round": 7,
@@ -68,7 +86,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     },
     {
       "round": 13,
@@ -84,7 +103,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     },
     {
       "round": 14,
@@ -100,7 +120,8 @@
       "country2": "",
       "placeholder_opponent": true,
       "known_heroes": false,
-      "mirror": false
+      "mirror": false,
+      "format": "Classic Constructed"
     }
   ],
   "unknown_players": [
@@ -124,7 +145,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Antoine Cordier",
@@ -146,7 +177,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Ben Cabrelli",
@@ -168,7 +209,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Brandon Flores",
@@ -190,7 +241,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Charles-Henri Maurin",
@@ -212,7 +273,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Chris Pasch",
@@ -234,7 +305,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Daniel Mckinlay",
@@ -256,7 +337,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "David Jose Iglesias Lopez",
@@ -278,7 +369,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "davide muratti",
@@ -300,7 +401,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Dylan Hammouti",
@@ -322,7 +433,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Emmanuel Boissard",
@@ -344,7 +465,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Friedemann Schorpp",
@@ -366,7 +497,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Gary Gao",
@@ -388,7 +529,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Giorgos Dailianis",
@@ -410,7 +561,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Joel Bloch",
@@ -432,7 +593,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Kamel Taleb",
@@ -454,7 +625,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Kevin Steiger",
@@ -476,7 +657,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Lucas Izumi",
@@ -498,7 +689,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Mathew Davies",
@@ -520,7 +721,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Mathis Djanoyan",
@@ -542,7 +753,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Maximilian Daffinger",
@@ -564,7 +785,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Nathan Rhoden",
@@ -586,7 +817,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Pierre-Alexandre Germain",
@@ -608,7 +849,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Ronan Pasquier",
@@ -630,7 +881,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Théo Crevon",
@@ -652,7 +913,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     },
     {
       "player": "Μαριος Γιουβανούδης",
@@ -674,7 +945,17 @@
       "day2": false,
       "top8": false,
       "finish": "",
-      "hero_swiss_win_pct": null
+      "constructed_wins": 0,
+      "constructed_losses": 1,
+      "constructed_draws": 0,
+      "constructed_win_pct": 0.0,
+      "draft_wins": 0,
+      "draft_losses": 0,
+      "draft_draws": 0,
+      "draft_win_pct": null,
+      "hero_swiss_win_pct": null,
+      "hero_day1_win_pct": null,
+      "hero_day2_win_pct": null
     }
   ],
   "first_seen_after_round1": [],

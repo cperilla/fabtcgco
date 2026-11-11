@@ -1,0 +1,883 @@
+﻿hero,opponent_hero,matches,wins,losses,draws,win_pct
+Arakni,"Arakni, Solitary Confinement",1,0,1,0,0.0
+Arakni,"Baalghor, Omen of the End",1,1,0,0,100.0
+Arakni,Dorinthea,1,0,1,0,0.0
+Arakni,Dromai,3,0,3,0,0.0
+Arakni,"Ira, Crimson Haze",1,1,0,0,100.0
+Arakni,Lexi,1,1,0,0,100.0
+Arakni,Verdance,1,0,1,0,0.0
+Arakni,Vynnset,1,0,1,0,0.0
+"Arakni, Solitary Confinement",Arakni,1,1,0,0,100.0
+"Arakni, Solitary Confinement",Aurora,1,0,1,0,0.0
+"Arakni, Solitary Confinement","Benji, the Piercing Wind",1,0,1,0,0.0
+"Arakni, Solitary Confinement","Blaze, Firemind",1,1,0,0,100.0
+"Arakni, Solitary Confinement","Bravo, Flattering Showman",2,2,0,0,100.0
+"Arakni, Solitary Confinement",Dash,1,1,0,0,100.0
+"Arakni, Solitary Confinement",Dorinthea,3,2,1,0,66.67
+"Arakni, Solitary Confinement",Dromai,3,0,3,0,0.0
+"Arakni, Solitary Confinement",Enigma,1,0,1,0,0.0
+"Arakni, Solitary Confinement",Florian,2,1,1,0,50.0
+"Arakni, Solitary Confinement",Hala,2,2,0,0,100.0
+"Arakni, Solitary Confinement","Ira, Crimson Haze",8,3,5,0,37.5
+"Arakni, Solitary Confinement",Kano,1,0,1,0,0.0
+"Arakni, Solitary Confinement",Kayo,1,0,1,0,0.0
+"Arakni, Solitary Confinement",Levia,4,3,1,0,75.0
+"Arakni, Solitary Confinement",Lexi,1,0,1,0,0.0
+"Arakni, Solitary Confinement",Lyath Goldmane,1,1,0,0,100.0
+"Arakni, Solitary Confinement",Olympia,2,0,2,0,0.0
+"Arakni, Solitary Confinement",Valda Brightaxe,2,2,0,0,100.0
+"Arakni, Solitary Confinement","Viserai, Between Worlds",1,0,1,0,0.0
+"Arakni, Solitary Confinement",Vynnset,1,0,1,0,0.0
+"Arakni, Solitary Confinement","Zane, Broadly Beloved",1,0,1,0,0.0
+"Arakni, Web of Deceit",Boltyn,1,1,0,0,100.0
+"Arakni, Web of Deceit","Bravo, Flattering Showman",1,1,0,0,100.0
+"Arakni, Web of Deceit",Dash,1,0,1,0,0.0
+"Arakni, Web of Deceit",Dorinthea,2,0,2,0,0.0
+"Arakni, Web of Deceit",Fai,1,0,0,1,0.0
+"Arakni, Web of Deceit",Kano,1,1,0,0,100.0
+"Arakni, Web of Deceit",Levia,1,0,0,1,0.0
+Aurora,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Aurora,"Benji, the Piercing Wind",1,0,1,0,0.0
+Aurora,Boltyn,2,2,0,0,100.0
+Aurora,"Bravo, Flattering Showman",13,8,5,0,61.54
+Aurora,Dash,1,0,1,0,0.0
+Aurora,Dorinthea,8,3,5,0,37.5
+Aurora,"Dorinthea, Quicksilver Prodigy",1,0,1,0,0.0
+Aurora,Dromai,5,2,3,0,40.0
+Aurora,Enigma,2,1,1,0,50.0
+Aurora,Fai,12,2,10,0,16.67
+Aurora,Florian,1,1,0,0,100.0
+Aurora,Gravy Bones,1,0,1,0,0.0
+Aurora,Hala,12,5,7,0,41.67
+Aurora,"Ira, Crimson Haze",23,9,14,0,39.13
+Aurora,Iyslander,4,4,0,0,100.0
+Aurora,Kano,7,2,5,0,28.57
+Aurora,Kayo,1,0,1,0,0.0
+Aurora,Levia,6,2,4,0,33.33
+Aurora,Lexi,3,1,2,0,33.33
+Aurora,Lyath Goldmane,4,2,2,0,50.0
+Aurora,Olympia,3,1,2,0,33.33
+Aurora,"Oscilio, Scion of the Third Age",3,3,0,0,100.0
+Aurora,Prism,1,0,1,0,0.0
+Aurora,"Prism, Advent of Thrones",1,1,0,0,100.0
+Aurora,Rhinar,2,2,0,0,100.0
+Aurora,Riptide,4,3,1,0,75.0
+Aurora,Valda Brightaxe,1,0,1,0,0.0
+Aurora,Viserai,1,1,0,0,100.0
+Aurora,"Viserai, Between Worlds",1,0,1,0,0.0
+Aurora,Vynnset,1,0,1,0,0.0
+Aurora,Zen,1,1,0,0,100.0
+Azalea,"Benji, the Piercing Wind",1,0,1,0,0.0
+Azalea,Dorinthea,1,0,1,0,0.0
+Azalea,Dromai,1,0,1,0,0.0
+Azalea,Fai,1,0,1,0,0.0
+Azalea,"Ira, Crimson Haze",6,1,5,0,16.67
+Azalea,Iyslander,1,0,1,0,0.0
+Azalea,"Kassai, Cintari Sellsword",1,0,1,0,0.0
+Azalea,Kayo,3,0,3,0,0.0
+Azalea,Levia,3,2,1,0,66.67
+Azalea,Nuu,1,0,1,0,0.0
+Azalea,Olympia,3,1,2,0,33.33
+Azalea,"Oscilio, Scion of the Third Age",1,0,1,0,0.0
+Azalea,Riptide,1,0,1,0,0.0
+Azalea,Teklovossen,1,1,0,0,100.0
+Azalea,"Zane, Broadly Beloved",1,0,1,0,0.0
+"Baalghor, Omen of the End",Arakni,1,0,1,0,0.0
+"Baalghor, Omen of the End","Benji, the Piercing Wind",1,0,1,0,0.0
+"Baalghor, Omen of the End",Boltyn,1,0,1,0,0.0
+"Baalghor, Omen of the End",Dorinthea,1,0,1,0,0.0
+"Baalghor, Omen of the End",Dromai,1,0,1,0,0.0
+"Baalghor, Omen of the End",Hala,1,0,1,0,0.0
+"Baalghor, Omen of the End",Levia,1,0,1,0,0.0
+"Baalghor, Omen of the End",Rhinar,1,0,1,0,0.0
+"Benji, the Piercing Wind","Arakni, Solitary Confinement",1,1,0,0,100.0
+"Benji, the Piercing Wind",Aurora,1,1,0,0,100.0
+"Benji, the Piercing Wind",Azalea,1,1,0,0,100.0
+"Benji, the Piercing Wind","Baalghor, Omen of the End",1,1,0,0,100.0
+"Benji, the Piercing Wind","Bravo, Flattering Showman",2,2,0,0,100.0
+"Benji, the Piercing Wind",Dorinthea,2,2,0,0,100.0
+"Benji, the Piercing Wind","Dorinthea, Quicksilver Prodigy",1,0,1,0,0.0
+"Benji, the Piercing Wind",Dromai,2,2,0,0,100.0
+"Benji, the Piercing Wind",Enigma,2,2,0,0,100.0
+"Benji, the Piercing Wind",Florian,2,2,0,0,100.0
+"Benji, the Piercing Wind",Hala,1,1,0,0,100.0
+"Benji, the Piercing Wind","Ira, Crimson Haze",12,3,9,0,25.0
+"Benji, the Piercing Wind",Iyslander,1,0,1,0,0.0
+"Benji, the Piercing Wind",Kano,1,1,0,0,100.0
+"Benji, the Piercing Wind",Lexi,2,1,1,0,50.0
+"Benji, the Piercing Wind",Olympia,1,0,1,0,0.0
+"Benji, the Piercing Wind",Riptide,2,1,1,0,50.0
+"Benji, the Piercing Wind",Valda Brightaxe,1,0,1,0,0.0
+"Benji, the Piercing Wind",Verdance,1,1,0,0,100.0
+"Benji, the Piercing Wind","Viserai, Between Worlds",1,1,0,0,100.0
+"Benji, the Piercing Wind",Vynnset,1,0,1,0,0.0
+"Blaze, Firemind","Arakni, Solitary Confinement",1,0,1,0,0.0
+"Blaze, Firemind",Boltyn,1,0,1,0,0.0
+"Blaze, Firemind","Bravo, Flattering Showman",1,1,0,0,100.0
+"Blaze, Firemind",Dromai,1,1,0,0,100.0
+"Blaze, Firemind",Enigma,1,0,1,0,0.0
+"Blaze, Firemind","Ira, Crimson Haze",4,1,3,0,25.0
+"Blaze, Firemind",Kayo,1,0,1,0,0.0
+"Blaze, Firemind",Levia,2,1,1,0,50.0
+"Blaze, Firemind",Lexi,1,0,1,0,0.0
+"Blaze, Firemind",Olympia,1,1,0,0,100.0
+"Blaze, Firemind",Vynnset,1,1,0,0,100.0
+Boltyn,"Arakni, Web of Deceit",1,0,1,0,0.0
+Boltyn,Aurora,2,0,2,0,0.0
+Boltyn,"Baalghor, Omen of the End",1,1,0,0,100.0
+Boltyn,"Blaze, Firemind",1,1,0,0,100.0
+Boltyn,Dash,1,0,1,0,0.0
+Boltyn,Fai,1,0,1,0,0.0
+Boltyn,"Ira, Crimson Haze",3,1,2,0,33.33
+Boltyn,Iyslander,2,0,2,0,0.0
+Boltyn,Kano,1,0,1,0,0.0
+Boltyn,Levia,1,1,0,0,100.0
+Boltyn,Olympia,1,0,1,0,0.0
+Boltyn,Riptide,1,0,1,0,0.0
+Boltyn,Verdance,1,1,0,0,100.0
+"Bravo, Flattering Showman","Arakni, Solitary Confinement",2,0,2,0,0.0
+"Bravo, Flattering Showman","Arakni, Web of Deceit",1,0,1,0,0.0
+"Bravo, Flattering Showman",Aurora,13,5,8,0,38.46
+"Bravo, Flattering Showman","Benji, the Piercing Wind",2,0,2,0,0.0
+"Bravo, Flattering Showman","Blaze, Firemind",1,0,1,0,0.0
+"Bravo, Flattering Showman",Dash,2,2,0,0,100.0
+"Bravo, Flattering Showman",Dorinthea,28,11,17,0,39.29
+"Bravo, Flattering Showman",Dromai,15,13,2,0,86.67
+"Bravo, Flattering Showman",Enigma,12,3,7,2,25.0
+"Bravo, Flattering Showman",Fai,24,13,11,0,54.17
+"Bravo, Flattering Showman",Florian,2,1,1,0,50.0
+"Bravo, Flattering Showman",Hala,22,7,14,1,31.82
+"Bravo, Flattering Showman","Ira, Crimson Haze",50,22,27,1,44.0
+"Bravo, Flattering Showman",Iyslander,12,8,3,1,66.67
+"Bravo, Flattering Showman",Kano,8,3,5,0,37.5
+"Bravo, Flattering Showman","Kassai, Cintari Sellsword",2,1,1,0,50.0
+"Bravo, Flattering Showman",Kayo,6,3,3,0,50.0
+"Bravo, Flattering Showman",Levia,30,14,15,1,46.67
+"Bravo, Flattering Showman",Lexi,4,2,2,0,50.0
+"Bravo, Flattering Showman",Lyath Goldmane,8,3,3,2,37.5
+"Bravo, Flattering Showman",Nuu,2,2,0,0,100.0
+"Bravo, Flattering Showman",Olympia,15,6,7,2,40.0
+"Bravo, Flattering Showman",Prism,1,1,0,0,100.0
+"Bravo, Flattering Showman","Prism, Advent of Thrones",2,2,0,0,100.0
+"Bravo, Flattering Showman",Rhinar,2,1,1,0,50.0
+"Bravo, Flattering Showman",Riptide,8,3,5,0,37.5
+"Bravo, Flattering Showman",Terra,3,2,1,0,66.67
+"Bravo, Flattering Showman",Valda Brightaxe,4,2,2,0,50.0
+"Bravo, Flattering Showman",Verdance,6,3,3,0,50.0
+"Bravo, Flattering Showman",Viserai,2,1,1,0,50.0
+"Bravo, Flattering Showman",Vynnset,3,2,1,0,66.67
+"Bravo, Flattering Showman","Zane, Broadly Beloved",9,4,5,0,44.44
+Dash,"Arakni, Solitary Confinement",1,0,1,0,0.0
+Dash,"Arakni, Web of Deceit",1,1,0,0,100.0
+Dash,Aurora,1,1,0,0,100.0
+Dash,Boltyn,1,1,0,0,100.0
+Dash,"Bravo, Flattering Showman",2,0,2,0,0.0
+Dash,Dorinthea,3,1,2,0,33.33
+Dash,Dromai,1,0,1,0,0.0
+Dash,Enigma,3,1,2,0,33.33
+Dash,Fai,2,1,1,0,50.0
+Dash,Florian,1,0,1,0,0.0
+Dash,"Ira, Crimson Haze",10,2,8,0,20.0
+Dash,Iyslander,3,1,2,0,33.33
+Dash,"Kassai, Cintari Sellsword",2,1,1,0,50.0
+Dash,Kayo,1,0,1,0,0.0
+Dash,Levia,4,1,3,0,25.0
+Dash,Lexi,1,0,1,0,0.0
+Dash,Olympia,4,2,2,0,50.0
+Dash,"Prism, Advent of Thrones",1,1,0,0,100.0
+Dash,Rhinar,1,0,1,0,0.0
+Dash,Riptide,2,1,1,0,50.0
+Dash,Valda Brightaxe,1,0,1,0,0.0
+Dash,Verdance,1,1,0,0,100.0
+Dash,Vynnset,1,1,0,0,100.0
+Dash,"Zane, Broadly Beloved",2,1,1,0,50.0
+Dash,Zen,1,1,0,0,100.0
+Dorinthea,Arakni,1,1,0,0,100.0
+Dorinthea,"Arakni, Solitary Confinement",3,1,2,0,33.33
+Dorinthea,"Arakni, Web of Deceit",2,2,0,0,100.0
+Dorinthea,Aurora,8,5,3,0,62.5
+Dorinthea,Azalea,1,1,0,0,100.0
+Dorinthea,"Baalghor, Omen of the End",1,1,0,0,100.0
+Dorinthea,"Benji, the Piercing Wind",2,0,2,0,0.0
+Dorinthea,"Bravo, Flattering Showman",28,17,11,0,60.71
+Dorinthea,Dash,3,2,1,0,66.67
+Dorinthea,Dromai,17,7,10,0,41.18
+Dorinthea,Enigma,6,3,3,0,50.0
+Dorinthea,Fai,18,3,15,0,16.67
+Dorinthea,Florian,6,0,6,0,0.0
+Dorinthea,Gravy Bones,1,1,0,0,100.0
+Dorinthea,Hala,15,8,5,2,53.33
+Dorinthea,"Ira, Crimson Haze",52,31,21,0,59.62
+Dorinthea,Iyslander,7,6,1,0,85.71
+Dorinthea,Kano,7,4,3,0,57.14
+Dorinthea,"Kassai, Cintari Sellsword",1,1,0,0,100.0
+Dorinthea,Kayo,11,7,4,0,63.64
+Dorinthea,"Killjoy, the Crooked Blade",3,1,2,0,33.33
+Dorinthea,Levia,24,10,14,0,41.67
+Dorinthea,Lexi,7,3,3,1,42.86
+Dorinthea,Lyath Goldmane,2,0,2,0,0.0
+Dorinthea,Nuu,1,0,1,0,0.0
+Dorinthea,Olympia,15,9,6,0,60.0
+Dorinthea,"Oscilio, Scion of the Third Age",1,1,0,0,100.0
+Dorinthea,"Prism, Advent of Thrones",2,1,1,0,50.0
+Dorinthea,Rhinar,2,2,0,0,100.0
+Dorinthea,Riptide,8,5,3,0,62.5
+Dorinthea,Terra,2,1,1,0,50.0
+Dorinthea,Valda Brightaxe,5,3,2,0,60.0
+Dorinthea,Verdance,1,1,0,0,100.0
+Dorinthea,Viserai,1,1,0,0,100.0
+Dorinthea,"Viserai, Between Worlds",2,2,0,0,100.0
+Dorinthea,Vynnset,4,3,1,0,75.0
+Dorinthea,"Zane, Broadly Beloved",12,7,5,0,58.33
+"Dorinthea, Quicksilver Prodigy",Aurora,1,1,0,0,100.0
+"Dorinthea, Quicksilver Prodigy","Benji, the Piercing Wind",1,1,0,0,100.0
+"Dorinthea, Quicksilver Prodigy",Dromai,1,0,1,0,0.0
+"Dorinthea, Quicksilver Prodigy",Enigma,1,0,1,0,0.0
+"Dorinthea, Quicksilver Prodigy",Fai,1,0,1,0,0.0
+"Dorinthea, Quicksilver Prodigy",Hala,1,0,1,0,0.0
+"Dorinthea, Quicksilver Prodigy","Ira, Crimson Haze",1,0,1,0,0.0
+"Dorinthea, Quicksilver Prodigy",Levia,1,1,0,0,100.0
+"Dorinthea, Quicksilver Prodigy",Olympia,2,0,2,0,0.0
+Dromai,Arakni,3,3,0,0,100.0
+Dromai,"Arakni, Solitary Confinement",3,3,0,0,100.0
+Dromai,Aurora,5,3,2,0,60.0
+Dromai,Azalea,1,1,0,0,100.0
+Dromai,"Baalghor, Omen of the End",1,1,0,0,100.0
+Dromai,"Benji, the Piercing Wind",2,0,2,0,0.0
+Dromai,"Blaze, Firemind",1,0,1,0,0.0
+Dromai,"Bravo, Flattering Showman",15,2,13,0,13.33
+Dromai,Dash,1,1,0,0,100.0
+Dromai,Dorinthea,17,10,7,0,58.82
+Dromai,"Dorinthea, Quicksilver Prodigy",1,1,0,0,100.0
+Dromai,Enigma,7,7,0,0,100.0
+Dromai,Fai,16,11,5,0,68.75
+Dromai,Florian,2,2,0,0,100.0
+Dromai,Hala,16,10,6,0,62.5
+Dromai,"Ira, Crimson Haze",44,10,34,0,22.73
+Dromai,Iyslander,11,4,7,0,36.36
+Dromai,Kano,8,2,6,0,25.0
+Dromai,"Kassai, Cintari Sellsword",1,1,0,0,100.0
+Dromai,Kayo,8,2,6,0,25.0
+Dromai,Levia,16,2,12,2,12.5
+Dromai,Lexi,5,4,1,0,80.0
+Dromai,Lyath Goldmane,2,1,1,0,50.0
+Dromai,Nuu,1,1,0,0,100.0
+Dromai,Olympia,10,9,1,0,90.0
+Dromai,"Oscilio, Scion of the Third Age",3,1,2,0,33.33
+Dromai,Prism,1,1,0,0,100.0
+Dromai,"Prism, Advent of Thrones",2,2,0,0,100.0
+Dromai,Rhinar,1,0,1,0,0.0
+Dromai,Riptide,5,4,1,0,80.0
+Dromai,Terra,2,1,1,0,50.0
+Dromai,Valda Brightaxe,1,0,1,0,0.0
+Dromai,Verdance,2,0,0,2,0.0
+Dromai,"Viserai, Between Worlds",3,0,3,0,0.0
+Dromai,Vynnset,7,4,3,0,57.14
+Dromai,"Zane, Broadly Beloved",4,3,1,0,75.0
+Enigma,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Enigma,Aurora,2,1,1,0,50.0
+Enigma,"Benji, the Piercing Wind",2,0,2,0,0.0
+Enigma,"Blaze, Firemind",1,1,0,0,100.0
+Enigma,"Bravo, Flattering Showman",12,7,3,2,58.33
+Enigma,Dash,3,2,1,0,66.67
+Enigma,Dorinthea,6,3,3,0,50.0
+Enigma,"Dorinthea, Quicksilver Prodigy",1,1,0,0,100.0
+Enigma,Dromai,7,0,7,0,0.0
+Enigma,Fai,13,5,8,0,38.46
+Enigma,Florian,3,3,0,0,100.0
+Enigma,Hala,8,6,2,0,75.0
+Enigma,"Ira, Crimson Haze",29,10,18,1,34.48
+Enigma,Iyslander,7,6,1,0,85.71
+Enigma,Kano,8,6,2,0,75.0
+Enigma,Kayo,3,1,2,0,33.33
+Enigma,Levia,6,1,5,0,16.67
+Enigma,Lyath Goldmane,2,2,0,0,100.0
+Enigma,Nuu,1,1,0,0,100.0
+Enigma,Olympia,4,3,1,0,75.0
+Enigma,"Oscilio, Scion of the Third Age",1,1,0,0,100.0
+Enigma,"Prism, Advent of Thrones",1,1,0,0,100.0
+Enigma,Rhinar,1,0,1,0,0.0
+Enigma,Riptide,4,3,1,0,75.0
+Enigma,Terra,4,3,1,0,75.0
+Enigma,Valda Brightaxe,2,2,0,0,100.0
+Enigma,Viserai,1,1,0,0,100.0
+Enigma,"Viserai, Between Worlds",3,3,0,0,100.0
+Enigma,Vynnset,1,0,1,0,0.0
+Enigma,"Zane, Broadly Beloved",4,3,1,0,75.0
+Fai,"Arakni, Web of Deceit",1,0,0,1,0.0
+Fai,Aurora,12,10,2,0,83.33
+Fai,Azalea,1,1,0,0,100.0
+Fai,Boltyn,1,1,0,0,100.0
+Fai,"Bravo, Flattering Showman",24,11,13,0,45.83
+Fai,Dash,2,1,1,0,50.0
+Fai,Dorinthea,18,15,3,0,83.33
+Fai,"Dorinthea, Quicksilver Prodigy",1,1,0,0,100.0
+Fai,Dromai,16,5,11,0,31.25
+Fai,Enigma,13,8,5,0,61.54
+Fai,Florian,2,2,0,0,100.0
+Fai,Hala,16,6,10,0,37.5
+Fai,"Ira, Crimson Haze",67,24,43,0,35.82
+Fai,Iyslander,5,4,1,0,80.0
+Fai,Kano,13,7,6,0,53.85
+Fai,Kayo,5,2,3,0,40.0
+Fai,Levia,20,6,14,0,30.0
+Fai,Lexi,4,1,3,0,25.0
+Fai,Lyath Goldmane,3,2,1,0,66.67
+Fai,Olympia,18,9,9,0,50.0
+Fai,"Oscilio, Scion of the Third Age",1,0,1,0,0.0
+Fai,"Prism, Advent of Thrones",5,3,2,0,60.0
+Fai,Rhinar,1,1,0,0,100.0
+Fai,Riptide,6,4,2,0,66.67
+Fai,Terra,2,2,0,0,100.0
+Fai,Valda Brightaxe,2,1,1,0,50.0
+Fai,Verdance,4,2,2,0,50.0
+Fai,Viserai,1,1,0,0,100.0
+Fai,"Viserai, Between Worlds",2,2,0,0,100.0
+Fai,Vynnset,6,6,0,0,100.0
+Fai,"Zane, Broadly Beloved",3,0,3,0,0.0
+Florian,"Arakni, Solitary Confinement",2,1,1,0,50.0
+Florian,Aurora,1,0,1,0,0.0
+Florian,"Benji, the Piercing Wind",2,0,2,0,0.0
+Florian,"Bravo, Flattering Showman",2,1,1,0,50.0
+Florian,Dash,1,1,0,0,100.0
+Florian,Dorinthea,6,6,0,0,100.0
+Florian,Dromai,2,0,2,0,0.0
+Florian,Enigma,3,0,3,0,0.0
+Florian,Fai,2,0,2,0,0.0
+Florian,Hala,3,3,0,0,100.0
+Florian,"Ira, Crimson Haze",13,5,8,0,38.46
+Florian,Iyslander,4,1,3,0,25.0
+Florian,Kano,3,0,3,0,0.0
+Florian,Kayo,3,0,2,1,0.0
+Florian,"Killjoy, the Crooked Blade",1,1,0,0,100.0
+Florian,Levia,7,5,2,0,71.43
+Florian,Lyath Goldmane,1,0,1,0,0.0
+Florian,Olympia,6,5,1,0,83.33
+Florian,Rhinar,1,0,1,0,0.0
+Florian,Riptide,1,1,0,0,100.0
+Florian,Terra,4,4,0,0,100.0
+Florian,Valda Brightaxe,1,1,0,0,100.0
+Florian,Viserai,1,1,0,0,100.0
+Florian,Vynnset,1,1,0,0,100.0
+Florian,"Zane, Broadly Beloved",2,2,0,0,100.0
+Gravy Bones,Aurora,1,1,0,0,100.0
+Gravy Bones,Dorinthea,1,0,1,0,0.0
+Gravy Bones,"Ira, Crimson Haze",2,1,1,0,50.0
+Gravy Bones,Levia,2,1,1,0,50.0
+Gravy Bones,Olympia,1,0,1,0,0.0
+Gravy Bones,Rhinar,1,1,0,0,100.0
+Gravy Bones,Verdance,1,0,1,0,0.0
+Hala,"Arakni, Solitary Confinement",2,0,2,0,0.0
+Hala,Aurora,12,7,5,0,58.33
+Hala,"Baalghor, Omen of the End",1,1,0,0,100.0
+Hala,"Benji, the Piercing Wind",1,0,1,0,0.0
+Hala,"Bravo, Flattering Showman",22,14,7,1,63.64
+Hala,Dorinthea,15,5,8,2,33.33
+Hala,"Dorinthea, Quicksilver Prodigy",1,1,0,0,100.0
+Hala,Dromai,16,6,10,0,37.5
+Hala,Enigma,8,2,6,0,25.0
+Hala,Fai,16,10,6,0,62.5
+Hala,Florian,3,0,3,0,0.0
+Hala,"Ira, Crimson Haze",44,23,21,0,52.27
+Hala,Iyslander,8,2,6,0,25.0
+Hala,Kano,8,6,2,0,75.0
+Hala,Kayo,6,4,2,0,66.67
+Hala,"Killjoy, the Crooked Blade",1,0,1,0,0.0
+Hala,Levia,5,2,3,0,40.0
+Hala,Lexi,2,2,0,0,100.0
+Hala,Lyath Goldmane,1,1,0,0,100.0
+Hala,Nuu,2,2,0,0,100.0
+Hala,Olympia,9,4,5,0,44.44
+Hala,"Oscilio, Scion of the Third Age",3,2,1,0,66.67
+Hala,"Prism, Advent of Thrones",1,1,0,0,100.0
+Hala,Rhinar,2,2,0,0,100.0
+Hala,Riptide,7,6,1,0,85.71
+Hala,Terra,1,0,0,1,0.0
+Hala,Valda Brightaxe,1,0,1,0,0.0
+Hala,Verdance,3,2,1,0,66.67
+Hala,"Viserai, Between Worlds",1,1,0,0,100.0
+Hala,Vynnset,1,1,0,0,100.0
+"Ira, Crimson Haze",Arakni,1,0,1,0,0.0
+"Ira, Crimson Haze","Arakni, Solitary Confinement",8,5,3,0,62.5
+"Ira, Crimson Haze",Aurora,23,14,9,0,60.87
+"Ira, Crimson Haze",Azalea,6,5,1,0,83.33
+"Ira, Crimson Haze","Benji, the Piercing Wind",12,9,3,0,75.0
+"Ira, Crimson Haze","Blaze, Firemind",4,3,1,0,75.0
+"Ira, Crimson Haze",Boltyn,3,2,1,0,66.67
+"Ira, Crimson Haze","Bravo, Flattering Showman",50,27,22,1,54.0
+"Ira, Crimson Haze",Dash,10,8,2,0,80.0
+"Ira, Crimson Haze",Dorinthea,52,21,31,0,40.38
+"Ira, Crimson Haze","Dorinthea, Quicksilver Prodigy",1,1,0,0,100.0
+"Ira, Crimson Haze",Dromai,44,34,10,0,77.27
+"Ira, Crimson Haze",Enigma,29,18,10,1,62.07
+"Ira, Crimson Haze",Fai,67,43,24,0,64.18
+"Ira, Crimson Haze",Florian,13,8,5,0,61.54
+"Ira, Crimson Haze",Gravy Bones,2,1,1,0,50.0
+"Ira, Crimson Haze",Hala,44,21,23,0,47.73
+"Ira, Crimson Haze",Iyslander,27,11,16,0,40.74
+"Ira, Crimson Haze",Kano,23,11,12,0,47.83
+"Ira, Crimson Haze",Kayo,23,15,8,0,65.22
+"Ira, Crimson Haze","Killjoy, the Crooked Blade",2,1,1,0,50.0
+"Ira, Crimson Haze",Levia,42,29,12,1,69.05
+"Ira, Crimson Haze",Lexi,17,10,7,0,58.82
+"Ira, Crimson Haze",Lyath Goldmane,4,4,0,0,100.0
+"Ira, Crimson Haze",Nuu,3,3,0,0,100.0
+"Ira, Crimson Haze",Olympia,39,22,15,2,56.41
+"Ira, Crimson Haze","Oscilio, Scion of the Third Age",4,2,2,0,50.0
+"Ira, Crimson Haze",Prism,1,1,0,0,100.0
+"Ira, Crimson Haze","Prism, Advent of Thrones",4,3,1,0,75.0
+"Ira, Crimson Haze",Rhinar,3,3,0,0,100.0
+"Ira, Crimson Haze",Riptide,32,12,20,0,37.5
+"Ira, Crimson Haze",Terra,5,2,2,1,40.0
+"Ira, Crimson Haze",Valda Brightaxe,20,3,17,0,15.0
+"Ira, Crimson Haze",Verdance,10,7,3,0,70.0
+"Ira, Crimson Haze",Viserai,1,1,0,0,100.0
+"Ira, Crimson Haze","Viserai, Between Worlds",5,3,2,0,60.0
+"Ira, Crimson Haze",Vynnset,6,4,2,0,66.67
+"Ira, Crimson Haze","Zane, Broadly Beloved",18,11,7,0,61.11
+"Ira, Crimson Haze",Zen,1,1,0,0,100.0
+Iyslander,Aurora,4,0,4,0,0.0
+Iyslander,Azalea,1,1,0,0,100.0
+Iyslander,"Benji, the Piercing Wind",1,1,0,0,100.0
+Iyslander,Boltyn,2,2,0,0,100.0
+Iyslander,"Bravo, Flattering Showman",12,3,8,1,25.0
+Iyslander,Dash,3,2,1,0,66.67
+Iyslander,Dorinthea,7,1,6,0,14.29
+Iyslander,Dromai,11,7,4,0,63.64
+Iyslander,Enigma,7,1,6,0,14.29
+Iyslander,Fai,5,1,4,0,20.0
+Iyslander,Florian,4,3,1,0,75.0
+Iyslander,Hala,8,6,2,0,75.0
+Iyslander,"Ira, Crimson Haze",27,16,11,0,59.26
+Iyslander,Kano,5,2,3,0,40.0
+Iyslander,"Kassai, Cintari Sellsword",3,3,0,0,100.0
+Iyslander,Kayo,4,0,4,0,0.0
+Iyslander,Levia,12,9,3,0,75.0
+Iyslander,Lexi,1,0,1,0,0.0
+Iyslander,Lyath Goldmane,2,1,1,0,50.0
+Iyslander,Olympia,5,2,3,0,40.0
+Iyslander,"Oscilio, Scion of the Third Age",1,1,0,0,100.0
+Iyslander,"Prism, Advent of Thrones",2,2,0,0,100.0
+Iyslander,Riptide,1,1,0,0,100.0
+Iyslander,Terra,1,0,1,0,0.0
+Iyslander,Valda Brightaxe,4,3,1,0,75.0
+Iyslander,Verdance,4,2,1,1,50.0
+Iyslander,Vynnset,5,3,1,1,60.0
+Iyslander,"Zane, Broadly Beloved",4,2,2,0,50.0
+Kano,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Kano,"Arakni, Web of Deceit",1,0,1,0,0.0
+Kano,Aurora,7,5,2,0,71.43
+Kano,"Benji, the Piercing Wind",1,0,1,0,0.0
+Kano,Boltyn,1,1,0,0,100.0
+Kano,"Bravo, Flattering Showman",8,5,3,0,62.5
+Kano,Dorinthea,7,3,4,0,42.86
+Kano,Dromai,8,6,2,0,75.0
+Kano,Enigma,8,2,6,0,25.0
+Kano,Fai,13,6,7,0,46.15
+Kano,Florian,3,3,0,0,100.0
+Kano,Hala,8,2,6,0,25.0
+Kano,"Ira, Crimson Haze",23,12,11,0,52.17
+Kano,Iyslander,5,3,2,0,60.0
+Kano,Kayo,5,4,1,0,80.0
+Kano,Levia,6,5,1,0,83.33
+Kano,Lexi,2,0,2,0,0.0
+Kano,Lyath Goldmane,2,0,2,0,0.0
+Kano,Olympia,7,3,4,0,42.86
+Kano,Riptide,2,1,1,0,50.0
+Kano,Valda Brightaxe,3,3,0,0,100.0
+Kano,Verdance,2,2,0,0,100.0
+Kano,Viserai,1,1,0,0,100.0
+Kano,Vynnset,2,2,0,0,100.0
+Kano,"Zane, Broadly Beloved",4,2,2,0,50.0
+Kano,Zen,1,0,1,0,0.0
+"Kassai, Cintari Sellsword",Azalea,1,1,0,0,100.0
+"Kassai, Cintari Sellsword","Bravo, Flattering Showman",2,1,1,0,50.0
+"Kassai, Cintari Sellsword",Dash,2,1,1,0,50.0
+"Kassai, Cintari Sellsword",Dorinthea,1,0,1,0,0.0
+"Kassai, Cintari Sellsword",Dromai,1,0,1,0,0.0
+"Kassai, Cintari Sellsword",Iyslander,3,0,3,0,0.0
+"Kassai, Cintari Sellsword",Riptide,1,0,1,0,0.0
+"Kassai, Cintari Sellsword",Valda Brightaxe,1,0,1,0,0.0
+"Kassai, Cintari Sellsword",Verdance,1,0,0,1,0.0
+"Kassai, Cintari Sellsword",Vynnset,1,1,0,0,100.0
+"Kassai, Cintari Sellsword","Zane, Broadly Beloved",1,0,1,0,0.0
+Kayo,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Kayo,Aurora,1,1,0,0,100.0
+Kayo,Azalea,3,3,0,0,100.0
+Kayo,"Blaze, Firemind",1,1,0,0,100.0
+Kayo,"Bravo, Flattering Showman",6,3,3,0,50.0
+Kayo,Dash,1,1,0,0,100.0
+Kayo,Dorinthea,11,4,7,0,36.36
+Kayo,Dromai,8,6,2,0,75.0
+Kayo,Enigma,3,2,1,0,66.67
+Kayo,Fai,5,3,2,0,60.0
+Kayo,Florian,3,2,0,1,66.67
+Kayo,Hala,6,2,4,0,33.33
+Kayo,"Ira, Crimson Haze",23,8,15,0,34.78
+Kayo,Iyslander,4,4,0,0,100.0
+Kayo,Kano,5,1,4,0,20.0
+Kayo,Levia,7,3,4,0,42.86
+Kayo,Lexi,2,1,1,0,50.0
+Kayo,Lyath Goldmane,3,2,1,0,66.67
+Kayo,Olympia,5,2,3,0,40.0
+Kayo,Riptide,3,1,2,0,33.33
+Kayo,Terra,1,0,1,0,0.0
+Kayo,Valda Brightaxe,1,1,0,0,100.0
+Kayo,Verdance,2,2,0,0,100.0
+Kayo,Vynnset,5,2,3,0,40.0
+Kayo,"Zane, Broadly Beloved",2,0,2,0,0.0
+"Killjoy, the Crooked Blade",Dorinthea,3,2,1,0,66.67
+"Killjoy, the Crooked Blade",Florian,1,0,1,0,0.0
+"Killjoy, the Crooked Blade",Hala,1,1,0,0,100.0
+"Killjoy, the Crooked Blade","Ira, Crimson Haze",2,1,1,0,50.0
+"Killjoy, the Crooked Blade",Vynnset,1,1,0,0,100.0
+Levia,"Arakni, Solitary Confinement",4,1,3,0,25.0
+Levia,"Arakni, Web of Deceit",1,0,0,1,0.0
+Levia,Aurora,6,4,2,0,66.67
+Levia,Azalea,3,1,2,0,33.33
+Levia,"Baalghor, Omen of the End",1,1,0,0,100.0
+Levia,"Blaze, Firemind",2,1,1,0,50.0
+Levia,Boltyn,1,0,1,0,0.0
+Levia,"Bravo, Flattering Showman",30,15,14,1,50.0
+Levia,Dash,4,3,1,0,75.0
+Levia,Dorinthea,24,14,10,0,58.33
+Levia,"Dorinthea, Quicksilver Prodigy",1,0,1,0,0.0
+Levia,Dromai,16,12,2,2,75.0
+Levia,Enigma,6,5,1,0,83.33
+Levia,Fai,20,14,6,0,70.0
+Levia,Florian,7,2,5,0,28.57
+Levia,Gravy Bones,2,1,1,0,50.0
+Levia,Hala,5,3,2,0,60.0
+Levia,"Ira, Crimson Haze",42,12,29,1,28.57
+Levia,Iyslander,12,3,9,0,25.0
+Levia,Kano,6,1,5,0,16.67
+Levia,Kayo,7,4,3,0,57.14
+Levia,Lexi,3,2,1,0,66.67
+Levia,Lyath Goldmane,2,1,1,0,50.0
+Levia,Nuu,1,1,0,0,100.0
+Levia,Olympia,15,5,10,0,33.33
+Levia,"Oscilio, Scion of the Third Age",1,0,1,0,0.0
+Levia,"Prism, Advent of Thrones",1,1,0,0,100.0
+Levia,Rhinar,1,1,0,0,100.0
+Levia,Riptide,10,6,4,0,60.0
+Levia,Teklovossen,1,1,0,0,100.0
+Levia,Terra,4,0,4,0,0.0
+Levia,Valda Brightaxe,2,1,1,0,50.0
+Levia,Verdance,5,3,2,0,60.0
+Levia,Viserai,3,0,3,0,0.0
+Levia,"Viserai, Between Worlds",2,1,1,0,50.0
+Levia,Vynnset,1,0,1,0,0.0
+Levia,"Zane, Broadly Beloved",3,0,3,0,0.0
+Lexi,Arakni,1,0,1,0,0.0
+Lexi,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Lexi,Aurora,3,2,1,0,66.67
+Lexi,"Benji, the Piercing Wind",2,1,1,0,50.0
+Lexi,"Blaze, Firemind",1,1,0,0,100.0
+Lexi,"Bravo, Flattering Showman",4,2,2,0,50.0
+Lexi,Dash,1,1,0,0,100.0
+Lexi,Dorinthea,7,3,3,1,42.86
+Lexi,Dromai,5,1,4,0,20.0
+Lexi,Fai,4,3,1,0,75.0
+Lexi,Hala,2,0,2,0,0.0
+Lexi,"Ira, Crimson Haze",17,7,10,0,41.18
+Lexi,Iyslander,1,1,0,0,100.0
+Lexi,Kano,2,2,0,0,100.0
+Lexi,Kayo,2,1,1,0,50.0
+Lexi,Levia,3,1,2,0,33.33
+Lexi,Lyath Goldmane,1,0,1,0,0.0
+Lexi,Olympia,3,0,3,0,0.0
+Lexi,Riptide,4,0,4,0,0.0
+Lexi,Terra,2,0,2,0,0.0
+Lexi,Verdance,1,0,1,0,0.0
+Lexi,Vynnset,1,0,1,0,0.0
+Lexi,"Zane, Broadly Beloved",2,1,1,0,50.0
+Lyath Goldmane,"Arakni, Solitary Confinement",1,0,1,0,0.0
+Lyath Goldmane,Aurora,4,2,2,0,50.0
+Lyath Goldmane,"Bravo, Flattering Showman",8,3,3,2,37.5
+Lyath Goldmane,Dorinthea,2,2,0,0,100.0
+Lyath Goldmane,Dromai,2,1,1,0,50.0
+Lyath Goldmane,Enigma,2,0,2,0,0.0
+Lyath Goldmane,Fai,3,1,2,0,33.33
+Lyath Goldmane,Florian,1,1,0,0,100.0
+Lyath Goldmane,Hala,1,0,1,0,0.0
+Lyath Goldmane,"Ira, Crimson Haze",4,0,4,0,0.0
+Lyath Goldmane,Iyslander,2,1,1,0,50.0
+Lyath Goldmane,Kano,2,2,0,0,100.0
+Lyath Goldmane,Kayo,3,1,2,0,33.33
+Lyath Goldmane,Levia,2,1,1,0,50.0
+Lyath Goldmane,Lexi,1,1,0,0,100.0
+Lyath Goldmane,"Oscilio, Scion of the Third Age",1,1,0,0,100.0
+Lyath Goldmane,Terra,1,0,1,0,0.0
+Lyath Goldmane,Viserai,1,1,0,0,100.0
+Lyath Goldmane,"Viserai, Between Worlds",1,1,0,0,100.0
+Lyath Goldmane,"Zane, Broadly Beloved",2,0,2,0,0.0
+Nuu,Azalea,1,1,0,0,100.0
+Nuu,"Bravo, Flattering Showman",2,0,2,0,0.0
+Nuu,Dorinthea,1,1,0,0,100.0
+Nuu,Dromai,1,0,1,0,0.0
+Nuu,Enigma,1,0,1,0,0.0
+Nuu,Hala,2,0,2,0,0.0
+Nuu,"Ira, Crimson Haze",3,0,3,0,0.0
+Nuu,Levia,1,0,1,0,0.0
+Nuu,Rhinar,1,0,1,0,0.0
+Nuu,Verdance,1,1,0,0,100.0
+Olympia,"Arakni, Solitary Confinement",2,2,0,0,100.0
+Olympia,Aurora,3,2,1,0,66.67
+Olympia,Azalea,3,2,1,0,66.67
+Olympia,"Benji, the Piercing Wind",1,1,0,0,100.0
+Olympia,"Blaze, Firemind",1,0,1,0,0.0
+Olympia,Boltyn,1,1,0,0,100.0
+Olympia,"Bravo, Flattering Showman",15,7,6,2,46.67
+Olympia,Dash,4,2,2,0,50.0
+Olympia,Dorinthea,15,5,10,0,33.33
+Olympia,"Dorinthea, Quicksilver Prodigy",2,2,0,0,100.0
+Olympia,Dromai,10,1,9,0,10.0
+Olympia,Enigma,4,1,3,0,25.0
+Olympia,Fai,18,9,9,0,50.0
+Olympia,Florian,6,1,5,0,16.67
+Olympia,Gravy Bones,1,1,0,0,100.0
+Olympia,Hala,9,5,4,0,55.56
+Olympia,"Ira, Crimson Haze",39,15,22,2,38.46
+Olympia,Iyslander,5,3,2,0,60.0
+Olympia,Kano,7,4,3,0,57.14
+Olympia,Kayo,5,3,2,0,60.0
+Olympia,Levia,15,10,5,0,66.67
+Olympia,Lexi,3,3,0,0,100.0
+Olympia,"Oscilio, Scion of the Third Age",4,3,1,0,75.0
+Olympia,"Prism, Advent of Thrones",1,1,0,0,100.0
+Olympia,Riptide,3,2,1,0,66.67
+Olympia,Valda Brightaxe,1,0,1,0,0.0
+Olympia,Verdance,2,1,1,0,50.0
+Olympia,"Viserai, Between Worlds",3,2,1,0,66.67
+Olympia,Vynnset,4,2,2,0,50.0
+Olympia,"Zane, Broadly Beloved",9,0,9,0,0.0
+"Oscilio, Scion of the Third Age",Aurora,3,0,3,0,0.0
+"Oscilio, Scion of the Third Age",Azalea,1,1,0,0,100.0
+"Oscilio, Scion of the Third Age",Dorinthea,1,0,1,0,0.0
+"Oscilio, Scion of the Third Age",Dromai,3,2,1,0,66.67
+"Oscilio, Scion of the Third Age",Enigma,1,0,1,0,0.0
+"Oscilio, Scion of the Third Age",Fai,1,1,0,0,100.0
+"Oscilio, Scion of the Third Age",Hala,3,1,2,0,33.33
+"Oscilio, Scion of the Third Age","Ira, Crimson Haze",4,2,2,0,50.0
+"Oscilio, Scion of the Third Age",Iyslander,1,0,1,0,0.0
+"Oscilio, Scion of the Third Age",Levia,1,1,0,0,100.0
+"Oscilio, Scion of the Third Age",Lyath Goldmane,1,0,1,0,0.0
+"Oscilio, Scion of the Third Age",Olympia,4,1,3,0,25.0
+"Oscilio, Scion of the Third Age",Terra,1,0,1,0,0.0
+"Oscilio, Scion of the Third Age",Verdance,1,1,0,0,100.0
+"Oscilio, Scion of the Third Age",Viserai,1,1,0,0,100.0
+"Oscilio, Scion of the Third Age","Viserai, Between Worlds",1,1,0,0,100.0
+Prism,Aurora,1,1,0,0,100.0
+Prism,"Bravo, Flattering Showman",1,0,1,0,0.0
+Prism,Dromai,1,0,1,0,0.0
+Prism,"Ira, Crimson Haze",1,0,1,0,0.0
+"Prism, Advent of Thrones",Aurora,1,0,1,0,0.0
+"Prism, Advent of Thrones","Bravo, Flattering Showman",2,0,2,0,0.0
+"Prism, Advent of Thrones",Dash,1,0,1,0,0.0
+"Prism, Advent of Thrones",Dorinthea,2,1,1,0,50.0
+"Prism, Advent of Thrones",Dromai,2,0,2,0,0.0
+"Prism, Advent of Thrones",Enigma,1,0,1,0,0.0
+"Prism, Advent of Thrones",Fai,5,2,3,0,40.0
+"Prism, Advent of Thrones",Hala,1,0,1,0,0.0
+"Prism, Advent of Thrones","Ira, Crimson Haze",4,1,3,0,25.0
+"Prism, Advent of Thrones",Iyslander,2,0,2,0,0.0
+"Prism, Advent of Thrones",Levia,1,0,1,0,0.0
+"Prism, Advent of Thrones",Olympia,1,0,1,0,0.0
+"Prism, Advent of Thrones",Riptide,1,0,1,0,0.0
+"Prism, Advent of Thrones",Valda Brightaxe,1,0,0,1,0.0
+"Prism, Advent of Thrones","Viserai, Between Worlds",1,1,0,0,100.0
+Rhinar,Aurora,2,0,2,0,0.0
+Rhinar,"Baalghor, Omen of the End",1,1,0,0,100.0
+Rhinar,"Bravo, Flattering Showman",2,1,1,0,50.0
+Rhinar,Dash,1,1,0,0,100.0
+Rhinar,Dorinthea,2,0,2,0,0.0
+Rhinar,Dromai,1,1,0,0,100.0
+Rhinar,Enigma,1,1,0,0,100.0
+Rhinar,Fai,1,0,1,0,0.0
+Rhinar,Florian,1,1,0,0,100.0
+Rhinar,Gravy Bones,1,0,1,0,0.0
+Rhinar,Hala,2,0,2,0,0.0
+Rhinar,"Ira, Crimson Haze",3,0,3,0,0.0
+Rhinar,Levia,1,0,1,0,0.0
+Rhinar,Nuu,1,1,0,0,100.0
+Rhinar,Terra,1,1,0,0,100.0
+Rhinar,Viserai,1,1,0,0,100.0
+Rhinar,"Viserai, Between Worlds",1,1,0,0,100.0
+Rhinar,"Zane, Broadly Beloved",1,0,1,0,0.0
+Riptide,Aurora,4,1,3,0,25.0
+Riptide,Azalea,1,1,0,0,100.0
+Riptide,"Benji, the Piercing Wind",2,1,1,0,50.0
+Riptide,Boltyn,1,1,0,0,100.0
+Riptide,"Bravo, Flattering Showman",8,5,3,0,62.5
+Riptide,Dash,2,1,1,0,50.0
+Riptide,Dorinthea,8,3,5,0,37.5
+Riptide,Dromai,5,1,4,0,20.0
+Riptide,Enigma,4,1,3,0,25.0
+Riptide,Fai,6,2,4,0,33.33
+Riptide,Florian,1,0,1,0,0.0
+Riptide,Hala,7,1,6,0,14.29
+Riptide,"Ira, Crimson Haze",32,20,12,0,62.5
+Riptide,Iyslander,1,0,1,0,0.0
+Riptide,Kano,2,1,1,0,50.0
+Riptide,"Kassai, Cintari Sellsword",1,1,0,0,100.0
+Riptide,Kayo,3,2,1,0,66.67
+Riptide,Levia,10,4,6,0,40.0
+Riptide,Lexi,4,4,0,0,100.0
+Riptide,Olympia,3,1,2,0,33.33
+Riptide,"Prism, Advent of Thrones",1,1,0,0,100.0
+Riptide,Terra,2,1,1,0,50.0
+Riptide,Valda Brightaxe,1,1,0,0,100.0
+Riptide,Verdance,2,1,1,0,50.0
+Riptide,"Viserai, Between Worlds",2,1,1,0,50.0
+Riptide,Vynnset,3,1,2,0,33.33
+Teklovossen,Azalea,1,0,1,0,0.0
+Teklovossen,Levia,1,0,1,0,0.0
+Terra,"Bravo, Flattering Showman",3,1,2,0,33.33
+Terra,Dorinthea,2,1,1,0,50.0
+Terra,Dromai,2,1,1,0,50.0
+Terra,Enigma,4,1,3,0,25.0
+Terra,Fai,2,0,2,0,0.0
+Terra,Florian,4,0,4,0,0.0
+Terra,Hala,1,0,0,1,0.0
+Terra,"Ira, Crimson Haze",5,2,2,1,40.0
+Terra,Iyslander,1,1,0,0,100.0
+Terra,Kayo,1,1,0,0,100.0
+Terra,Levia,4,4,0,0,100.0
+Terra,Lexi,2,2,0,0,100.0
+Terra,Lyath Goldmane,1,1,0,0,100.0
+Terra,"Oscilio, Scion of the Third Age",1,1,0,0,100.0
+Terra,Rhinar,1,0,1,0,0.0
+Terra,Riptide,2,1,1,0,50.0
+Terra,Zen,1,0,0,1,0.0
+Valda Brightaxe,"Arakni, Solitary Confinement",2,0,2,0,0.0
+Valda Brightaxe,Aurora,1,1,0,0,100.0
+Valda Brightaxe,"Benji, the Piercing Wind",1,1,0,0,100.0
+Valda Brightaxe,"Bravo, Flattering Showman",4,2,2,0,50.0
+Valda Brightaxe,Dash,1,1,0,0,100.0
+Valda Brightaxe,Dorinthea,5,2,3,0,40.0
+Valda Brightaxe,Dromai,1,1,0,0,100.0
+Valda Brightaxe,Enigma,2,0,2,0,0.0
+Valda Brightaxe,Fai,2,1,1,0,50.0
+Valda Brightaxe,Florian,1,0,1,0,0.0
+Valda Brightaxe,Hala,1,1,0,0,100.0
+Valda Brightaxe,"Ira, Crimson Haze",20,17,3,0,85.0
+Valda Brightaxe,Iyslander,4,1,3,0,25.0
+Valda Brightaxe,Kano,3,0,3,0,0.0
+Valda Brightaxe,"Kassai, Cintari Sellsword",1,1,0,0,100.0
+Valda Brightaxe,Kayo,1,0,1,0,0.0
+Valda Brightaxe,Levia,2,1,1,0,50.0
+Valda Brightaxe,Olympia,1,1,0,0,100.0
+Valda Brightaxe,"Prism, Advent of Thrones",1,0,0,1,0.0
+Valda Brightaxe,Riptide,1,0,1,0,0.0
+Valda Brightaxe,Verdance,1,0,1,0,0.0
+Valda Brightaxe,"Viserai, Between Worlds",1,0,1,0,0.0
+Valda Brightaxe,Vynnset,1,1,0,0,100.0
+Valda Brightaxe,"Zane, Broadly Beloved",3,1,2,0,33.33
+Verdance,Arakni,1,1,0,0,100.0
+Verdance,"Benji, the Piercing Wind",1,0,1,0,0.0
+Verdance,Boltyn,1,0,1,0,0.0
+Verdance,"Bravo, Flattering Showman",6,3,3,0,50.0
+Verdance,Dash,1,0,1,0,0.0
+Verdance,Dorinthea,1,0,1,0,0.0
+Verdance,Dromai,2,0,0,2,0.0
+Verdance,Fai,4,2,2,0,50.0
+Verdance,Gravy Bones,1,1,0,0,100.0
+Verdance,Hala,3,1,2,0,33.33
+Verdance,"Ira, Crimson Haze",10,3,7,0,30.0
+Verdance,Iyslander,4,1,2,1,25.0
+Verdance,Kano,2,0,2,0,0.0
+Verdance,"Kassai, Cintari Sellsword",1,0,0,1,0.0
+Verdance,Kayo,2,0,2,0,0.0
+Verdance,Levia,5,2,3,0,40.0
+Verdance,Lexi,1,1,0,0,100.0
+Verdance,Nuu,1,0,1,0,0.0
+Verdance,Olympia,2,1,1,0,50.0
+Verdance,"Oscilio, Scion of the Third Age",1,0,1,0,0.0
+Verdance,Riptide,2,1,1,0,50.0
+Verdance,Valda Brightaxe,1,1,0,0,100.0
+Verdance,"Viserai, Between Worlds",1,1,0,0,100.0
+Viserai,Aurora,1,0,1,0,0.0
+Viserai,"Bravo, Flattering Showman",2,1,1,0,50.0
+Viserai,Dorinthea,1,0,1,0,0.0
+Viserai,Enigma,1,0,1,0,0.0
+Viserai,Fai,1,0,1,0,0.0
+Viserai,Florian,1,0,1,0,0.0
+Viserai,"Ira, Crimson Haze",1,0,1,0,0.0
+Viserai,Kano,1,0,1,0,0.0
+Viserai,Levia,3,3,0,0,100.0
+Viserai,Lyath Goldmane,1,0,1,0,0.0
+Viserai,"Oscilio, Scion of the Third Age",1,0,1,0,0.0
+Viserai,Rhinar,1,0,1,0,0.0
+Viserai,"Viserai, Between Worlds",1,0,1,0,0.0
+"Viserai, Between Worlds","Arakni, Solitary Confinement",1,1,0,0,100.0
+"Viserai, Between Worlds",Aurora,1,1,0,0,100.0
+"Viserai, Between Worlds","Benji, the Piercing Wind",1,0,1,0,0.0
+"Viserai, Between Worlds",Dorinthea,2,0,2,0,0.0
+"Viserai, Between Worlds",Dromai,3,3,0,0,100.0
+"Viserai, Between Worlds",Enigma,3,0,3,0,0.0
+"Viserai, Between Worlds",Fai,2,0,2,0,0.0
+"Viserai, Between Worlds",Hala,1,0,1,0,0.0
+"Viserai, Between Worlds","Ira, Crimson Haze",5,2,3,0,40.0
+"Viserai, Between Worlds",Levia,2,1,1,0,50.0
+"Viserai, Between Worlds",Lyath Goldmane,1,0,1,0,0.0
+"Viserai, Between Worlds",Olympia,3,1,2,0,33.33
+"Viserai, Between Worlds","Oscilio, Scion of the Third Age",1,0,1,0,0.0
+"Viserai, Between Worlds","Prism, Advent of Thrones",1,0,1,0,0.0
+"Viserai, Between Worlds",Rhinar,1,0,1,0,0.0
+"Viserai, Between Worlds",Riptide,2,1,1,0,50.0
+"Viserai, Between Worlds",Valda Brightaxe,1,1,0,0,100.0
+"Viserai, Between Worlds",Verdance,1,0,1,0,0.0
+"Viserai, Between Worlds",Viserai,1,1,0,0,100.0
+"Viserai, Between Worlds","Zane, Broadly Beloved",1,0,1,0,0.0
+Vynnset,Arakni,1,1,0,0,100.0
+Vynnset,"Arakni, Solitary Confinement",1,1,0,0,100.0
+Vynnset,Aurora,1,1,0,0,100.0
+Vynnset,"Benji, the Piercing Wind",1,1,0,0,100.0
+Vynnset,"Blaze, Firemind",1,0,1,0,0.0
+Vynnset,"Bravo, Flattering Showman",3,1,2,0,33.33
+Vynnset,Dash,1,0,1,0,0.0
+Vynnset,Dorinthea,4,1,3,0,25.0
+Vynnset,Dromai,7,3,4,0,42.86
+Vynnset,Enigma,1,1,0,0,100.0
+Vynnset,Fai,6,0,6,0,0.0
+Vynnset,Florian,1,0,1,0,0.0
+Vynnset,Hala,1,0,1,0,0.0
+Vynnset,"Ira, Crimson Haze",6,2,4,0,33.33
+Vynnset,Iyslander,5,1,3,1,20.0
+Vynnset,Kano,2,0,2,0,0.0
+Vynnset,"Kassai, Cintari Sellsword",1,0,1,0,0.0
+Vynnset,Kayo,5,3,2,0,60.0
+Vynnset,"Killjoy, the Crooked Blade",1,0,1,0,0.0
+Vynnset,Levia,1,1,0,0,100.0
+Vynnset,Lexi,1,1,0,0,100.0
+Vynnset,Olympia,4,2,2,0,50.0
+Vynnset,Riptide,3,2,1,0,66.67
+Vynnset,Valda Brightaxe,1,0,1,0,0.0
+Vynnset,"Zane, Broadly Beloved",1,0,1,0,0.0
+"Zane, Broadly Beloved","Arakni, Solitary Confinement",1,1,0,0,100.0
+"Zane, Broadly Beloved",Azalea,1,1,0,0,100.0
+"Zane, Broadly Beloved","Bravo, Flattering Showman",9,5,4,0,55.56
+"Zane, Broadly Beloved",Dash,2,1,1,0,50.0
+"Zane, Broadly Beloved",Dorinthea,12,5,7,0,41.67
+"Zane, Broadly Beloved",Dromai,4,1,3,0,25.0
+"Zane, Broadly Beloved",Enigma,4,1,3,0,25.0
+"Zane, Broadly Beloved",Fai,3,3,0,0,100.0
+"Zane, Broadly Beloved",Florian,2,0,2,0,0.0
+"Zane, Broadly Beloved","Ira, Crimson Haze",18,7,11,0,38.89
+"Zane, Broadly Beloved",Iyslander,4,2,2,0,50.0
+"Zane, Broadly Beloved",Kano,4,2,2,0,50.0
+"Zane, Broadly Beloved","Kassai, Cintari Sellsword",1,1,0,0,100.0
+"Zane, Broadly Beloved",Kayo,2,2,0,0,100.0
+"Zane, Broadly Beloved",Levia,3,3,0,0,100.0
+"Zane, Broadly Beloved",Lexi,2,1,1,0,50.0
+"Zane, Broadly Beloved",Lyath Goldmane,2,2,0,0,100.0
+"Zane, Broadly Beloved",Olympia,9,9,0,0,100.0
+"Zane, Broadly Beloved",Rhinar,1,1,0,0,100.0
+"Zane, Broadly Beloved",Valda Brightaxe,3,2,1,0,66.67
+"Zane, Broadly Beloved","Viserai, Between Worlds",1,1,0,0,100.0
+"Zane, Broadly Beloved",Vynnset,1,1,0,0,100.0
+Zen,Aurora,1,0,1,0,0.0
+Zen,Dash,1,0,1,0,0.0
+Zen,"Ira, Crimson Haze",1,0,1,0,0.0
+Zen,Kano,1,1,0,0,100.0
+Zen,Terra,1,0,0,1,0.0

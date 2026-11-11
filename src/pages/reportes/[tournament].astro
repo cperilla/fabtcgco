@@ -1,0 +1,16 @@
+---
+import TournamentReport from '../../components/TournamentReport.astro';
+import showdown from '../../../public/data/showdown-paris-2026/summary.json';
+import showdownRounds from '../../../public/data/showdown-paris-2026/player-rounds.json';
+import worlds from '../../../public/data/world-championship-paris-2026/summary.json';
+import worldsRounds from '../../../public/data/world-championship-paris-2026/player-rounds.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { tournament: 'showdown-paris-2026' }, props: { data: showdown, playerRounds: showdownRounds } },
+    { params: { tournament: 'world-championship-paris-2026' }, props: { data: worlds, playerRounds: worldsRounds } },
+  ];
+}
+const { data, playerRounds } = Astro.props;
+---
+<TournamentReport data={data} playerRounds={playerRounds} />

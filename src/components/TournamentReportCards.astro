@@ -1,0 +1,26 @@
+---
+import calling from '../../public/data/calling-paris/summary.json';
+import showdown from '../../public/data/showdown-paris-2026/summary.json';
+import worlds from '../../public/data/world-championship-paris-2026/summary.json';
+const reports = [calling, worlds, showdown];
+---
+
+<div class="tournament-cards">
+  {reports.map(report => <a class="tournament-card" href={`/reportes/${report.event.slug}/`}>
+    <span class="eyebrow">Análisis internacional · {report.event.format}</span>
+    <h2>{report.event.name}</h2>
+    <p>{report.observed_players.toLocaleString('es-CO')} jugadores observados · Campeón: {report.champion}.</p>
+    <p>Participación, tasas de victoria con confianza y resultados de cada jugador. {report.missing_rounds.length > 0 && `Datos incompletos: falta la ronda ${report.missing_rounds.join(', ')}.`}</p>
+    <strong>Explorar resultados →</strong>
+  </a>)}
+</div>
+
+<style>
+  .tournament-cards { display:grid; gap:1rem; margin:1.5rem 0 2rem; }
+  .tournament-card { display:block; padding:1.75rem; border:1px solid var(--border-color); border-left:5px solid var(--secondary-color); border-radius:1rem; background:var(--base-variant); color:var(--text-color); text-decoration:none; }
+  .tournament-card:hover { outline:2px solid var(--secondary-color); outline-offset:3px; }
+  .eyebrow { font-size:.8rem; text-transform:uppercase; letter-spacing:.12em; }
+  h2 { font-size:1.75rem; margin:.4rem 0; }
+  p { margin:.5rem 0; line-height:1.65; }
+  strong { display:block; margin-top:1rem; }
+</style>
